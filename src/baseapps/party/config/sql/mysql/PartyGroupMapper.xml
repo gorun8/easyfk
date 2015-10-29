@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gorun8.easyfk.party.dao.PartyGroupDao">
+
+
+    <select id="findPartyGroupList" parameterType="java.lang.String"   resultType="cn.gorun8.easyfk.entity.GenericValue">
+        SELECT  * FROM party_group;
+    </select>
+
+    <insert id="createPartyGroup" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+            INSERT INTO party_group(
+            PARTY_ID,
+            GROUP_NAME,
+            GROUP_NAME_LOCAL,
+            OFFICE_SITE_NAME,
+            ANNUAL_REVENUE,
+            NUM_EMPLOYEES,
+            TICKER_SYMBOL,
+            COMMENTS)
+            VALUES (
+            #{partyGroup.PARTY_ID},
+            #{partyGroup.GROUP_NAME},
+            #{partyGroup.GROUP_NAME_LOCAL},
+            #{partyGroup.OFFICE_SITE_NAME},
+            #{partyGroup.ANNUAL_REVENUE},
+            #{partyGroup.NUM_EMPLOYEES},
+            #{partyGroup.TICKER_SYMBOL},
+            #{partyGroup.COMMENTS}
+            );
+
+    </insert>
+
+    <update id="savePartyGroup" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+          UPDATE party_group
+          SET
+            GROUP_NAME =#{partyGroup.GROUP_NAME},
+            GROUP_NAME_LOCAL =#{partyGroup.GROUP_NAME_LOCAL},
+            OFFICE_SITE_NAME = #{partyGroup.OFFICE_SITE_NAME},
+            ANNUAL_REVENUE =  #{partyGroup.ANNUAL_REVENUE},
+            NUM_EMPLOYEES = #{partyGroup.NUM_EMPLOYEES},
+            TICKER_SYMBOL = #{partyGroup.TICKER_SYMBOL},
+            COMMENTS =#{partyGroup.COMMENTS}
+          WHERE
+            PARTY_ID =#{partyGroup.PARTY_ID}
+    </update>
+
+    <delete id="removePartyGroupByPrimaryKey" parameterType="java.lang.String">
+            DELETE  FROM party_group
+            WHERE   PARTY_ID =#{partyId};
+    </delete>
+</mapper>

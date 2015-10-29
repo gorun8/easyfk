@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gorun8.easyfk.security.dao.DBCacheDao">
+
+    <insert id="set" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+        INSERT INTO user_login_session SET SESSION_ID = #{key},
+        	SESSION_DATA= #{value};
+
+    </insert>
+
+    <select id="get"  resultType="cn.gorun8.easyfk.entity.GenericValue">
+        SELECT *
+        FROM
+        user_login_session ul
+        WHERE ul.KEY = #{key}
+    </select>
+
+    <!-- 根据主键删除 -->
+    <delete id="del" parameterType="java.lang.String">
+       DELETE
+        FROM
+        user_login_session
+        WHERE ul.KEY = #{key}
+    </delete>
+
+    <delete id="clear" parameterType="java.lang.String">
+        DELETE
+        FROM
+        user_login_session
+    </delete>
+
+    <select id="dbSize"  resultType="java.lang.String">
+        SELECT count(*)
+        FROM
+        user_login_session ;
+    </select>
+</mapper>

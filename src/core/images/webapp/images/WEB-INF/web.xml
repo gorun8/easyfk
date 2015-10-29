@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Project:Easy Web Framework
+
+Description: This project is based on much more open source projects than ever before,
+             and can be applied to mostly web development environment.
+Author:hezhiping   Email:110476592@qq.com
+
+=============================================================================================
+
+-->
+
+<web-app>
+  <display-name>Easy Web Framework - demostore images</display-name>
+  <description>Demo Store Images for the Easy Web Framework Project</description>
+
+  <session-config>
+    <session-timeout>1</session-timeout>
+  </session-config>
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>main.jsp</welcome-file>
+  </welcome-file-list>
+
+</web-app>

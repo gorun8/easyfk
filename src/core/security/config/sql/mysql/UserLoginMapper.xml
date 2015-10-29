@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gorun8.easyfk.security.dao.UserLoginDao">
+    
+    <select id="findUserLogin"  resultType="cn.gorun8.easyfk.entity.GenericValue">
+    	SELECT * 
+        FROM
+        	user_login ul
+        WHERE ul.USER_LOGIN_ID = #{userLoginId}
+    </select>
+    
+    <select id="findUserByTicket"  resultType="cn.gorun8.easyfk.entity.GenericValue">
+        SELECT * 
+        FROM
+        	user_login ul
+        WHERE ul.TICKET = #{ticket}
+    </select>
+    
+    <update id="saveUserLogin" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+        UPDATE user_login
+        SET 
+        	CURRENT_PASSWORD = #{userLogin.CURRENT_PASSWORD},
+        	EMAIL = #{userLogin.EMAIL},
+        	MOBILE_PHONE = #{userLogin.MOBILE_PHONE},
+        	ENABLED = #{userLogin.ENABLED},
+        	REQUIRE_PASSWORD_CHANGE = #{userLogin.REQUIRE_PASSWORD_CHANGE},
+        	DISABLED_DATE_TIME = #{userLogin.DISABLED_DATE_TIME},
+        	SUSSESSIVE_FAILED_LOGINS = #{userLogin.SUSSESSIVE_FAILED_LOGINS},
+        	LAST_UPDATED_STAMP = NOW(),
+        	CREATED_STAMP = #{userLogin.CREATED_STAMP}
+        WHERE
+        	USER_LOGIN_ID = #{userLogin.USER_LOGIN_ID}
+    </update>
+    
+    <update id="saveTicket" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+        UPDATE user_login
+        SET 
+        	SSOKEY = #{ticket}
+        WHERE
+        	USER_LOGIN_ID = #{userLoginId}
+    </update>
+     
+    
+     
+    
+</mapper>

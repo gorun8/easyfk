@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Project:Easy Web Framework
+
+Description: This project is based on much more open source projects than ever before,
+             and can be applied to mostly web development environment.
+Author:hezhiping   Email:110476592@qq.com
+
+=============================================================================================
+
+-->
+
+<project name="Base" default="jar" basedir=".">
+    <import file="../../common.xml"/>
+
+    <!-- ================================================================== -->
+    <!-- Initialization of all property settings                            -->
+    <!-- ================================================================== -->
+
+    <property name="desc" value="Base API"/>
+    <property name="name" value="base"/>
+    <property name="easyfk.home.dir" value="../.."/>
+
+    <path id="local.class.path">
+        <fileset dir="${lib.dir}" includes="*.jar"/>
+        <fileset dir="${lib.dir}/commons" includes="*.jar"/>
+        <fileset dir="${lib.dir}/j2eespecs" includes="*.jar"/>
+        <fileset dir="${lib.dir}/scripting" includes="*.jar"/>
+        <fileset dir="../start/build/lib" includes="*.jar"/>
+    </path>
+    <patternset id="src-dirs">
+        <include name="build/gen-src/javacc"/>
+    </patternset>
+
+    <filelist id="test.classes" dir="${src.dir}">
+        <file name="cn/gorun8/easyfk/base/util/test/TimeDurationTests.java"/>
+    </filelist>
+
+    <target name="init">
+        <!-- make sure we have crypto packages available -->
+        <condition property="exclude.crypto" value="cn/gorun8/easyfk/base/crypto/**">
+            <not>
+                <available classname="javax.crypto.Cipher" classpathref="local.class.path"/>
+            </not>
+        </condition>
+        <condition property="exclude.cobertura" value="cn/gorun8/easyfk/base/config/Cobertura*.java">
+            <not>
+                <available classname="net.sourceforge.cobertura.instrument.ClassInstrumenter" classpathref="local.class.path"/>
+            </not>
+        </condition>
+        <patternset id="src.exc.set">
+            <exclude name="${exclude.cobertura}"/>
+            <exclude name="${exclude.crypto}"/>
+            <exclude name="cn/gorun8/easyfk/base/util/EasyFKJsBsfEngine.java"/>
+        </patternset>
+    </target>
+
+    <target name="gen-src">
+        <easyfk-javacc dir="cn/gorun8/easyfk/base/json" file="JSON"/>
+    </target>
+
+    <target name="classes" depends="prepare,gen-src">
+        <javac16/>
+    </target>
+
+    <target name="jar" depends="classes">
+        <main-jar>
+            <main-elements>
+                <!-- also put the DTDs in the jar file... -->
+                <fileset dir="${dtd.dir}" includes="*.dtd"/>
+                <service type="cn.gorun8.easyfk.base.conversion.ConverterLoader">
+                    <provider classname="cn.gorun8.easyfk.base.conversion.BooleanConverters"/>
+                    <provider classname="cn.gorun8.easyfk.base.conversion.CollectionConverters"/>
+                    <provider classname="cn.gorun8.easyfk.base.conversion.DateTimeConverters"/>
+                    <provider classname="cn.gorun8.easyfk.base.conversion.JSONConverters"/>
+                    <provider classname="cn.gorun8.easyfk.base.conversion.MiscConverters"/>
+                    <provider classname="cn.gorun8.easyfk.base.conversion.NetConverters"/>
+                    <provider classname="cn.gorun8.easyfk.base.conversion.NumberConverters"/>
+                </service>
+            </main-elements>
+        </main-jar>
+        <test-jar>
+            <test-elements>
+                <service type="cn.gorun8.easyfk.base.util.test.UtilObjectTests$TestFactoryIntf">
+                    <provider classname="cn.gorun8.easyfk.base.util.test.UtilObjectTests$FirstTestFactory"/>
+                    <provider classname="cn.gorun8.easyfk.base.util.test.UtilObjectTests$SecondTestFactory"/>
+                </service>
+            </test-elements>
+        </test-jar>
+    </target>
+</project>

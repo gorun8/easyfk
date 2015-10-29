@@ -1,0 +1,264 @@
+
+.icon-arrowrefresh{
+	background:url('../icons/famfamfam/arrow_refresh.png') no-repeat center center;
+}
+.icon-cancel{
+	background:url('../icons/famfamfam/cancel.png') no-repeat center center;
+}
+.icon-arrowundo{
+	background:url('../icons/famfamfam/arrow_undo.png') no-repeat center center;
+}
+
+
+.icon-notenew{
+	background:url('../icons/famfamfam/note_add.png') no-repeat center center;
+}
+.icon-noteedit{
+	background:url('../icons/famfamfam/note_edit.png') no-repeat center center;
+}
+.icon-notedelete{
+	background:url('../icons/famfamfam/note_delete.png') no-repeat center center;
+}
+.icon-notego{
+	background:url('../icons/famfamfam/note_go.png') no-repeat center center;
+}
+
+
+.icon-packageadd{
+	background:url('../icons/famfamfam/package_add.png') no-repeat center center;
+}
+
+.icon-packagedelete{
+	background:url('../icons/famfamfam/package_delete.png') no-repeat center center;
+}
+.icon-packagego{
+	background:url('../icons/famfamfam/package_go.png') no-repeat center center;
+}
+
+.icon-folderadd{
+	background:url('../icons/famfamfam/folder_add.png') no-repeat center center;
+}
+
+.icon-folderedit{
+	background:url('../icons/famfamfam/folder_edit.png') no-repeat center center;
+}
+
+.icon-folderdelete{
+	background:url('../icons/famfamfam/folder_delete.png') no-repeat center center;
+}
+
+.icon-folderpicture{
+	background:url('../icons/famfamfam/folder_picture.png') no-repeat center center;
+}
+.icon-folderheart{
+	background:url('../icons/famfamfam/folder_heart.png') no-repeat center center;
+}
+
+
+.icon-folderdatabase{
+	background:url('../icons/famfamfam/folder_database.png') no-repeat center center;
+}
+
+.icon-heartadd{
+	background:url('../icons/famfamfam/heart_add.png') no-repeat center center;
+}
+
+
+.icon-worldadd{
+	background:url('../icons/famfamfam/world_add.png') no-repeat center center;
+}
+.icon-worldedit{
+	background:url('../icons/famfamfam/world_edit.png') no-repeat center center;
+}
+.icon-worlddelete{
+	background:url('../icons/famfamfam/world_delete.png') no-repeat center center;
+}
+
+ 
+
+.icon-mapadd{
+	background:url('../icons/famfamfam/map_add.png') no-repeat center center;
+}
+
+.icon-mapedit{
+	background:url('../icons/famfamfam/map_edit.png') no-repeat center center;
+}
+
+.icon-mapdelete{
+	background:url('../icons/famfamfam/map_delete.png') no-repeat center center;
+}
+.icon-mapgo{
+	background:url('../icons/famfamfam/map_go.png') no-repeat center center;
+}
+
+
+.icon-applicationformadd{
+	background:url('../icons/famfamfam/application_form_add.png') no-repeat center center;
+}
+
+.icon-applicationformedit{
+	background:url('../icons/famfamfam/application_form_edit.png') no-repeat center center;
+}
+
+.icon-applicationformdelete{
+	background:url('../icons/famfamfam/application_form_delete.png') no-repeat center center;
+}
+
+.icon-applicationgo{
+	background:url('../icons/famfamfam/application_go.png') no-repeat center center;
+}
+
+.icon-applicationkey{
+	background:url('../icons/famfamfam/application_key.png') no-repeat center center;
+}
+ 
+
+.icon-databaserefresh{
+	background:url('../icons/famfamfam/database_refresh.png') no-repeat center center;
+}
+
+.icon-databasedelete{
+	background:url('../icons/famfamfam/database_delete.png') no-repeat center center;
+}
+.icon-databaseedit{
+	background:url('../icons/famfamfam/database_edit.png') no-repeat center center;
+}
+
+
+.icon-wand{
+	background:url('../icons/famfamfam/wand.png') no-repeat center center;
+}
+.icon-databaselightning{
+	background:url('../icons/famfamfam/database_lightning.png') no-repeat center center;
+}
+
+.icon-databasesave{
+	background:url('../icons/famfamfam/database_save.png') no-repeat center center;
+}
+.icon-databasegear{
+	background:url('../icons/famfamfam/database_gear.png') no-repeat center center;
+}
+
+.icon-useradd{
+	background:url('../icons/famfamfam/user_add.png') no-repeat center center;
+}
+
+.icon-usergo{
+	background:url('../icons/famfamfam/user_go.png') no-repeat center center;
+}
+.icon-cartgo{
+	background:url('../icons/famfamfam/cart_go.png') no-repeat center center;
+}
+.icon-cartedit{
+	background:url('../icons/famfamfam/cart_edit.png') no-repeat center center;
+}
+.icon-cartremove{
+	background:url('../icons/famfamfam/cart_remove.png') no-repeat center center;
+}
+
+
+.icon-printer{
+	background:url('../icons/famfamfam/printer.png') no-repeat center center;
+}
+.icon-key{
+	background:url('../icons/famfamfam/key.png') no-repeat center center;
+}
+
+.icon-awardstaradd{
+	background:url('../icons/famfamfam/award_star_add.png') no-repeat center center;
+}
+.icon-awardstardelete{
+	background:url('../icons/famfamfam/award_star_delete.png') no-repeat center center;
+}
+.icon-awardstarbronze3{
+	background:url('../icons/famfamfam/award_star_bronze_3.png') no-repeat center center;
+}
+.icon-groupadd{
+	background:url('../icons/famfamfam/group_add.png') no-repeat center center;
+}
+
+.icon-groupdelete{
+	background:url('../icons/famfamfam/group_delete.png') no-repeat center center;
+}
+
+.icon-groupedit{
+	background:url('../icons/famfamfam/group_edit.png') no-repeat center center;
+}
+
+.icon-groupgo{
+	background:url('../icons/famfamfam/group_go.png') no-repeat center center;
+}
+.icon-calendaredit{
+	background:url('../icons/famfamfam/calendar_edit.png') no-repeat center center;
+}
+
+.icon-transmitadd{
+	background:url('../icons/famfamfam/transmit_add.png') no-repeat center center;
+}
+
+.icon-transmitedit{
+	background:url('../icons/famfamfam/transmit_edit.png') no-repeat center center;
+}
+
+.icon-tagblueadd{
+	background:url('../icons/famfamfam/tag_blue_add.png') no-repeat center center;
+}
+
+.iocn-application_side_list{
+		background:url('../icons/famfamfam/application_side_list.png') no-repeat center center;
+}
+.iocn-feed_edit{
+	background:url('../icons/famfamfam/feed_edit.png') no-repeat center center;
+}
+.iocn-feed_key{
+	background:url('../icons/famfamfam/feed_key.png') no-repeat center center;
+}
+.iocn-feed_link{
+	background:url('../icons/famfamfam/feed_link.png') no-repeat center center;
+}
+.iocn-feed_disk{
+	background:url('../icons/famfamfam/feed_disk.png') no-repeat center center;
+}
+.iocn-feed_go{
+	background:url('../icons/famfamfam/feed_go.png') no-repeat center center;
+}
+
+.iocn-feed_magnify{
+	background:url('../icons/famfamfam/feed_magnify.png') no-repeat center center;
+}
+
+.iocn-group-checkboxs{
+	background:url('../icons/famfamfam/text_list_bullets.png') no-repeat center center;
+}
+.icon-mult-change-product-saleabley{
+	background:url('../icons/famfamfam/arrow_in.png') no-repeat center center;
+}
+.icon-mult-change-product-saleablen{
+	background:url('../icons/famfamfam/arrow_out.png') no-repeat center center;
+}
+
+.icon-publish-all-product{
+	background:url('../icons/famfamfam/webcam.png') no-repeat center center;
+}
+
+.icon-page-white-swoosh{
+	background:url('../icons/famfamfam/page_white_swoosh.png') no-repeat center center;
+	
+}
+.icon-page-add{
+	background:url('../icons/famfamfam/page_add.png') no-repeat center center;
+}
+.icon-book-add{
+	background:url('../icons/famfamfam/book_add.png') no-repeat center center;
+}
+ 
+.icon-report{
+	background:url('../icons/famfamfam/report.png') no-repeat center center;
+}
+.icon-text-align-justify{
+	background:url('../icons/famfamfam/text_align_justify.png') no-repeat center center;
+}
+.icon-time{
+	background:url('../icons/famfamfam/time.png') no-repeat center center;
+}
+ 

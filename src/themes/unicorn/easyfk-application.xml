@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Project:Easy Web Framework
+
+Description: This project is based on much more open source projects than ever before,
+             and can be applied to mostly web development environment.
+Author:hezhiping   Email:110476592@qq.com
+
+=============================================================================================
+
+-->
+<easyfk-application name="unicorn"   
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.gorun8.cn/dtds/easyfk-application.xsd">
+    
+    <!-- place the config directory on the classpath to access configuration files -->
+    <classpath type="dir" location="config"/>
+    <!-- web baseapps; will be mounted when using the embedded container -->
+    <webapp name="unicorn"
+        title="unicorn"
+        server="default-server"
+        location="webapp"
+        mount-point="/unicorn"/>
+</easyfk-application>

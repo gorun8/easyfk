@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Project:Easy Web Framework
+
+Description: This project is based on much more open source projects than ever before,
+             and can be applied to mostly web development environment.
+Author:hezhiping   Email:110476592@qq.com
+
+=============================================================================================
+
+-->
+<!--
+本文件负责基础的通用，如数据源、加载系统默认的properties文件、异常处理等.
+注意：该文件被所有组件共享，建议不要修改该文件，除非你非常明确用途。
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:c="http://www.springframework.org/schema/c" xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- 配置全局的数据连接池 -->
+    
+	<bean id="targetDataSource"  class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="url" value="${db.dburl}" />
+		<property name="username" value="${db.dbusername}" />
+		<property name="password" value="${db.dbpassword}" />
+		<property name="driverClassName" value="${db.dbdriver}" />
+		<property name="initialSize" value="30"></property>
+		<property name="maxActive" value="100" />
+		<property name="maxIdle" value="30" />
+		<property name="maxWait" value="1000" />
+		<property name="testWhileIdle" value="true"></property>
+		<property name="testOnBorrow" value="true"></property>
+		<property name="validationQuery" value="select 1"></property>
+	 	
+	    <property name="defaultAutoCommit" value="false"/>
+         <property name="timeBetweenEvictionRunsMillis" value="3600000"/>
+        <property name="minEvictableIdleTimeMillis" value="3600000"/>
+  
+	</bean>
+
+	<bean id="targetDataSource2"  class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="url" value="${db2.dburl}" />
+		<property name="username" value="${db2.dbusername}" />
+		<property name="password" value="${db2.dbpassword}" />
+		<property name="driverClassName" value="${db2.dbdriver}" />
+		<property name="initialSize" value="30"></property>
+		<property name="maxActive" value="100" />
+		<property name="maxIdle" value="30" />
+		<property name="maxWait" value="1000" />
+		<property name="testWhileIdle" value="true"></property>
+		<property name="testOnBorrow" value="true"></property>
+		<property name="validationQuery" value="select 1"></property>
+
+		<property name="defaultAutoCommit" value="false"/>
+		<property name="timeBetweenEvictionRunsMillis" value="3600000"/>
+		<property name="minEvictableIdleTimeMillis" value="3600000"/>
+
+	</bean>
+
+	<bean id="dataSource" class="cn.gorun8.easyfk.entity.datasource.EasyFKDataSource">
+		<property name="targetDataSources">
+			<!--注：key应与cn.gorun8.easyfk.entity.datasource.EntityGroupType中的定义保持一直-->
+			<map key-type="java.lang.String">
+				<!-- write -->
+				<entry key="master" value-ref="targetDataSource"/>
+				<!-- read -->
+				<entry key="slave" value-ref="targetDataSource2"/>
+			</map>
+		</property>
+		<property name="defaultTargetDataSource" ref="targetDataSource"/>
+	</bean>
+
+	<!--
+	<bean id="dataSource" 
+	    class="org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy">
+        <property name="targetDataSource" ref="targetDataSource"/>
+    </bean>
+	-->
+	<!--注册IOC工具，方便从代码中获取IOC中的对象-->
+    <bean class="cn.gorun8.easyfk.base.util.UtilIOC"></bean>
+
+	<bean id="propertiesReader"
+		  class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="ignoreUnresolvablePlaceholders" value="true"/>
+		<property name="locations">
+			<list>
+				<value>classpath*:easyfk-general.properties</value>
+				<value>classpath*:easyfk-database.properties</value>
+				<value>classpath*:security.properties</value>
+			</list>
+		</property>
+	</bean>
+	<!--收集错误信息-->
+	<bean id="easyfkExceptionHanlder" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionMappings">
+			<props>
+				<prop key="java.lang.Exception">component://common/webcommon/ftl/generalexception</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!--引入其它配置-->
+	<import resource="classpath*:easyfk-spring-scan.xml"/>
+	<import resource="classpath*:easyfk-spring-transition.xml"/>
+</beans>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<display-name>Easy Web Framework - frontorg Component</display-name>
+    <description>frontorg Component of the Easy Web Framework Project</description>
+	<context-param>
+        <param-name>webSiteId</param-name>
+        <param-value>frontorg_ID</param-value>
+        <description>A unique ID used to look up the WebSite entity</description>
+    </context-param>
+     
+	<!-- 配置字符集过滤器 -->
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+ 
+	<!-- 配置项目的编码mapping -->
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	      
+	
+</web-app>

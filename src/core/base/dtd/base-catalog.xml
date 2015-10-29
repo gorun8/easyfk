@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Project:Easy Web Framework
+
+Description: This project is based on much more open source projects than ever before,
+             and can be applied to mostly web development environment.
+Author:hezhiping   Email:110476592@qq.com
+
+=============================================================================================
+
+-->
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN"
+                         "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
+<!--
+  Comment the DTD declaration to avoid looking for it on the web.
+  Alternatively we can place a copy of the DTD locally and refer to it.
+-->
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <!-- <public publicId="-//W3C//DTD SVG 1.0//EN" uri="svg10.dtd"/> -->
+    <system systemId="http://www.gorun8.cn/dtds/component-loader.xsd" uri="component-loader.xsd"/>
+    <system systemId="http://www.gorun8.cn/dtds/jndi-config.xsd" uri="jndi-config.xsd"/>
+    <system systemId="http://www.gorun8.cn/dtds/easyfk-application.xsd" uri="easyfk-application.xsd"/>
+    <system systemId="http://www.gorun8.cn/dtds/easyfk-containers.xsd" uri="easyfk-containers.xsd"/>
+    <system systemId="http://www.gorun8.cn/dtds/easyfk-properties.xsd" uri="easyfk-properties.xsd"/>
+</catalog>

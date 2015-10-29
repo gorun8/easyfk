@@ -1,0 +1,2094 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" readonly="true" id="a0af7b4c-719a-4b1c-8eae-b0891933c70f" name="Default" comment="">
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\documents\快速创建组件模板.txt" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\config\blue-theme.properties" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\easyfk-application.xml" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\META-INF\MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\WEB-INF\web.xml" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\js\jquery.easyui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\js\jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\js\main.js" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\HostInspect\HostInspect.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\HostInspect\list.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\HostInspect\list1.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\HostInspect\list2.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\HostInspect\list3.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\HostInspect\warning.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\HostInspect\warning2.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\HostInspect\warning3.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\System\System.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\System\SystemManage.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\System\key2.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\System\key3.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\System\key4.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\System\key5.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\System\key6.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\System\list.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\desktop1.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\footer.ftl" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\header.ftl" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\left.ftl" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\monitor\list.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\monitor\list1.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\monitor\list2.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\monitor\logManage.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\monitor\monitor.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\monitor\monitor2.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\monitor\monitor3.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\monitor\monitor4.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\monitor\monitor5.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\monitor\tree_data1.json" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\monitor\warning\list1.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\monitor\warning\list2.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\monitor\warning\list3.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\monitor\warning\warning.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\monitor\warning\warning2.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\monitor\warning\warning3.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\device.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\device2.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\device3.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\device4.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\device5.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\device6.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\files_list.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\files_pic.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\list.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\list333.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\list4.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\new_infoenter.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\new_printexport.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\policy.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\pop_device_add.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\pop_device_add2.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\pop_device_add4.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\pop_file1.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\pop_sclass.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\tab-list.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\tab-list2.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\tree-menu.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\view.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy\view2.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\service\add_content1.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\service\list1.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\service\log_data1.json" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\service\pop_add.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\service\pop_add2.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\service\service.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\service\service2.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\service\service3.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\service\service4.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\service\service5.htm" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\common.css" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\desktop.css" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\device.css" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\down.css" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\easyui.css" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\framework.css" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\init.css" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\layout.css" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\login.css" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\main.css" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\policy.css" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\terminal.css" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\icon.css" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\AppleIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\AppleIconEmpty.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\HostInspect" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\LinuxIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\LinuxIconEmpty.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\META-INF" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\System" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\WEB-INF" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\accept.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\accordion_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\add.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\aim.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\andriodIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\andriodIconEmpty.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\application_double.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\application_edit.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\approve.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\arrow_left.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\arrow_right.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\arrow_undo.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\attach.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\back.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\book_open.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\books.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\btnbg_blue1.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\btnbg_blue2.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\btnbg_disable.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\btnbg_gray1.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\btnbg_gray2.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\btnbg_green1.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\btnbg_green2.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\btnbg_normal1.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\btnbg_normal2.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\btnbg_orange1.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\btnbg_orange2.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\calendar_1.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\calendar_2.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\calendar_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\cancel.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\cd.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\chart_bar.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\colligate.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\combo_arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\compress.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\config.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\config" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\cross.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\cross_octagon.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\cross_shield_2.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\cut.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\data.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\datagrid_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\datebox_arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\desktop_stat1.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\desktop_stat2.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\disk.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\disk_disable.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\doc_access.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\doc_detail.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\doc_excel_table.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\doc_film.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\doc_illustrator.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\doc_music.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\doc_pdf.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\doc_photoshop.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\documents" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\door.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\down.jpg" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\download.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\drawer.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\drawerin.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\edit.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\edit_add.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\edit_remove.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\equipmentHead01.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\exclamation.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\exclamation_octagon.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\export.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\export2.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\feed_ballon.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\feed_document.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\film.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\filter.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\find.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\flag_blue.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\folder.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\folder2.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\group.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\hand.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\help.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\house.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\icon1.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\icon2.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\icon3.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\icon4.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\icon5.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\icon6.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\icon_arrow_in.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\icon_arrow_out.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\icon_tit.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\images" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\jindu.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\js" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\key.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\layout_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftadd.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftaudit.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftbacoder.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftbgicon.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftcompany.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftfile.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\lefticon1.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftinout.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftlist.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftlog.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftmenu_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftnew.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftpersonal.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftreceive.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftreceived.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftsapply.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftsapprove.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftsave.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftsave2.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftsearch.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftsend.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftsent.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftset.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftshare.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftsubicon1.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftsubicon2.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftsys.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\leftuser.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\level.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\link.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\link_break.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\linkbutton_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\list_bullets.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\list_pic.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\lock.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\lock_unlock.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\login.jpg" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\login_bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\login_btn1.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\login_btn2.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\login_foot.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\login_icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\login_tit.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\login_tit.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\make.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\menu_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\menu_arrows_white.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\menu_batch.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\menu_blacklist.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\menu_clearlog.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\menu_createfolder.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\menu_download.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\menu_recycle.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\menu_share1.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\menu_share2.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\menu_upload.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\menu_view.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\messager_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\mini_add.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\mini_edit.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\mini_refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\monitor" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\navbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\navleft.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\new.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\ok.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\page_excel.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\page_paste.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\page_white_csharp.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\page_white_edit.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\page_white_error.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\page_white_excel.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\page_white_flash.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\page_white_put.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\page_white_word.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\page_white_world.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\pagination_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\paintbrush.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\panel_tools.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\paste.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\pdf.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\pencil.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\photo_album.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\pic01.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\pic02.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\picture.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\policy" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\popicon1.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\popicon2.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\popicon3.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\popicon4.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\popicon5.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\print.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\printer.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\redo.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\relay.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\reload.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\rosette.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\s_back.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\save.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\save_dis.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\scrap.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\scrap_cd.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\seal.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\search.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\searchbox_button.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\sectionHead.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\service" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\share_delete.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\shareicon.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\sketch02.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\slider_handle.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\spinner_arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\star_1.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\stat1.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\sum.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\switch2_disable.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\switch2_enable.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\switch_disable.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\switch_enable.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\switch_pause.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\tab_imge01.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\tab_imge02.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\tab_imge03.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\tabs_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\telephone.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\tick.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\tip.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\title_img_bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\title_img_bg2.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\title_img_bg3.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\title_img_bg6.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\title_img_bg7.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\top_logo.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\topbg.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\topo1.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\topoicon2_error.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\topoicon2_error.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\topoicon2_normal.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\topoicon2_warring.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\topoicon_error.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\topoicon_error.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\topoicon_normal.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\topoicon_warring.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\tree_icons.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\uncolligate.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\upload.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\user.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\user_business_boss.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\validatebox_warning.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\vcard.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\verify.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\wait.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\page\monitor\warning" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\welcome.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\windowIconEmpty.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\windowsIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\word.gif" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\icons\images\world.png" afterPath="" />
+      <change type="DELETED" beforePath="I:\dev\github\easyfk_svn\easyfk\themes\blue\webapp\style\css\images\复件 leftbacoder.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ant" afterPath="$PROJECT_DIR$/ant" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.project" afterPath="$PROJECT_DIR$/.project" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.xmlcatalog.xml" afterPath="$PROJECT_DIR$/.xmlcatalog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/security/config/sql/mysql/DBCacheMapper.xml" afterPath="$PROJECT_DIR$/core/security/config/sql/mysql/DBCacheMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/DOCUMENT_HEADER" afterPath="$PROJECT_DIR$/documents/DOCUMENT_HEADER" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/resources/templates/DemoController.java" afterPath="$PROJECT_DIR$/documents/resources/templates/DemoController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/resources/templates/DemoDao.java" afterPath="$PROJECT_DIR$/documents/resources/templates/DemoDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/resources/templates/DemoMapper.xml" afterPath="$PROJECT_DIR$/documents/resources/templates/DemoMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/resources/templates/DemoService.java" afterPath="$PROJECT_DIR$/documents/resources/templates/DemoService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/resources/templates/DemoServiceImpl.java" afterPath="$PROJECT_DIR$/documents/resources/templates/DemoServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/base/config/ESAPI.properties" afterPath="$PROJECT_DIR$/core/base/config/ESAPI.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/resources/templates/HELP.xml" afterPath="$PROJECT_DIR$/documents/resources/templates/HELP.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/workflow/config/sql/mysql/LeaveMapper.xml" afterPath="$PROJECT_DIR$/baseapps/workflow/config/sql/mysql/LeaveMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/Notes" afterPath="$PROJECT_DIR$/documents/Notes" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/party/config/sql/mysql/PartyClsGroupMapper.xml" afterPath="$PROJECT_DIR$/baseapps/party/config/sql/mysql/PartyClsGroupMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/party/config/sql/mysql/PartyGroupMapper.xml" afterPath="$PROJECT_DIR$/baseapps/party/config/sql/mysql/PartyGroupMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/workflow/config/sql/mysql/TaskHolderMapper.xml" afterPath="$PROJECT_DIR$/baseapps/workflow/config/sql/mysql/TaskHolderMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/security/config/sql/mysql/UserLoginMapper.xml" afterPath="$PROJECT_DIR$/core/security/config/sql/mysql/UserLoginMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/workflow/config/activiti-bpm.xml" afterPath="$PROJECT_DIR$/baseapps/workflow/config/activiti-bpm.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ant.bat" afterPath="$PROJECT_DIR$/ant.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/base/config/antisamy-esapi.xml" afterPath="$PROJECT_DIR$/core/base/config/antisamy-esapi.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/party/webapp/resources/page/appcommon.ftl" afterPath="$PROJECT_DIR$/baseapps/party/webapp/resources/page/appcommon.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/workflow/webapp/resources/page/appcommon.ftl" afterPath="$PROJECT_DIR$/baseapps/workflow/webapp/resources/page/appcommon.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/resources/templates/appcommon.ftl" afterPath="$PROJECT_DIR$/documents/resources/templates/appcommon.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/workflow/webapp/resources/page/applyleaveget.ftl" afterPath="$PROJECT_DIR$/baseapps/workflow/webapp/resources/page/applyleaveget.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/workflow/webapp/resources/page/applyleavepost.ftl" afterPath="$PROJECT_DIR$/baseapps/workflow/webapp/resources/page/applyleavepost.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/party/webapp/resources/page/appmenus.ftl" afterPath="$PROJECT_DIR$/baseapps/party/webapp/resources/page/appmenus.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/workflow/webapp/resources/page/appmenus.ftl" afterPath="$PROJECT_DIR$/baseapps/workflow/webapp/resources/page/appmenus.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/resources/templates/appmenus.ftl" afterPath="$PROJECT_DIR$/documents/resources/templates/appmenus.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/base/dtd/base-catalog.xml" afterPath="$PROJECT_DIR$/core/base/dtd/base-catalog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/build.xml" afterPath="$PROJECT_DIR$/baseapps/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/party/build.xml" afterPath="$PROJECT_DIR$/baseapps/party/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/workflow/build.xml" afterPath="$PROJECT_DIR$/baseapps/workflow/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/build.xml" afterPath="$PROJECT_DIR$/core/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/base/build.xml" afterPath="$PROJECT_DIR$/core/base/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/catalina/build.xml" afterPath="$PROJECT_DIR$/core/catalina/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/common/build.xml" afterPath="$PROJECT_DIR$/core/common/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/entity/build.xml" afterPath="$PROJECT_DIR$/core/entity/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/security/build.xml" afterPath="$PROJECT_DIR$/core/security/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/start/build.xml" afterPath="$PROJECT_DIR$/core/start/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/webapp/build.xml" afterPath="$PROJECT_DIR$/core/webapp/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/resources/templates/build.xml" afterPath="$PROJECT_DIR$/documents/resources/templates/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hot-deploy/install/build.xml" afterPath="$PROJECT_DIR$/hot-deploy/install/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/base/config/cache.properties" afterPath="$PROJECT_DIR$/core/base/config/cache.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/catalina/catalina-users.xml" afterPath="$PROJECT_DIR$/runtime/catalina/catalina-users.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/common/webcommon/ftl/common.ftl" afterPath="$PROJECT_DIR$/core/common/webcommon/ftl/common.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common.xml" afterPath="$PROJECT_DIR$/common.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/component-load.xml" afterPath="$PROJECT_DIR$/baseapps/component-load.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/component-load.xml" afterPath="$PROJECT_DIR$/core/component-load.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/base/config/component-load.xml" afterPath="$PROJECT_DIR$/core/base/config/component-load.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/base/dtd/component-loader.xsd" afterPath="$PROJECT_DIR$/core/base/dtd/component-loader.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/unicorn/webapp/page/contextmenu.ftl" afterPath="$PROJECT_DIR$/themes/unicorn/webapp/page/contextmenu.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/images/webapp/images/js/jquery/cookie.js" afterPath="$PROJECT_DIR$/core/images/webapp/images/js/jquery/cookie.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/base/config/debug.properties" afterPath="$PROJECT_DIR$/core/base/config/debug.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/data/derby.properties" afterPath="$PROJECT_DIR$/runtime/data/derby.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/party/easyfk-application.xml" afterPath="$PROJECT_DIR$/baseapps/party/easyfk-application.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/workflow/easyfk-application.xml" afterPath="$PROJECT_DIR$/baseapps/workflow/easyfk-application.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/base/easyfk-application.xml" afterPath="$PROJECT_DIR$/core/base/easyfk-application.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/catalina/easyfk-application.xml" afterPath="$PROJECT_DIR$/core/catalina/easyfk-application.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/common/easyfk-application.xml" afterPath="$PROJECT_DIR$/core/common/easyfk-application.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/entity/easyfk-application.xml" afterPath="$PROJECT_DIR$/core/entity/easyfk-application.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/images/easyfk-application.xml" afterPath="$PROJECT_DIR$/core/images/easyfk-application.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/security/easyfk-application.xml" afterPath="$PROJECT_DIR$/core/security/easyfk-application.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/webapp/easyfk-application.xml" afterPath="$PROJECT_DIR$/core/webapp/easyfk-application.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/resources/templates/easyfk-application.xml" afterPath="$PROJECT_DIR$/documents/resources/templates/easyfk-application.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hot-deploy/install/easyfk-application.xml" afterPath="$PROJECT_DIR$/hot-deploy/install/easyfk-application.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/frontorg/easyfk-application.xml" afterPath="$PROJECT_DIR$/themes/frontorg/easyfk-application.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/frontred/easyfk-application.xml" afterPath="$PROJECT_DIR$/themes/frontred/easyfk-application.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/unicorn/easyfk-application.xml" afterPath="$PROJECT_DIR$/themes/unicorn/easyfk-application.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/base/dtd/easyfk-application.xsd" afterPath="$PROJECT_DIR$/core/base/dtd/easyfk-application.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/resources/templates/easyfk-component.xml" afterPath="$PROJECT_DIR$/documents/resources/templates/easyfk-component.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/base/config/easyfk-containers.xml" afterPath="$PROJECT_DIR$/core/base/config/easyfk-containers.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/base/dtd/easyfk-containers.xsd" afterPath="$PROJECT_DIR$/core/base/dtd/easyfk-containers.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/base/config/easyfk-database.properties" afterPath="$PROJECT_DIR$/core/base/config/easyfk-database.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/webapp/config/easyfk-default-springmvc.xml" afterPath="$PROJECT_DIR$/core/webapp/config/easyfk-default-springmvc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/entity/config/easyfk-mybatis.xml" afterPath="$PROJECT_DIR$/core/entity/config/easyfk-mybatis.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/base/dtd/easyfk-properties.xsd" afterPath="$PROJECT_DIR$/core/base/dtd/easyfk-properties.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/webapp/config/easyfk-spring-common.xml" afterPath="$PROJECT_DIR$/core/webapp/config/easyfk-spring-common.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/webapp/config/easyfk-spring-scan.xml" afterPath="$PROJECT_DIR$/core/webapp/config/easyfk-spring-scan.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/entity/config/easyfk-spring-transition.xml" afterPath="$PROJECT_DIR$/core/entity/config/easyfk-spring-transition.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/resources/templates/easyfk-theme.xml" afterPath="$PROJECT_DIR$/documents/resources/templates/easyfk-theme.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/entity/entitydef/mysql/entitycommon.sql" afterPath="$PROJECT_DIR$/core/entity/entitydef/mysql/entitycommon.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/common/webcommon/ftl/err404.ftl" afterPath="$PROJECT_DIR$/core/common/webcommon/ftl/err404.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hot-deploy/install/webapp/resources/page/footer.ftl" afterPath="$PROJECT_DIR$/hot-deploy/install/webapp/resources/page/footer.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/frontorg/webapp/page/footer.ftl" afterPath="$PROJECT_DIR$/themes/frontorg/webapp/page/footer.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/frontred/webapp/page/footer.ftl" afterPath="$PROJECT_DIR$/themes/frontred/webapp/page/footer.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/unicorn/webapp/page/footer.ftl" afterPath="$PROJECT_DIR$/themes/unicorn/webapp/page/footer.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/webapp/config/freemarkerImports.properties" afterPath="$PROJECT_DIR$/core/webapp/config/freemarkerImports.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/webapp/config/freemarkerTransforms.properties" afterPath="$PROJECT_DIR$/core/webapp/config/freemarkerTransforms.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/frontorg/config/frontorg-theme.properties" afterPath="$PROJECT_DIR$/themes/frontorg/config/frontorg-theme.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/frontred/config/frontred-theme.properties" afterPath="$PROJECT_DIR$/themes/frontred/config/frontred-theme.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/frontorg/webapp/page/header.ftl" afterPath="$PROJECT_DIR$/themes/frontorg/webapp/page/header.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/frontred/webapp/page/header.ftl" afterPath="$PROJECT_DIR$/themes/frontred/webapp/page/header.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/unicorn/webapp/page/header.ftl" afterPath="$PROJECT_DIR$/themes/unicorn/webapp/page/header.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/common/webcommon/ftl/htmlTemplate.ftl" afterPath="$PROJECT_DIR$/core/common/webcommon/ftl/htmlTemplate.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/party/webapp/resources/page/index.ftl" afterPath="$PROJECT_DIR$/baseapps/party/webapp/resources/page/index.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/workflow/webapp/resources/page/index.ftl" afterPath="$PROJECT_DIR$/baseapps/workflow/webapp/resources/page/index.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/resources/templates/index.ftl" afterPath="$PROJECT_DIR$/documents/resources/templates/index.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hot-deploy/install/webapp/resources/page/index.ftl" afterPath="$PROJECT_DIR$/hot-deploy/install/webapp/resources/page/index.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/resources/templates/index.jsp" afterPath="$PROJECT_DIR$/documents/resources/templates/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hot-deploy/install/webapp/index.jsp" afterPath="$PROJECT_DIR$/hot-deploy/install/webapp/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/base/config/install-containers.xml" afterPath="$PROJECT_DIR$/core/base/config/install-containers.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hot-deploy/install/config/install-database-temp.properties" afterPath="$PROJECT_DIR$/hot-deploy/install/config/install-database-temp.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hot-deploy/install/webapp/WEB-INF/classes/install-spring-scan.xml" afterPath="$PROJECT_DIR$/hot-deploy/install/webapp/WEB-INF/classes/install-spring-scan.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/base/config/install.properties" afterPath="$PROJECT_DIR$/core/base/config/install.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ivy.xml" afterPath="$PROJECT_DIR$/ivy.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/base/config/jsse.properties" afterPath="$PROJECT_DIR$/core/base/config/jsse.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/workflow/webapp/resources/page/leavetest.ftl" afterPath="$PROJECT_DIR$/baseapps/workflow/webapp/resources/page/leavetest.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/unicorn/webapp/page/left.ftl" afterPath="$PROJECT_DIR$/themes/unicorn/webapp/page/left.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/base/config/log4j.xml" afterPath="$PROJECT_DIR$/core/base/config/log4j.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/security/webapp/resources/page/login.ftl" afterPath="$PROJECT_DIR$/core/security/webapp/resources/page/login.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/macros.xml" afterPath="$PROJECT_DIR$/macros.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/frontorg/webapp/page/menu1.ftl" afterPath="$PROJECT_DIR$/themes/frontorg/webapp/page/menu1.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/frontred/webapp/page/menu1.ftl" afterPath="$PROJECT_DIR$/themes/frontred/webapp/page/menu1.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/frontorg/webapp/page/menu2.ftl" afterPath="$PROJECT_DIR$/themes/frontorg/webapp/page/menu2.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/frontred/webapp/page/menu2.ftl" afterPath="$PROJECT_DIR$/themes/frontred/webapp/page/menu2.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/frontorg/webapp/page/menu3.ftl" afterPath="$PROJECT_DIR$/themes/frontorg/webapp/page/menu3.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/frontred/webapp/page/menu3.ftl" afterPath="$PROJECT_DIR$/themes/frontred/webapp/page/menu3.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/frontorg/webapp/page/message.ftl" afterPath="$PROJECT_DIR$/themes/frontorg/webapp/page/message.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/frontred/webapp/page/message.ftl" afterPath="$PROJECT_DIR$/themes/frontred/webapp/page/message.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/unicorn/webapp/page/message.ftl" afterPath="$PROJECT_DIR$/themes/unicorn/webapp/page/message.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/catalina/config/mime-type.xml" afterPath="$PROJECT_DIR$/core/catalina/config/mime-type.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/workflow/webapp/resources/page/modellist.ftl" afterPath="$PROJECT_DIR$/baseapps/workflow/webapp/resources/page/modellist.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hot-deploy/install/config/mysql.properties" afterPath="$PROJECT_DIR$/hot-deploy/install/config/mysql.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/unicorn/webapp/page/navbar.ftl" afterPath="$PROJECT_DIR$/themes/unicorn/webapp/page/navbar.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/unicorn/webapp/page/pagebar.ftl" afterPath="$PROJECT_DIR$/themes/unicorn/webapp/page/pagebar.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/party/entitydef/mysql/party.sql" afterPath="$PROJECT_DIR$/baseapps/party/entitydef/mysql/party.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/party/webapp/resources/page/partyclsgrouplist.ftl" afterPath="$PROJECT_DIR$/baseapps/party/webapp/resources/page/partyclsgrouplist.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/party/webapp/resources/page/partygrouplist.ftl" afterPath="$PROJECT_DIR$/baseapps/party/webapp/resources/page/partygrouplist.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/party/entitydef/mysql/partyseed.sql" afterPath="$PROJECT_DIR$/baseapps/party/entitydef/mysql/partyseed.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/party/entitydef/mysql/person.sql" afterPath="$PROJECT_DIR$/baseapps/party/entitydef/mysql/person.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/common/entitydef/mysql/portal_page.sql" afterPath="$PROJECT_DIR$/core/common/entitydef/mysql/portal_page.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/webapp/dtd/regions.xsd" afterPath="$PROJECT_DIR$/core/webapp/dtd/regions.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/unicorn/webapp/page/right.ftl" afterPath="$PROJECT_DIR$/themes/unicorn/webapp/page/right.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/security/webapp/WEB-INF/classes/security-shiro-context.xml" afterPath="$PROJECT_DIR$/core/security/webapp/WEB-INF/classes/security-shiro-context.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/base/config/security.properties" afterPath="$PROJECT_DIR$/core/base/config/security.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/party/webapp/WEB-INF/classes/shiro-context.xml" afterPath="$PROJECT_DIR$/baseapps/party/webapp/WEB-INF/classes/shiro-context.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/resources/templates/shiro-context.xml" afterPath="$PROJECT_DIR$/documents/resources/templates/shiro-context.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/webapp/dtd/site-conf.xsd" afterPath="$PROJECT_DIR$/core/webapp/dtd/site-conf.xsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/workflow/webapp/WEB-INF/classes/spring-scan.xml" afterPath="$PROJECT_DIR$/baseapps/workflow/webapp/WEB-INF/classes/spring-scan.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/party/webapp/WEB-INF/classes/springmvc.xml" afterPath="$PROJECT_DIR$/baseapps/party/webapp/WEB-INF/classes/springmvc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/workflow/webapp/WEB-INF/classes/springmvc.xml" afterPath="$PROJECT_DIR$/baseapps/workflow/webapp/WEB-INF/classes/springmvc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/security/webapp/WEB-INF/classes/springmvc.xml" afterPath="$PROJECT_DIR$/core/security/webapp/WEB-INF/classes/springmvc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/resources/templates/springmvc.xml" afterPath="$PROJECT_DIR$/documents/resources/templates/springmvc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hot-deploy/install/webapp/WEB-INF/classes/springmvc.xml" afterPath="$PROJECT_DIR$/hot-deploy/install/webapp/WEB-INF/classes/springmvc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/base/config/start.properties" afterPath="$PROJECT_DIR$/core/base/config/start.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/linux/starteasyfk-debug.sh" afterPath="$PROJECT_DIR$/platforms/linux/starteasyfk-debug.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/windows/starteasyfk.bat" afterPath="$PROJECT_DIR$/platforms/windows/starteasyfk.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/linux/starteasyfk.sh" afterPath="$PROJECT_DIR$/platforms/linux/starteasyfk.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/windows/stopeasyfk.bat" afterPath="$PROJECT_DIR$/platforms/windows/stopeasyfk.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/linux/stopeasyfk.sh" afterPath="$PROJECT_DIR$/platforms/linux/stopeasyfk.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/svninfo.ftl" afterPath="$PROJECT_DIR$/runtime/svninfo.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/resources/templates/themeconfig.properties" afterPath="$PROJECT_DIR$/documents/resources/templates/themeconfig.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/resources/templates/themepart.ftl" afterPath="$PROJECT_DIR$/documents/resources/templates/themepart.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/unicorn/webapp/page/top.ftl" afterPath="$PROJECT_DIR$/themes/unicorn/webapp/page/top.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/workflow/webapp/resources/page/traceflow.ftl" afterPath="$PROJECT_DIR$/baseapps/workflow/webapp/resources/page/traceflow.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/workflow/webapp/WEB-INF/classes/transition-bpm.xml" afterPath="$PROJECT_DIR$/baseapps/workflow/webapp/WEB-INF/classes/transition-bpm.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/unicorn/config/unicorn-theme.properties" afterPath="$PROJECT_DIR$/themes/unicorn/config/unicorn-theme.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/webapp/config/url.properties" afterPath="$PROJECT_DIR$/core/webapp/config/url.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/security/entitydef/mysql/user_login.sql" afterPath="$PROJECT_DIR$/core/security/entitydef/mysql/user_login.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/security/entitydef/mysql/user_login_seed.sql" afterPath="$PROJECT_DIR$/core/security/entitydef/mysql/user_login_seed.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baseapps/workflow/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/baseapps/workflow/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/images/webapp/images/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/core/images/webapp/images/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/webapp/dtd/webapp-catalog.xml" afterPath="$PROJECT_DIR$/core/webapp/dtd/webapp-catalog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <ignored path="easyfk.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/build/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="easyfk" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="CommonService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/common/src/cn/gorun8/easyfk/common/service/CommonService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="23" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Config.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/start/src/cn/gorun8/easyfk/base/start/Config.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Classpath.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/start/src/cn/gorun8/easyfk/base/start/Classpath.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TTLCachedObject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/base/src/cn/gorun8/easyfk/base/concurrent/TTLCachedObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="44" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="appcommon.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/baseapps/party/webapp/resources/page/appcommon.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.7777777">
+              <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DemoDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/documents/resources/templates/DemoDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommonServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/common/src/cn/gorun8/easyfk/common/service/impl/CommonServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".project" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.project">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5085617">
+              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hot-deploy/install/webapp/resources/page/index.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.611111">
+              <caret line="41" column="79" selection-start-line="41" selection-start-column="79" selection-end-line="41" selection-end-column="79" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/core/entity/src/com/westone/easyfk/entity/DelegatorFactory.java" />
+        <option value="$PROJECT_DIR$/core/entity/src/com/westone/easyfk/entity/Delegator.java" />
+        <option value="$PROJECT_DIR$/baseapps/party/webapp/resources/page/partygrouplist.ftl" />
+        <option value="$PROJECT_DIR$/core/security/entitydef/mysql/user_login_seed.sql" />
+        <option value="$PROJECT_DIR$/hot-deploy/yy/src/com/westone/easyfk/yy/service/DemoService.java" />
+        <option value="$PROJECT_DIR$/documents/resources/templates/DemoService.java" />
+        <option value="$PROJECT_DIR$/hot-deploy/yy/src/com/westone/easyfk/yy/controller/DemoController.java" />
+        <option value="$PROJECT_DIR$/documents/resources/templates/DemoController.java" />
+        <option value="$PROJECT_DIR$/hot-deploy/aa/config/sql/mysql/DemoMapper.xml" />
+        <option value="$PROJECT_DIR$/hot-deploy/aa/src/com/westone/easyfk/aa/controller/DemoController.java" />
+        <option value="$PROJECT_DIR$/themes/unicorn/webapp/page/login.ftl" />
+        <option value="$PROJECT_DIR$/hot-deploy/ss/config/sql/mysql/DemoMapper.xml" />
+        <option value="$PROJECT_DIR$/core/common/webcommon/ftl/generalexception.ftl" />
+        <option value="$PROJECT_DIR$/themes/unicorn/webapp/style/css/unicorn.main.css" />
+        <option value="$PROJECT_DIR$/themes/unicorn/webapp/style/css/unicorn.login.css" />
+        <option value="$PROJECT_DIR$/core/entity/src/com/westone/easyfk/entity/util/SequenceUtil.java" />
+        <option value="$PROJECT_DIR$/core/entity/src/com/westone/easyfk/entity/SequenceFactory.java" />
+        <option value="$PROJECT_DIR$/themes/unicorn/webapp/page/message.ftl" />
+        <option value="$PROJECT_DIR$/core/security/src/com/westone/easyfk/security/controller/UserLoginController.java" />
+        <option value="$PROJECT_DIR$/core/base/src/com/westone/easyfk/base/util/UtilHttp.java" />
+        <option value="$PROJECT_DIR$/core/common/src/com/westone/easyfk/common/controller/CommonController.java" />
+        <option value="$PROJECT_DIR$/core/entity/src/com/westone/easyfk/entity/GenericValue.java" />
+        <option value="$PROJECT_DIR$/baseapps/party/webapp/resources/page/appmenus.ftl" />
+        <option value="$PROJECT_DIR$/hot-deploy/install/webapp/resources/page/dbinstall.ftl" />
+        <option value="$PROJECT_DIR$/core/base/src/com/westone/easyfk/base/util/UtilMessages.java" />
+        <option value="$PROJECT_DIR$/core/images/webapp/images/js/common.js" />
+        <option value="$PROJECT_DIR$/themes/unicorn/webapp/page/footer.ftl" />
+        <option value="$PROJECT_DIR$/core/images/webapp/images/js/jquery/plugins/validate/localization/messages_cn.js" />
+        <option value="$PROJECT_DIR$/baseapps/party/webapp/resources/page/partyclsgrouplist.ftl" />
+        <option value="$PROJECT_DIR$/themes/unicorn/webapp/page/pagebar.ftl" />
+        <option value="$PROJECT_DIR$/baseapps/party/src/com/westone/easyfk/party/controller/PartyClassificationGroupController.java" />
+        <option value="$PROJECT_DIR$/baseapps/party/config/sql/mysql/PartyClsGroupMapper.xml" />
+        <option value="$PROJECT_DIR$/documents/DOCUMENT_HEADER" />
+        <option value="$PROJECT_DIR$/platforms/windows/starteasyfk.bat" />
+        <option value="$PROJECT_DIR$/ant.bat" />
+        <option value="$PROJECT_DIR$/documents/Notes" />
+        <option value="$PROJECT_DIR$/platforms/windows/stopeasyfk.bat" />
+        <option value="$PROJECT_DIR$/core/base/src/cn/gorun8/easyfk/base/util/UtilZip.java" />
+        <option value="$PROJECT_DIR$/baseapps/workflow/src/cn/gorun8/easyfk/workflow/controller/LeaveApproveTask.java" />
+        <option value="$PROJECT_DIR$/baseapps/party/src/cn/gorun8/easyfk/party/dao/PartyClsGroupDao.java" />
+        <option value="$PROJECT_DIR$/baseapps/component-load.xml" />
+        <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/hot-deploy/install/webapp/resources/page/footer.ftl" />
+        <option value="$PROJECT_DIR$/hot-deploy/install/webapp/resources/page/index.ftl" />
+        <option value="$PROJECT_DIR$/core/start/src/cn/gorun8/easyfk/base/start/Classpath.java" />
+        <option value="$PROJECT_DIR$/baseapps/party/webapp/resources/page/appcommon.ftl" />
+        <option value="$PROJECT_DIR$/documents/resources/templates/DemoDao.java" />
+        <option value="$PROJECT_DIR$/core/common/src/cn/gorun8/easyfk/common/service/CommonService.java" />
+        <option value="$PROJECT_DIR$/core/common/src/cn/gorun8/easyfk/common/service/impl/CommonServiceImpl.java" />
+        <option value="$PROJECT_DIR$/.project" />
+        <option value="$PROJECT_DIR$/hot-deploy/install/src/cn/gorun8/easyfk/install/controller/InitController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AOP</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <OptionsSetting value="true" id="Undo Check Out" />
+    <OptionsSetting value="true" id="Get Latest Version" />
+    <ConfirmationsSetting value="1" id="Add" />
+    <ConfirmationsSetting value="2" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="easyfk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="easyfk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="easyfk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="easyfk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.westone.easyfk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="easyfk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="easyfk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.westone.easyfk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="easyfk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="easyfk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.westone.easyfk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="easyfk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="easyfk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="easyfk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="easyfk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="easyfk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="easyfk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="easyfk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hot-deploy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="LayoutCode.rearrangeEntriesJava" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="LayoutCode.rearrangeEntries&lt;FreeMarker&gt;" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="options.lastSelected" value="copyright.profiles" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.022836538" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="LayoutCode.rearrangeEntriesXML" value="false" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\workspace\easyfk\core\entity" />
+      <recent name="G:\workspace\easyfk\core\entity\config" />
+      <recent name="G:\workspace\easyfk\baseapps\party\webapp\resources\page" />
+      <recent name="G:\workspace\easyfk\baseapps\party\config\sql\mysql" />
+      <recent name="G:\workspace\easyfk\baseapps\party\entitydef\mysql" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\workspace\easyfk\core\entity\config" />
+      <recent name="G:\workspace\easyfk\core\images\webapp\images\jquery" />
+      <recent name="G:\workspace\easyfk\core\common" />
+      <recent name="G:\workspace\easyfk\hot-deploy\hzp\webapp\WEB-INF" />
+      <recent name="G:\workspace\easyfk\documents\resources\templates" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.westone.easyfk.entity.util" />
+      <recent name="com.westone.easyfk.entity" />
+      <recent name="com.westone.easyfk.party.dao" />
+      <recent name="com.westone.easyfk.party.controller" />
+      <recent name="com.westone.easyfk.webapp.taglib" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Remote.easyfk">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/core/entity/lib/pagehelper-4.0.1.jar" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="false" name="easyfk" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="8008" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="8008" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Remote.easyfk" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\hzp\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="I:\dev\github\easyfk_svn\easyfk" />
+          <option name="myCopyRoot" value="I:\dev\github\easyfk_svn\easyfk" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="I:\dev\github\easyfk_svn\easyfk\.idea" />
+          <option name="myCopyRoot" value="I:\dev\github\easyfk_svn\easyfk\.idea" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="I:\dev\github\easyfk_svn\easyfk" />
+          <option name="myCopyRoot" value="I:\dev\github\easyfk_svn\easyfk" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a0af7b4c-719a-4b1c-8eae-b0891933c70f" name="Default" comment="" />
+      <created>1443575617296</created>
+      <option name="number" value="Default" />
+      <updated>1443575617296</updated>
+      <workItem from="1443575633015" duration="20807000" />
+      <workItem from="1444098574828" duration="13051000" />
+      <workItem from="1444275898906" duration="3317000" />
+      <workItem from="1444283510312" duration="4500000" />
+      <workItem from="1444351563562" duration="14346000" />
+      <workItem from="1444438811125" duration="24058000" />
+      <workItem from="1444612167390" duration="7950000" />
+      <workItem from="1444631271468" duration="3266000" />
+      <workItem from="1444703602390" duration="18477000" />
+      <workItem from="1444872051000" duration="139000" />
+      <workItem from="1444873738171" duration="19085000" />
+      <workItem from="1444965579437" duration="9541000" />
+      <workItem from="1445234299640" duration="8607000" />
+      <workItem from="1445248978890" duration="15593000" />
+      <workItem from="1445391020031" duration="19163000" />
+      <workItem from="1445492844859" duration="6655000" />
+      <workItem from="1445563573937" duration="2077000" />
+      <workItem from="1445576980406" duration="1383000" />
+      <workItem from="1445582057125" duration="9665000" />
+      <workItem from="1445822724421" duration="81000" />
+      <workItem from="1445912258437" duration="10914000" />
+      <workItem from="1445999137375" duration="18457000" />
+      <workItem from="1444612340484" duration="13010000" />
+      <workItem from="1446126160001" duration="4803000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="248945000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5122349" sideWeight="0.59289175" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43333334" sideWeight="0.7407108" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.81889766" sideWeight="0.74151856" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28139183" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0065252855" sideWeight="0.6276252" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19709209" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35056543" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.81904763" sideWeight="0.2584814" order="4" side_tool="false" content_ui="tabs" x="158" y="301" width="683" height="375" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15873016" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43333334" sideWeight="0.7407108" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19709209" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35056543" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.05079365" sideWeight="0.2584814" order="4" side_tool="false" content_ui="tabs" x="158" y="301" width="683" height="375" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15873016" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1904762" sideWeight="0.59289175" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26349208" sideWeight="0.40710825" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37883684" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4063492" sideWeight="0.6462036" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/core/base/src/com/westone/easyfk/base/common/controller/CommonControl.java</url>
+          <line>12</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/core/security/src/com/westone/easyfk/security/shiro/cache/RedisManager.java</url>
+          <line>84</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/core/common/src/com/westone/easyfk/common/service/impl/CommonServiceImpl.java</url>
+          <line>12</line>
+          <properties />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/hot-deploy/hzp/src/com/westone/easyfk/hzp/controller/DemoController.java</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/baseapps/workflow/src/com/westone/easyfk/workflow/controller/WorkflowController.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/baseapps/workflow/src/com/westone/easyfk/workflow/controller/WorkflowController.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/hot-deploy/mm/src/com/westone/easyfk/mm/controller/DemoController.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/hot-deploy/hzp/src/com/westone/easyfk/hzp/controller/DemoController.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/core/base/src/com/westone/easyfk/base/component/ComponentConfig.java</url>
+          <line>317</line>
+          <properties />
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/baseapps/party/src/com/westone/easyfk/party/service/impl/PartyClsGroupServiceImpl.java</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/baseapps/party/src/com/westone/easyfk/party/service/impl/PartyClsGroupServiceImpl.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/baseapps/party/src/com/westone/easyfk/party/controller/PartyGroupController.java</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/hot-deploy/ww/src/com/westone/easyfk/ww/service/impl/DemoServiceImpl.java</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/hot-deploy/rr/src/com/westone/easyfk/rr/service/impl/DemoServiceImpl.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="115" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/hot-deploy/rr/src/com/westone/easyfk/rr/controller/DemoController.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>jar://$PROJECT_DIR$/core/base/lib/spring-webmvc-4.1.2.jar!/org/springframework/web/servlet/handler/SimpleMappingExceptionResolver.class</url>
+          <line>70</line>
+          <properties class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver" />
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>jar://$PROJECT_DIR$/core/base/lib/spring-jdbc-4.1.2.jar!/org/springframework/jdbc/datasource/TransactionAwareDataSourceProxy.class</url>
+          <line>36</line>
+          <properties class="org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy" />
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>jar://$PROJECT_DIR$/core/base/lib/spring-jdbc-4.1.2.jar!/org/springframework/jdbc/datasource/TransactionAwareDataSourceProxy.class</url>
+          <line>59</line>
+          <properties class="org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy.TransactionAwareInvocationHandler" />
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>jar://$PROJECT_DIR$/core/base/lib/spring-jdbc-4.1.2.jar!/org/springframework/jdbc/datasource/lookup/AbstractRoutingDataSource.class</url>
+          <line>100</line>
+          <properties class="org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource" />
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>jar://$PROJECT_DIR$/core/entity/lib/mybatis-spring-1.2.2.jar!/org/mybatis/spring/SqlSessionFactoryBean.class</url>
+          <line>269</line>
+          <properties class="org.mybatis.spring.SqlSessionFactoryBean" />
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-defaults>
+        <breakpoint suspend="THREAD" type="java-line" />
+      </breakpoints-defaults>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="146" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+    <buildFile url="file://$PROJECT_DIR$/build.xml">
+      <targetFilters>
+        <filter targetName="init" isVisible="false" />
+        <filter targetName="ivy-init" isVisible="false" />
+        <filter targetName="sonar-init" isVisible="false" />
+        <filter targetName="refresh" isVisible="true" />
+        <filter targetName="clean-all" isVisible="true" />
+        <filter targetName="clean-logs" isVisible="true" />
+        <filter targetName="clean-tmp" isVisible="true" />
+        <filter targetName="clean-output" isVisible="true" />
+        <filter targetName="clean-xtra" isVisible="true" />
+        <filter targetName="clean-catalina" isVisible="true" />
+        <filter targetName="clean-cache" isVisible="true" />
+        <filter targetName="clean-tempfiles" isVisible="true" />
+        <filter targetName="tests" isVisible="false" />
+        <filter targetName="clean" isVisible="false" />
+        <filter targetName="build" isVisible="true" />
+        <filter targetName="docs" isVisible="true" />
+        <filter targetName="docs-all" isVisible="true" />
+        <filter targetName="start" isVisible="true" />
+        <filter targetName="apply-start" isVisible="true" />
+        <filter targetName="start-batch" isVisible="true" />
+        <filter targetName="start-debug" isVisible="true" />
+        <filter targetName="apply-start-debug" isVisible="true" />
+        <filter targetName="stop" isVisible="true" />
+        <filter targetName="apply-stop" isVisible="true" />
+        <filter targetName="status" isVisible="true" />
+        <filter targetName="run-tests" isVisible="true" />
+        <filter targetName="run-test" isVisible="true" />
+        <filter targetName="run-test-suite" isVisible="true" />
+        <filter targetName="apply-create-component" isVisible="true" />
+        <filter targetName="apply-create-web" isVisible="true" />
+        <filter targetName="apply-create-themes" isVisible="true" />
+        <filter targetName="dist" isVisible="true" />
+        <filter targetName="clean-dist" isVisible="false" />
+      </targetFilters>
+      <expanded value="true" />
+    </buildFile>
+    <buildFile url="file://$PROJECT_DIR$/build.xml">
+      <targetFilters>
+        <filter targetName="init" isVisible="false" />
+        <filter targetName="ivy-init" isVisible="false" />
+        <filter targetName="sonar-init" isVisible="false" />
+        <filter targetName="refresh" isVisible="true" />
+        <filter targetName="clean-all" isVisible="true" />
+        <filter targetName="clean-logs" isVisible="true" />
+        <filter targetName="clean-tmp" isVisible="true" />
+        <filter targetName="clean-output" isVisible="true" />
+        <filter targetName="clean-xtra" isVisible="true" />
+        <filter targetName="clean-catalina" isVisible="true" />
+        <filter targetName="clean-cache" isVisible="true" />
+        <filter targetName="clean-tempfiles" isVisible="true" />
+        <filter targetName="tests" isVisible="false" />
+        <filter targetName="clean" isVisible="false" />
+        <filter targetName="build" isVisible="true" />
+        <filter targetName="docs" isVisible="true" />
+        <filter targetName="docs-all" isVisible="true" />
+        <filter targetName="start" isVisible="true" />
+        <filter targetName="apply-start" isVisible="true" />
+        <filter targetName="start-batch" isVisible="true" />
+        <filter targetName="start-debug" isVisible="true" />
+        <filter targetName="apply-start-debug" isVisible="true" />
+        <filter targetName="stop" isVisible="true" />
+        <filter targetName="apply-stop" isVisible="true" />
+        <filter targetName="status" isVisible="true" />
+        <filter targetName="run-tests" isVisible="true" />
+        <filter targetName="run-test" isVisible="true" />
+        <filter targetName="run-test-suite" isVisible="true" />
+        <filter targetName="apply-create-component" isVisible="true" />
+        <filter targetName="apply-create-web" isVisible="true" />
+        <filter targetName="apply-create-themes" isVisible="true" />
+        <filter targetName="dist" isVisible="true" />
+        <filter targetName="clean-dist" isVisible="false" />
+      </targetFilters>
+      <expanded value="true" />
+    </buildFile>
+    <buildFile url="file://$PROJECT_DIR$/build.xml">
+      <targetFilters>
+        <filter targetName="init" isVisible="false" />
+        <filter targetName="ivy-init" isVisible="false" />
+        <filter targetName="sonar-init" isVisible="false" />
+        <filter targetName="refresh" isVisible="true" />
+        <filter targetName="clean-all" isVisible="true" />
+        <filter targetName="clean-logs" isVisible="true" />
+        <filter targetName="clean-tmp" isVisible="true" />
+        <filter targetName="clean-output" isVisible="true" />
+        <filter targetName="clean-xtra" isVisible="true" />
+        <filter targetName="clean-catalina" isVisible="true" />
+        <filter targetName="clean-cache" isVisible="true" />
+        <filter targetName="clean-tempfiles" isVisible="true" />
+        <filter targetName="tests" isVisible="false" />
+        <filter targetName="clean" isVisible="false" />
+        <filter targetName="build" isVisible="true" />
+        <filter targetName="docs" isVisible="true" />
+        <filter targetName="docs-all" isVisible="true" />
+        <filter targetName="start" isVisible="true" />
+        <filter targetName="apply-start" isVisible="true" />
+        <filter targetName="start-batch" isVisible="true" />
+        <filter targetName="start-debug" isVisible="true" />
+        <filter targetName="apply-start-debug" isVisible="true" />
+        <filter targetName="stop" isVisible="true" />
+        <filter targetName="apply-stop" isVisible="true" />
+        <filter targetName="status" isVisible="true" />
+        <filter targetName="run-tests" isVisible="true" />
+        <filter targetName="run-test" isVisible="true" />
+        <filter targetName="run-test-suite" isVisible="true" />
+        <filter targetName="apply-create-component" isVisible="true" />
+        <filter targetName="apply-create-web" isVisible="true" />
+        <filter targetName="apply-create-themes" isVisible="true" />
+        <filter targetName="dist" isVisible="true" />
+        <filter targetName="clean-dist" isVisible="false" />
+      </targetFilters>
+      <expanded value="true" />
+    </buildFile>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/themes/unicorn/webapp/page/message.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.75">
+          <caret line="14" column="77" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/core/base/lib/json-lib-2.2.3-jdk15.jar!/net/sf/json/JSONObject.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.079235">
+          <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baseapps/party/webapp/resources/page/appmenus.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.5">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/unicorn/webapp/js/unicorn.interface.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/unicorn/webapp/page/interface.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.388889">
+          <caret line="580" column="8" selection-start-line="580" selection-start-column="8" selection-end-line="580" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hot-deploy/install/webapp/resources/page/dbinstall.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6388888">
+          <caret line="94" column="52" selection-start-line="94" selection-start-column="16" selection-end-line="94" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/images/webapp/images/js/jquery/plugins/validate/jquery.validate.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50373137">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/images/webapp/images/js/jquery/plugins/validate/todo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.601695">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/unicorn/webapp/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17161018">
+          <caret line="3" column="64" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/images/webapp/images/js/jquery/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/unicorn/webapp/js/jquery.validate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40042374">
+          <caret line="272" column="52" selection-start-line="272" selection-start-column="52" selection-end-line="272" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/unicorn/webapp/page/form-validation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.61238533">
+          <caret line="225" column="66" selection-start-line="225" selection-start-column="66" selection-end-line="225" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/unicorn/webapp/page/footer.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/images/webapp/images/js/jquery/plugins/validate/localization/messages_cn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/images/webapp/images/js/jquery/plugins/validate/jquery.validate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="259" column="6" selection-start-line="259" selection-start-column="6" selection-end-line="259" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/images/webapp/images/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.6939163">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/documents/resources/templates/index.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.75">
+          <caret line="32" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baseapps/party/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6159696">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/core/base/lib/spring-web-4.1.2.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="132" column="0" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baseapps/party/webapp/resources/page/partyclsgrouplist.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/unicorn/webapp/page/pagebar.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/base/cert/newcert.pem">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/base/cert/certreq.pem">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/base/config/cache.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3254546">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baseapps/party/config/sql/mysql/PartyGroupMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34363636">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <marker date="1446127168170" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..party_group..." />
+            <marker date="1446127168170" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446127168170" expanded="true" signature="-1:-1" placeholder="UPDATE party..." />
+            <marker date="1446127168170" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baseapps/party/config/sql/mysql/PartyClsGroupMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19636364">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <folding>
+            <marker date="1446127168746" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..party_classification_group..." />
+            <marker date="1446127168746" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446127168746" expanded="true" signature="-1:-1" placeholder="UPDATE party..." />
+            <marker date="1446127168746" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/documents/DOCUMENT_HEADER">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.89615387">
+          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/unicorn/webapp/page/calendar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/documents/resources/templates/DemoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.089108914">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platforms/windows/starteasyfk.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4285715">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ant.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.857143">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/documents/Notes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platforms/windows/stopeasyfk.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="8.678572">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/base/src/cn/gorun8/easyfk/base/util/UtilZip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/base/src/cn/gorun8/easyfk/base/util/template/EasyFKFileTemplateLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baseapps/workflow/src/cn/gorun8/easyfk/workflow/controller/LeaveApproveTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baseapps/party/src/cn/gorun8/easyfk/party/dao/PartyClsGroupDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/standardSchemas/XMLSchema-instance.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51265824">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baseapps/component-load.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="56" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="487" column="68" selection-start-line="487" selection-start-column="68" selection-end-line="487" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hot-deploy/install/webapp/resources/page/footer.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4444444">
+          <caret line="5" column="78" selection-start-line="5" selection-start-column="69" selection-end-line="5" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hot-deploy/install/webapp/resources/page/index.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.611111">
+          <caret line="41" column="79" selection-start-line="41" selection-start-column="79" selection-end-line="41" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/start/src/cn/gorun8/easyfk/base/start/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/start/src/cn/gorun8/easyfk/base/start/Classpath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/base/src/cn/gorun8/easyfk/base/concurrent/TTLCachedObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="44" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baseapps/party/webapp/resources/page/appcommon.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.7777777">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/documents/resources/templates/DemoDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/common/src/cn/gorun8/easyfk/common/service/CommonService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/common/src/cn/gorun8/easyfk/common/service/impl/CommonServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hot-deploy/install/src/cn/gorun8/easyfk/install/controller/InitController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6558219">
+          <caret line="95" column="40" selection-start-line="95" selection-start-column="40" selection-end-line="95" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.project">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5085617">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="Copyright.UI">
+        <settings>
+          <last-edited>easyfk</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>easyfk</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

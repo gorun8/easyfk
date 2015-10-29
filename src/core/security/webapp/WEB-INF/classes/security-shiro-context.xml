@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	本文件用于配置Security组件的安全访问
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:c="http://www.springframework.org/schema/c" xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="requestInitFilter" class="cn.gorun8.easyfk.security.shiro.RequestInitFilter"/>
+   <!--
+    <bean id="casCheckFilter" class="cn.gorun8.easyfk.security.shiro.CasCheckFilter"/>
+	-->
+
+    <bean id="x509RetryLimitMatcher" class="cn.gorun8.easyfk.security.shiro.x509.X509RetryLimitMatcher">
+        <!--
+        <constructor-arg ref="cacheManager"/>
+         -->
+        <property name="hashAlgorithmName" value="md5"/>
+        <property name="hashIterations" value="2"/>
+        <property name="storedCredentialsHexEncoded" value="true"/>
+    </bean>
+
+    <bean id="passwordRetryLimitMatcher" class="cn.gorun8.easyfk.security.shiro.passwd.PasswordRetryLimitMatcher">
+        <!--
+        <constructor-arg ref="cacheManager"/>
+         -->
+        <property name="hashAlgorithmName" value="md5"/>
+        <property name="hashIterations" value="2"/>
+        <property name="storedCredentialsHexEncoded" value="true"/>
+    </bean>
+    <bean id="exceptionStopStrategy" class="cn.gorun8.easyfk.security.shiro.ExceptionStopStrategy"></bean>
+
+
+    <!-- shiro redisManager -->
+    <bean id="redisManager" class="cn.gorun8.easyfk.security.shiro.cache.RedisManager">
+        <property name="host" value="${security.session.cache.redis.host}"/>
+        <property name="port" value="${security.session.cache.redis.port}"/>
+        <property name="expire" value="${security.session.cache.redis.expire.second}"/>
+        <!-- optional properties:
+         <property name="timeout" value="${security.session.cache.redis.timeout.second}"/>
+        <property name="password" value="${security.session.cache.redis.password}"/>
+        -->
+    </bean>
+
+	<!-- shiro jdbcCacheManager -->
+	<bean id="jdbcManager" class="cn.gorun8.easyfk.security.shiro.cache.JDBCManager">
+		<property name="expire" value="${security.session.cache.redis.expire.second}"/>
+	</bean>
+
+    <!-- easyFKSessionDAO ,采用redis缓存easyFKManager设为redisManager,采用数据库则设为jdbcManager-->
+    <bean id="easyFKSessionDAO" class="cn.gorun8.easyfk.security.shiro.cache.EasyFKSessionDAO">
+        <property name="easyFKManager" ref="redisManager"/>
+    </bean>
+
+    <!-- sessionManager -->
+    <bean id="sessionManager" class="org.apache.shiro.web.session.mgt.DefaultWebSessionManager">
+        <property name="sessionDAO" ref="easyFKSessionDAO"/>
+        <!-- <property name="sessionValidationScheduler" ref="shiroSessionValidationScheduler"/> -->
+        <property name="sessionValidationInterval" value="${security.sessionValidationInterval.second}"/>
+        <property name="globalSessionTimeout" value="${security.globalSessionTimeout.second}"/>
+        <property name="sessionIdCookie.domain" value="${security.sessionIdCookie.domain}"/>
+        <property name="sessionIdCookie.name" value="${security.sessionIdCookie.name}"/>
+        <property name="sessionIdCookie.path" value="${security.sessionIdCookie.path}"/>
+
+        <!-- <property name="sessionListeners">
+            <list>
+                <bean class=""/>
+            </list>
+        </property> -->
+    </bean>
+
+	<!-- cacheManager -->
+	<bean id="easyFKCacheManager" class="cn.gorun8.easyfk.security.shiro.cache.EasyFKCacheManager">
+		<property name="easyFKManager" ref="redisManager" />
+	</bean>
+
+	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+		<property name="realms">
+		<list>
+		 	<bean id="passwordRealm" class="cn.gorun8.easyfk.security.shiro.passwd.PasswordRealm">
+		 		<property name="credentialsMatcher" ref="passwordRetryLimitMatcher"/>
+		 	</bean>
+			<bean id="x509Realm" class="cn.gorun8.easyfk.security.shiro.x509.X509Realm">
+				<property name="credentialsMatcher" ref="x509RetryLimitMatcher" />
+			</bean>
+		</list>
+		</property>
+
+		<property name="authenticator.authenticationStrategy" ref="exceptionStopStrategy" />
+		<property name="sessionManager" ref="sessionManager" />
+		<property name="cacheManager" ref="easyFKCacheManager" />
+
+		<!-- By default the servlet container sessions will be used.  Uncomment this line
+             to use shiro's native sessions (see the JavaDoc for more): -->
+		<!-- <property name="sessionMode" value="native"/> -->
+
+	</bean>
+
+
+	<bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+		<property name="securityManager" ref="securityManager" />
+		<property name="loginUrl" value="${security.login.url}" />
+ 		<!-- <property name="unauthorizedUrl" value="/error" /> -->
+		<property name="filters">
+		 	<map>    
+		      <entry key="reqinit" value-ref="requestInitFilter"/>
+				<!--
+                        <entry key="cascheck" value-ref="casCheckFilter"/>
+                    -->
+           </map>   
+		</property>
+		<property name="filterChainDefinitions">
+			<value>
+				/login/** = anon,reqinit
+				/loginajax/** = anon
+				/style/** = anon
+				/commjson/** = anon
+				/js/** = anon
+				/captcha.jpg/** = anon
+				/checkcaptcha/** = anon
+				/** = authc,reqinit
+
+			</value>
+		</property>
+	</bean>
+	 
+</beans>

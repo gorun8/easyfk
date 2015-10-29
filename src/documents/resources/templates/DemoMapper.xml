@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        <!--
+        特别注意：该文件必须以Mapper.xml结尾，否则不会被系统加载。
+        -->
+        <!--mybatis 的模板文件-->
+        <mapper namespace="cn.gorun8.easyfk.@component-name@.dao.DemoDao">
+            <insert id="saveMaster" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+                在这写上SQL
+            </insert>
+
+            <insert id="saveSlave" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+                在这写上SQL
+            </insert>
+
+            <select id="listByPage" resultType="cn.gorun8.easyfk.entity.GenericValue">
+                 在这写上SQL
+            </select>
+        </mapper>
+
+        

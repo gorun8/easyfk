@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gorun8.easyfk.party.dao.PartyClsGroupDao">
+
+
+    <select id="findPartyClsGroupList" parameterType="java.lang.String"   resultType="cn.gorun8.easyfk.entity.GenericValue">
+        SELECT  * FROM party_classification_group
+    </select>
+
+    <insert id="createPartyClsGroup" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+            INSERT INTO party_classification_group(
+             PARTY_CLASSIFICATION_GROUP_ID,
+             PARTY_CLASSIFICATION_TYPE_ID,
+             PARENT_GROUP_ID,
+             DESCRIPTION)
+            VALUES (
+            #{partyClsGroup.PARTY_CLASSIFICATION_GROUP_ID},
+            #{partyClsGroup.PARTY_CLASSIFICATION_TYPE_ID},
+            #{partyClsGroup.PARENT_GROUP_ID},
+            #{partyClsGroup.DESCRIPTION}
+            )
+
+    </insert>
+
+    <update id="savePartyClsGroup" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+          UPDATE party_classification_group
+          SET
+           PARTY_CLASSIFICATION_GROUP_ID = #{partyClsGroup.PARTY_CLASSIFICATION_GROUP_ID},
+           PARTY_CLASSIFICATION_TYPE_ID = #{partyClsGroup.PARTY_CLASSIFICATION_TYPE_ID},
+           PARENT_GROUP_ID = #{partyClsGroup.PARENT_GROUP_ID},
+           DESCRIPTION = #{partyClsGroup.DESCRIPTION}
+          WHERE
+            PARTY_ID =#{partyGroup.PARTY_CLASSIFICATION_GROUP_ID}
+    </update>
+
+    <delete id="removePartyClsGroupByPrimaryKey" parameterType="java.lang.String">
+            DELETE  FROM party_classification_group
+            WHERE   PARTY_CLASSIFICATION_GROUP_ID =#{partyClsGroupId}
+    </delete>
+</mapper>

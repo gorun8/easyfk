@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Project:Easy Web Framework
+
+Description: This project is based on much more open source projects than ever before,
+             and can be applied to mostly web development environment.
+Author:hezhiping   Email:110476592@qq.com
+
+=============================================================================================
+
+-->
+
+<easyfk-containers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.gorun8.cn/dtds/easyfk-containers.xsd">
+    <!-- load the easyfk component container (always first) -->
+    <container name="component-container" class="cn.gorun8.easyfk.base.container.ComponentContainer"/>
+
+    <!-- load the cached classloader container (always second) -->
+    <container name="classloader-container" class="cn.gorun8.easyfk.base.container.ClassLoaderContainer"/>
+
+<!-- load the data load container, runs the entity data load stuff -->
+     <!-- 
+     <container name="dataload-container" class="cn.gorun8.easyfk.entityext.data.EntityDataLoadContainer">
+        <property name="delegator-name" value="default"/>
+        <property name="entity-group-name" value="cn.easyfk"/>
+    </container>
+    -->
+  
+   <container name="catalina-container" class="cn.gorun8.easyfk.catalina.container.CatalinaContainer">
+        <property name="run-setup-mode" value="true"/>
+        <property name="enable-app-list" value="install,images"/><!--加载的应用列表，多个应用之间用“，”分开-->
+        <property name="delegator-name" value="default"/>
+        <property name="use-naming" value="false"/>
+        <property name="debug" value="0"/>
+        <property name="catalina-runtime-home" value="runtime/catalina"/>
+        <property name="apps-context-reloadable" value="false"/>
+        <property name="apps-cross-context" value="false"/>
+        <property name="apps-distributable" value="false"/> 
+         <property name="default-server" value="engine">
+            <property name="default-host" value="0.0.0.0"/>
+            <property name="jvm-route" value="jvm1"/>
+            <property name="access-log-pattern">
+                <property-value>%h %l %u %t "%r" %s %b "%{Referer}i" "%{User-Agent}i"</property-value>
+            </property>
+            <property name="access-log-resolve" value="true"/>
+            <property name="access-log-rotate" value="true"/>
+            <property name="access-log-prefix" value="access_log."/>
+            <property name="access-log-dir" value="runtime/logs"/>
+              <property name="enable-cross-subdomain-sessions" value="false"/>
+             
+        </property>
+         
+        <property name="http-connector" value="connector">
+             <property name="allowTrace" value="false"/>
+            <property name="emptySessionPath" value="false"/>
+            <property name="enableLookups" value="false"/>
+            <property name="maxPostSize" value="2097152"/>
+            <property name="protocol" value="HTTP/1.1"/>
+            <property name="proxyName" value=""/>
+            <property name="proxyPort" value=""/>
+            <property name="redirectPort" value=""/>
+            <property name="scheme" value="http"/>
+            <property name="secure" value="false"/>
+            <property name="URIEncoding" value="UTF-8"/>
+            <property name="useBodyEncodingForURI" value="false"/>
+            <property name="xpoweredBy" value="true"/>
+            
+            <property name="acceptCount" value="10"/>
+            <property name="address" value="0.0.0.0"/>
+            <property name="bufferSize" value="2048"/>
+            <property name="compression" value="on"/>
+            <property name="compressableMimeType" value="text/html,text/xml,text/plain,text/javascript,text/css"/>
+            <property name="noCompressionUserAgents" value=""/>
+            <property name="connectionLinger" value="-1"/>
+            <property name="connectionTimeout" value="60000"/>
+            <property name="disableUploadTimeout" value="false"/>
+            <property name="maxHttpHeaderSize" value="4096"/>
+            <property name="maxKeepAliveRequests" value="100"/>
+            <property name="maxSpareThreads" value="50"/>
+            <property name="maxThreads" value="100"/>
+            <property name="minSpareThreads" value="4"/>
+            <property name="port" value="9090"/>
+            <property name="restrictedUserAgents" value=""/>
+            <property name="server" value=""/>
+            <property name="socketBuffer" value="9000"/>
+            <property name="strategy" value="lf"/>
+            <property name="tcpNoDelay" value="true"/>
+            <property name="threadPriority" value="java.lang.Thread#NORM_PRIORITY"/>
+        </property>
+        
+    </container>
+   
+</easyfk-containers>
+

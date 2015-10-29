@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Project:Easy Web Framework
+
+Description: This project is based on much more open source projects than ever before,
+             and can be applied to mostly web development environment.
+Author:hezhiping   Email:110476592@qq.com
+
+=============================================================================================
+
+-->
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+	debug="false">
+
+	<!-- async appender -->
+	<appender name="async" class="org.apache.log4j.AsyncAppender">
+		<param name="locationInfo" value="true" />
+		<param name="blocking" value="false" />
+		<param name="bufferSize" value="256" />
+		<appender-ref ref="stdout" />
+		<appender-ref ref="easyfk-file" />
+		<appender-ref ref="easyfk-html" />
+		<appender-ref ref="debug" />
+		<appender-ref ref="error" />
+		<!--<appender-ref ref="socket"/> -->
+		<!-- <appender-ref ref="email"/> -->
+	</appender>
+
+	<!-- stdout appender -->
+	<appender name="stdout" class="org.apache.log4j.ConsoleAppender">
+		<param name="threshold" value="info" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d (%t) [%24F:%-3L:%-5p]%x %m%n" />
+		</layout>
+	</appender>
+
+	<!-- easyfk file appender -->
+	<appender name="easyfk-file" class="org.apache.log4j.RollingFileAppender">
+		<param name="maxFileSize" value="1000KB" />
+		<param name="maxBackupIndex" value="10" />
+		<param name="File" value="runtime/logs/easyfk.log" />
+		<param name="threshold" value="info" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d (%t) [%24F:%-3L:%-5p]%x %m%n" />
+		</layout>
+	</appender>
+
+	<!-- easyfk web file appender -->
+
+	<appender name="easyfk-html" class="org.apache.log4j.RollingFileAppender">
+		<param name="maxFileSize" value="500KB" />
+		<param name="maxBackupIndex" value="1" />
+		<param name="File" value="runtime/logs/easyfk.html" />
+		<param name="threshold" value="info" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="&lt;div class=&quot;%p&quot;&gt;%d (%t) [%24F:%-3L:%-5p]%x %m &lt;/div&gt;%n" />
+		</layout>
+	</appender>
+
+
+	<!-- debug log -->
+	<appender name="debug" class="org.apache.log4j.RollingFileAppender">
+		<param name="maxFileSize" value="10000KB" />
+		<param name="maxBackupIndex" value="10" />
+		<param name="File" value="runtime/logs/debug.log" />
+		<param name="Append" value="false" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d (%t) [%24F:%-3L:%-5p]%x %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMax" value="info" />
+			<param name="LevelMin" value="trace" />
+			<param name="AcceptOnMatch" value="true" />
+		</filter>
+	</appender>
+
+	<!-- error log -->
+	<appender name="error" class="org.apache.log4j.RollingFileAppender">
+		<param name="maxFileSize" value="10000KB" />
+		<param name="maxBackupIndex" value="10" />
+		<param name="File" value="runtime/logs/error.log" />
+		<param name="Append" value="false" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d (%t) [%24F:%-3L:%-5p]%x %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMax" value="fatal" />
+			<param name="LevelMin" value="error" />
+			<param name="AcceptOnMatch" value="true" />
+		</filter>
+	</appender>
+
+	<!-- special minerva log <appender name="minerva-log" class="org.apache.log4j.RollingFileAppender"> 
+		<param name="maxFileSize" value="5000KB"/> <param name="maxBackupIndex" value="10"/> 
+		<param name="File" value="runtime/logs/minerva.log"/> <param name="Append" 
+		value="false"/> <layout class="org.apache.log4j.PatternLayout"> <param name="ConversionPattern" 
+		value="%d (%t) [%24F:%-3L:%-5p]%x %m%n"/> </layout> </appender> -->
+
+	<!-- chainsaw remote socket log monitor <appender name="socket" class="org.apache.log4j.net.SocketHubAppender"> 
+		<param name="port" value="4445"/> </appender> -->
+	<!-- fatal error SMTP notification <appender name="email" class="org.apache.log4j.net.SMTPAppender"> 
+		<param name="threshold" value="fatal"/> <param name="BufferSize" value="512"/> 
+		<param name="SMTPHost" value="localhost"/> <param name="From" value="easyfk-error@localhost"/> 
+		<param name="To" value="neo@foobar.com"/> <param name="Subject" value="[EasyFK-Notify] 
+		Application message"/> <layout class="org.apache.log4j.PatternLayout"> <param 
+		name="ConversionPattern" value="%d (%t) [%24F:%-3L:%-5p]%x %m%n"/> </layout> 
+		</appender> -->
+
+
+
+	<appender name="freemarker-log" class="org.apache.log4j.RollingFileAppender">
+		<param name="maxFileSize" value="5000KB" />
+		<param name="maxBackupIndex" value="10" />
+		<param name="File" value="runtime/logs/freemarker.log" />
+		<param name="Append" value="false" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d (%t) [%24F:%-3L:%-5p]%x %m%n" />
+		</layout>
+	</appender>
+
+	<category name="cn.gorun8.easyfk.base.converter.Converters">
+		<priority value="warn" />
+	</category>
+
+	<category name="org.apache.axis">
+		<priority value="warn" />
+	</category>
+
+	<category name="org.apache.catalina">
+		<priority value="warn" />
+	</category>
+
+	<category name="org.apache.commons.digester">
+		<priority value="warn" />
+	</category>
+
+	<category name="org.apache.coyote">
+		<priority value="warn" />
+	</category>
+
+	<category name="org.apache.jasper">
+		<priority value="warn" />
+	</category>
+
+	<category name="org.apache.jk">
+		<priority value="warn" />
+	</category>
+
+	<!-- log4j category -->
+	<category name="org.apache.log4j">
+		<priority value="warn" />
+	</category>
+
+	<category name="org.apache.tomcat">
+		<priority value="warn" />
+	</category>
+
+	<category name="freemarker">
+		<priority value="warn" />
+		<appender-ref ref="freemarker-log" />
+	</category>
+
+	<!-- root logger -->
+	<root>
+		<priority value="all"></priority>
+		<appender-ref ref="async" />
+	</root>
+</log4j:configuration>

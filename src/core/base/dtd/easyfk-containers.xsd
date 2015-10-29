@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Project:Easy Web Framework
+
+Description: This project is based on much more open source projects than ever before,
+             and can be applied to mostly web development environment.
+Author:hezhiping   Email:110476592@qq.com
+
+=============================================================================================
+
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="easyfk-containers">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="container"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="container">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="property"/>
+            </xs:sequence>
+            <xs:attributeGroup ref="attlist.container"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="attlist.container">
+        <xs:attribute type="xs:string" name="name" use="required"/>
+        <xs:attribute type="xs:string" name="class" use="required"/>
+    </xs:attributeGroup>
+    <xs:element name="property">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="property"/>
+                <xs:element minOccurs="0" ref="property-value"/>
+            </xs:sequence>
+            <xs:attributeGroup ref="attlist.property"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="attlist.property">
+        <xs:attribute type="xs:string" name="name" use="required"/>
+        <xs:attribute type="xs:string" name="value"/>
+    </xs:attributeGroup>
+    <xs:element name="property-value" type="any"/>
+    <xs:complexType name="any" mixed="true">
+        <xs:sequence>
+            <xs:any minOccurs="0" maxOccurs="unbounded" processContents="skip"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
+<!--
+
+    Container properties are relative to the implementation class for details
+    of which properties are available see the docs on the class defined.
+
+    Example:
+
+    <easyfk-containers>
+        <container name="jetty-container" class="cn.gorun8.easyfk.base.container.JettyContainer">
+            <property name="default-listener">
+              <property name="type" value="default"/>
+              <property name="host" value="0.0.0.0"/>
+              <property name="port" value="80"/>
+              <property name="min-threads" value="5"/>
+              <property name="max-threads" value="250"/>
+              <property name="max-idle-time" value="30000"/>
+              <property name="max-read-time" value="60000"/>
+            </property>
+        </container>
+        <container name="component-container" class="cn.gorun8.easyfk.base.container.ComponentContainer">
+            <property name="entity" value="${easyfk.home}/core/entity/component.xml"/>
+            <property name="service" value="${easyfk.home}/core/service/component.xml"/>
+            <property name="party" value="${easyfk.home}/baseapps/party/component.xml"/>
+        </container>
+    </easyfk-containers>
+
+-->

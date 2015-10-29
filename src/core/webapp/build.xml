@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Project:Easy Web Framework
+
+Description: This project is based on much more open source projects than ever before,
+             and can be applied to mostly web development environment.
+Author:hezhiping   Email:110476592@qq.com
+
+=============================================================================================
+
+-->
+
+<project name="WebApp Component" default="jar" basedir=".">
+    <import file="../../common.xml"/>
+
+    <!-- ================================================================== -->
+    <!-- Initialization of all property settings                            -->
+    <!-- ================================================================== -->
+
+    <property name="desc" value="Web App Component"/>
+    <property name="name" value="webapp"/>
+    <property name="easyfk.home.dir" value="../.."/>
+
+    <path id="local.class.path">
+        <fileset dir="${lib.dir}" includes="*.jar"/>
+        <fileset dir="../base/lib" includes="*.jar"/>
+        <fileset dir="../base/lib/commons" includes="*.jar"/>
+        <fileset dir="../base/lib/j2eespecs" includes="*.jar"/>
+        <fileset dir="../base/lib/scripting" includes="*.jar"/>
+        <fileset dir="../start/build/lib" includes="*.jar"/>
+        <fileset dir="../base/build/lib" includes="*.jar"/>
+        <fileset dir="../entity/lib" includes="*.jar"/>
+        <fileset dir="../entity/build/lib" includes="*.jar"/>
+     
+         
+    </path>
+
+    <patternset id="src.exc.set">
+        <!-- JasperReports dependent files -->
+        <exclude name="cn/gorun8/easyfk/webapp/view/JasperReportsPdfViewHandler.java"/>
+        <exclude name="cn/gorun8/easyfk/webapp/view/JasperReportsXmlViewHandler.java"/>
+        <exclude name="cn/gorun8/easyfk/webapp/view/JasperReportsJXlsViewHandler.java"/>
+        <exclude name="cn/gorun8/easyfk/webapp/view/JasperReportsPoiXlsViewHandler.java"/>
+        <!-- JPublish/EdenLib dependent files -->
+        <exclude name="cn/gorun8/easyfk/webapp/view/GenericViewRenderer.java"/>
+        <exclude name="cn/gorun8/easyfk/webapp/view/JPublishViewHandler.java"/>
+        <exclude name="cn/gorun8/easyfk/webapp/view/JPublishWrapper.java"/>
+        <exclude name="cn/gorun8/easyfk/webapp/ftl/FreeMarkerViewRenderer.java"/>
+        <exclude name="cn/gorun8/easyfk/webapp/ftl/JpCacheIncludeTransform.java"/>
+    </patternset>
+
+    <target name="jar" depends="classes">
+        <main-jar/>
+        <test-jar/>
+    </target>
+</project>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Project:Easy Web Framework
+
+Description: This project is based on much more open source projects than ever before,
+             and can be applied to mostly web development environment.
+Author:hezhiping   Email:110476592@qq.com
+
+=============================================================================================
+
+-->
+<easyfk-application name="party" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.gorun8.cn/dtds/easyfk-application.xsd">
+    
+    <!-- place the config directory on the classpath to access configuration files -->
+    <classpath type="dir" location="config"/>
+   
+    <!-- load single or multiple external libraries -->
+    <classpath type="jar" location="build/lib/*"/>
+    <classpath type="jar" location="lib/*"/>
+	 <!-- please uncomment below if necessary -->
+
+    <entity-resource type="model" reader-name="main" loader="main" location="entitydef/${db.type}/party.sql"/>
+    <entity-resource type="model" reader-name="main" loader="main" location="entitydef/${db.type}/person.sql"/>
+    <entity-resource type="seed" reader-name="main" loader="main" location="entitydef/${db.type}/partyseed.sql"/>
+
+
+    <!-- web baseapps; will be mounted when using the embedded container -->
+    <webapp name="party"
+        title="会员管理"
+        server="default-server"
+        location="webapp"
+        mount-point="/party"/>
+</easyfk-application>

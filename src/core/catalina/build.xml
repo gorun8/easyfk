@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Project:Easy Web Framework
+
+Description: This project is based on much more open source projects than ever before,
+             and can be applied to mostly web development environment.
+Author:hezhiping   Email:110476592@qq.com
+
+=============================================================================================
+
+-->
+<project name="Catalina" default="jar" basedir=".">
+    <import file="../../common.xml"/>
+
+    <!-- ================================================================== -->
+    <!-- Initialization of all property settings                            -->
+    <!-- ================================================================== -->
+
+    <property name="desc" value="Catalina Http/Servlet Container"/>
+    <property name="name" value="catalina"/>
+    <property name="easyfk.home.dir" value="../.."/>
+
+    <path id="local.class.path">
+        <fileset dir="${lib.dir}" includes="*.jar"/>
+        <fileset dir="../base/lib" includes="*.jar"/>
+        <fileset dir="../base/lib/commons" includes="*.jar"/>
+        <fileset dir="../base/lib/j2eespecs" includes="*.jar"/>
+        <fileset dir="../base/build/lib" includes="*.jar"/>
+    </path>
+</project>

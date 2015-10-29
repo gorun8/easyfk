@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Project:Easy Web Framework
+
+Description: This project is based on much more open source projects than ever before,
+             and can be applied to mostly web development environment.
+Author:hezhiping   Email:110476592@qq.com
+
+=============================================================================================
+
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="regions">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="define"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="define">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="put"/>
+            </xs:sequence>
+            <xs:attributeGroup ref="attlist.define"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="attlist.define">
+        <xs:attribute name="id" use="required"/>
+        <xs:attribute name="template"/>
+        <xs:attribute name="region"/>
+    </xs:attributeGroup>
+    <!--
+        NOTE: type can be direct (for direct inline content), region (for a nested region),
+            default (for JSP/Servlet resource), or any ViewHandler defined in the corresponding controller.xml file
+    -->
+    <xs:element name="put">
+        <xs:complexType mixed="true">
+            <xs:attributeGroup ref="attlist.put"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="attlist.put">
+        <xs:attribute name="section" use="required"/>
+        <xs:attribute name="info"/>
+        <xs:attribute name="role"/>
+        <xs:attribute name="permission"/>
+        <xs:attribute name="action"/>
+        <xs:attribute name="content"/>
+        <xs:attribute name="type" default="default"/>
+    </xs:attributeGroup>
+</xs:schema>

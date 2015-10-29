@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Project:Easy Web Framework
+
+Description: This project is based on much more open source projects than ever before,
+             and can be applied to mostly web development environment.
+Author:hezhiping   Email:110476592@qq.com
+
+=============================================================================================
+
+-->
+
+<component-loader xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.gorun8.cn/dtds/component-loader.xsd">
+    <load-components parent-directory="core"/>
+    <load-components parent-directory="themes"/>
+    <load-components parent-directory="baseapps"/>
+    <load-components parent-directory="hot-deploy"/>
+</component-loader>

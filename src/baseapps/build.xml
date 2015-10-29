@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Project:Easy Web Framework
+
+Description: This project is based on much more open source projects than ever before,
+             and can be applied to mostly web development environment.
+Author:hezhiping   Email:110476592@qq.com
+
+=============================================================================================
+
+-->
+
+<project name="Basic Applications Build" default="build" basedir=".">
+    <import file="../macros.xml"/>
+
+    <filelist id="baseapps-builds" dir="." files="workflow/build.xml,party/build.xml"/>
+   	 
+    <!-- ================================================================== -->
+    <!-- Removes all created files and directories                          -->
+    <!-- ================================================================== -->
+
+    <target name="refresh">
+        <antcall target="clean-all"/>
+        <antcall target="build"/>
+    </target>
+
+    <target name="clean-all">
+        <antcall target="clean-xtra"/>
+        <antcall target="clean"/>
+    </target>
+
+    <target name="clean-xtra" depends="">
+        <delete verbose="on">
+            <fileset dir="." includes="**/.nbattrs,**/*~,**/.#*,**/.DS_Store,**/*.rej,**/*.orig"/>
+        </delete>
+    </target>
+
+    <target name="tests">
+    </target>
+
+    <target name="clean">
+        <iterate target="clean" filelist="baseapps-builds"/>
+        <delete file="easyfk.jar"/>
+        <echo message="[clean] ========== Done Cleaning Basic  Applications =========="/>
+    </target>
+
+    <!-- ================================================================== -->
+    <!-- Build Components                                                   -->
+    <!-- ================================================================== -->
+
+    <target name="build" depends="">
+        <echo message="[build] ========== Start Building Basic Applications (Compile) =========="/>
+
+        <iterate inheritall="false" filelist="baseapps-builds"/>
+
+        <echo message="[build] ========== Done Building Basic Applications (Compile) =========="/>
+    </target>
+
+    <!-- ================================================================== -->
+    <!-- Build JavaDocs                                                     -->
+    <!-- ================================================================== -->
+
+    <target name="docs" depends="">
+        <echo message="[docs] ========== Start Building Basic Applications (JavaDoc) =========="/>
+
+        <iterate target="docs" filelist="baseapps-builds"/>
+
+        <echo message="[docs] ========== Done Building Basic Applications (JavaDocs) =========="/>
+    </target>
+</project>

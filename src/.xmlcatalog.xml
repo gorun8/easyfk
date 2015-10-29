@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Project:Easy Web Framework
+
+Description: This project is based on much more open source projects than ever before,
+             and can be applied to mostly web development environment.
+Author:hezhiping   Email:110476592@qq.com
+
+=============================================================================================
+
+-->
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <nextCatalog catalog="platform:/resource/easyfk/core/base/dtd/base-catalog.xml"/>
+  <nextCatalog catalog="platform:/resource/easyfk/core/datafile/dtd/datafiles-catalog.xml"/>
+  <nextCatalog catalog="platform:/resource/easyfk/core/entity/dtd/entity-catalog.xml"/>
+  <nextCatalog catalog="platform:/resource/easyfk/core/minilang/dtd/minilang-catalog.xml"/>
+  <nextCatalog catalog="platform:/resource/easyfk/core/service/dtd/service-catalog.xml"/>
+  <nextCatalog catalog="platform:/resource/easyfk/core/testtools/dtd/testtools-catalog.xml"/>
+  <nextCatalog catalog="platform:/resource/easyfk/core/webapp/dtd/webapp-catalog.xml"/>
+  <nextCatalog catalog="platform:/resource/easyfk/core/widget/dtd/widget-catalog.xml"/>
+</catalog>

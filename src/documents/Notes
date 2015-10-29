@@ -1,0 +1,8 @@
+1、修改服务端口，修改core/base/config目录下的相应xml配置文件中的端口号。比如easyfk-containers.xml是运行时的containners
+如运行时的端口由<property name="port" value="8080"/>设置，
+默认是8080可以根据需要改成其它的
+
+2、在同一台机子上运行两个easyfk服务，需要修改服务端口，除此之外，还要修改管理端口，在
+core\start\src\cn\gorun8\easyfk\base\start\start.properties文件中。
+修改easyfk.admin.port。因为文件是编译时已经生存在easyfk.jar中了，如果修改需要修改easyfk.jar中的相应文件，
+或者重新编译

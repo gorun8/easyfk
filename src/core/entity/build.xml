@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Project:Easy Web Framework
+
+Description: This project is based on much more open source projects than ever before,
+             and can be applied to mostly web development environment.
+Author:hezhiping   Email:110476592@qq.com
+
+=============================================================================================
+
+-->
+
+<project name="Entity" default="jar" basedir=".">
+    <import file="../../common.xml"/>
+
+    <!-- ================================================================== -->
+    <!-- Initialization of all property settings                            -->
+    <!-- ================================================================== -->
+
+    <property name="desc" value="Entity Component"/>
+    <property name="name" value="entity"/>
+    <property name="easyfk.home.dir" value="../.."/>
+
+    <path id="local.class.path">
+        <fileset dir="${lib.dir}" includes="*.jar"/>
+        <fileset dir="../base/lib" includes="*.jar"/>
+        <fileset dir="../base/lib/commons" includes="*.jar"/>
+        <fileset dir="../base/lib/j2eespecs" includes="*.jar"/>
+        <fileset dir="../base/lib/scripting" includes="*.jar"/>
+        <fileset dir="../base/build/lib" includes="*.jar"/>
+        <!-- 
+        <fileset dir="../sql/build/lib" includes="*.jar"/>
+         -->
+    </path>
+
+    <patternset id="src.exc.set">
+        <exclude name="cn/gorun8/easyfk/entity/connection/XaPoolConnectionFactory.java"/>
+        <exclude name="cn/gorun8/easyfk/entity/connection/TyrexConnectionFactory.java"/>
+    </patternset>
+
+    <target name="jar" depends="classes">
+        <main-jar/>
+        <test-jar>
+            <test-selector>
+                <filename name="META-INF/services" negate="true"/>
+                <filename name="META-INF/services/*" negate="true"/>
+            </test-selector>
+        </test-jar>
+    </target>
+
+</project>

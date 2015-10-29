@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>   
+<!DOCTYPE configuration   
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"   
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+ <properties resource="install-database-temp.properties">
+ </properties>
+ <settings>
+  <!-- 全局的映射器启用或禁用缓存。 -->
+  <setting name="cacheEnabled" value="true" />
+  <!-- 全局启用或禁用延迟加载 -->
+  <setting name="lazyLoadingEnabled" value="true" />
+  <!-- 允许或不允许多种结果集从一个单独的语句中返回 -->
+  <setting name="multipleResultSetsEnabled" value="true" />
+  <!-- 使用列标签代替列名 -->
+  <setting name="useColumnLabel" value="true" />
+  <!-- 允许JDBC支持生成的键 -->
+  <setting name="useGeneratedKeys" value="false" />
+  <!-- 配置默认的执行器 -->
+  <setting name="defaultExecutorType" value="SIMPLE" />
+  <!-- 设置超时时间 -->
+  <setting name="defaultStatementTimeout" value="25000" />
+ </settings>
+
+
+ <!-- 可以配置多种环境，如果你想连接两个数据库，你需要创建两个SqlSessionFactory实例 -->
+ <environments default="development">
+  <environment id="development">
+   <transactionManager type="JDBC" />
+   <dataSource type="POOLED">
+    <property name="driver" value="${db.dbdriver}" />
+    <property name="url" value="${db.dburl}" />
+    <property name="username" value="${db.dbusername}" />
+    <property name="password" value="${db.dbpassword}" />
+   </dataSource>
+  </environment>
+ </environments>
+
+</configuration>  
