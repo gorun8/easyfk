@@ -33,7 +33,6 @@ import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * Start - EasyFK Container(s) Startup Class
- *
  */
 public class Start {
 
@@ -48,14 +47,6 @@ public class Start {
                     start.stopServer();
                 }
             }
-        },RESTART {
-            void processRequest(Start start, PrintWriter writer) {
-            	 writer.println("OK");
-            	 writer.flush();
-            	start.restartServer();
-            	
-                 
-             }
         }, STATUS {
             void processRequest(Start start, PrintWriter writer) {
                 writer.println(start.serverState.get());
@@ -73,7 +64,6 @@ public class Start {
         out.println("");
         out.println("Usage: java -jar easyfk.jar [command] [arguments]");
         out.println("-help, -? ----> This screen");
-        out.println("-setup -------> Run external application server setup");
         out.println("-start -------> Start the server");
         out.println("-install -------> install with sqldata");
         out.println("-status ------> Status of the server");
@@ -97,28 +87,24 @@ public class Start {
 
     /**
      * 检测安装标志文件是否存在，
-     * @param args
-     * @return
      */
-    public static boolean isInstalled()
-    {
-    	String configFileName = System.getProperty("easyfk.home",".");
-        configFileName +="/core/base/config";
-        File tagFile= new File(configFileName,"install.lock");
-		if(tagFile.exists())
-		{
-			System.setProperty("EASYFK_INSTALL_FLAG",tagFile.getAbsolutePath());
-		}
-		return tagFile.exists();
+    public static boolean isInstalled() {
+        String configFileName = System.getProperty("easyfk.home", ".");
+        configFileName += "/core/base/config";
+        File tagFile = new File(configFileName, "install.lock");
+        if (tagFile.exists()) {
+            System.setProperty("EASYFK_INSTALL_FLAG", tagFile.getAbsolutePath());
+        }
+        return tagFile.exists();
     }
-    
+
     public static void main(String[] args) throws StartupException {
         Command command = null;
         List<String> loaderArgs = new ArrayList<String>(args.length);
-        
-        for (String arg: args) {
-        	 
-        	if (arg.equals("-help") || arg.equals("-?")) {
+
+        for (String arg : args) {
+
+            if (arg.equals("-help") || arg.equals("-?")) {
                 command = checkCommand(command, Command.HELP);
             } else if (arg.equals("-status")) {
                 command = checkCommand(command, Command.STATUS);
@@ -136,7 +122,7 @@ public class Start {
                 }
             }
         }
-        
+
         if (command == Command.HELP) {
             help(System.out);
             return;
@@ -144,25 +130,22 @@ public class Start {
             help(System.err);
             System.exit(1);
         }
-        
+
         if (command == null) {
             command = Command.COMMAND;
             loaderArgs.add("start");
         }
-        
+
         //如果没有安装就以安装模式启动
-        if(loaderArgs.size()>0)
-        {
-	        String arg0 = loaderArgs.get(0);
-	        if("start".equals(arg0)||"install".equals(arg0))
-	        {	
-	        	if(!isInstalled())
-	        	{
-	        		args = new String[]{"-install"};
-	        		loaderArgs.clear();
-	        		loaderArgs.add("install");
-	        	}
-	        }
+        if (loaderArgs.size() > 0) {
+            String arg0 = loaderArgs.get(0);
+            if ("start".equals(arg0) || "install".equals(arg0)) {
+                if (!isInstalled()) {
+                    args = new String[]{"-install"};
+                    loaderArgs.clear();
+                    loaderArgs.add("install");
+                }
+            }
         }
         Start start = new Start();
         start.init(args, command == Command.COMMAND);
@@ -227,7 +210,7 @@ public class Start {
             } catch (IOException e) {
                 throw (StartupException) new StartupException("Couldn't load global system props").initCause(e);
             } finally {
-                if (stream != null){
+                if (stream != null) {
                     try {
                         stream.close();
                     } catch (IOException e) {
@@ -236,13 +219,13 @@ public class Start {
                 }
             }
         }
-        
+
         try {
             this.config = Config.getInstance(args);
         } catch (IOException e) {
             throw (StartupException) new StartupException("Couldn't not fetch config instance").initCause(e);
         }
-        
+
         // parse the startup arguments
         if (args.length > 1) {
             this.loaderArgs.addAll(Arrays.asList(args).subList(1, args.length));
@@ -262,7 +245,11 @@ public class Start {
 
         // set the shutdown hook
         if (config.useShutdownHook) {
-            Runtime.getRuntime().addShutdownHook(new Thread() { public void run() { shutdownServer(); } });
+            Runtime.getRuntime().addShutdownHook(new Thread() {
+                public void run() {
+                    shutdownServer();
+                }
+            });
         } else {
             System.out.println("Shutdown hook disabled");
         }
@@ -292,7 +279,7 @@ public class Start {
         ClassLoader classloader = Thread.currentThread().getContextClassLoader();
         synchronized (this.loaders) {
             // initialize the loaders
-            for (String loaderClassName: config.loaders) {
+            for (String loaderClassName : config.loaders) {
                 if (this.serverState.get() == ServerState.STOPPING) {
                     return;
                 }
@@ -318,22 +305,22 @@ public class Start {
         String response = "EasyFK is Down";
 
         try {
-        Socket socket = new Socket(config.adminAddress, config.adminPort);
+            Socket socket = new Socket(config.adminAddress, config.adminPort);
 
-        // send the command
-        PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
-        writer.println(config.adminKey + ":" + control);
-        writer.flush();
+            // send the command
+            PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
+            writer.println(config.adminKey + ":" + control);
+            writer.flush();
 
-        // read the reply
-        BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        response = reader.readLine();
+            // read the reply
+            BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            response = reader.readLine();
 
-        reader.close();
+            reader.close();
 
-        // close the socket
-        writer.close();
-        socket.close();
+            // close the socket
+            writer.close();
+            socket.close();
 
         } catch (ConnectException e) {
             System.out.println("Could not connect to " + config.adminAddress + ":" + config.adminPort);
@@ -387,13 +374,13 @@ public class Start {
 
     /**
      * Returns <code>true</code> if all loaders were started.
-     * 
+     *
      * @return <code>true</code> if all loaders were started.
      */
     private boolean startStartLoaders() {
         synchronized (this.loaders) {
             // start the loaders
-            for (StartupLoader loader: this.loaders) {
+            for (StartupLoader loader : this.loaders) {
                 if (this.serverState.get() == ServerState.STOPPING) {
                     return false;
                 }
@@ -423,35 +410,7 @@ public class Start {
         System.exit(0);
     }
 
-	public void restartServer() {
-		shutdownServer();
-		try {
-			String homedir = System.getProperty("easyfk.home");
-			ProcessBuilder pb = new ProcessBuilder("java",
-					"-Xms128M -Xmx512M -XX:MaxPermSize=512m -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005 ",
-					"-jar",
-					"easyfk.jar","-start","-restart");
-			pb.directory(new File(homedir));
-			// 得到进程生成器的环境 变量,这个变量我们可以改,
-			// 改了以后也会反应到新起的进程里面去
-			Map<String, String> map = pb.environment();
-//			pb.redirectErrorStream(true);
-			Process process = pb.start();
- 			InputStream in = process.getInputStream();
-			byte[] re = new byte[1024];
-			String result = "";
-			while (in.read(re) != -1) {
-				System.out.println(new String(re));
-				result = result + new String(re);
-			}
- 			in.close();
-			System.out.println("Server is restarting");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 
-		System.exit(0);
-	}
     // org.apache.commons.daemon.Daemon.destroy()
     public void destroy() {
         // FIXME: undo init() calls.

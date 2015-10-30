@@ -355,9 +355,7 @@ public class Config {
             adminPort = 0;
         }
 
-        // set the Derby system home
-        String derbyPath = getProp(props, "derby.system.home", "runtime/data/derby");
-        System.setProperty("derby.system.home", derbyPath);
+
 
         // set the property to tell Log4J to use log4j.xml
         String log4jConfig = getProp(props, "log4j.configuration", "log4j.xml");
@@ -380,17 +378,10 @@ public class Config {
             shutdownAfterLoad = "true".equalsIgnoreCase(props.getProperty("easyfk.auto.shutdown"));
         }
 
-        // set AWT headless mode
-        //awtHeadless = getProp(props, "java.awt.headless", null);
-        //if (awtHeadless != null) {
-        //    System.setProperty("java.awt.headless", awtHeadless);
-        //}
 
         // get the splash logo
         //splashLogo = props.getProperty("easyfk.start.splash.logo", null);
 
-        // set the property to tell Jetty to use 2.4 SessionListeners
-        //System.setProperty("org.mortbay.jetty.servlet.AbstractSessionManager.24SessionDestroyed", "true");
 
         // set the default locale
         String localeString = props.getProperty("easyfk.locale.default");
