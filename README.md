@@ -1,6 +1,4 @@
 # easyfk
-  Project:Easy Web Framework
-  Description:
   EasyFK stands for Easy Web Framework.It's an open source product for E-Business / E-Commerce.It
   was launched by a chinese Hezhiping(QQ:110476592) in 2015.The goal of EasyFK is to  provide a
   foundation and starting point for reliable, secure , simple-to-use ,cost-effective ,scalable
@@ -27,7 +25,7 @@
   面借鉴OFBIZ的设计，以电子商务应用为主要应用场景进行设计开发。同时，我们不是要简单的“翻译”OFBIZ，因此我们在设计
   开发过程中会充分考虑中国用户的实际需要，在易用性、可扩展性、高效性、安全性、稳定性方面也将重点关注。以高端、大
   规模、高并发为发展目标。要支持分布式集群、高效缓存等等。。。。。
-  总之一句话，让开发人员的工作变得更加简单、易学、高效；让高企业用户，不再需要从头开始规划自己的电子商务系统，降
+  总之一句话，让开发人员的工作变得更加简单、易学、高效；让企业用户，不再需要从头开始规划自己的电子商务系统，降
   低企业实施电子商务转型的成本，加快其电子商务的发展步伐。
   
   罗马不是一个人建成的，我希望有更多的人可以加入到EasyFK的开发队伍中来。如果您愿意，请联系我,我的QQ是:
