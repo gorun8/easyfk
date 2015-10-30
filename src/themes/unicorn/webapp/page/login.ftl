@@ -17,7 +17,7 @@
         <div class="controls">
             <div class="input-prepend">
                 <span class="add-on"><i class="icon-user"></i></span><input name="USERNAME" id="USERNAME" type="text"
-                                                                            placeholder="用户名" value="gorun8admin"/>
+                                                                            placeholder="用户名" value="easyfkadmin"/>
             </div>
         </div>
     </div>

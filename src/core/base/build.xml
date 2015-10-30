@@ -56,7 +56,7 @@ Author:hezhiping   Email:110476592@qq.com
     </target>
 
     <target name="gen-src">
-        <easyfk-javacc dir="cn/gorun8/easyfk/base/json" file="JSON"/>
+
     </target>
 
     <target name="classes" depends="prepare,gen-src">
