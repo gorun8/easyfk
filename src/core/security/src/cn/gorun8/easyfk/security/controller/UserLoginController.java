@@ -76,7 +76,7 @@ public class UserLoginController {
 		{
 			return "redirect:common/err404";
 		}
-		session.setAttribute( "url", orgUrl);
+		session.setAttribute( ORG_URL, orgUrl);
 		return "page/login";
 	} 
 	
@@ -137,7 +137,7 @@ public class UserLoginController {
 				//通过了身份认证，重定向到登录前的URL
 				Session session = UtilSecurity.getSession();
 				String rememberMe = UtilCookie.getCookieValue(request, "rememberMe");
-				String orgUrl =(String) session.getAttribute( "url");
+				String orgUrl =(String) session.getAttribute(ORG_URL);
 
 				Object commonSessionId = session.getId();
 				orgUrl = orgUrl+"?gbsid="+commonSessionId+"&rememberMe="+rememberMe;
