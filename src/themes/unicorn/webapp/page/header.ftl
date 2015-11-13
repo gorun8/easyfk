@@ -30,7 +30,19 @@
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 </head>
 <body>
-
+<div id="unicornAlertDailog" class="modal hide">
+    <div class="modal-header">
+        <button data-dismiss="modal" class="close" type="button">×</button>
+        <h3 id="unicornAlertDailog_title">提示</h3>
+    </div>
+    <div class="modal-body">
+        <p id="unicornAlertDailog_body">Lorem ipsum dolor sit amet...</p>
+    </div>
+    <div class="modal-footer">
+        <a data-dismiss="modal" class="btn " href="#">确定</a>
+        <a data-dismiss="modal" class="btn btn-primary" href="#">取消</a>
+    </div>
+</div>
 
 
 

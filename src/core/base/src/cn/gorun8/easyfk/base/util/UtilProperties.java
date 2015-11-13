@@ -162,7 +162,7 @@ public class UtilProperties implements Serializable {
      * 如果找不到指定文件或者指定属性名，返回默认的属性值
      * @param resource 资源名，如果属性文件是“webevent.properties”，属性值则是“webevent”
      * @param name 属性文件的属性名
-     * @param defaultNumber 找不到属性名时，返回该值
+     * @param defaultValue 找不到属性名时，返回该值
      * @return 布尔类型的属性值，找不到属性值则返回默认值
      */
     public static Boolean getPropertyAsBoolean(String resource, String name, boolean defaultValue) {
@@ -807,7 +807,7 @@ public class UtilProperties implements Serializable {
 
     /**
      * 根据提供的语言化信息返回候选语言化信息集合。返回的路径集合包括提供的和默认候选的语言化信息
-     * @param localez 需要的语言化信息
+     * @param locale 需要的语言化信息
      * @return 候选语言化信息集合
      */
     @Deprecated

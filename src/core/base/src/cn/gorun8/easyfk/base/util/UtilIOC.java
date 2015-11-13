@@ -33,22 +33,7 @@ public final class UtilIOC implements BeanFactoryPostProcessor {
 	@Override
 	public void postProcessBeanFactory(
 			ConfigurableListableBeanFactory beanFactory) throws BeansException {
-
-		// Map<String, String> dynamicDataSourceConfig = new HashMap<String,
-		// String>();
-		// dynamicDataSourceConfig.put("jdbc.driverClassName",
-		// "com.mysql.jdbc.Driver");
-		// dynamicDataSourceConfig
-		// .put("jdbc.url","jdbc\\:mysql\\://127.0.0.1\\:3306/use_permission_db?useUnicode\\=true&characterEncoding\\=utf-8");
-		// dynamicDataSourceConfig.put("jdbc.username", "root");
-		// dynamicDataSourceConfig.put("jdbc.password", "123456");
-
-//		beanFactory
-//				.addBeanPostProcessor(new ComboPooledDataSourceBeanPostProcessor());
 		UtilIOC.beanFactory = beanFactory;
-
-		// DynamicDataSourceConfigHolder.setDynamicConfig(dynamicDataSourceConfig);
-
 	}
 
 	/**

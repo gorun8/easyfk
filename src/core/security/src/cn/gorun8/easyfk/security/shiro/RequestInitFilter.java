@@ -21,42 +21,38 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.session.Session;
-import org.apache.shiro.subject.PrincipalCollection;
-import org.apache.shiro.subject.Subject;
+import cn.gorun8.easyfk.base.util.Debug;
+import cn.gorun8.easyfk.base.util.UtilIOC;
+
+import cn.gorun8.easyfk.base.util.collections.ResourceBundleMessageSource;
 import org.apache.shiro.web.servlet.OncePerRequestFilter;
 
-import cn.gorun8.easyfk.base.util.UtilValidate;
-import cn.gorun8.easyfk.entity.GenericValue;
-
 public class RequestInitFilter extends OncePerRequestFilter {
+    private final  static String module = RequestInitFilter.class.getName();
+    private final  static String FILTERED_FLG = "FILTERED_FLG";
+
     @Override
     protected void doFilterInternal(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
-    	
-//    	Subject subject = SecurityUtils.getSubject();
-//		if (!subject.isAuthenticated()){
-//			System.out.print("no login");
-//		}
-//    	Session session =subject.getSession();
-//    	Object userLogin = session.getAttribute("userLogin");
-//    	if(UtilValidate.isEmpty(userLogin)){
-//    		PrincipalCollection principalCollection = subject.getPrincipals();
-//    		if(UtilValidate.isNotEmpty(principalCollection)){
-//    			userLogin= (GenericValue)principalCollection.asList().get(0);
-//    		}
-//        	if(UtilValidate.isNotEmpty(userLogin)){
-//        		session.setAttribute("userLogin", userLogin);
-//        	}
-//        }
-//
-//		if(UtilValidate.isNotEmpty(userLogin)){
-//			request.setAttribute("userLogin", userLogin);
-//		}
+        HttpServletRequest req = (HttpServletRequest)request;
+        if(request.getAttribute(FILTERED_FLG) != null)
+        {
+            chain.doFilter(request, response);
+            return ;
+        }
+        request.setAttribute(FILTERED_FLG, true);
 
-		HttpServletRequest req = (HttpServletRequest)request;
+        try {
+            ResourceBundleMessageSource uiLabelMap = UtilIOC.getBean(ResourceBundleMessageSource.class);
+            String labelMapName = uiLabelMap.getLabelMapName();
+            request.setAttribute(labelMapName, uiLabelMap);
+        }catch (Exception e){
+            e.printStackTrace();
+            Debug.logWarning("i18n resource not found",module);
+        }
+
 		String ctx = req.getContextPath();
 		request.setAttribute("ctx", ctx);
+
         chain.doFilter(request, response);
     }
 }

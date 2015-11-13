@@ -14,8 +14,10 @@
 package cn.gorun8.easyfk.party.service;
 
 import cn.gorun8.easyfk.entity.GenericValue;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * demo 服务接口
@@ -23,21 +25,60 @@ import java.util.List;
  */
 public interface PartyClsGroupService {
 
-	public List<GenericValue> findPartyClsGroupList();
 	/**
-	 * 创建会员组
+	 * 获取根组织机构
+	 * @param context
+	 * @return
+	 */
+	public List<Map>  listRootNode(Map<String, ? extends Object> context);
+
+	/**
+	 * 获取下级组织机构
+	 * @param context
+	 * @return
+	 */
+	public List<Map>  listChildNode(Map<String, ? extends Object> context);
+
+
+	/**
+	 * 是否存在获取下级组织机构
+	 * @param parentId
+	 * @return
+	 */
+	public boolean hasChildrenPartyClsGroup(String parentId);
+
+
+	/**
+	 * 获取指定组织机构
+	 * @param partyClsGroupId
+	 * @return
+	 */
+	public GenericValue findPartyClsGroupById(String partyClsGroupId);
+
+	/**
+	 * 相同组织机构下是否存在同名
+	 * @param parentId
+	 * @return
+	 */
+	public boolean hasPartyClsGroupName(String parentId,String description);
+
+
+
+
+	/**
+	 * 创建组织机构
 	 * @param partyGroup
 	 */
 	public void createPartyClsGroup(  GenericValue partyGroup);
 
 	/**
-	 * 更新会员组
-	 * @param partyGroup
+	 * 更新组织机构
+	 * @param partyClsGroup
 	 */
-	public void savePartyClsGroup( GenericValue partyGroup);
+	public void savePartyClsGroup( GenericValue partyClsGroup);
 
 	/**
-	 * 删除会员组
+	 * 删除组织机构
 	 * @param partyClsGroupId
 	 */
 	public void removePartyClsGroupByPrimaryKey(String partyClsGroupId);

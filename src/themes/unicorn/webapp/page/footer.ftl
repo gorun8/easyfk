@@ -28,8 +28,8 @@
             <script src="/unicorn/js/bootstrap.min.js"></script>
             <script src="/unicorn/js/jquery.gritter.min.js"></script>
             <script src="/unicorn/js/jquery.peity.min.js"></script>
-            <script src="/images/js/jquery/plugins/validate/jquery.validate.min.js"></script>
-            <script src="/images/js/jquery/plugins/validate/localization/messages_cn.js"></script>
+            <script src="/images/js/jquery/validate/jquery.validate.min.js"></script>
+            <script src="/images/js/jquery/validate/localization/messages_zh.min.js"></script>
 
 
             <script src="/unicorn/js/unicorn.js"></script>

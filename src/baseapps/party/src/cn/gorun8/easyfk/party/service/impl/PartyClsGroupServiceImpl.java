@@ -13,14 +13,17 @@
  */
 package cn.gorun8.easyfk.party.service.impl;
 
+import cn.gorun8.easyfk.base.util.UtilValidate;
 import cn.gorun8.easyfk.entity.GenericValue;
 import cn.gorun8.easyfk.party.dao.PartyClsGroupDao;
 import cn.gorun8.easyfk.party.service.PartyClsGroupService;
+import javolution.util.FastList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 
@@ -32,11 +35,68 @@ import java.util.List;
 public class PartyClsGroupServiceImpl implements PartyClsGroupService {
 	@Autowired
 	protected PartyClsGroupDao partyClsGroupDao;
-	
 
-	public List<GenericValue>  findPartyClsGroupList(){
-		return partyClsGroupDao.findPartyClsGroupList("");
+
+	public List<Map>  listRootNode(Map<String, ? extends Object> context){
+
+		String parentId =(String)context.get("parentId");
+
+		List<Map> parClsMapList = FastList.newInstance();
+		if(UtilValidate.isEmpty(parentId))
+		{
+			return parClsMapList;
+		}
+
+		List<GenericValue> partyClsGroupList = partyClsGroupDao.findChildPartyClsGroupList(parentId);
+		if(partyClsGroupList != null && partyClsGroupList.size()>0){
+			GenericValue gv = partyClsGroupList.get(0);
+			String id = gv.getString("partyClassificationGroupId");
+			int count = partyClsGroupDao.findChildPartyClsGroupCount(id);
+			Map map = gv.toMap();
+			map.put("childCount", Integer.valueOf(count));
+			parClsMapList.add(map);
+		}
+		return  parClsMapList;
 	}
+
+	public List<Map>  listChildNode(Map<String, ? extends Object> context)
+	{
+		String parentId =(String)context.get("parentId");
+		List<Map> parClsMapList = FastList.newInstance();
+		if(UtilValidate.isEmpty(parentId))
+		{
+			return parClsMapList;
+		}
+
+		List<GenericValue> partyClsGroupList = partyClsGroupDao.findChildPartyClsGroupList(parentId);
+		for (GenericValue gv :partyClsGroupList){
+			Map v = gv.toMap();
+			String id = (String)v.get("partyClassificationGroupId");
+			int count = partyClsGroupDao.findChildPartyClsGroupCount(id);
+			v.put("childCount",Integer.valueOf(count));
+			parClsMapList.add(v);
+		}
+		return  parClsMapList;
+	}
+
+	public boolean hasChildrenPartyClsGroup(String parentId){
+		int count =  partyClsGroupDao.findChildPartyClsGroupCount(parentId);
+		return (count > 0);
+	}
+
+	/**
+	 * 获取指定组织机构
+	 * @param partyClsGroupId
+	 * @return
+	 */
+	public GenericValue findPartyClsGroupById(String partyClsGroupId){
+		return partyClsGroupDao.findPartyClsGroupById(partyClsGroupId);
+	}
+	public boolean hasPartyClsGroupName(String parentId,String description){
+		List<GenericValue> list = partyClsGroupDao.findChildPartyClsGroupByName(parentId,description);
+		return (list != null) && (list.size() >0);
+	}
+
 
 	@Override
 	public void createPartyClsGroup(GenericValue genericValue) {
@@ -44,8 +104,8 @@ public class PartyClsGroupServiceImpl implements PartyClsGroupService {
 	}
 
 	@Override
-	public void savePartyClsGroup(GenericValue partyGroup) {
-		partyClsGroupDao.savePartyClsGroup(partyGroup);
+	public void savePartyClsGroup(GenericValue partyClsGroup) {
+		partyClsGroupDao.savePartyClsGroup(partyClsGroup);
 	}
 
 	@Override

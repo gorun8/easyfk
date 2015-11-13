@@ -29,7 +29,7 @@
 		<param-value>
 			classpath*:easyfk-spring-common.xml,
 			classpath*:easyfk-mybatis.xml,<!--不需要mybatis访问数据库，可以删除-->
-			classpath*:shiro-context.xml <!--不需要访问控制，可以删除-->
+			classpath*:private-context.xml
 		</param-value>
 	</context-param>
 

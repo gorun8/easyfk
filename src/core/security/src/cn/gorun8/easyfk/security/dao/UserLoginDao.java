@@ -18,6 +18,8 @@ import org.springframework.stereotype.Repository;
 
 import cn.gorun8.easyfk.entity.GenericValue;
 
+import java.util.List;
+
 /**
  * 访问用户数据
  * @author:hezhiping(110476592@qq.com)
@@ -31,26 +33,19 @@ public interface UserLoginDao {
 	 * @return
 	 */
 	public GenericValue findUserLogin(@Param("userLoginId") String userLoginId);
-	
+
 	/**
-	 * 根据ticket返回用户信息
-	 * @param ticket
+	 * 根据partyId返回用户信息
+	 * @param partyId
 	 * @return
 	 */
-	public GenericValue findUserByTicket(@Param("ticket") String ticket);
-	
-	
+	public List<GenericValue> findUserLoginByPartyId(@Param("partyId") String partyId);
+
 	/**
 	 * 保存user信息
 	 * @param userLogin
 	 */
 	public void saveUserLogin(@Param("userLogin") GenericValue userLogin);
 	
-	/**
-	 * 保存票据
-	 * @param userLoginId
-	 * @param ticket
-	 */
-	public void saveTicket(@Param("userLoginId")String userLoginId,@Param("ticket")String ticket);
-	
+
 	}

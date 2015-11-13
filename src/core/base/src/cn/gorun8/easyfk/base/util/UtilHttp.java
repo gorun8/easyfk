@@ -108,8 +108,7 @@ public class UtilHttp {
         return getParameterMap(request, nameSet, null);
     }
 
-    public static Map<String, Object> getMultipartMap(HttpServletRequest request) throws Exception
-    {
+    public static Map<String, Object> getMultipartMap(HttpServletRequest request) throws Exception    {
     	 boolean isMultiPart = ServletFileUpload.isMultipartContent(request);
     	// String tmpUploadRepository = EntityUtilProperties.getPropertyValue("general.properties", "http.upload.tmprepository", "runtime/tmp", dctx.getDelegator());
     	// int sizeThreshold = 10240; // 10K
@@ -230,8 +229,25 @@ public class UtilHttp {
             Debug.logVerbose("Request Parameter Map Entries: " + System.getProperty("line.separator") + UtilMisc.printMap(paramMap), module);
         }
 
+        attachRequestContext(request,paramMap);
         return canonicalizeParameterMap(paramMap);
     }
+
+    /**
+     * 添加附加参数
+     * @param request
+     * @param map
+     */
+    public static void attachRequestContext(HttpServletRequest request,Map<String, Object> map){
+        HttpSession session = request.getSession();
+        Object userLogin = session.getAttribute("userLogin");
+        if(userLogin != null){
+             map.put("userLogin",userLogin);
+        }
+
+        map.put("locale",UtilHttp.getLocale(request));
+    }
+
 
     public static Map<String, Object> getQueryStringOnlyParameterMap(HttpServletRequest request) {
         return getQueryStringOnlyParameterMap(request.getQueryString());

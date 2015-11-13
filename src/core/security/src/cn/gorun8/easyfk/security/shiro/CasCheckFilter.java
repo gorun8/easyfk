@@ -18,8 +18,6 @@ package cn.gorun8.easyfk.security.shiro;
  * Created by hzp on 2015/10/6.
  */
 
-import cn.gorun8.easyfk.base.util.Debug;
-import cn.gorun8.easyfk.base.util.UtilCookie;
 import cn.gorun8.easyfk.base.util.UtilValidate;
 import cn.gorun8.easyfk.security.utils.UtilSecurity;
 import org.apache.shiro.session.Session;
@@ -40,13 +38,17 @@ public class CasCheckFilter extends AdviceFilter {
     @Override
     protected boolean preHandle(ServletRequest request, ServletResponse response)throws Exception {
         if(UtilSecurity.hasAuthenticated() ){
+            HttpServletRequest httpRequest  = WebUtils.toHttp(request);
             //如果用户已经登录了，则直接传回token即可
             String orgUrl = WebUtils.getCleanParam(request,  "url");
-            if(UtilValidate.isNotEmpty(orgUrl))
+            if(UtilValidate.isEmpty(orgUrl))
             {
+                orgUrl = UtilSecurity.getCookieValue(httpRequest,"url");
+            }
+
+            if(UtilValidate.isEmpty(orgUrl)){
                 //通过了身份认证，重定向到登录前的URL
-                HttpServletRequest httpRequest  = WebUtils.toHttp(request);
-                String rememberMe = UtilCookie.getCookieValue(httpRequest, "rememberMe");
+                String rememberMe = UtilSecurity.getCookieValue(httpRequest, "rememberMe");
                 Session session  = UtilSecurity.getSession();
                 Object commonSessionId = session.getId();
                 orgUrl = orgUrl+"?gbsid="+commonSessionId+"&rememberMe="+rememberMe;

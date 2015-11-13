@@ -20,8 +20,7 @@ import org.apache.shiro.util.CollectionUtils;
 import java.util.*;
 
 /**
- * redis cache
- * @author kuang hj
+ *  cache
  *
  * @param <K>
  * @param <V>
@@ -30,18 +29,15 @@ public class EasyFKCache<K, V> implements Cache<K, V> {
 
 	public static final String module = EasyFKCache.class.getName();
 
-	/**
-     * The wrapped jdbc instance.
-     */
-	private EasyFKManager cache;
+	private CacheManager cache;
 
 	/**
 	 * The Redis key prefix for the sessions
 	 */
-	private String keyPrefix = "shiro_redis_session:";
+	private String keyPrefix = "easyfk_cache_session:";
 
 	/**
-	 * Returns the Redis session keys
+	 * Returns the   session keys
 	 * prefix.
 	 * @return The prefix
 	 */
@@ -50,7 +46,7 @@ public class EasyFKCache<K, V> implements Cache<K, V> {
 	}
 
 	/**
-	 * Sets the Redis sessions key
+	 * Sets the   sessions key
 	 * prefix.
 	 * @param keyPrefix The prefix
 	 */
@@ -58,10 +54,8 @@ public class EasyFKCache<K, V> implements Cache<K, V> {
 		this.keyPrefix = keyPrefix;
 	}
 
-	/**
-	 * 通过一个JedisManager实例构造RedisCache
-	 */
-	public EasyFKCache(EasyFKManager cache){
+
+	public EasyFKCache(CacheManager cache){
 		 if (cache == null) {
 	         throw new IllegalArgumentException("Cache argument cannot be null.");
 	     }
@@ -72,9 +66,9 @@ public class EasyFKCache<K, V> implements Cache<K, V> {
 	 * Constructs a cache instance with the specified
 	 * Redis manager and using a custom key prefix.
 	 * @param cache The cache manager instance
-	 * @param prefix The Redis key prefix
+	 * @param prefix The   key prefix
 	 */
-	public EasyFKCache(EasyFKManager cache,
+	public EasyFKCache(CacheManager cache,
 					 String prefix){
 		 
 		this( cache );

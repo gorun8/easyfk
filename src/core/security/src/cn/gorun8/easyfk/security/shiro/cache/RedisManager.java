@@ -22,10 +22,8 @@ import redis.clients.jedis.JedisPoolConfig;
 
 /**
  *  redis 管理
- * @author kuang hj
- *
  */
-public class RedisManager implements  EasyFKManager{
+public class RedisManager implements CacheManager {
 	
 	private String host = "127.0.0.1";
 	

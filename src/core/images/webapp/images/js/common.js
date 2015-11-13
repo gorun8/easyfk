@@ -7,14 +7,13 @@ easyfk.ajaxpost = function(ajaxUrl,postparams,callback)
         url: ajaxUrl,
         type: 'POST',
         data: postparams,
-        error: function(msg) {
+	    error: function(msg) {
             alert("通信出错，可能网络不通");
             easyfk.hideProgress();
         },
         success: function(jsonstr) {
         	easyfk.hideProgress();
 			var obj = jQuery.parseJSON(jsonstr);
-
         	var msg = "";
         	var type = false;
         	if(obj.hasOwnProperty("errorMessageList"))
@@ -42,9 +41,9 @@ easyfk.ajaxgetstring = function(ajaxUrl,postparams,callback)
 {
     jQuery.ajax({
         url: ajaxUrl,
-        type: 'POST',
+        type: 'GET',
         data: postparams,
-        error: function(msg) {
+	    error: function(msg) {
             alert("通信出错，可能网络不通");
             easyfk.hideProgress();
         },

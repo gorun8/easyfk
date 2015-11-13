@@ -23,13 +23,14 @@ Author:hezhiping   Email:110476592@qq.com
         	user_login ul
         WHERE ul.USER_LOGIN_ID = #{userLoginId}
     </select>
-    
-    <select id="findUserByTicket"  resultType="cn.gorun8.easyfk.entity.GenericValue">
-        SELECT * 
+
+    <select id="findUserLoginByPartyId"  resultType="cn.gorun8.easyfk.entity.GenericValue">
+        SELECT *
         FROM
-        	user_login ul
-        WHERE ul.TICKET = #{ticket}
+        user_login ul
+        WHERE ul.PARTY_ID = #{partyId}
     </select>
+
     
     <update id="saveUserLogin" parameterType="cn.gorun8.easyfk.entity.GenericValue">
         UPDATE user_login
@@ -46,16 +47,4 @@ Author:hezhiping   Email:110476592@qq.com
         WHERE
         	USER_LOGIN_ID = #{userLogin.USER_LOGIN_ID}
     </update>
-    
-    <update id="saveTicket" parameterType="cn.gorun8.easyfk.entity.GenericValue">
-        UPDATE user_login
-        SET 
-        	SSOKEY = #{ticket}
-        WHERE
-        	USER_LOGIN_ID = #{userLoginId}
-    </update>
-     
-    
-     
-    
 </mapper>

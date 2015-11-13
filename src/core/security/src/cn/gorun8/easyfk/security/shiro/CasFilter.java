@@ -19,15 +19,11 @@ package cn.gorun8.easyfk.security.shiro;
  */
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
 import cn.gorun8.easyfk.base.util.*;
 import cn.gorun8.easyfk.security.utils.UtilSecurity;
-import org.apache.commons.lang.StringUtils;
-import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.session.Session;
-import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.servlet.AdviceFilter;
 import org.apache.shiro.web.util.WebUtils;
 
@@ -59,19 +55,16 @@ public class CasFilter extends AdviceFilter {
         //这样就可以拿到在认证服务器中产生的session了
         if(UtilValidate.isNotEmpty(gbsid)){
 
-            UtilCookie.setCookie(httpRequest ,WebUtils.toHttp(response), "gbsid", gbsid,domain);
-            String rememberMe  = WebUtils.getCleanParam(request, "rememberMe");
-            UtilCookie.setCookie(httpRequest ,WebUtils.toHttp(response), "rememberMe", rememberMe,domain);
+            UtilSecurity.setCookie(httpRequest, WebUtils.toHttp(response), "gbsid", gbsid, domain);
+//            String rememberMe  = WebUtils.getCleanParam(request, "rememberMe");
+//            UtilSecurity.setCookie("rememberMe", rememberMe,domain);
 
             WebUtils.issueRedirect(request, response, url);
-            Debug.logInfo("redirect : " + url, module);
             return false;
         }
-
         //重写向到认证服务器进行认证
         String uri = loginURL + "?url=" + url;
         WebUtils.issueRedirect(request, response, uri);
-        Debug.logInfo("redirect : " + uri,module);
         return false;
     }
 

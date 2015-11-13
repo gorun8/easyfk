@@ -38,7 +38,6 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
 	<mvc:annotation-driven>
-		<!--
 		<mvc:message-converters>
 			<bean
 				class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
@@ -49,7 +48,6 @@
 				</property>
 			</bean>
 		</mvc:message-converters>
-		-->
 	</mvc:annotation-driven>
 
 	<!-- Freemaerker 配置 开始 -->

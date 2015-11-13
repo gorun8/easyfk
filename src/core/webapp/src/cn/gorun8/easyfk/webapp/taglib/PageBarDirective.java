@@ -49,7 +49,7 @@ public class PageBarDirective extends AbstractDirective {
 			BeanModel req = (BeanModel)env.getVariable("httpServletRequest");
 			HttpServletRequest request = null;
 			if( req == null) {
-				Debug.logError("上下文件环境中找不到HttpServletRequest",module);
+				Debug.logError(" HttpServletRequest not found in context",module);
 				return ;
 			}
 
@@ -59,7 +59,7 @@ public class PageBarDirective extends AbstractDirective {
 			Page page = (Page) request.getAttribute("PAGE_DATA");
 			if(page == null)
 			{
-				Debug.logError("没有找到分页信息",module);
+				Debug.logWarning("paging information not found",module);
 				return ;
 			}
 

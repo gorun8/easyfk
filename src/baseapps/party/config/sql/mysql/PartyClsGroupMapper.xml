@@ -18,8 +18,21 @@ Author:hezhiping   Email:110476592@qq.com
 <mapper namespace="cn.gorun8.easyfk.party.dao.PartyClsGroupDao">
 
 
-    <select id="findPartyClsGroupList" parameterType="java.lang.String"   resultType="cn.gorun8.easyfk.entity.GenericValue">
-        SELECT  * FROM party_classification_group
+    <select id="findChildPartyClsGroupList" parameterType="java.lang.String"    resultType="cn.gorun8.easyfk.entity.GenericValue">
+        SELECT  * FROM party_classification_group WHERE PARENT_GROUP_ID = #{parentId}
+    </select>
+
+    <select id="findChildPartyClsGroupCount" parameterType="java.lang.String"    resultType="java.lang.Integer">
+        SELECT  count(*) FROM party_classification_group where PARENT_GROUP_ID = #{parentId}
+    </select>
+
+
+    <select id="findChildPartyClsGroupByName" parameterType="java.lang.String"    resultType="cn.gorun8.easyfk.entity.GenericValue">
+        SELECT  * FROM party_classification_group WHERE PARENT_GROUP_ID = #{parentId} AND DESCRIPTION =#{description}
+    </select>
+
+    <select id="findPartyClsGroupById" parameterType="java.lang.String"    resultType="cn.gorun8.easyfk.entity.GenericValue">
+        SELECT  * FROM party_classification_group WHERE PARTY_CLASSIFICATION_GROUP_ID = #{partyClsGroupId}
     </select>
 
     <insert id="createPartyClsGroup" parameterType="cn.gorun8.easyfk.entity.GenericValue">
@@ -40,12 +53,10 @@ Author:hezhiping   Email:110476592@qq.com
     <update id="savePartyClsGroup" parameterType="cn.gorun8.easyfk.entity.GenericValue">
           UPDATE party_classification_group
           SET
-           PARTY_CLASSIFICATION_GROUP_ID = #{partyClsGroup.PARTY_CLASSIFICATION_GROUP_ID},
-           PARTY_CLASSIFICATION_TYPE_ID = #{partyClsGroup.PARTY_CLASSIFICATION_TYPE_ID},
            PARENT_GROUP_ID = #{partyClsGroup.PARENT_GROUP_ID},
            DESCRIPTION = #{partyClsGroup.DESCRIPTION}
           WHERE
-            PARTY_ID =#{partyGroup.PARTY_CLASSIFICATION_GROUP_ID}
+            PARTY_CLASSIFICATION_GROUP_ID =#{partyClsGroup.PARTY_CLASSIFICATION_GROUP_ID}
     </update>
 
     <delete id="removePartyClsGroupByPrimaryKey" parameterType="java.lang.String">

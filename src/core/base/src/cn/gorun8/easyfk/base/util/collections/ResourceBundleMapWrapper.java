@@ -57,6 +57,14 @@ public class ResourceBundleMapWrapper implements Map<String, Object>, Serializab
         this.rbmwStack = MapStack.create(new InternalRbmWrapper(initialResourceBundle));
     }
 
+    public void setInitialResourceBundle(ResourceBundle initialResourceBundle) {
+        if (initialResourceBundle == null) {
+            throw new IllegalArgumentException("Cannot create ResourceBundleMapWrapper with a null initial ResourceBundle.");
+        }
+        this.initialResourceBundle = initialResourceBundle;
+        this.rbmwStack = MapStack.create(new InternalRbmWrapper(initialResourceBundle));
+    }
+
     /** When creating new from a ResourceBundle the one passed to the constructor should be the most specific or local ResourceBundle, with more common ones pushed onto the stack progressively.
      */
     public ResourceBundleMapWrapper(ResourceBundle initialResourceBundle, Map<String, Object> context) {

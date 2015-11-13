@@ -565,21 +565,21 @@
         <mkdir dir="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/controller"/>
         <mkdir dir="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/service"/>
         <mkdir dir="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/service/impl"/>
-        <mkdir dir="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/tool"/>
+        <mkdir dir="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/utils"/>
         <mkdir dir="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/annotation"/>
         <mkdir dir="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/interceptor"/>
         <mkdir dir="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/tag"/>
         <mkdir dir="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/dao"/>
         
         <mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/META-INF"/>
-		
-		<mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/WEB-INF/lib"/>
+        <mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/WEB-INF/classes"/>
+        <mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/WEB-INF/lib"/>
 		<mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/resources/js"/>
         <mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/resources/page"/>
         <mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/resources/style/icons"/>
         <mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/resources/style/images"/>
         <mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/resources/config"/>
-         
+
         <mkdir dir="${basedir}/hot-deploy/${component-name}/documents"/>
         
         <copy file="${basedir}/documents/resources/templates/easyfk-application.xml" tofile="${basedir}/hot-deploy/${component-name}/easyfk-application.xml" encoding="utf-8">
@@ -594,13 +594,15 @@
 		    <filterset refid="replacePlaceholders"/>
 		</copy>
 
+
+        <copy file="${basedir}/documents/resources/templates/DemoUiLabels.xml" tofile="${basedir}/hot-deploy/${component-name}/config/Demo${component-name}UiLabels.xml" encoding="utf-8">
+            <filterset refid="replacePlaceholders"/>
+        </copy>
+
         <copy file="${basedir}/documents/resources/templates/DemoMapper.xml" tofile="${basedir}/hot-deploy/${component-name}/config/sql/mysql/DemoMapper.xml" encoding="utf-8">
             <filterset refid="replacePlaceholders"/>
         </copy>
 
-        <copy file="${basedir}/documents/resources/templates/DemoMapper.xml" tofile="${basedir}/hot-deploy/${component-name}/config/sql/oracle/DemoMapper.xml" encoding="utf-8">
-            <filterset refid="replacePlaceholders"/>
-        </copy>
 
         <copy file="${basedir}/documents/resources/templates/build.xml" tofile="${basedir}/hot-deploy/${component-name}/build.xml" encoding="utf-8">
             <filterset refid="replacePlaceholders"/>
@@ -640,7 +642,7 @@
         <copy file="${basedir}/documents/resources/templates/MANIFEST.MF" tofile="${basedir}/hot-deploy/${component-name}/webapp/META-INF/MANIFEST.MF" encoding="utf-8">
             <filterset refid="replacePlaceholders"/>
         </copy>
-        <copy file="${basedir}/documents/resources/templates/shiro-context.xml" tofile="${basedir}/hot-deploy/${component-name}/webapp/WEB-INF/classes/shiro-context.xml" encoding="utf-8">
+        <copy file="${basedir}/documents/resources/templates/private-context.xml" tofile="${basedir}/hot-deploy/${component-name}/webapp/WEB-INF/classes/private-context.xml" encoding="utf-8">
             <filterset refid="replacePlaceholders"/>
         </copy>
         <copy file="${basedir}/documents/resources/templates/springmvc.xml" tofile="${basedir}/hot-deploy/${component-name}/webapp/WEB-INF/classes/springmvc.xml" encoding="utf-8">

@@ -30,32 +30,12 @@ public interface LoginService {
 	
 	/**
 	 * 保存用户
-	 * @param user
+	 * @param userLogin
 	 */
 	public void saveUserLogin(GenericValue userLogin);
 	
 	
-	/**
-	 * 保存标据
-	 * @param user
-	 */
-	public void saveTicket(String userLoginId,String ticket);
-	
-	
-	/**
-	 * 验证票据是否合法
-	 * @param ticket
-	 * @return
-	 */
-	public boolean isTicketLegal(String ticket);
-	
-	
-	/**
-	 * 根据ticket查找user
-	 * @param ticket
-	 * @return
-	 */
-	public GenericValue findUserByTicket(String ticket);
+
 	
 	 
 

@@ -13,19 +13,19 @@
  */
 package cn.gorun8.easyfk.security.shiro.passwd;
 
+import cn.gorun8.easyfk.base.util.UtilProperties;
 import cn.gorun8.easyfk.base.util.UtilValidate;
-import org.apache.commons.lang3.StringUtils;
+import cn.gorun8.easyfk.entity.GenericValue;
+import cn.gorun8.easyfk.security.shiro.RetryLimitMatcher;
+import cn.gorun8.easyfk.security.utils.UtilSecurity;
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.cache.CacheManager;
+import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.PrincipalCollection;
-
-import cn.gorun8.easyfk.base.util.UtilProperties;
-import cn.gorun8.easyfk.entity.GenericValue;
-import cn.gorun8.easyfk.security.shiro.RetryLimitMatcher;
-import cn.gorun8.easyfk.security.utils.UtilSecurity;
 
 public class PasswordRetryLimitMatcher extends RetryLimitMatcher {
 
@@ -61,12 +61,12 @@ public class PasswordRetryLimitMatcher extends RetryLimitMatcher {
 		checkStatus(userLogin);
 		//验证密码
 		boolean useEncryption = "true".equals(UtilProperties.getPropertyValue("security.properties", "password.encrypt"));
-		String oldPassword = userLogin.getString("CURRENT_PASSWORD");
+		String oldPassword = userLogin.getString("currentPassword");
 		if(!UtilSecurity.checkPassword(oldPassword,useEncryption,password)){
 			throw new IncorrectCredentialsException("密码不正确!再错"+remts+"次,账号将被锁定");//密码错误
-			
 		}
-
+		//save current userlogin to session .
+		UtilSecurity.setSession("userLogin",userLogin);
 		return true;
 	}
 

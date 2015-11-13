@@ -13,18 +13,13 @@
  */
 package cn.gorun8.easyfk.security.controller;
 
-import java.util.Map;
-import java.util.Properties;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import cn.gorun8.easyfk.base.util.*;
 import cn.gorun8.easyfk.security.utils.UtilCaptcha;
-import cn.gorun8.easyfk.security.utils.UtilJCaptcha;
 import cn.gorun8.easyfk.security.utils.UtilSecurity;
-import net.sf.json.JSONObject;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -111,9 +106,8 @@ public class UserLoginController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
 		return null;
-
-
 	}
 
 	private boolean doLogin(HttpServletRequest request
@@ -128,7 +122,7 @@ public class UserLoginController {
 			{
 				throw e.getCause();
 			}
-			
+
 			if (subject.isAuthenticated()) {
 				//um =(SysUserMember)currentUser.getPrincipals().asList().get(0);
 				// 正常状态
@@ -136,7 +130,7 @@ public class UserLoginController {
 
 				//通过了身份认证，重定向到登录前的URL
 				Session session = UtilSecurity.getSession();
-				String rememberMe = UtilCookie.getCookieValue(request, "rememberMe");
+				String rememberMe = UtilSecurity.getCookieValue(request, "rememberMe");
 				String orgUrl =(String) session.getAttribute(ORG_URL);
 
 				Object commonSessionId = session.getId();
@@ -182,7 +176,7 @@ public class UserLoginController {
 		String captchaId = request.getParameter("CAPTCHAID");
 		
 		AuthenticationToken token = null;
-		boolean remember = "0".equals(rememberMe) ? false : true;
+		boolean remember = true;//"0".equals(rememberMe) ? false : true;
 		
 		if("PASSWD".equals(authType))
 		{
@@ -199,25 +193,7 @@ public class UserLoginController {
 			
 		return token;
 	}
-	
-	/**
-	 * 退出
-	 * @param request
-	 * @param response
-	 */
-	@RequestMapping("/logout")
-	public String ssoLogout(HttpServletRequest request,HttpServletResponse response){
-		HttpSession session = request.getSession();
-		Subject subject = SecurityUtils.getSubject();
-		if (subject.isAuthenticated())
-		{
-			subject.logout();
-			subject.getSession().removeAttribute("userLogin");
-		}
 
-		return "redirect:login";
-	}
- 
 	/**
 	 * 产生验证码
 	 * @param id

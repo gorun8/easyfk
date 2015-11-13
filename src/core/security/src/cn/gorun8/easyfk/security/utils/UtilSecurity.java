@@ -14,19 +14,19 @@
 
 package cn.gorun8.easyfk.security.utils;
 
-import java.util.List;
-
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.mgt.RealmSecurityManager;
-import org.apache.shiro.session.Session;
-import org.apache.shiro.subject.Subject;
-
 import cn.gorun8.easyfk.base.util.Debug;
 import cn.gorun8.easyfk.base.util.UtilProperties;
 import cn.gorun8.easyfk.base.util.UtilValidate;
 import cn.gorun8.easyfk.entity.GenericValue;
+import cn.gorun8.easyfk.security.shiro.EasyFKWebSubject;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.session.Session;
+import org.apache.shiro.subject.Subject;
 
- 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 
 /**
  * 文件描述：安全工具
@@ -39,17 +39,168 @@ public class UtilSecurity {
 	 * 获取Session
 	 */
 	public  static Session getSession(){
+		return getSession(false);
+	}
+
+	/**
+	 * 获取Session
+	 */
+	public  static Session getSession(boolean create){
 		Subject currentUser = getSubject();
-		return currentUser.getSession();
+		return currentUser.getSession(create);
+	}
+
+	/**
+	 * 保存到session中
+	 * @param key
+	 * @param value
+	 */
+	public static void setSession(String key, Object value){
+		String ids = UtilProperties.getPropertyValue("security","security.sessionId.allows","");
+		if(ids.indexOf(key)>=0){
+			Session session = getSession();
+			session.setAttribute("userLogin",value);
+		}else{
+			Debug.logWarning("the key ["+key+"] is not allowed for session ,please check security.sessionId.allows in security.properties",module);
+		}
 	}
 
 
 	/**
-	 *
+	 * 取值Cookie
+	 * @param request
+	 * @param name
+	 * @return
 	 */
+	public static Cookie getCookie(HttpServletRequest request, String name) {
+		Cookie cookies[] = request.getCookies();
+		if (cookies == null || name == null || name.length() == 0) {
+			return null;
+		}
+		for (int i = 0; i < cookies.length; i++) {
+			if (name.equals(cookies[i].getName()))
+			//    && request.getServerName().equals(cookies[i].getDomain()))
+			{
+				return cookies[i];
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * 从Cookie中读取值
+	 * @param request
+	 * @param name
+	 * @return
+	 */
+	public static String getCookieValue(HttpServletRequest request, String name) {
+		Cookie cookies[] = request.getCookies();
+		if (cookies == null || name == null || name.length() == 0) {
+			return null;
+		}
+		String svrName = request.getServerName();
+		for (int i = 0; i < cookies.length; i++) {
+			String dn = cookies[i].getDomain();
+			if (name.equals(cookies[i].getName())
+					&& svrName.equals(dn))
+			{
+				return cookies[i].getValue();
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * 从Cookie中删除值
+	 * @param request
+	 * @param response
+	 * @param cookie
+	 */
+	public static void deleteCookie(HttpServletRequest request,
+									HttpServletResponse response, Cookie cookie) {
+		if (cookie != null) {
+			cookie.setPath(getPath(request));
+			cookie.setValue("");
+			cookie.setMaxAge(0);
+			response.addCookie(cookie);
+		}
+	}
+
+	/**
+	 * 将值保存到Cookie中,统一设置过期时间
+	 * @param request
+	 * @param response
+	 * @param name
+	 * @param value
+	 */
+	public static void setCookie(HttpServletRequest request,
+								 HttpServletResponse response, String name, String value,String domain) {
+		String ids = UtilProperties.getPropertyValue("security","security.cookieId.allows","");
+		if(ids.indexOf(name) >= 0){
+			int maxAge = UtilProperties.getPropertyAsInteger("security","security.cookieId.allows",0x278d00);
+			setCookie(request, response, name, value, maxAge,domain);
+		}else{
+			Debug.logWarning("the name ["+name+"] is not allowed for cookie ,please check security.cookieId.allows in security.properties",module);
+		}
+	}
+
+	/**
+	 * 将值保存到Cookie中
+	 * @param name
+	 * @param value
+	 * @param domain
+	 */
+	public static void setCookie( String name, String value,String domain){
+		EasyFKWebSubject subject = (EasyFKWebSubject) SecurityUtils.getSubject();
+		HttpServletRequest request = (HttpServletRequest)subject.getServletRequest();
+		HttpServletResponse response = (HttpServletResponse)subject.getServletResponse();
+		setCookie(request, response,name,value,domain);
+	}
+
+	/**
+	 * 将值保存到Cookie中
+	 * @param request
+	 * @param response
+	 * @param name
+	 * @param value
+	 * @param maxAge
+	 */
+	private static void setCookie(HttpServletRequest request,
+								  HttpServletResponse response, String name, String value, int maxAge,String domain) {
+		Cookie cookie =  getCookie(request, name);
+		if(cookie == null) {
+			cookie =  new Cookie(name, value == null ? "" : value);
+		} else {
+			cookie.setValue(value);
+		}
+
+		cookie.setMaxAge(maxAge);
+		//cookie.setDomain(domain);
+		cookie.setPath(getPath(request));
+		response.addCookie(cookie);
+
+	}
+
+	private static String getPath(HttpServletRequest request) {
+		// String path = request.getContextPath();
+		//return (path == null || path.length()==0) ? "/" : path;
+		return "/";
+	}
+
+	/**
+	*是否登录,可以是自动登录
+	*/
 	public static boolean hasAuthenticated(){
-		Subject currentUser = getSubject();
-		return  currentUser.isAuthenticated();
+		EasyFKWebSubject currentUser = getSubject();
+		return currentUser.isAuthenticated();
+	}
+
+	/**
+	 *是否登录
+	 */
+	public static boolean hasLiveAuthenticated(){
+		EasyFKWebSubject currentUser = getSubject();
+		return currentUser.isAuthenticated();
 	}
 
 	/**
@@ -69,8 +220,8 @@ public class UtilSecurity {
 	 *
 	 * @return
 	 */
-	public static Subject getSubject() {
-		return SecurityUtils.getSubject();
+	public static EasyFKWebSubject  getSubject() {
+		return (EasyFKWebSubject)SecurityUtils.getSubject();
 	}
 
 	 
@@ -107,18 +258,18 @@ public class UtilSecurity {
 	 
 	 
 	@SuppressWarnings("unchecked")
-	public static GenericValue getSessionUserMember(){
-		List<String>  list = null;
-		GenericValue userLogin = new GenericValue();
-		if (SecurityUtils.getSubject() != null && getSubject().getPrincipals() != null) {
-			list = getSubject().getPrincipals().asList();
-		}
-		if (list != null && list.size() > 0) {
-			userLogin.put("USER_LOGIN_ID", list.get(0));
-			userLogin.put("USER_NAME",list.get(1));
-		}
-		return userLogin;
-	}
+//	public static GenericValue getSessionUserMember(){
+//		List<String>  list = null;
+//		GenericValue userLogin = new GenericValue();
+//		if (SecurityUtils.getSubject() != null && getSubject().getPrincipals() != null) {
+//			list = getSubject().getPrincipals().asList();
+//		}
+//		if (list != null && list.size() > 0) {
+//			userLogin.put("USER_LOGIN_ID", list.get(0));
+//			userLogin.put("USER_NAME",list.get(1));
+//		}
+//		return userLogin;
+//	}
 
 	
 	public static String getHashType() {

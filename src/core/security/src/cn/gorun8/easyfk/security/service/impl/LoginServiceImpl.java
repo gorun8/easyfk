@@ -25,7 +25,7 @@ import cn.gorun8.easyfk.security.service.LoginService;
 
 /**
  * 
- * 服务接口实现类
+ * 身份认证服务接口实现类
  *
  */
 
@@ -46,25 +46,6 @@ public class LoginServiceImpl implements LoginService{
 		userLoginDao.saveUserLogin(userLogin);
 	}
 
-	@Override
-	public boolean isTicketLegal(String ticket) {
-		GenericValue user = userLoginDao.findUserByTicket(ticket);
-		if(UtilValidate.isNotEmpty(user)){
-			return true;
-		}
-		return false;
-	}
 
-	@Override
-	public GenericValue findUserByTicket(String ticket) {
-		return userLoginDao.findUserByTicket(ticket);
-	}
-
-	@Override
-	public void saveTicket(String userLoginId,String ticket) {
-		userLoginDao.saveTicket(userLoginId, ticket);
-	}
-	
-	
 	 
 }

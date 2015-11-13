@@ -26,22 +26,49 @@ import java.util.List;
 public interface PartyClsGroupDao {
 
 
-    public List<GenericValue> findPartyClsGroupList(String name);
+    /**
+     * 查询下级组织机构
+     * @param parentId
+     * @return
+     */
+    public List<GenericValue> findChildPartyClsGroupList(@Param("parentId")String parentId);
 
     /**
-     * 创建会员组
+     * 按名字查询下级组织机构
+     * @param parentId
+     * @return
+     */
+    public List<GenericValue> findChildPartyClsGroupByName(@Param("parentId")String parentId,@Param("description") String description);
+
+    /**
+     * 查询下级组织机构数
+     * @param parentId
+     * @return
+     */
+
+    public int findChildPartyClsGroupCount(@Param("parentId")String parentId);
+
+    /**
+     * 查询组织机构
+     * @param partyClsGroupId
+     * @return
+     */
+    public  GenericValue  findPartyClsGroupById(@Param("partyClsGroupId")String partyClsGroupId);
+
+    /**
+     * 创建组织机构
      * @param partyClsGroup
      */
     public void createPartyClsGroup(@Param("partyClsGroup") GenericValue partyClsGroup);
 
     /**
-     * 更新会员组
+     * 更新组织机构
      * @param partyClsGroup
      */
     public void savePartyClsGroup(@Param("partyClsGroup") GenericValue partyClsGroup);
 
     /**
-     * 删除会员组
+     * 删除组织机构
      * @param partyClsGroupId
      */
     public void removePartyClsGroupByPrimaryKey(@Param("partyClsGroupId") String partyClsGroupId);

@@ -37,7 +37,20 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
-	<mvc:annotation-driven />
+	<mvc:annotation-driven>
+		<mvc:message-converters>
+			<bean class="cn.gorun8.easyfk.party.utils.FastJsonHttpMessageConverter">
+				<property name="supportedMediaTypes">
+					<list>
+						<value>application/json;charset=UTF-8</value>
+					</list>
+				</property>
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+
+
+
 
 	<!-- Freemaerker 配置 开始 -->
     <bean id="freemarkerConfig" class="cn.gorun8.easyfk.webapp.ftl.EasyFKFreeMarkerConfigurer">

@@ -29,6 +29,14 @@
       href:'${ctx}/partyclsgroup/list'
       },
       {
+      id:'menupartyClsGroupId2',
+      title:'电子文件',
+      desc:'电子文件',
+      style:'icon-home',
+      href:'/doc'
+      }
+        ,
+      {
       id:'menuFormId',
       title:'表单元素',
       desc:'表单元素',

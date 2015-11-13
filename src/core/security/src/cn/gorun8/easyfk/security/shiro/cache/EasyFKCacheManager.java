@@ -19,31 +19,20 @@ import java.util.concurrent.ConcurrentMap;
 
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.cache.CacheException;
-import org.apache.shiro.cache.CacheManager;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-/**
- * redis 缓存管理
- * @author kuang hj
- *
- */
-public class EasyFKCacheManager implements CacheManager {
 
 
-	// fast lookup by name map
+public class EasyFKCacheManager implements org.apache.shiro.cache.CacheManager {
 	@SuppressWarnings("rawtypes")
 	private final ConcurrentMap<String, Cache> caches = new ConcurrentHashMap<String, Cache>();
-
-	private EasyFKManager easyFKManager;
+	private CacheManager cacheManager;
 
 	/**
-	 * The Redis key prefix for caches 
+	 * The key prefix for caches
 	 */
-	private String keyPrefix = "shiro_redis_cache:";
+	private String keyPrefix = "easyfk_cache:";
 	
 	/**
-	 * Returns the Redis session keys
+	 * Returns the   session keys
 	 * prefix.
 	 * @return The prefix
 	 */
@@ -69,10 +58,10 @@ public class EasyFKCacheManager implements CacheManager {
 		if (c == null) {
 
 			// initialize the Redis manager instance
-			easyFKManager.init();
+			cacheManager.init();
 			
 			// create a new cache instance
-			c = new EasyFKCache<K, V>(easyFKManager, keyPrefix);
+			c = new EasyFKCache<K, V>(cacheManager, keyPrefix);
 			
 			// add it to the cache collection
 			caches.put(name, c);
@@ -80,12 +69,12 @@ public class EasyFKCacheManager implements CacheManager {
 		return c;
 	}
 
-	public EasyFKManager getRedisManager() {
-		return easyFKManager;
+	public CacheManager getCacheManager() {
+		return cacheManager;
 	}
 
-	public void setEasyFKManager(EasyFKManager easyFKManager) {
-		this.easyFKManager = easyFKManager;
+	public void setCacheManager(CacheManager cacheManager) {
+		this.cacheManager = cacheManager;
 	}
 
 }

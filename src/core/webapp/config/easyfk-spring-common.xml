@@ -38,7 +38,7 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
     <!-- 配置全局的数据连接池 -->
-    
+
 	<bean id="targetDataSource"  class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 		<property name="url" value="${db.dburl}" />
 		<property name="username" value="${db.dbusername}" />
