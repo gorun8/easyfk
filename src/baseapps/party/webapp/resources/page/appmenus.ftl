@@ -16,141 +16,251 @@
    {MENU_DATA:[
       {
         id:'menuHomeId',
-        title:'首页',
-        desc:'显示首面',
-        style:'icon-home',
+        title:'系统状态',
+        desc:'显示系统状态监控的信息',
+        style:'icon-signal',
         href:'${ctx}'
        },
       {
-      id:'menupartyClsGroupId',
-      title:'组织机构',
-      desc:'管理组织机构',
+      id:'menuPartygpgs',
+      title:'机构和用户',
+      desc:'管理组织机构和组织机构下的用户',
       style:'icon-home',
-      href:'${ctx}/partyclsgroup/list'
+          sub:[
+          {
+          id:'menuPartygpgs1',
+          title:'组织机构',
+          desc:'管理组织机构',
+          style:'icon-tint',
+          href:'${ctx}/partyclsgroup/list'
+          },
+          {
+          id:'menuPartygpgs2',
+          title:'三员管理',
+          desc:'显示具有三员权限的登录帐号',
+          style:'icon-tint',
+          href:'${ctx}/page/adminpartylist.ftl'
+          }]
       },
       {
-      id:'menupartyClsGroupId2',
-      title:'电子文件',
-      desc:'电子文件',
-      style:'icon-home',
-      href:'/doc'
+      id:'menuPartyAuth',
+      title:'权限管理',
+      desc:'对用户进行授权',
+      style:'icon-qrcode',
+      sub:[
+      {
+      id:'menuPartyAuth_2',
+      title:'角色授限',
+      desc:'管理角色和为角色授权',
+      style:'icon-tint',
+      href:'${ctx}/page/partyrolelist.ftl',
+      target:'_self'
+      },
+      {
+      id:'menuPartyAuth_3',
+      title:'资源管理',
+      desc:'管理可授权的资源',
+      style:'icon-tint',
+      href:'${ctx}/page/resourcelist.ftl',
+      target:'_self'
+      },
+      ]
       }
         ,
       {
-      id:'menuFormId',
-      title:'表单元素',
-      desc:'表单元素',
+      id:'menuPartygCert',
+      title:'证书管理',
+      desc:'证书管理',
       style:'icon-th-list',
           sub:[
               {
-              id:'menuFormId_1',
-              title:'通用元素',
-              desc:'通用元素',
+              id:'menuPartygCert_1',
+              title:'服务器证书',
+              desc:'配置代表服务器身份的证书',
               style:'icon-tint',
-              href:'/unicorn/page/form-common.html',
-              target:'_bank'
-              },
-              {
-              id:'menuFormId_2',
-              title:'表单验证',
-              desc:'表单验证',
-              style:'icon-tint',
-              href:'/unicorn/page/form-validation.html',
+              href:'${ctx}/page/servercert.ftl',
               target:'_self'
               },
               {
-              id:'menuFormId_3',
-              title:'向导',
-              desc:'表单向导',
+              id:'menuPartygCert_2',
+              title:'CA证书',
+              desc:'CA证书',
               style:'icon-tint',
-              href:'/unicorn/page/form-wizard.html',
+              href:'${ctx}/page/calist.ftl',
+              target:'_self'
+              },
+              {
+              id:'menuPartygCert_3',
+              title:'CRL黑表',
+              desc:'CRL黑表',
+              style:'icon-tint',
+              href:'${ctx}/page/crllist.ftl',
               target:'_self'
               }
           ]
       },
       {
-      id:'menuButtonId',
-      title:'按钮',
-      desc:'按钮',
-      style:'icon-tint',
-      href:'/unicorn/page/buttons.html',
-      target:'_bank'
-      },
-      {
-      id:'menuInterfaceId',
-      title:'接口',
-      desc:'接口',
-      style:'icon-pencil',
-      href:'/unicorn/page/interface.html',
-      target:'_bank'
-      },
-      {
-      id:'menuTableId',
-      title:'表格',
-      desc:'表格',
-      style:'icon-th',
-      href:'/unicorn/page/tables.html',
-      target:'_bank'
-      },
-      {
-      id:'menuGradleId',
-      title:'列表',
-      desc:'列表',
-      style:'icon-th-list',
-      href:'/unicorn/page/grid.html',
-      target:'_bank'
-      },
-      {
-      id:'menuPageId',
-      title:'页面',
-      desc:'页面',
-      style:'icon-file',
+      id:'menuNetConfig',
+      title:'网络配置',
+      desc:'网络配置',
+      style:'icon-random',
       sub:[
           {
-          id:'menuPageId_1',
-          title:'Invoice',
-          desc:'Invoice',
-          href:'/unicorn/page/invoice.html',
-          target:'_bank'
+          id:'menuNetConfig_1',
+          title:'网络接口',
+          desc:'配置网络接口的IP、网关、DNS等',
+          style:'icon-tint',
+          href:'${ctx}/page/netinterfacelist.ftl',
+          target:'_self'
           },
           {
-          id:'menuPageId_2',
-          title:'聊天',
-          desc:'聊天',
-          href:'/unicorn/page/chat.html',
-          target:'_bank'
-          },
-          {
-          id:'menuPageId_3',
-          title:'日历',
-          desc:'日历',
-          href:'/unicorn/page/calendar.html',
-          target:'_bank'
-          },
-          {
-          id:'menuPageId_4',
-          title:'日历',
-          desc:'日历',
-          href:'/unicorn/page/gallery.html',
-          target:'_bank'
+          id:'menuNetConfig_2',
+          title:'服务端口',
+          desc:'配置WEB服务端口、存贮服务端口等',
+          style:'icon-tint',
+          href:'${ctx}/page/serverparam.ftl',
+          target:'_self'
           }
-        ]
+      ]
       },
       {
-      id:'menuChartsId',
-      title:'图表',
-      desc:'图表',
-      style:'icon-signal',
-      href:'/unicorn/page/charts.html',
-      target:'_bank'
-      },
-      {
-      id:'menuWidgetsId',
-      title:'控件',
-      desc:'控件',
-      style:'icon-inbox',
-      href:'/unicorn/page/widgets.html',
-      target:'_bank'
-      }
+      id:'menuPartygSetting',
+      title:'参数设置',
+      desc:'参数设置',
+      style:'icon-cog',
+      sub:[
+          {
+          id:'menuPartygSetting_1',
+          title:'密码安全',
+          desc:'配置密码安全相关的参数',
+          style:'icon-tint',
+          href:'${ctx}/page/secparam.ftl',
+          target:'_self'
+          },
+          {
+          id:'menuPartygSetting_2',
+          title:'认证参数配置',
+          desc:'配置认证的凭证类型、锁定策略、验证码策略等',
+          style:'icon-tint',
+          href:'${ctx}/page/authparam.ftl',
+          target:'_self'
+          },
 
+          {
+          id:'menuPartygSetting_3',
+          title:'日志配置',
+          desc:'配置日志级别、告警邮件、远程日志服务地址等',
+          style:'icon-tint',
+          href:'${ctx}/page/logparam.ftl',
+          target:'_self'
+          }
+          ]
+      },
+      {
+      id:'menuPartygLogs',
+      title:'日志管理',
+      desc:'审计和管理日志数据',
+      style:'icon-list-alt',
+      sub:[
+
+      {
+      id:'menuPartygLogs_0',
+      title:'日志概况',
+      desc:'显示日志的整体状态',
+      style:'icon-tint',
+      href:'${ctx}/page/logchartreport.ftl',
+      target:'_self'
+      },
+      {
+      id:'menuPartygLogs_1',
+      title:'系统日志',
+      desc:'系统运行过程中产生的日志',
+      style:'icon-tint',
+      href:'${ctx}/page/sysloglist.ftl',
+      target:'_self'
+      },
+      {
+      id:'menuPartygLogs_2',
+      title:'操作日志',
+      desc:'系统管理员和一般用户进行操作时产生的日志',
+      style:'icon-tint',
+      href:'${ctx}/page/oploglist.ftl',
+      target:'_self'
+      },
+      {
+      id:'menuPartygSetting_3',
+      title:'日志配置',
+      desc:'配置日志级别、告警邮件、远程日志服务地址等',
+      style:'icon-tint',
+      href:'${ctx}/page/logparam.ftl',
+      target:'_self'
+      }
+      ]
+      },
+      {
+      id:'menuPartygCommunite',
+      title:'公告和消息',
+      desc:'发布公告或消息',
+      style:'icon-comment',
+          sub:[
+              {
+              id:'menuPartygCommunite_0',
+              title:'收件箱',
+              desc:'我收到的所有消息',
+              style:'icon-tint',
+              href:'${ctx}/page/inbox.ftl',
+              target:'_self'
+              }
+              ,
+              {
+              id:'menuPartygCommunite_4',
+              title:'发件箱',
+              desc:'我发出的所有消息',
+              style:'icon-tint',
+              href:'${ctx}/page/outbox.ftl',
+              target:'_self'
+              }
+              ,
+              {
+              id:'menuPartygCommunite_5',
+              title:'草稿箱',
+              desc:'我写的消息草稿',
+              style:'icon-tint',
+              href:'${ctx}/page/trash.ftl',
+              target:'_self'
+              },
+              {
+              id:'menuPartygCommunite_6',
+              title:'即时消息',
+              desc:'即时消息',
+              style:'icon-tint',
+              href:'${ctx}/page/chat.ftl',
+              target:'_bank'
+              }
+
+          ]
+      },
+      {
+      id:'menuPartygVersion',
+      title:'版本版权',
+      desc:'程序模块的版本、版权管理和升级',
+      style:'icon-inbox',
+      sub:[
+      {
+          id:'menuPartygVersion_1',
+          title:'程序管理',
+          desc:'新新程序版本发布、版本检测、升级策略等',
+          href:'/party/page/versionctrl.ftl'
+
+      },
+      {
+          id:'menuPartygVersion_2',
+          title:'许可证',
+          desc:'许可证的管理',
+          href:'${ctx}/page/licence.ftl'
+
+      },
+
+      ]
+      }
   ]}

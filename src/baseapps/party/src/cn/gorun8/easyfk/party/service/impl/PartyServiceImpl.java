@@ -19,6 +19,7 @@ import cn.gorun8.easyfk.entity.dao.CommonDao;
 import cn.gorun8.easyfk.entity.GenericValue;
 import cn.gorun8.easyfk.entity.SequenceFactory;
 import cn.gorun8.easyfk.entity.page.UtilPage;
+import cn.gorun8.easyfk.party.dao.PartyClsGroupDao;
 import cn.gorun8.easyfk.party.dao.PartyDao;
 import cn.gorun8.easyfk.party.service.PartyService;
 import cn.gorun8.easyfk.party.utils.PartyTypeUtil;
@@ -51,10 +52,14 @@ public class PartyServiceImpl implements PartyService {
     @Autowired
     private UserLoginDao userLoginDao;
 
+    @Autowired
+    private PartyClsGroupDao partyClsGroupDao;
+
     public List<Map> listParty(Map<String, ? extends Object> context){
         List<Map> list2 = FastList.newInstance();
         try {
-            List<GenericValue> list = partyDao.findPartyList();
+             String clsId = (String)context.get("clsId");
+             List<GenericValue> list = partyDao.findPartyList(clsId);
              for (GenericValue it: list){
                  list2.add(it.toMap());
              }
@@ -162,6 +167,10 @@ public class PartyServiceImpl implements PartyService {
                 if (statusId == null) {
                     statusId = "PARTY_ENABLED";
                 }
+                if (UtilValidate.isEmpty(description)) {
+                    description = (String) context.get("firstName");
+                }
+
                 Map<String, Object> newPartyMap = UtilMisc.toMap("partyId", partyId, "partyTypeId", "PERSON", "description", description, "createdDate", now, "lastModifiedDate", now, "statusId", statusId);
                 String preferredCurrencyUomId = (String) context.get("preferredCurrencyUomId");
                 if (!UtilValidate.isEmpty(preferredCurrencyUomId)) {
@@ -175,13 +184,11 @@ public class PartyServiceImpl implements PartyService {
                     newPartyMap.put("createdByUserLogin", userLogin.get("userLoginId"));
                     newPartyMap.put("lastModifiedByUserLogin", userLogin.get("userLoginId"));
                 }
-
-                    party = GenericValue.fromMap(newPartyMap);
-                    partyDao.createParty(party);
-                    // create the status history
-                    GenericValue partyStatus = GenericValue.fromMap(UtilMisc.toMap("partyId", partyId, "statusId", statusId, "statusDate", now));
-                    partyDao.createPartyStatus(partyStatus);
-
+                party = GenericValue.fromMap(newPartyMap);
+                partyDao.createParty(party);
+                // create the status history
+                GenericValue partyStatus = GenericValue.fromMap(UtilMisc.toMap("partyId", partyId, "statusId", statusId, "statusDate", now));
+                partyDao.createPartyStatus(partyStatus);
             }
 
             GenericValue person = null;
@@ -207,6 +214,11 @@ public class PartyServiceImpl implements PartyService {
             person.setNonPKFields(context);
             person.set("partyId", partyId);
             partyDao.createPerson(person);
+
+            //setparty to class
+            String partyClassificationGroupId =(String) context.get("partyClassificationGroupId");
+            GenericValue partyCls = GenericValue.fromMap(UtilMisc.toMap("partyId", partyId,"partyClassificationGroupId",partyClassificationGroupId,"fromDate",now));
+            partyClsGroupDao.setPartyClassification(partyCls);
         }catch(Exception e){
             e.printStackTrace();
             return UtilMessages.returnError(UtilProperties.getMessage(resourceError,
@@ -241,14 +253,14 @@ public class PartyServiceImpl implements PartyService {
             if (!party.getString("statusId").equals(statusId)) {
 
                 // check that status is defined as a valid change
-                GenericValue status = GenericValue.fromMap(UtilMisc.toMap("statusId", party.get("statusId"), "statusIdTo", statusId));
+                GenericValue status = GenericValue.fromMap(UtilMisc.toMap("statusId", party.getString("statusId"), "statusIdTo", statusId));
                 GenericValue statusValidChange = commonDao.findStatusValidChange(status);
                 if (statusValidChange == null) {
-                    String errorMsg = "Cannot change party status from " + party.get("statusId") + " to " + statusId;
+                    String errorMsg = "Cannot change party status from " + party.getString("statusId") + " to " + statusId;
                     Debug.logWarning(errorMsg, module);
                     return UtilMessages.returnError(UtilProperties.getMessage(resource, 
                             "PartyStatusCannotBeChanged", 
-                            UtilMisc.toMap("partyFromStatusId", party.get("statusId"),
+                            UtilMisc.toMap("partyFromStatusId", party.getString("statusId"),
                             "partyToStatusId", statusId), locale)); 
                 }
 

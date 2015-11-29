@@ -22,4 +22,14 @@
 INSERT INTO `party_classification_type` VALUES ('ORGANIZATION_CLASSIF', null, 'N', '组织', '2014-06-11 15:21:30', '2014-06-11 15:21:30', '2014-06-11 15:21:30', '2014-06-11 15:21:30');
 INSERT INTO `party_classification_type` VALUES ('PERSON_CLASSIFICATIO', null, 'N', '人员', '2014-06-11 15:21:30', '2014-06-11 15:21:30', '2014-06-11 15:21:30', '2014-06-11 15:21:30');
 
+-- ----------------------------
+--  party status change defined
+-- ----------------------------
+INSERT INTO `status_type` VALUES ('PARTY_STATUS', null, 'N', '会员', '2015-11-23 11:42:15', '2015-11-23 11:42:14', '2015-11-23 11:42:15', '2015-11-23 11:42:14');
+INSERT INTO `status_item` VALUES ('PARTY_DISABLED', 'PARTY_STATUS', 'DISABLED', '99', '停用', '2015-11-23 11:42:15', '2015-11-23 11:42:14', '2015-11-23 11:42:15', '2015-11-23 11:42:14');
+INSERT INTO `status_item` VALUES ('PARTY_ENABLED', 'PARTY_STATUS', 'ENABLED', '01', '启用', '2015-11-23 11:42:15', '2015-11-23 11:42:14', '2015-11-23 11:42:15', '2015-11-23 11:42:14');
+INSERT INTO `status_valid_change` VALUES ('PARTY_DISABLED', 'PARTY_ENABLED', null, '重新启用', '2015-11-23 11:42:15', '2015-11-23 11:42:14', '2015-11-23 11:42:15', '2015-11-23 11:42:14');
+INSERT INTO `status_valid_change` VALUES ('PARTY_ENABLED', 'PARTY_DISABLED', null, '停用', '2015-11-23 11:42:15', '2015-11-23 11:42:14', '2015-11-23 11:42:15', '2015-11-23 11:42:14');
+
+
 

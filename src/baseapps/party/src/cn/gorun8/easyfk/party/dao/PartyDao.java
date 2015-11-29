@@ -28,7 +28,7 @@ public interface PartyDao {
      * 获取会员列表
      * @return
      */
-    public List<GenericValue> findPartyList() throws Exception;
+    public List<GenericValue> findPartyList(@Param("partyClsId") String partyClsId) throws Exception;
 
     /**
      * 根据partyId查询Party
@@ -48,6 +48,7 @@ public interface PartyDao {
      * @param party
      */
     public  void  saveParty(@Param("party")GenericValue party) throws Exception;
+
 
 
     /**
@@ -117,6 +118,5 @@ public interface PartyDao {
      * @param partyId
      */
     public void removePartyGroupByPrimaryKey(@Param("partyId") String partyId);
-
 
 }

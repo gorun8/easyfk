@@ -19,7 +19,11 @@ Author:hezhiping   Email:110476592@qq.com
 
 
     <select id="findPartyList" parameterType="java.lang.String"   resultType="cn.gorun8.easyfk.entity.GenericValue">
-        SELECT  * FROM party as pt,person as ps   WHERE pt.PARTY_ID = ps.PARTY_ID
+        SELECT  * FROM party as pt,person as ps,party_classification as pcls
+        WHERE pt.PARTY_ID = ps.PARTY_ID and pt.STATUS_ID='PARTY_ENABLED' and pcls.PARTY_ID = ps.PARTY_ID
+        <if test="partyClsId != null">
+           and pcls.PARTY_CLASSIFICATION_GROUP_ID = #{partyClsId}
+        </if>
     </select>
 
     <select id="findPartyById" parameterType="java.lang.String"   resultType="cn.gorun8.easyfk.entity.GenericValue">

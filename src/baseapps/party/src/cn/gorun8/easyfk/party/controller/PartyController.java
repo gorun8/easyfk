@@ -74,14 +74,41 @@ public class PartyController {
 	public String listpartydata(HttpServletRequest request,
 							@RequestParam(value="pageSize" ,defaultValue="10")int pageSize,
 							@RequestParam(value="pageIndex" ,defaultValue="1")int pageIndex){
-
-		UtilPage.startPage(request, pageIndex, pageSize);
 		Map<String,Object> context = UtilHttp.getParameterMap(request);
 		String navids = (String) context.get("navids");
+
+		if(UtilValidate.isNotEmpty(navids)){
+			List<Map> parentClsGroupList = FastList.newInstance();
+			String  []ids = navids.split(",");
+			for (String id : ids){
+				if(UtilValidate.isEmpty(id)){
+					continue;
+				}
+				GenericValue gv = partyClsGroupService.findPartyClsGroupById(id);
+				if(gv != null){
+					parentClsGroupList.add(gv.toMap());
+				}
+			}
+			request.setAttribute("navids",navids);
+			request.setAttribute("parentClsGroupList",parentClsGroupList);
+		}
+
+		UtilPage.startPage(request, pageIndex, pageSize);
 		List<Map> partyGroupList = partyService.listParty(context);
-		request.setAttribute("navids",navids);
 		request.setAttribute("partyGroupList",partyGroupList);
 		return "page/partylistdata";
+	}
+
+	@RequestMapping("disableParty")
+	@ResponseBody
+	public String disableParty(HttpServletRequest request ){
+		Map<String,Object> context = UtilHttp.getParameterMap(request);
+		context.put("statusId","PARTY_DISABLED");
+		Map<String,Object> result = partyService.setPartyStatus(context);
+		if(UtilMessages.isSuccess(result)){
+			return  UtilMessages.successResponse(request);
+		}
+		return 	UtilMessages.errorResponse(request,result);
 	}
 
 	@RequestMapping("createperson")
@@ -89,12 +116,15 @@ public class PartyController {
 	public String createPerson( HttpServletRequest request  ){
 		Map<String,Object> context = UtilHttp.getParameterMap(request);
 		Map<String,Object> result = partyService.createPerson(context);
-		return  UtilMessages.successResponse(request);
+		if(UtilMessages.isSuccess(result)){
+			return  UtilMessages.successResponse(request);
+		}
+		return 	UtilMessages.errorResponse(request, result);
 	}
+
 
 	@RequestMapping("partydetial")
 	public String partydetial(HttpServletRequest request){
-
 		return "page/partydetial";
 	}
 
@@ -103,7 +133,10 @@ public class PartyController {
 	public String savePerson(HttpServletRequest request,HttpServletResponse response ){
 		Map<String,Object> context = UtilHttp.getParameterMap(request);
 		Map<String,Object> result = partyService.updatePerson(context);
-		return  UtilMessages.successResponse(request);
+		if(UtilMessages.isSuccess(result)){
+			return  UtilMessages.successResponse(request);
+		}
+		return 	UtilMessages.errorResponse(request, result);
 	}
 
 	@RequestMapping(value = "creategroup",method = RequestMethod.POST)
@@ -111,7 +144,10 @@ public class PartyController {
 	public String createGroup( HttpServletRequest request  ){
 		Map<String,Object> context = UtilHttp.getParameterMap(request);
 		Map<String,Object> result = partyService.createPartyGroup(context);
-		return  UtilMessages.successResponse(request);
+		if(UtilMessages.isSuccess(result)){
+			return  UtilMessages.successResponse(request);
+		}
+		return 	UtilMessages.errorResponse(request, result);
 	}
 
 	@RequestMapping("updategroup")
@@ -119,6 +155,9 @@ public class PartyController {
 	public String saveGroup(HttpServletRequest request,HttpServletResponse response ){
 		Map<String,Object> context = UtilHttp.getParameterMap(request);
 		Map<String,Object> result = partyService.updatePartyGroup(context);
-		return  UtilMessages.successResponse(request);
+		if(UtilMessages.isSuccess(result)){
+			return  UtilMessages.successResponse(request);
+		}
+		return 	UtilMessages.errorResponse(request, result);
 	}
 }

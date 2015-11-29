@@ -139,9 +139,9 @@ public class UtilMessages {
      * @return
      */
     public static String errorResponse(HttpServletRequest request){
-        Map<String, Object> attrMap = UtilHttp.getJSONAttributeMap(request,"errorMessageList");
+        Map<String, Object> attrMap = UtilHttp.getJSONAttributeMap(request,ERROR_MESSAGE_LIST);
         JSONObject json = JSONObject.fromObject(attrMap);
-        json.put(RESPONSE_TYPE,RESPOND_SUCCESS);
+        json.put(RESPONSE_TYPE,RESPOND_ERROR);
         return json.toString();
     }
 
@@ -155,7 +155,15 @@ public class UtilMessages {
         return  errorResponse(request);
     }
 
-
+    /**
+     * JSON格式的出错响应
+     * @param request
+     * @return
+     */
+    public static String errorResponse(HttpServletRequest request,Map<String, ? extends Object> result){
+        UtilMessages.getMessages(request, result, "");
+        return  errorResponse(request);
+    }
 
     /**
      * 将当前请求消息转换为JSON.
@@ -294,13 +302,13 @@ public class UtilMessages {
 
     public static void setMessages(HttpServletRequest request, String errorMessage, String eventMessage, String defaultMessage) {
         if (UtilValidate.isNotEmpty(errorMessage))
-            request.setAttribute("_ERROR_MESSAGE_", errorMessage);
+            request.setAttribute(ERROR_MESSAGE_LIST, errorMessage);
 
         if (UtilValidate.isNotEmpty(eventMessage))
-            request.setAttribute("_EVENT_MESSAGE_", eventMessage);
+            request.setAttribute(EVENT_MESSAGE_LIST, eventMessage);
 
         if (UtilValidate.isEmpty(errorMessage) && UtilValidate.isEmpty(eventMessage) && UtilValidate.isNotEmpty(defaultMessage))
-            request.setAttribute("_EVENT_MESSAGE_", defaultMessage);
+            request.setAttribute(EVENT_MESSAGE_LIST, defaultMessage);
 
     }
 

@@ -79,6 +79,26 @@ public class PartyClsGroupServiceImpl implements PartyClsGroupService {
 		return  parClsMapList;
 	}
 
+	public List<Map>  searchNode(Map<String, ? extends Object> context){
+		String partyClsName =(String)context.get("partyClsName");
+		List<Map> parClsMapList = FastList.newInstance();
+		if(UtilValidate.isEmpty(partyClsName))
+		{
+			return parClsMapList;
+		}
+
+		List<GenericValue> partyClsGroupList = partyClsGroupDao.findPartyClsGroupByName(partyClsName);
+		for (GenericValue gv :partyClsGroupList){
+			Map v = gv.toMap();
+			String id = (String)v.get("partyClassificationGroupId");
+			int count = partyClsGroupDao.findChildPartyClsGroupCount(id);
+			v.put("childCount",Integer.valueOf(count));
+			parClsMapList.add(v);
+		}
+		return  parClsMapList;
+	}
+
+
 	public boolean hasChildrenPartyClsGroup(String parentId){
 		int count =  partyClsGroupDao.findChildPartyClsGroupCount(parentId);
 		return (count > 0);

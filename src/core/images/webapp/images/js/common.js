@@ -54,6 +54,26 @@ easyfk.ajaxgetstring = function(ajaxUrl,postparams,callback)
 }
 
 /**
+ * 显示对模态对话框
+ * @param containerId
+ */
+easyfk.showDailog = function(containerId,jsondata){
+	if(jsondata != null && jsondata != undefined){
+		$.each( jsondata, function(key, val){
+			$("#"+key).val(val);
+			//$("#partyPersonForm").children("#"+key).val(val);
+		});
+	}//endif
+
+	$("#"+containerId).modal({backdrop:'static',keyboard:false,show:true});
+
+}
+
+easyfk.changePage = function(url){
+	document.location.href = url;
+}
+
+/**
  * 选择checkbox 可以全选，反选。jqType可以根据css,id等灵活设置*/
 easyfk.selectAllCheckbox = function(jqType)
 {
@@ -199,6 +219,8 @@ function confirmForm(msg,formObj){
 	return false;
 }
 
+
+
 //进度条
 easyfk.showProgress = function(message,title,closetime)
 {
@@ -227,12 +249,12 @@ easyfk.showSubmitProgress = function()
 
 
 //弹出框
-window.realAlert = window.alert;
-window.alert = function(mess)
-{
-	//$.messager.alert('easyfk',mess);
-	easyfk.showWarningBox(mess);
-}
+//window.realAlert = window.alert;
+//window.alert = function(mess)
+//{
+//	//$.messager.alert('easyfk',mess);
+//	easyfk.showWarningBox(mess);
+//}
 
  
 

@@ -41,6 +41,14 @@ public interface PartyClsGroupService {
 
 
 	/**
+	 * 根据组织机构名查询
+	 * @param context
+	 * @return
+	 */
+	public List<Map>  searchNode(Map<String, ? extends Object> context);
+
+
+	/**
 	 * 是否存在获取下级组织机构
 	 * @param parentId
 	 * @return

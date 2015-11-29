@@ -109,7 +109,7 @@
             <property name="useBodyEncodingForURI" value="false"/>
             <property name="xpoweredBy" value="true"/>
             <property name="acceptCount" value="10"/>
-            <property name="address" value="127.0.0.1"/>
+            <property name="address" value="0.0.0.0"/>
             <property name="bufferSize" value="2048"/>
             <property name="compression" value="on"/>
             <property name="compressableMimeType" value="text/html,text/xml,text/plain,text/javascript,text/css"/>
@@ -146,7 +146,7 @@
             <property name="useBodyEncodingForURI" value="false"/>
             <property name="xpoweredBy" value="true"/>
             <property name="acceptCount" value="10"/>
-            <property name="address" value="127.0.0.1"/>
+            <property name="address" value="0.0.0.0"/>
             <property name="bufferSize" value="2048"/>
             <property name="compression" value="on"/>
             <property name="compressableMimeType" value="text/html,text/xml,text/plain,text/javascript,text/css"/>

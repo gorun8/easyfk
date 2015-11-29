@@ -12,7 +12,7 @@
   Author:hezhiping   Email:110476592@qq.com
 -->
 
-<@easyfkSetAppMenu menuName="EASYFK_MENU" focusItemIds="{['menupartyClsGroupId']}" location="component://party/webapp/resources/page/appmenus.ftl">
+<@easyfkSetAppMenu menuName="EASYFK_MENU" focusItemIds="{['menuPartygpgs']}" location="component://party/webapp/resources/page/appmenus.ftl">
 </@easyfkSetAppMenu>
 
 <@easyfkSetNavBar subTitle="会员列表">
@@ -28,13 +28,7 @@
 <@easyfkDecoratorScreen name="body" location="component://party/webapp/resources/page/appcommon.ftl">
 <div class="row-fluid">
     <div class="span12">
-        <@easyfkContextMenu>
-            {MENU_DATA:[
-                {id:'contextNewMenuId',title:'个人会员',desc:'新建个人会员',toggle:'modal',href:'javascript:easyfk.newPerson()',style:'btn btn-primary tip-bottom',style2:' icon-plus-sign icon-white'},
-                {id:'contextNewMenuId',title:'组织会员',desc:'新建组织会员',toggle:'modal',href:'javascript:easyfk.newGroup()',style:'btn btn-primary tip-bottom',style2:' icon-plus-sign icon-white'},
 
-            ]}
-        </@easyfkContextMenu>
         <div id="listdatacontainer"></div>
 
     </div>

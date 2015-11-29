@@ -17,479 +17,502 @@ Author:hezhiping   Email:110476592@qq.com
         <value xml:lang="en">安全组列表</value>
         <value xml:lang="zh">安全组列表</value>
     </property>
+
+    <property key="GroupName">
+        <value xml:lang="en">Group Name</value>
+        <value xml:lang="zh">组织机构名称</value>
+    </property>
+    <property key="PartyGroupName">
+        <value xml:lang="en">Group Party Name</value>
+        <value xml:lang="zh">组织会员名称</value>
+    </property>
+
+    <property key="ExternalId">
+        <value xml:lang="en">External ID</value>
+        <value xml:lang="zh">其它编号</value>
+    </property>
+
     
-    <property key="FormFieldTitle_annualRevenue">
+    <property key="annualRevenue">
         <value xml:lang="en">Annual revenue</value>
         <value xml:lang="zh">年收入</value>
     </property>
     
-    <property key="FormFieldTitle_birthDate">
+    <property key="birthDate">
         <value xml:lang="en">Birth Date</value>
         <value xml:lang="zh">生日</value>
     </property>
-    <property key="FormFieldTitle_certProvisionId">
+    <property key="certProvisionId">
         <value xml:lang="en">Cert Provision Id</value>
-        <value xml:lang="zh">证书提供标识</value>
+        <value xml:lang="zh">证书提供编号</value>
     </property>
-    <property key="FormFieldTitle_certString">
+    <property key="certString">
         <value xml:lang="en">Cert String</value>
         <value xml:lang="zh">证书字符串</value>
     </property>
-    <property key="FormFieldTitle_cityLocality">
+    <property key="cityLocality">
         <value xml:lang="en">City Locality</value>
         <value xml:lang="zh">城市/所在地</value>
     </property>
-    <property key="FormFieldTitle_cmDetail">
+    <property key="cmDetail">
         <value xml:lang="en">Contach Mech Detail</value>
         <value xml:lang="zh">详细联系方式</value>
     </property>
-    <property key="FormFieldTitle_personalImage">
+    <property key="personalImage">
         <value xml:lang="en">头相</value>
         <value xml:lang="zh">头相</value>
     </property>
+    <property key="personalName">
+        <value xml:lang="en">Name</value>
+        <value xml:lang="zh">姓名</value>
+    </property>
+    <property key="newPerson">
+        <value xml:lang="en">New Person</value>
+        <value xml:lang="zh">新建个人会员</value>
+    </property>
+
     
-    
-    <property key="FormFieldTitle_commonName">
+    <property key="commonName">
         <value xml:lang="en">Common Name</value>
         <value xml:lang="zh">通用名</value>
     </property>
-    <property key="FormFieldTitle_communicationEventId">
+    <property key="communicationEventId">
         <value xml:lang="en">Communication Event Id</value>
-        <value xml:lang="zh">沟通事件标识</value>
+        <value xml:lang="zh">沟通事件编号</value>
     </property>
-    <property key="FormFieldTitle_communicationEventPrpTypId">
+    <property key="communicationEventPrpTypId">
         <value xml:lang="en">Communication Event Purpose Type Id</value>
-        <value xml:lang="zh">沟通事件目的类型标识</value>
+        <value xml:lang="zh">沟通事件目的类型编号</value>
     </property>
-    <property key="FormFieldTitle_communicationEventTypeId">
+    <property key="communicationEventTypeId">
         <value xml:lang="en">Comm.Type Id</value>
-        <value xml:lang="zh">沟通事件类型标识</value>
+        <value xml:lang="zh">沟通事件类型编号</value>
     </property>
-    <property key="FormFieldTitle_communicationPartyId">
+    <property key="communicationPartyId">
         <value xml:lang="en">Communication Party Id</value>
-        <value xml:lang="zh">沟通会员标识</value>
+        <value xml:lang="zh">沟通会员编号</value>
     </property>
-    <property key="FormFieldTitle_contactListId">
+    <property key="contactListId">
         <value xml:lang="en">Contact List Id</value>
-        <value xml:lang="zh">联系列表标识</value>
+        <value xml:lang="zh">联系列表编号</value>
     </property>
-    <property key="FormFieldTitle_contactListName">
+    <property key="contactListName">
         <value xml:lang="en">Contact List Name</value>
         <value xml:lang="zh">联系列表名称</value>
     </property>
-    <property key="FormFieldTitle_contactListTypeId">
+    <property key="contactListTypeId">
         <value xml:lang="en">Contact List Type Id</value>
-        <value xml:lang="zh">联系列表类型标识</value>
+        <value xml:lang="zh">联系列表类型编号</value>
     </property>
-    <property key="FormFieldTitle_contactMechTypeId">
+    <property key="contactMechTypeId">
         <value xml:lang="en">Contact Mech Type Id</value>
-        <value xml:lang="zh">联系方式类型标识</value>
+        <value xml:lang="zh">联系方式类型编号</value>
     </property>
-    <property key="FormFieldTitle_contentMimeTypeId">
+    <property key="contentMimeTypeId">
         <value xml:lang="en">Content Mime Type Id</value>
-        <value xml:lang="zh">内容Mime类型标识</value>
+        <value xml:lang="zh">内容Mime类型编号</value>
     </property>
-    <property key="FormFieldTitle_country">
+    <property key="country">
         <value xml:lang="en">Country</value>
         <value xml:lang="zh">国家</value>
     </property>
-    <property key="FormFieldTitle_deceasedDate">
+    <property key="deceasedDate">
         <value xml:lang="en">Deceased Date</value>
     </property>
-    <property key="FormFieldTitle_defaultRate">
+    <property key="defaultRate">
         <value xml:lang="en">Default Rate</value>
         <value xml:lang="zh">默认费率</value>
     </property>
-    <property key="FormFieldTitle_deleteEmail">
+    <property key="deleteEmail">
         <value xml:lang="en">Delete email</value>
         <value xml:lang="zh">删除电子邮件</value>
     </property>
-    <property key="FormFieldTitle_destinationFacilityId">
+    <property key="destinationFacilityId">
         <value xml:lang="en">Destination Facility Id</value>
-        <value xml:lang="zh">目的地设备标识</value>
+        <value xml:lang="zh">目的地设备编号</value>
     </property>
-    <property key="FormFieldTitle_disabledDateTime">
+    <property key="disabledDateTime">
         <value xml:lang="en">Disabled Date Time</value>
         <value xml:lang="zh">无效的日期时间</value>
     </property>
-    <property key="FormFieldTitle_editContent">
+    <property key="editContent">
         <value xml:lang="en">Edit Content</value>
         <value xml:lang="zh">编辑内容</value>
     </property>
-    <property key="FormFieldTitle_emailAddress">
+    <property key="emailAddress">
         <value xml:lang="en">Email Address</value>
         <value xml:lang="zh">电子邮件地址</value>
     </property>
-    <property key="FormFieldTitle_employmentStatusEnumId">
+    <property key="employmentStatusEnumId">
         <value xml:lang="en">Employment Status Enum Id</value>
-        <value xml:lang="zh">雇佣状态枚举标识</value>
+        <value xml:lang="zh">雇佣状态枚举编号</value>
     </property>
-    <property key="FormFieldTitle_enabled">
+    <property key="enabled">
         <value xml:lang="en">Enabled</value>
         <value xml:lang="zh">启用</value>
     </property>
-    <property key="FormFieldTitle_existingCustomer">
+    <property key="existingCustomer">
         <value xml:lang="en">Existing Customer</value>
         <value xml:lang="zh">已有客户</value>
     </property>
-    <property key="FormFieldTitle_firstName">
+    <property key="firstName">
         <value xml:lang="en">First Name</value>
         <value xml:lang="zh">名字</value>
     </property>
-    <property key="FormFieldTitle_firstNameLocal">
+    <property key="firstNameLocal">
         <value xml:lang="en">First Name Local</value>
         <value xml:lang="zh">名字本地语言</value>
     </property>
-    <property key="FormFieldTitle_fromPartyId">
+    <property key="fromPartyId">
         <value xml:lang="en">From Party Id</value>
-        <value xml:lang="zh">来自会员标识</value>
+        <value xml:lang="zh">来自会员编号</value>
     </property>
-    <property key="FormFieldTitle_gender">
+    <property key="gender">
         <value xml:lang="en">Gender</value>
         <value xml:lang="zh">性别</value>
     </property>
-    <property key="FormFieldTitle_groupName">
+    <property key="groupName">
         <value xml:lang="en">Group Name</value>
         <value xml:lang="zh">组名称</value>
     </property>
-    <property key="FormFieldTitle_groupNameLocal">
+    <property key="groupNameLocal">
         <value xml:lang="en">Group Name Local</value>
         <value xml:lang="zh">组名称本地语言</value>
     </property>
-    <property key="FormFieldTitle_height">
+    <property key="height">
         <value xml:lang="en">Height</value>
         <value xml:lang="zh">高度</value>
     </property>
-    <property key="FormFieldTitle_infoString">
+    <property key="infoString">
         <value xml:lang="en">Info String</value>
         <value xml:lang="zh">信息字符串</value>
     </property>
-    <property key="FormFieldTitle_isExempt">
+    <property key="isExempt">
         <value xml:lang="en">Is Exempt</value>
         <value xml:lang="zh">免税吗</value>
     </property>
-    <property key="FormFieldTitle_isNexus">
+    <property key="isNexus">
         <value xml:lang="en">Is Nexus</value>
         <value xml:lang="zh">关联吗</value>
     </property>
-    <property key="FormFieldTitle_lastInviteDate">
+    <property key="lastInviteDate">
         <value xml:lang="en">Last Invite Date</value>
         <value xml:lang="zh">上次邀请日期</value>
     </property>
-    <property key="FormFieldTitle_lastName">
+    <property key="lastName">
         <value xml:lang="en">Last Name</value>
         <value xml:lang="zh">姓</value>
     </property>
-    <property key="FormFieldTitle_lastNameLocal">
+    <property key="lastNameLocal">
         <value xml:lang="en">Last Name Local</value>
         <value xml:lang="zh">姓的本地语言</value>
     </property>
-    <property key="FormFieldTitle_logoImageUrl">
+    <property key="logoImageUrl">
         <value xml:lang="en">Logo Image Url</value>
-        <value xml:lang="zh">标识图片网址</value>
+        <value xml:lang="zh">编号图片网址</value>
     </property>
-    <property key="FormFieldTitle_maritalStatus">
+    <property key="maritalStatus">
         <value xml:lang="en">Marital Status</value>
         <value xml:lang="zh">婚姻状况</value>
     </property>
-    <property key="FormFieldTitle_marketingCampaignId">
+    <property key="marketingCampaignId">
         <value xml:lang="en">Marketing Campaign Id</value>
-        <value xml:lang="zh">市场攻势标识</value>
+        <value xml:lang="zh">市场攻势编号</value>
     </property>
-    <property key="FormFieldTitle_memberId">
+    <property key="memberId">
         <value xml:lang="en">Member Id</value>
-        <value xml:lang="zh">成员标识</value>
+        <value xml:lang="zh">成员编号</value>
     </property>
-    <property key="FormFieldTitle_messageId">
+    <property key="messageId">
         <value xml:lang="en">Message Id</value>
-        <value xml:lang="zh">消息标识</value>
+        <value xml:lang="zh">消息编号</value>
     </property>
-    <property key="FormFieldTitle_middleName">
+    <property key="middleName">
         <value xml:lang="en">Middle Name</value>
         <value xml:lang="zh">中间名</value>
     </property>
-    <property key="FormFieldTitle_middleNameLocal">
+    <property key="middleNameLocal">
         <value xml:lang="en">Middle Name Local</value>
         <value xml:lang="zh">中间名的本地语言</value>
     </property>
-    <property key="FormFieldTitle_monthsWithEmployer">
+    <property key="monthsWithEmployer">
         <value xml:lang="en">Months With Employer</value>
         <value xml:lang="zh">月为雇主</value>
     </property>
-    <property key="FormFieldTitle_mothersMaidenName">
+    <property key="mothersMaidenName">
         <value xml:lang="en">Mothers Maiden Name</value>
         <value xml:lang="zh">母亲未婚时名字</value>
     </property>
-    <property key="FormFieldTitle_nickname">
+    <property key="nickname">
         <value xml:lang="en">Nickname</value>
         <value xml:lang="zh">昵称</value>
     </property>
-    <property key="FormFieldTitle_note">
+    <property key="note">
         <value xml:lang="en">Note</value>
         <value xml:lang="zh">便笺</value>
     </property>
-    <property key="FormFieldTitle_noteId">
+    <property key="noteId">
         <value xml:lang="en">Note Id</value>
-        <value xml:lang="zh">便笺标识</value>
+        <value xml:lang="zh">便笺编号</value>
     </property>
-    <property key="FormFieldTitle_noteName">
+    <property key="noteName">
         <value xml:lang="en">Note Name</value>
         <value xml:lang="zh">便笺名称</value>
     </property>
-    <property key="FormFieldTitle_numEmployees">
+    <property key="numEmployees">
         <value xml:lang="en">Number of employees</value>
         <value xml:lang="zh">雇员数量</value>
     </property>
-    <property key="FormFieldTitle_occupation">
+    <property key="occupation">
         <value xml:lang="en">Occupation</value>
         <value xml:lang="zh">职业</value>
     </property>
-    <property key="FormFieldTitle_officeSiteName">
+    <property key="officeSiteName">
         <value xml:lang="en">Office Site Name</value>
         <value xml:lang="zh">办公站点名称</value>
     </property>
-    <property key="FormFieldTitle_optInVerifyCode">
+    <property key="optInVerifyCode">
         <value xml:lang="en">Opt-in Code</value>
         <value xml:lang="zh">兴趣代码</value>
     </property>
-    <property key="FormFieldTitle_organizationName">
+    <property key="organizationName">
         <value xml:lang="en">Organization Name</value>
         <value xml:lang="zh">机构名称</value>
     </property>
-    <property key="FormFieldTitle_organizationalUnit">
+    <property key="organizationalUnit">
         <value xml:lang="en">Organizational Unit</value>
         <value xml:lang="zh">机构部门</value>
     </property>
-    <property key="FormFieldTitle_origCommEventId">
+    <property key="origCommEventId">
         <value xml:lang="en">Orig Comm Event Id</value>
-        <value xml:lang="zh">初始沟通事件标识</value>
+        <value xml:lang="zh">初始沟通事件编号</value>
     </property>
-    <property key="FormFieldTitle_originContactMechId">
+    <property key="originContactMechId">
         <value xml:lang="en">Origin Contact Mech Id</value>
-        <value xml:lang="zh">初始联系方法标识</value>
+        <value xml:lang="zh">初始联系方法编号</value>
     </property>
-    <property key="FormFieldTitle_otherLocal">
+    <property key="otherLocal">
         <value xml:lang="en">Other Local</value>
         <value xml:lang="zh">其它语言</value>
     </property>
-    <property key="FormFieldTitle_paAddress1">
+    <property key="paAddress1">
         <value xml:lang="en">Address 1</value>
         <value xml:lang="zh">地址1</value>
     </property>
-    <property key="FormFieldTitle_paAddress2">
+    <property key="paAddress2">
         <value xml:lang="en">Address 2</value>
         <value xml:lang="zh">地址2</value>
     </property>
-    <property key="FormFieldTitle_paPostalCode">
+    <property key="paPostalCode">
         <value xml:lang="en">Postal Code</value>
         <value xml:lang="zh">邮政编码</value>
     </property>
-    <property key="FormFieldTitle_parentCommEventId">
+    <property key="parentCommEventId">
         <value xml:lang="en">Parent Comm Event Id</value>
-        <value xml:lang="zh">上级沟通事件标识</value>
+        <value xml:lang="zh">上级沟通事件编号</value>
     </property>
-    <property key="FormFieldTitle_parentGroupId">
+    <property key="parentGroupId">
         <value xml:lang="en">Parent Group Id</value>
-        <value xml:lang="zh">上级组标识</value>
+        <value xml:lang="zh">上级组编号</value>
     </property>
-    <property key="FormFieldTitle_parentTypeId">
+    <property key="parentTypeId">
         <value xml:lang="en">Parent Type Id</value>
-        <value xml:lang="zh">上级类型标识</value>
+        <value xml:lang="zh">上级类型编号</value>
     </property>
-    <property key="FormFieldTitle_partyClassificationGroupId">
+    <property key="partyClassificationGroupId">
         <value xml:lang="en">Party Classification Group Id</value>
-        <value xml:lang="zh">会员分类组标识</value>
+        <value xml:lang="zh">会员分类组编号</value>
     </property>
-    <property key="FormFieldTitle_partyClassificationTypeId">
+    <property key="partyClassificationTypeId">
         <value xml:lang="en">Party Classification Type Id</value>
-        <value xml:lang="zh">会员分类类型标识</value>
+        <value xml:lang="zh">会员分类类型编号</value>
     </property>
-    <property key="FormFieldTitle_partyContentTypeId">
+    <property key="partyContentTypeId">
         <value xml:lang="en">Parent Content Type Id</value>
-        <value xml:lang="zh">上级内容类型标识</value>
+        <value xml:lang="zh">上级内容类型编号</value>
     </property>
-    <property key="FormFieldTitle_partyId">
+    <property key="partyId">
         <value xml:lang="en">Party Id</value>
-        <value xml:lang="zh">会员标识</value>
+        <value xml:lang="zh">会员编号</value>
     </property>
-    <property key="FormFieldTitle_partyIdFrom">
+    <property key="partyIdFrom">
         <value xml:lang="en">From Party ID</value>
-        <value xml:lang="zh">自会员标识</value>
+        <value xml:lang="zh">自会员编号</value>
     </property>
-    <property key="FormFieldTitle_partyIdTo">
+    <property key="partyIdTo">
         <value xml:lang="en">To Party ID</value>
-        <value xml:lang="zh">到会员标识</value>
+        <value xml:lang="zh">到会员编号</value>
     </property>
-    <property key="FormFieldTitle_partyIdentTypeDesc">
+    <property key="partyIdentTypeDesc">
         <value xml:lang="en">Identification Type</value>
     </property>
-    <property key="FormFieldTitle_partyIdentificationTypeId">
+    <property key="partyIdentificationTypeId">
         <value xml:lang="en">Identification Type</value>
     </property>
-    <property key="FormFieldTitle_partyInvitationId">
+    <property key="partyInvitationId">
         <value xml:lang="en">Party Invitation Id</value>
-        <value xml:lang="zh">会员邀请标识</value>
+        <value xml:lang="zh">会员邀请编号</value>
     </property>
-    <property key="FormFieldTitle_partyRelationshipName">
+    <property key="partyRelationshipName">
         <value xml:lang="en">Party Relationship Name</value>
         <value xml:lang="zh">会员关系名称</value>
     </property>
-    <property key="FormFieldTitle_partyRelationshipTypeId">
+    <property key="partyRelationshipTypeId">
         <value xml:lang="en">Party Relationship Type Id</value>
-        <value xml:lang="zh">会员关系类型标识</value>
+        <value xml:lang="zh">会员关系类型编号</value>
     </property>
-    <property key="FormFieldTitle_partyTaxId">
+    <property key="partyTaxId">
         <value xml:lang="en">Party Tax Id</value>
-        <value xml:lang="zh">会员税务标识</value>
+        <value xml:lang="zh">会员税务编号</value>
     </property>
-    <property key="FormFieldTitle_partyTypeId">
+    <property key="partyTypeId">
         <value xml:lang="en">Party Type Id</value>
-        <value xml:lang="zh">会员类型标识</value>
+        <value xml:lang="zh">会员类型编号</value>
     </property>
-    <property key="FormFieldTitle_passportExpireDate">
+    <property key="passportExpireDate">
         <value xml:lang="en">Passport Expire Date</value>
         <value xml:lang="zh">护照过期日期</value>
     </property>
-    <property key="FormFieldTitle_passportNumber">
+    <property key="passportNumber">
         <value xml:lang="en">Passport Number</value>
         <value xml:lang="zh">护照编号</value>
     </property>
-    <property key="FormFieldTitle_passwordHint">
+    <property key="passwordHint">
         <value xml:lang="en">Password Hint</value>
         <value xml:lang="zh">密码提示</value>
     </property>
-    <property key="FormFieldTitle_percentComplete">
+    <property key="percentComplete">
         <value xml:lang="en">Percent Complete</value>
         <value xml:lang="zh">百分数完成</value>
     </property>
-    <property key="FormFieldTitle_percentageUsed">
+    <property key="percentageUsed">
         <value xml:lang="en">Percentage Used</value>
         <value xml:lang="zh">已用百分比</value>
     </property>
-    <property key="FormFieldTitle_personalTitle">
+    <property key="personalTitle">
         <value xml:lang="en">Personal Title</value>
         <value xml:lang="zh">称谓</value>
     </property>
-    <property key="FormFieldTitle_personalImage">
+    <property key="personalImage">
         <value xml:lang="en">Personal Image</value>
     </property>
-    <property key="FormFieldTitle_preferredContactMechId">
+    <property key="preferredContactMechId">
         <value xml:lang="en">Preferred Contact Mech Id</value>
-        <value xml:lang="zh">优先使用的联系方式标识</value>
+        <value xml:lang="zh">优先使用的联系方式编号</value>
     </property>
-    <property key="FormFieldTitle_preferredCurrencyUomId">
+    <property key="preferredCurrencyUomId">
         <value xml:lang="en">Preferred Currency Uom Id</value>
-        <value xml:lang="zh">优先使用的币种标识</value>
+        <value xml:lang="zh">优先使用的币种编号</value>
     </property>
-    <property key="FormFieldTitle_quickAssignPartyId">
+    <property key="quickAssignPartyId">
         <value xml:lang="en">Quick Assign Party Id</value>
-        <value xml:lang="zh">快速指派会员标识</value>
+        <value xml:lang="zh">快速指派会员编号</value>
     </property>
-    <property key="FormFieldTitle_rateDefaultAmount">
+    <property key="rateDefaultAmount">
         <value xml:lang="en">Rate Default Amount</value>
         <value xml:lang="zh">税金缺省金额</value>
     </property>
-    <property key="FormFieldTitle_residenceStatusEnumId">
+    <property key="residenceStatusEnumId">
         <value xml:lang="en">Residence Status Enum Id</value>
         <value xml:lang="zh">居住状态枚举类型</value>
     </property>
-    <property key="FormFieldTitle_roleTypeId">
+    <property key="roleTypeId">
         <value xml:lang="en">Role Type Id</value>
-        <value xml:lang="zh">角色类型标识</value>
+        <value xml:lang="zh">角色类型编号</value>
     </property>
-    <property key="FormFieldTitle_roleTypeIdFrom">
+    <property key="roleTypeIdFrom">
         <value xml:lang="en">Role Type Id From</value>
-        <value xml:lang="zh">角色类型标识来自</value>
+        <value xml:lang="zh">角色类型编号来自</value>
     </property>
-    <property key="FormFieldTitle_roleTypeIdTo">
+    <property key="roleTypeIdTo">
         <value xml:lang="en">Role Type Id To</value>
-        <value xml:lang="zh">角色类型标识到</value>
+        <value xml:lang="zh">角色类型编号到</value>
     </property>
-    <property key="FormFieldTitle_roleTypeList">
+    <property key="roleTypeList">
         <value xml:lang="en">Role Type List</value>
         <value xml:lang="zh">角色类型列表</value>
     </property>
-    <property key="FormFieldTitle_salutation">
+    <property key="salutation">
         <value xml:lang="en">Salutation</value>
         <value xml:lang="zh">问候</value>
     </property>
-    <property key="FormFieldTitle_socialSecurityNumber">
+    <property key="socialSecurityNumber">
         <value xml:lang="en">Social Security Number</value>
         <value xml:lang="zh">身份号码</value>
     </property>
-    <property key="FormFieldTitle_stateProvince">
+    <property key="stateProvince">
         <value xml:lang="en">State Province</value>
         <value xml:lang="zh">省/直辖市</value>
     </property>
-    <property key="FormFieldTitle_statusHistory">
+    <property key="statusHistory">
         <value xml:lang="en">Status History</value>
         <value xml:lang="zh">状态历史记录</value>
     </property>
-    <property key="FormFieldTitle_subject">
+    <property key="subject">
         <value xml:lang="en">Subject</value>
         <value xml:lang="zh">主题</value>
     </property>
-    <property key="FormFieldTitle_successiveFailedLogins">
+    <property key="successiveFailedLogins">
         <value xml:lang="en">Successive Failed Logins</value>
         <value xml:lang="zh">连续失败的登录</value>
     </property>
-    <property key="FormFieldTitle_suffix">
+    <property key="suffix">
         <value xml:lang="en">Suffix</value>
         <value xml:lang="zh">后缀</value>
     </property>
-    <property key="FormFieldTitle_taxAuthPartyId">
+    <property key="taxAuthPartyId">
         <value xml:lang="en">Tax Authority Party</value>
         <value xml:lang="zh">税务机关会员</value>
     </property>
-    <property key="FormFieldTitle_tickerSymbol">
+    <property key="tickerSymbol">
         <value xml:lang="en">Ticker symbol</value>
         <value xml:lang="zh">股票代号</value>
     </property>
-    <property key="FormFieldTitle_toName">
+    <property key="toName">
         <value xml:lang="en">To Name</value>
         <value xml:lang="zh">到名称</value>
     </property>
-    <property key="FormFieldTitle_toPartyId">
+    <property key="toPartyId">
         <value xml:lang="en">To Party Id</value>
-        <value xml:lang="zh">到会员标识</value>
+        <value xml:lang="zh">到会员编号</value>
     </property>
-    <property key="FormFieldTitle_totalInvoiceNotApplied">
+    <property key="totalInvoiceNotApplied">
         <value xml:lang="en">Total Invoice Not Applied</value>
         <value xml:lang="zh">未使用的发票合计</value>
     </property>
-    <property key="FormFieldTitle_totalPaymentNotApplied">
+    <property key="totalPaymentNotApplied">
         <value xml:lang="en">Total Payment Not Applied</value>
         <value xml:lang="zh">未使用的支付合计</value>
     </property>
-    <property key="FormFieldTitle_totalPaymentsIn">
+    <property key="totalPaymentsIn">
         <value xml:lang="en">Total Payments In</value>
         <value xml:lang="zh">收入合计</value>
     </property>
-    <property key="FormFieldTitle_totalPaymentsOut">
+    <property key="totalPaymentsOut">
         <value xml:lang="en">Total Payments Out</value>
         <value xml:lang="zh">支出合计</value>
     </property>
-    <property key="FormFieldTitle_totalPurchaseInvoice">
+    <property key="totalPurchaseInvoice">
         <value xml:lang="en">Total Purchase Invoice</value>
         <value xml:lang="zh">采购发票合计</value>
     </property>
-    <property key="FormFieldTitle_totalSalesInvoice">
+    <property key="totalSalesInvoice">
         <value xml:lang="en">Total Sales Invoice</value>
         <value xml:lang="zh">销售发票合计</value>
     </property>
-    <property key="FormFieldTitle_totalYearsWorkExperience">
+    <property key="totalYearsWorkExperience">
         <value xml:lang="en">Total Years Work Experience</value>
         <value xml:lang="zh">工作经历年数合计</value>
     </property>
-    <property key="FormFieldTitle_viewContent">
+    <property key="viewContent">
         <value xml:lang="en">View Content</value>
         <value xml:lang="zh">浏览内容</value>
     </property>
-    <property key="FormFieldTitle_weight">
+    <property key="weight">
         <value xml:lang="en">Weight</value>
         <value xml:lang="zh">重量</value>
     </property>
-    <property key="FormFieldTitle_yearsWithEmployer">
+    <property key="yearsWithEmployer">
         <value xml:lang="en">Years With Employer</value>
         <value xml:lang="zh">年为雇主</value>
     </property>
@@ -1022,7 +1045,7 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyClassificationGroupId">
         <value xml:lang="en">Classification Group Id</value>
-        <value xml:lang="zh">分类组标识</value>
+        <value xml:lang="zh">分类组编号</value>
     </property>
     <property key="PartyClassificationGroupParties">
         <value xml:lang="en">Classification Group Parties</value>
@@ -1207,7 +1230,7 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyContactMechIdMissing">
         <value xml:lang="en">Contact Mech ID is missing</value>
-        <value xml:lang="zh">找不到联系方法标识</value>
+        <value xml:lang="zh">找不到联系方法编号</value>
     </property>
     <property key="PartyContactMechNotFoundCannotDelete">
         <value xml:lang="en">ERROR: Could not delete contact info (party contact mech not found)</value>
@@ -1219,7 +1242,7 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyContactMechTypeIdMissing">
         <value xml:lang="en">Contact Mech Type ID is missing</value>
-        <value xml:lang="zh">缺少联系方式类型标识</value>
+        <value xml:lang="zh">缺少联系方式类型编号</value>
     </property>
     <property key="PartyContactMechanismSuccessfullyCreated">
         <value xml:lang="en">Contact Mechanism successfully created.</value>
@@ -1279,7 +1302,7 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyContentId">
         <value xml:lang="en">Content ID</value>
-        <value xml:lang="zh">内容标识</value>
+        <value xml:lang="zh">内容编号</value>
     </property>
     <property key="PartyCookie">
         <value xml:lang="en">Cookie</value>
@@ -1516,7 +1539,7 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyEditSecurityGroupWithId">
         <value xml:lang="en">Edit Security Group With ID</value>
-        <value xml:lang="zh">编辑安全组：标识</value>
+        <value xml:lang="zh">编辑安全组：编号</value>
     </property>
     <property key="PartyEftAccount">
         <value xml:lang="en">EFT Account</value>
@@ -1712,7 +1735,7 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyGroupPartyId">
         <value xml:lang="en">Group Party ID</value>
-        <value xml:lang="zh">组会员标识</value>
+        <value xml:lang="zh">组会员编号</value>
     </property>
     <property key="PartyHeight">
         <value xml:lang="en">Height</value>
@@ -1811,7 +1834,7 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyInvitationGroupAssocPartyIdTo">
         <value xml:lang="en">Party Id To</value>
-        <value xml:lang="zh">会员标识到</value>
+        <value xml:lang="zh">会员编号到</value>
     </property>
     <property key="PartyInvitationLastInviteDate">
         <value xml:lang="en">Last Invite Date</value>
@@ -2072,7 +2095,7 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyMechPurposeTypeNotFound">
         <value xml:lang="en">Purpose Type not found with ID</value>
-        <value xml:lang="zh">没有找到目的类型，标识：</value>
+        <value xml:lang="zh">没有找到目的类型，编号：</value>
     </property>
     <property key="PartyMemberRoles">
         <value xml:lang="en">Member Roles</value>
@@ -2256,11 +2279,11 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyNoPartyForUpdateCustomer">
         <value xml:lang="en">No partyId passed, cannot Update Customer</value>
-        <value xml:lang="zh">没有传递会员标识，无法更新客户</value>
+        <value xml:lang="zh">没有传递会员编号，无法更新客户</value>
     </property>
     <property key="PartyNoPartyFoundWithPartyId">
         <value xml:lang="en">No party found with the partyId of</value>
-        <value xml:lang="zh">没有找到会员，会员标识</value>
+        <value xml:lang="zh">没有找到会员，会员编号</value>
     </property>
     <property key="PartyNoPartyWithDataSourceId">
         <value xml:lang="en">Data source with ID ${dataSourceId} was not found</value>
@@ -2360,7 +2383,7 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyOrganizationPartyId">
         <value xml:lang="en">Organization Party ID</value>
-        <value xml:lang="zh">机构会员标识</value>
+        <value xml:lang="zh">机构会员编号</value>
     </property>
     <property key="PartyOriginEmailNotKnown">
         <value xml:lang="en">Origin Email address not known!</value>
@@ -2446,15 +2469,15 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyPartyIDUserLoginID">
         <value xml:lang="en">PartyID/UserLoginID</value>
-        <value xml:lang="zh">会员标识/用户登录标识</value>
+        <value xml:lang="zh">会员编号/用户登录编号</value>
     </property>
     <property key="PartyPartyId">
         <value xml:lang="en">Party ID</value>
-        <value xml:lang="zh">会员标识</value>
+        <value xml:lang="zh">会员编号</value>
     </property>
     <property key="PartyPartyIdMissing">
         <value xml:lang="en">Party ID missing</value>
-        <value xml:lang="zh">找不到会员标识</value>
+        <value xml:lang="zh">找不到会员编号</value>
     </property>
     <property key="PartyPartyIdentification">
         <value xml:lang="en">Identification Number</value>
@@ -2497,7 +2520,7 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyPartyWithId">
         <value xml:lang="en">of the Party with ID </value>
-        <value xml:lang="zh">会员，标识 </value>
+        <value xml:lang="zh">会员，编号 </value>
     </property>
     <property key="PartyPassportExpire">
         <value xml:lang="en">Passport Expire</value>
@@ -2561,7 +2584,7 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyPermissionSecurityGroupWithId">
         <value xml:lang="en">Permissions for SecurityGroup with ID</value>
-        <value xml:lang="zh">安全组的权限，标识</value>
+        <value xml:lang="zh">安全组的权限，编号</value>
     </property>
     <property key="PartyPersonSuccessfullyCreated">
         <value xml:lang="en">Person successfully created.</value>
@@ -2648,7 +2671,7 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyProductId">
         <value xml:lang="en">Product Id</value>
-        <value xml:lang="zh">宝贝标识</value>
+        <value xml:lang="zh">宝贝编号</value>
     </property>
     <property key="PartyProfile">
         <value xml:lang="en">Profile</value>
@@ -2680,7 +2703,7 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyPurposeTypeNotFound">
         <value xml:lang="en">Contact Purpose Type Not Found with ID</value>
-        <value xml:lang="zh">找不到联系目的类型：标识</value>
+        <value xml:lang="zh">找不到联系目的类型：编号</value>
     </property>
     <property key="PartyPushURL">
         <value xml:lang="en">Push URL</value>
@@ -2803,19 +2826,19 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyRoleTypeId">
         <value xml:lang="en">RoleType ID</value>
-        <value xml:lang="zh">角色类型标识</value>
+        <value xml:lang="zh">角色类型编号</value>
     </property>
     <property key="PartyRoleTypeIdFrom">
         <value xml:lang="en">Party Role Type Id From (NEW)</value>
-        <value xml:lang="zh">会员角色类型标识来自 (新)</value>
+        <value xml:lang="zh">会员角色类型编号来自 (新)</value>
     </property>
     <property key="PartyRoleTypeIdMissing">
         <value xml:lang="en">Role Type ID is missing.</value>
-        <value xml:lang="zh">没有找到角色类型标识。</value>
+        <value xml:lang="zh">没有找到角色类型编号。</value>
     </property>
     <property key="PartyRoleTypeIdTo">
         <value xml:lang="en">Party Role Type Id To (NEW)</value>
-        <value xml:lang="zh">会员角色类型标识到 (新)</value>
+        <value xml:lang="zh">会员角色类型编号到 (新)</value>
     </property>
     <property key="PartyRoleTypeTo">
         <value xml:lang="en">Role Type To</value>
@@ -2840,15 +2863,15 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartySegmentGroupId">
         <value xml:lang="en">Segment Group Id</value>
-        <value xml:lang="zh">分区组标识</value>
+        <value xml:lang="zh">分区组编号</value>
     </property>
     <property key="PartySegmentGroupProductStoreId">
         <value xml:lang="en">Product Store Id</value>
-        <value xml:lang="zh">宝贝店铺标识</value>
+        <value xml:lang="zh">宝贝店铺编号</value>
     </property>
     <property key="PartySegmentGroupTypeId">
         <value xml:lang="en">Segment Type Id</value>
-        <value xml:lang="zh">分区类型标识</value>
+        <value xml:lang="zh">分区类型编号</value>
     </property>
     <property key="PartySegmentRoles">
         <value xml:lang="en">Segment Roles</value>
@@ -2884,7 +2907,7 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartySequenceId">
         <value xml:lang="en">Sequence Id</value>
-        <value xml:lang="zh">顺序标识</value>
+        <value xml:lang="zh">顺序编号</value>
     </property>
     <property key="PartyServer">
         <value xml:lang="en">Server</value>
@@ -2900,7 +2923,7 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyServicemgntCustRequestId">
         <value xml:lang="en">Service management Customer Request Id</value>
-        <value xml:lang="zh">服务管理客户请求标识</value>
+        <value xml:lang="zh">服务管理客户请求编号</value>
     </property>
     <property key="PartyShipperAccount">
         <value xml:lang="en">Shipper Account</value>
@@ -3002,11 +3025,11 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyTaxId">
         <value xml:lang="en">Tax ID</value>
-        <value xml:lang="zh">税务标识</value>
+        <value xml:lang="zh">税务编号</value>
     </property>
     <property key="PartyTaxIdentification">
         <value xml:lang="en">Tax Identification and Exemption</value>
-        <value xml:lang="zh">税务标识和免除</value>
+        <value xml:lang="zh">税务编号和免除</value>
     </property>
     <property key="PartyTaxIsExempt">
         <value xml:lang="en">Is Exempt?</value>
@@ -3094,7 +3117,7 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyTypeId">
         <value xml:lang="en">Party Type Id</value>
-        <value xml:lang="zh">会员类型标识</value>
+        <value xml:lang="zh">会员类型编号</value>
     </property>
     <property key="PartyUnableToLocatePurpose">
         <value xml:lang="en">Unable to locate purpose; cannot delete</value>
@@ -3149,7 +3172,7 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyUserLoginsForSecurityGroup">
         <value xml:lang="en">UserLogins for SecurityGroup with ID</value>
-        <value xml:lang="zh">安全组用户登录，标识</value>
+        <value xml:lang="zh">安全组用户登录，编号</value>
     </property>
     <property key="PartyUserName">
         <value xml:lang="en">User Name(s)</value>
@@ -3211,11 +3234,11 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyVisitIDSessionID">
         <value xml:lang="en">VisitID / SessionID</value>
-        <value xml:lang="zh">访问标识 / 会话标识</value>
+        <value xml:lang="zh">访问编号 / 会话编号</value>
     </property>
     <property key="PartyVisitId">
         <value xml:lang="en">Visit Id</value>
-        <value xml:lang="zh">访问标识</value>
+        <value xml:lang="zh">访问编号</value>
     </property>
     <property key="PartyVisitListing">
         <value xml:lang="en">Visit Listing</value>
@@ -3223,7 +3246,7 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyVisitorId">
         <value xml:lang="en">Visitor ID</value>
-        <value xml:lang="zh">访问者标识</value>
+        <value xml:lang="zh">访问者编号</value>
     </property>
     <property key="PartyVisits">
         <value xml:lang="en">Visits</value>

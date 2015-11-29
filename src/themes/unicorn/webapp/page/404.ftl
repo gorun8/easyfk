@@ -20,11 +20,11 @@
 		<link rel="shortcut icon" href="/images/ofbiz.ico" />
 		<link rel="stylesheet" type="text/css" href="/images/css/icons.css">
 		<link rel="stylesheet" type="text/css" href="/images/css/messages.css"> 
-		<link rel="stylesheet" href="/unicorn/style/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="/unicorn/style/css/bootstrap-responsive.min.css" />
+		<link rel="stylesheet" href="/images/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="/images/css/bootstrap-responsive.min.css" />
         <link rel="stylesheet" href="/unicorn/style/css/unicorn.login.css" />
  
-        <script src="/unicorn/js/jquery.min.js"></script>  
+        <script src="/images/js/jquery/jquery.min.js"></script>
         <script charset="utf-8" type="text/javascript" src="/images/js/common.js"></script>
  
     	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

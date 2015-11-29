@@ -11,6 +11,16 @@
   http://www.apache.org/licenses/LICENSE-2.0
   Author:hezhiping   Email:110476592@qq.com
 -->
+<script>
+    easyfk.changePage = function(url){
+        $("#listdatacontainer").load(url);
+    }
+
+</script>
+    <#list parentClsGroupList as item>
+    <#--    {id:'navid${item.partyClassificationGroupId}',tip:'${item.description}',title:'${item.description}'},-->
+    /${item.description}
+    </#list>
 
     <div class="widget-box">
         <div class="widget-title">
@@ -26,17 +36,23 @@
                 <tr>
                     <th>会员名称</th>
                     <th>类型</th>
-                    <th style="width:120px;">类型</th>
+                    <th style="width:60px;">类型</th>
                 </tr>
                 </thead>
                 <tbody>
                 <#list partyGroupList as item>
-                <tr>
+                <tr id="row${item.partyId}">
                     <td>${item.description} </td>
                     <td>${uiLabelMap[item.partyTypeId]}</td>
                     <td>
-                        <button class="btn btn-mini " onclick="easyfk.partydetial('${item.partyId}')" class="tip-bottom" data-original-title="${uiLabelMap.CommonView}${uiLabelMap.CommonDetails}"><i class="icon-eye-open "></i>${uiLabelMap.CommonView}</button>
-                        <button class="btn btn-warning btn-mini" onclick="easyfk.removeparty();"><i class=" icon-trash "></i>${uiLabelMap.CommonRemove}</button>
+                        <div class="btn-group">
+                            <button class="btn  btn-mini">操作</button>
+                            <button data-toggle="dropdown" class="btn  btn-mini dropdown-toggle"><span class="caret"></span></button>
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="#" onclick="easyfk.partyDetial('${item.partyId}')"><i class="icon-eye-open "></i>${uiLabelMap.CommonView}</a></li>
+                                <li><a href="#" onclick="easyfk.disableParty('${item.partyId}');"><i class=" icon-trash "></i>${uiLabelMap.CommonRemove}</a></li>
+                            </ul>
+                        </div>
                     </td>
                 </tr>
                 </#list>
@@ -45,7 +61,7 @@
         </div>
 
     </div>
-    <@easyfkPageBar pageUrl="${ctx}/party/list?navids=${navids}&pageSize=10&pageIndex="></@easyfkPageBar>
+    <@easyfkPageBar pageUrl="${ctx}/party/listpartydata?navids=${navids}&pageSize=10&pageIndex="></@easyfkPageBar>
 
 
 

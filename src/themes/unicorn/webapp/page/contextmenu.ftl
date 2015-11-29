@@ -26,11 +26,15 @@ Author:hezhiping   Email:110476592@qq.com
     <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">操作 <span class="caret"></span></button>
     <ul class="dropdown-menu pull-right" >
     <#list EASYFK_CONTEXT_MENU.MENU_DATA as item>
+        <#if item.id =="divider">
+            <li class="divider"></li>
+        <#else>
         <li >
             <a href="${item.href?default('')}" class="tip-left" title="${item.desc?default("")}" data-toggle="${item.toggle?default('')}">
                 <i class="${item.style2?default('')}"></i>  ${item.title?default('')}
             </a>
         </li>
+        </#if>
     </#list>
     </ul>
 </div>

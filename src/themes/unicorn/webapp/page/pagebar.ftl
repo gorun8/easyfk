@@ -19,18 +19,18 @@
 <div class="pagination">
     <ul>
         <#if hasPrev?has_content>
-            <li><a href="${pageUrl?default('')}1" class="active">首页</a></li>
+            <li><a href="javascript:easyfk.changePage('${pageUrl?default('')}1')" class="active">首页</a></li>
         <#else>
             <li><a  title="已经是第一页了" class="tip-top">首页</a></li>
         </#if>
 
         <#list startShowIndex..endShowIndex as ii>
             <li  <#if viewIndex == ii >class="active" </#if>>
-                    <a href="${pageUrl?default('')}${ii}">${ii?string}</a>
+                    <a href="javascript:easyfk.changePage('${pageUrl?default('')}${ii}')">${ii?string}</a>
             </li>
         </#list>
         <#if hasNext?has_content>
-            <li><a href="${pageUrl?default('')}${endShowIndex}"  >末页</a></li>
+            <li><a href="javascript:easyfk.changePage('${pageUrl?default('')}${endShowIndex}')"  >末页</a></li>
         <#else>
             <li><a   title="已经是最后一页了" class="tip-top" class="inactive">末页</a></li>
         </#if>

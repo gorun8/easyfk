@@ -12,7 +12,7 @@
   Author:hezhiping   Email:110476592@qq.com
 -->
 
-<@easyfkSetAppMenu menuName="EASYFK_MENU" focusItemIds="{['menupartyClsGroupId']}" location="component://party/webapp/resources/page/appmenus.ftl">
+<@easyfkSetAppMenu menuName="EASYFK_MENU" focusItemIds="{['menuPartygpgs']}" location="component://party/webapp/resources/page/appmenus.ftl">
 </@easyfkSetAppMenu>
 
 <@easyfkSetNavBar subTitle="会员列表">
@@ -25,9 +25,35 @@
  ]}
 </@easyfkSetNavBar>
 
+<@easyfkHeaderAttach>
+
+<link rel="stylesheet" href="/images/css/datepicker.css" />
+<link rel="stylesheet" href="/images/css/uniform.css" />
+
+<script src="/images/js/jquery/bootstrap-datepicker.js"></script>
+<script src="/images/js/jquery/validate/jquery.validate.min.js"></script>
+<script src="/images/js/jquery/validate/localization/messages_zh.min.js"></script>
+<script src="/images/js/jquery/jquery.uniform.js"></script>
+</@easyfkHeaderAttach>
+<@easyfkFooterAttach>
+<script src="/party/js/partydetial.js"></script>
+</@easyfkFooterAttach>
+
+
 <@easyfkDecoratorScreen name="body" location="component://party/webapp/resources/page/appcommon.ftl">
 <div class="row-fluid">
     <div class="span12">
+        <#--@easyfkContextMenu  >
+            {MENU_DATA:[
+            {id:'',title:'详情',desc:'显示会员详情汇总',toggle:'modal',href:'javascript:easyfk.noimplement()',style:'btn btn-primary tip-bottom',style2:' icon-map-marker icon-white'},
+            {id:'',title:'角色',desc:'显示会员具有的角色',toggle:'modal',href:'javascript:easyfk.noimplement()',style:'btn btn-primary tip-bottom',style2:' icon-map-marker icon-white'},
+            {id:'',title:'权限',desc:'显示会员权限',toggle:'modal',href:'javascript:easyfk.noimplement()',style:'btn btn-primary tip-bottom',style2:' icon-map-marker icon-white'},
+            {id:'',title:'组织',desc:'显示会员所属的组织机构',toggle:'modal',href:'javascript:easyfk.noimplement()',style:'btn btn-primary tip-bottom',style2:' icon-map-marker icon-white'},
+            {id:'',title:'日志',desc:'显示会员相关的日志',toggle:'modal',href:'javascript:easyfk.noimplement()',style:'btn btn-primary tip-bottom',style2:' icon-map-marker icon-white'},
+
+            ]}
+        </@easyfkContextMenu-->
+
             <div class="row-fluid">
                 <div class="span6">
                     <div class="widget-box">
@@ -49,26 +75,26 @@
 								<span class="icon">
 									<i class="icon-th-list"></i>
 								</span>
-                            <h5>登录账号</h5>
-                            <button class="btn btn-info btn-mini" onclick="easyfk.newUserLogin();" style="float: right;margin: 9px 15px 0 0;">添加</button>
+                            <h5>联系信息</h5>
+                            <button class="btn btn-info btn-mini" onclick="easyfk.selectConactType();" style="float: right;margin: 9px 15px 0 0;">添加</button>
 
                         </div>
                         <div class="widget-content">
                             <table class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
-                                    <th>状态</th>
-                                    <th>账号</th>
+                                    <th>类型</th>
+                                    <th>内容</th>
                                     <th style="width:80px;">操作</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <td>
-                                        <span class="badge"  >1</span>
+                                        <span class="badge">手机</span>
                                     </td>
                                     <td>
-                                        <i   title="该账号已过期" class="tip-bottom" style="color:#999;"> zxxx@westone.com </i>
+                                        <i   title="已过期" class="tip-bottom" style="color:#999;"> 18030662011 </i>
                                     </td>
                                     <td>
                                         <div class="btn-group">
@@ -76,7 +102,26 @@
                                             <button data-toggle="dropdown" class="btn   btn-mini dropdown-toggle"><span class="caret"></span></button>
                                             <ul class="dropdown-menu pull-right">
                                                 <li><a href="#" onclick="easyfk.removeUserLogin()">重新启用</a></li>
-                                                <li><a href="#" onclick="easyfk.changePassword()">修改密码</a></li>
+                                                <li><a href="#" onclick="easyfk.newMobile()">添加新的</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="badge badge-success">手机</span>
+                                    </td>
+                                    <td>
+                                        <a   title="正常" class="tip-bottom" style="color:#468847;">13530662011 </a>
+
+                                    </td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button class="btn btn-mini">操作</button>
+                                            <button data-toggle="dropdown" class="btn   btn-mini dropdown-toggle"><span class="caret"></span></button>
+                                            <ul class="dropdown-menu pull-right">
+                                                <li><a href="#" onclick="easyfk.removeUserLogin()">重新启用</a></li>
+                                                <li><a href="#" onclick="easyfk.newMobile()">添加新的</a></li>
                                             </ul>
                                         </div>
                                     </td>
@@ -84,10 +129,10 @@
                                 <tr>
 
                                     <td>
-                                        <span class="badge badge-success">2</span>
+                                        <span class="badge badge-success">办公电话</span>
                                     </td>
                                     <td>
-                                        <a   title="该账号正常" class="tip-bottom" style="color:#468847;"> zxxx@westone.com </a>
+                                        <a   title="正常" class="tip-bottom" style="color:#468847;">028-82545845 </a>
                                     </td>
                                     <td>
                                         <div class="btn-group">
@@ -95,18 +140,17 @@
                                             <button data-toggle="dropdown" class="btn  btn-mini dropdown-toggle"><span class="caret"></span></button>
                                             <ul class="dropdown-menu pull-right">
                                                 <li><a href="#" onclick="easyfk.removeUserLogin()">停用</a></li>
-                                                <li><a href="#" onclick="easyfk.changePassword()">修改密码</a></li>
+                                                <li><a href="#" onclick="easyfk.newTel()">添加新的</a></li>
                                             </ul>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-
                                     <td>
-                                        <span class="badge badge-warning">4</span>
+                                        <span class="badge badge-warning">电子邮件</span>
                                     </td>
                                     <td>
-                                        <a   title="该账号已停用" class="tip-bottom" style="color:#f89406;"> wwww@westone.com </a>
+                                        <a   title="已停用" class="tip-bottom" style="color:#f89406;"> wwww@gorun8.cn </a>
                                     </td>
                                     <td>
                                         <div class="btn-group">
@@ -114,7 +158,25 @@
                                             <button data-toggle="dropdown" class="btn  btn-mini dropdown-toggle"><span class="caret"></span></button>
                                             <ul class="dropdown-menu pull-right">
                                                 <li><a href="#" onclick="easyfk.removeUserLogin()">启用</a></li>
-                                                <li><a href="#" onclick="easyfk.changePassword()">修改密码</a></li>
+                                                <li><a href="#" onclick="easyfk.newEmail()">添加新的</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="badge badge-warning">公司地址</span>
+                                    </td>
+                                    <td>
+                                        <a   title="该账号已停用" class="tip-bottom" style="color:#f89406;">成都高新区云华路333号 </a>
+                                    </td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button class="btn  btn-mini">操作</button>
+                                            <button data-toggle="dropdown" class="btn  btn-mini dropdown-toggle"><span class="caret"></span></button>
+                                            <ul class="dropdown-menu pull-right">
+                                                <li><a href="#" onclick="easyfk.removeUserLogin()">启用</a></li>
+                                                <li><a href="#" onclick="easyfk.newAddress()">添加新的</a></li>
                                             </ul>
                                         </div>
                                     </td>
@@ -125,153 +187,153 @@
                     </div>
                 </div>
 
-        </div>
+
+            </div>
     </div>
 </div>
+
+
 
 <div class="row-fluid">
     <div class="span12">
-        <div class="row-fluid">
-            <div class="span6">
-                <div class="widget-box">
-                    <div class="widget-title">
+        <div class="widget-box">
+            <div class="widget-title">
 								<span class="icon">
 									<i class="icon-th-list"></i>
 								</span>
-                        <h5>简介</h5>
-                        <button class="btn btn-info btn-mini" onclick="easyfk.editUserInfo()" style="float: right;margin: 9px 15px 0 0;">编辑</button>
-                    </div>
-                    <div class="widget-content">
-                     </div>
-                </div>
+                <h5>登录账号</h5>
+                <button class="btn btn-info btn-mini" onclick="easyfk.newUserLogin();" style="float: right;margin: 9px 15px 0 0;">添加</button>
+
             </div>
-            <div class="span6">
-                <div class="widget-box">
-                    <div class="widget-title">
-								<span class="icon">
-									<i class="icon-th-list"></i>
-								</span>
-                        <h5>联系信息</h5>
-                        <button class="btn btn-info btn-mini" onclick="easyfk.newUserLogin();" style="float: right;margin: 9px 15px 0 0;">添加</button>
+            <div class="widget-content">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                        <th style="width:40px;">序号</th>
+                        <th>账号</th>
+                        <th>状态</th>
+                        <th>角色</th>
+                        <th>认证方式</th>
 
-                    </div>
-                    <div class="widget-content">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <th>类型</th>
-                                <th>内容</th>
-                                <th style="width:80px;">操作</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>
-                                    <span class="badge">手机</span>
-                                </td>
-                                <td>
-                                    <i   title="已过期" class="tip-bottom" style="color:#999;"> 18030662011 </i>
-                                </td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button class="btn btn-mini">操作</button>
-                                        <button data-toggle="dropdown" class="btn   btn-mini dropdown-toggle"><span class="caret"></span></button>
-                                        <ul class="dropdown-menu pull-right">
-                                            <li><a href="#" onclick="easyfk.removeUserLogin()">重新启用</a></li>
-                                            <li><a href="#" onclick="easyfk.newMobile()">添加新的</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="badge badge-success">手机</span>
-                                </td>
-                                <td>
-                                    <a   title="正常" class="tip-bottom" style="color:#468847;">13530662011 </a>
+                        <th style="width:80px;">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <span class="badge"  >1</span>
+                        </td>
+                        <td>
+                            <i   title="该账号已过期" class="tip-bottom" style="color:#999;"> zxxx@gorun8.cn </i>
+                        </td>
+                        <td>
+                            过期
+                        </td>
+                        <td>
+                            系统管理员
+                        </td>
+                        <td>
+                            密码
+                        </td>
 
-                                </td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button class="btn btn-mini">操作</button>
-                                        <button data-toggle="dropdown" class="btn   btn-mini dropdown-toggle"><span class="caret"></span></button>
-                                        <ul class="dropdown-menu pull-right">
-                                            <li><a href="#" onclick="easyfk.removeUserLogin()">重新启用</a></li>
-                                            <li><a href="#" onclick="easyfk.newMobile()">添加新的</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
+                        <td>
+                            <div class="btn-group">
+                                <button class="btn btn-mini">操作</button>
+                                <button data-toggle="dropdown" class="btn   btn-mini dropdown-toggle"><span class="caret"></span></button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="#" onclick="easyfk.partydetial(1)">会员详情</a></li>
+                                    <li><a href="#" onclick="easyfk.showLog()">关联日志</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
 
-                                <td>
-                                    <span class="badge badge-success">办公电话</span>
-                                </td>
-                                <td>
-                                    <a   title="正常" class="tip-bottom" style="color:#468847;">028-82545845 </a>
-                                </td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button class="btn  btn-mini">操作</button>
-                                        <button data-toggle="dropdown" class="btn  btn-mini dropdown-toggle"><span class="caret"></span></button>
-                                        <ul class="dropdown-menu pull-right">
-                                            <li><a href="#" onclick="easyfk.removeUserLogin()">停用</a></li>
-                                            <li><a href="#" onclick="easyfk.newTel()">添加新的</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="badge badge-warning">电子邮件</span>
-                                </td>
-                                <td>
-                                    <a   title="已停用" class="tip-bottom" style="color:#f89406;"> wwww@westone.com </a>
-                                </td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button class="btn  btn-mini">操作</button>
-                                        <button data-toggle="dropdown" class="btn  btn-mini dropdown-toggle"><span class="caret"></span></button>
-                                        <ul class="dropdown-menu pull-right">
-                                            <li><a href="#" onclick="easyfk.removeUserLogin()">启用</a></li>
-                                            <li><a href="#" onclick="easyfk.newEmail()">添加新的</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="badge badge-warning">公司地址</span>
-                                </td>
-                                <td>
-                                    <a   title="该账号已停用" class="tip-bottom" style="color:#f89406;">成都高新区云华路333号 </a>
-                                </td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button class="btn  btn-mini">操作</button>
-                                        <button data-toggle="dropdown" class="btn  btn-mini dropdown-toggle"><span class="caret"></span></button>
-                                        <ul class="dropdown-menu pull-right">
-                                            <li><a href="#" onclick="easyfk.removeUserLogin()">启用</a></li>
-                                            <li><a href="#" onclick="easyfk.newAddress()">添加新的</a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                        <td>
+                            <span class="badge badge-success">2</span>
+                        </td>
+                        <td>
+                            <a   title="该账号正常" class="tip-bottom" style="color:#468847;"> zxxx@gorun8.cn </a>
+                        </td>
+                        <td>
+                            正常
+                        </td>
+                        <td>
+                            安全保密管理员
+                        </td>
+                        <td>
+                            密码
+                        </td>
+
+                        <td>
+                            <div class="btn-group">
+                                <button class="btn  btn-mini">操作</button>
+                                <button data-toggle="dropdown" class="btn  btn-mini dropdown-toggle"><span class="caret"></span></button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="#" onclick="easyfk.removeUserLogin()">停用</a></li>
+                                    <li><a href="#" onclick="easyfk.changePassword()">修改</a></li>
+                                    <li><a href="#" onclick="easyfk.setUserCert(false)">关联证书</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td>
+                            <span class="badge badge-warning">4</span>
+                        </td>
+                        <td>
+                            <a   title="该账号已停用" class="tip-bottom" style="color:#f89406;"> wwww@gorun8.cn </a>
+                        </td>
+                        <td>
+                            停用
+                        </td>
+                        <td>
+                            系统安全员
+                        </td>
+
+                        <td>
+                            <button class="btn btn-success btn-mini">证书</button>
+                        </td>
+
+                        <td>
+                            <div class="btn-group">
+                                <button class="btn  btn-mini">操作</button>
+                                <button data-toggle="dropdown" class="btn  btn-mini dropdown-toggle"><span class="caret"></span></button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="#" onclick="easyfk.removeUserLogin()">启用</a></li>
+                                    <li><a href="#" onclick="easyfk.changePassword()">修改</a></li>
+                                    <li><a href="#" onclick="easyfk.setUserCert(true)">关联证书</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
-
         </div>
     </div>
+
 </div>
 
-</@easyfkDecoratorScreen>
+
 <script type="text/javascript">
+    easyfk.noimplement= function(){
+        alert("该功能还未实现");
+    }
+    easyfk.showLog = function(){
+        document.location.href = "${ctx}/page/oploglist.ftl";
+    }
 
-
-
+    easyfk.setUserCert = function(showcert) {
+        if(!showcert)
+        {
+            $(".certcontent").hide();
+        }else{
+            $(".certcontent").show();
+        }
+        $("#userCertFormPanel").modal("show");
+    }
 
     easyfk.newUserLogin = function () {
         $("#userLoginFormAction").val("${ctx}/party/createuserlogin");
@@ -283,8 +345,8 @@
 
     easyfk.changePassword = function () {
         $("#userLoginFormAction").val("${ctx}/party/createuserlogin");
-        $("#userLoginFormLabel").html("修改密码");
-        $("#userLoginId").val(" wwww@westone.com");
+        $("#userLoginFormLabel").html("修改");
+        $("#userLoginId").val(" wwww@gorun8.cn");
         $("#userLoginId").attr("readonly","true");
         $("#userLoginFormPanel").modal("show");
     }
@@ -364,7 +426,18 @@
                     <input type="text" id="userLoginId" name="userLoginId"/>
                 </div>
             </div>
-
+            <div class="control-group">
+                <label class="control-label">角色类型</label>
+                <div class="controls">
+                    <select   multiple="">
+                        <option value=""/>一般用户
+                        <option value=""/>系统管理员
+                        <option value=""/>系统安全员
+                        <option value=""/>安全保密管理员
+                        <option value=""/>自定义角色XX
+                    </select>
+                </div>
+            </div>
             <div class="control-group">
                 <label class="control-label">${uiLabelMap.CommonPassword}</label>
                 <div class="controls">
@@ -376,6 +449,12 @@
                 <label class="control-label">${uiLabelMap.CommonPasswordConfirm}</label>
                 <div class="controls">
                     <input type="password" id="password2" name="password2"/>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">密码提示</label>
+                <div class="controls">
+                    <input type="text" id="password2" name="password2"/>
                 </div>
             </div>
 
@@ -426,6 +505,30 @@
     easyfk.newMobile = function(){
         $("#mobileFormPanel").modal("show");
     }
+    easyfk.selectConactType = function(){
+        $("#selectConactTypeFormPanel").modal("show");
+    }
+
+    $(function(){
+        $("#selectConactTypeFormSubmit").click(function(){
+            $("#selectConactTypeFormPanel").modal("hide");
+            var v = $("#conactType").val();
+            if(v == "mobile"){
+                easyfk.newMobile();
+            }else if(v =="tel"){
+                easyfk.newTel();
+            }else if(v =="email"){
+                easyfk.newEmail();
+            }else if(v =="address"){
+                easyfk.newAddress();
+            }
+        });
+
+    });
+
+
+
+
 
 </script>
 
@@ -569,9 +672,77 @@
 </div>
 
 
+<input type="hidden" id="selectConactTypeFormAction">
+<div id="selectConactTypeFormPanel" class="modal hide fade" role="dialog" aria-labelledby="selectConactTypeFormLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="selectConactTypeFormLabel">新建联系信息
+        </h3>
+    </div>
+    <div class="modal-body">
+        <form action="" method="post" class="form-horizontal" name="selectConactTypeForm" id="selectConactTypeForm">
+            <div class="control-group">
+                <label class="control-label">类型</label>
+                <div class="controls">
+                    <select id="conactType">
+                        <option value="mobile"/>手机
+                        <option value="tel"/>办公电话
+                        <option value="email"/>电子邮件
+                        <option value="address"/>公司地址
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" id="selectConactTypeFormSubmit" >保存</button>
+        <button class="btn" id="selectConactTypeFormClose" data-dismiss="modal" aria-hidden="true">关闭</button>
+    </div>
+</div>
 
 
+<input type="hidden" id="userLoginFormAction">
+<div id="userCertFormPanel" class="modal hide fade" role="dialog" aria-labelledby="userCertFormLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="userCertFormLabel">
+            关联证书
+        </h3>
+    </div>
+    <div class="modal-body">
+        <form action="" method="post" class="form-horizontal" name="userCertForm" id="userCertForm">
+            <input type="hidden" name="partyId" id="partyId">
+            <div class="control-group certcontent">
+                <label class="control-label">主题</label>
+                <div class="controls">
+                    CN = XX,E = admin@gorun8.cn.cn
+                </div>
+            </div>
+            <div class="control-group certcontent">
+                <label class="control-label">生效时间</label>
+                <div class="controls">
+                    2012年2月15日 20:50:53
+                </div>
+            </div>
+            <div class="control-group certcontent">
+                <label class="control-label">失效时间</label>
+                <div class="controls">
+                    2017年2月13日 20:50:53
+                </div>
+            </div>
 
+            <div class="control-group">
+                <label class="control-label">证书文件</label>
+                <div class="controls">
+                    <input type="file" id="cert" name="cert"/>
+                </div>
+            </div>
 
-
-
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" id="userCertFormSubmit" >保存</button>
+        <button class="btn" id="userCertFormClose" data-dismiss="modal" aria-hidden="true">关闭</button>
+    </div>
+</div>
+</@easyfkDecoratorScreen>

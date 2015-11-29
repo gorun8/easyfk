@@ -25,6 +25,12 @@ import java.util.List;
 @Repository
 public interface PartyClsGroupDao {
 
+    /**
+     * 按名字查询组织机构
+     * @param description
+     * @return
+     */
+    public List<GenericValue> findPartyClsGroupByName(@Param("description") String description);
 
     /**
      * 查询下级组织机构
@@ -72,4 +78,11 @@ public interface PartyClsGroupDao {
      * @param partyClsGroupId
      */
     public void removePartyClsGroupByPrimaryKey(@Param("partyClsGroupId") String partyClsGroupId);
+
+    /**
+     *设置会员分类
+     * @param partyCls
+     */
+    public void setPartyClassification(@Param("partyCls") GenericValue partyCls);
+
 }

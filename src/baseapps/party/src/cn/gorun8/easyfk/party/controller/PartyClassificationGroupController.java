@@ -42,10 +42,10 @@ public class PartyClassificationGroupController {
 	
 	@Autowired
 	private PartyClsGroupService partyClsGroupService;
-	//ResourceBundleMessageSource t;
+	ResourceBundleMessageSource t;
 	@RequestMapping(value = "list")
 	public String list(HttpServletRequest request){
-		String parentId = "N/A";
+		String parentId = "N_A";
 		List<Map> parClsMapList = partyClsGroupService.listRootNode(UtilMisc.toMap("parentId",parentId));
 		if(parClsMapList.size() >0) {
 			request.setAttribute("partyClsGroupRoot", parClsMapList);
@@ -67,10 +67,27 @@ public class PartyClassificationGroupController {
 		{
 			return UtilMessages.errorResponse(request,"没有参数");
 		}
-		List<Map> parClsMapList =  partyClsGroupService.listChildNode(UtilMisc.toMap("parentId",parentId));
+		List<Map> parClsMapList =  partyClsGroupService.listChildNode(UtilMisc.toMap("parentId", parentId));
 		request.setAttribute("partyClsGroupList", parClsMapList);
 		return  UtilMessages.successResponse("partyClsGroupList",request);
 	}
+
+	@RequestMapping(value = "searchnode")
+	@ResponseBody
+	public String search(HttpServletRequest request,@RequestParam(value="partyClsName")String partyClsName){
+		if(UtilValidate.isEmpty(partyClsName))
+		{
+			return UtilMessages.errorResponse(request,"没有参数");
+		}
+
+		List<Map> parClsMapList =  partyClsGroupService.searchNode(UtilMisc.toMap("partyClsName", partyClsName));
+		request.setAttribute("partyClsGroupList", parClsMapList);
+		String id = (String)parClsMapList.get(0).get("partyClassificationGroupId");
+		request.setAttribute("partyClsGroupRootId", id);
+		return  UtilMessages.successResponse("partyClsGroupList,partyClsGroupRootId",request);
+	}
+
+
 
 	@RequestMapping("createform")
 	public String createPartyClsGroupForm( HttpServletRequest request,HttpServletResponse response ){
@@ -141,5 +158,6 @@ public class PartyClassificationGroupController {
 		}
 		return  UtilMessages.successResponse(request,"删除组织机构成功");
 	}
+
 
 }

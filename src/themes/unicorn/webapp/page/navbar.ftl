@@ -15,10 +15,12 @@
 <div id="content-header">
     <h1>${EASYFK_SUB_TITLE?default("")}</h1>
     <div class="btn-group">
-        <a class="btn btn-large tip-bottom" title="管理文件"><i class="icon-file"></i></a>
-        <a class="btn btn-large tip-bottom" title="管理用户"><i class="icon-user"></i></a>
-        <a class="btn btn-large tip-bottom" title="管理消息"><i class="icon-comment"></i><span class="label label-important">5</span></a>
+        <a class="btn btn-large tip-bottom" href="/party/" title="系统状态"><i class="icon-signal"></i><span class="label label-important" style="z-index:99">告警</span></a>
+        <a class="btn btn-large tip-bottom" href="/party/page/profile.ftl" title="我的信息"><i class="icon-user"></i></a>
+        <a class="btn btn-large tip-bottom" href="/party/page/inbox.ftl" title="我收到的消息"><i class="icon-comment"></i><span class="label label-important">4</span></a>
+        <#--
         <a class="btn btn-large tip-bottom" title="管理订单"><i class="icon-shopping-cart"></i></a>
+        -->
     </div>
 </div>
 

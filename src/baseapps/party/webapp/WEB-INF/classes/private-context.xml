@@ -170,13 +170,15 @@
 		</property>
 		<property name="filterChainDefinitions">
 			<value>
+				<!--
 				/login/** = anon,reqinit
 				/loginajax/** = anon
 				/style/** = anon
 				/commjson/** = anon
 				/js/** = anon
 				/** = cas,reqinit
-
+				-->
+				/** = anon,reqinit
 			</value><!--/** = cas,reqinit-->
 		</property>
 	</bean>

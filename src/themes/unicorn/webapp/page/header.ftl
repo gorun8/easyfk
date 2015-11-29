@@ -14,21 +14,39 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <title>电子文件综合安全管理系统</title>
+    <title>EasyFK</title>
+
     <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
     <link rel="shortcut icon" href="/images/ofbiz.ico"/>
-    <link rel="stylesheet" type="text/css" href="/images/css/icons.css">
-    <link rel="stylesheet" type="text/css" href="/images/css/messages.css">
-    <link rel="stylesheet" href="/unicorn/style/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="/unicorn/style/css/bootstrap-responsive.min.css"/>
-    <link rel="stylesheet" href="/unicorn/style/css/fullcalendar.css"/>
+
+    <link rel="stylesheet" href="/images/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/images/css/bootstrap-responsive.min.css"/>
+    <link rel="stylesheet" href="/images/css/fullcalendar.css"/>
+    <link rel="stylesheet" href="/images/css/jquery.gritter.css" />
+    <link rel="stylesheet" href="/images/css/bootstrap-switch.min.css" />
+
+
+    <script src="/images/js/jquery/jquery.min.js" ></script>
+    <script src="/images/js/jquery/jquery.ui.custom.js"></script>
+    <script src="/images/js/jquery/bootstrap.min.js"></script>
+    <script src="/images/js/jquery/jquery.gritter.min.js"></script>
+    <script src="/images/js/jquery/jquery.peity.min.js"></script>
+    <script src="/images/js/jquery/bootstrap-switch.min.js"></script>
+
+
+    <script charset="utf-8" type="text/javascript" src="/images/js/common.js"></script>
+     ${EASYFK_HEADER_ATTACH?default("")}
+    <script src="/unicorn/js/commonex.js"></script>
+    <style>
+        .datepicker, .select2-drop{z-index:99999;}
+    </style>
     <link rel="stylesheet" href="/unicorn/style/css/unicorn.main.css"/>
     <link rel="stylesheet" href="/unicorn/style/css/unicorn.grey.css" class="skin-color"/>
-    <script  charset="utf-8" type="text/javascript" src="/images/js/jquery/jquery.min.js"></script>
-    <script charset="utf-8" type="text/javascript" src="/images/js/common.js"></script>
-   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 </head>
+
 <body>
 <div id="unicornAlertDailog" class="modal hide">
     <div class="modal-header">
@@ -36,13 +54,21 @@
         <h3 id="unicornAlertDailog_title">提示</h3>
     </div>
     <div class="modal-body">
-        <p id="unicornAlertDailog_body">Lorem ipsum dolor sit amet...</p>
+        <p id="unicornAlertDailog_body">...</p>
     </div>
     <div class="modal-footer">
-        <a data-dismiss="modal" class="btn " href="#">确定</a>
-        <a data-dismiss="modal" class="btn btn-primary" href="#">取消</a>
+        <button class="btn" id="unicornAlertDailog_ok">确定</button>
+        <button class="btn btn-primary" id="unicornAlertDailog_cancel" data-dismiss="modal" aria-hidden="true">取消</button>
     </div>
 </div>
 
-
-
+<div id="processBarDailog" class="modal hide">
+    <div class="modal-header">
+        <h3 id="processBarDailog_title">正在处理，请稍候...</h3>
+    </div>
+    <div class="modal-body">
+        <div class="progress progress-striped active">
+            <div style="width: 100%;" class="bar"></div>
+        </div>
+    </div>
+</div>
