@@ -174,7 +174,7 @@
 </script>
 
 
-<div id="logDetailPanel" class="modal hide fade" role="dialog" aria-labelledby="logDetailLabel" aria-hidden="true">
+<div id="logDetailPanel" class="modal  fade" role="dialog" aria-labelledby="logDetailLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="logDetailLabel">
@@ -200,7 +200,7 @@
 
 
 <input type="hidden"   id="sysLogSearchFormAction" value="">
-<div id="sysLogSearchFormDailog" class="modal hide fade" role="dialog" aria-labelledby="sysLogSearchFormLabel" aria-hidden="true">
+<div id="sysLogSearchFormDailog" class="modal  fade" role="dialog" aria-labelledby="sysLogSearchFormLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="sysLogSearchFormLabel">
@@ -248,7 +248,7 @@
 </div>
 
 <input type="hidden"   id="sysLogSearchExportFormAction" value="">
-<div id="sysLogSearchExportFormDailog" class="modal hide fade" role="dialog" aria-labelledby="sysLogSearchExportFormLabel" aria-hidden="true">
+<div id="sysLogSearchExportFormDailog" class="modal  fade" role="dialog" aria-labelledby="sysLogSearchExportFormLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="sysLogSearchExportFormLabel">

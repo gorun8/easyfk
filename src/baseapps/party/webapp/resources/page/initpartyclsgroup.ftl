@@ -44,11 +44,8 @@
 </@easyfkFooterAttach>
 
 <@easyfkDecoratorScreen name="body" location="component://party/webapp/resources/page/appcommon.ftl">
-<div class="row-fluid">
-    <div class="span12">
-
-
-
+<div class="row">
+    <div class="col-xs-12">
         <div  style="text-align: center">
             <div   style="overflow-y: auto;height: 550px;">
                 <@easyfkContextMenu  >
@@ -64,7 +61,7 @@
 
 <input type="hidden"   id="currentSelectedGroupId" value="N_A">
 <input type="hidden"   id="partyClsGroupFormAction" value="">
-<div id="partyClsGroupFormDailog" class="modal hide fade" role="dialog" aria-labelledby="partyClsGroupFormLabel" aria-hidden="true">
+<div id="partyClsGroupFormDailog" class="modal  fade" role="dialog" aria-labelledby="partyClsGroupFormLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="partyClsGroupFormLabel">

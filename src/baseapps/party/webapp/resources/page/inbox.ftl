@@ -164,7 +164,7 @@
 </script>
 
 
-<div id="messageDetailPanel" class="modal hide fade" role="dialog" aria-labelledby="messageDetailLabel" aria-hidden="true">
+<div id="messageDetailPanel" class="modal  fade" role="dialog" aria-labelledby="messageDetailLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="messageDetailLabel">
@@ -218,7 +218,7 @@
 </div>
 
 
-<div id="messagePublicPanel" class="modal hide fade" role="dialog" aria-labelledby="messagePubliclLabel" aria-hidden="true">
+<div id="messagePublicPanel" class="modal  fade" role="dialog" aria-labelledby="messagePubliclLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="messagePublicLabel">
@@ -271,7 +271,7 @@
 </div>
 </div>
 
-<div id="partyClsPanel" class="modal hide fade" role="dialog" aria-labelledby="partyClslLabel" aria-hidden="true">
+<div id="partyClsPanel" class="modal  fade" role="dialog" aria-labelledby="partyClslLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="partyClsLabel">

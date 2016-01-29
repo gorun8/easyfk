@@ -11,7 +11,7 @@
   http://www.apache.org/licenses/LICENSE-2.0
   Author:hezhiping   Email:110476592@qq.com
 -->
-
+<#--
 <div id="header">
     <h1><a href="./dashboard.html">EasyFK</a></h1>
 </div>
@@ -21,7 +21,7 @@
 </div>
 <div id="user-nav" class="navbar navbar-inverse">
     <ul class="nav btn-group">
-    <#--
+
             <li class="btn btn-inverse"><a title="" href="/party/page/profile.ftl"><i class="icon icon-user"></i> <span class="text">我的</span></a></li>
             <li class="btn btn-inverse dropdown" id="menu-messages"><a href="#" data-toggle="dropdown" data-target="#menu-messages" class="dropdown-toggle"><i class="icon icon-envelope"></i> <span class="text">消息</span> <span class="label label-important">5</span> <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -31,8 +31,76 @@
                     <li><a class="sTrash" title="" href="#">草稿箱</a></li>
                 </ul>
             </li>
-    -->
+
     <li class="btn btn-inverse"><a title="" href="/party/page/secparam.ftl"><i class="icon icon-cog"></i> <span class="text">设置</span></a></li>
     <li class="btn btn-inverse"><a title="" href="${ctx}/common/logout"><i class="icon icon-share-alt"></i> <span class="text">注销</span></a></li>
+    </ul>
+</div>
+-->
+
+<div id="header">
+    <h1><a href="./index.html">Unicorn Admin</a></h1>
+    <a id="menu-trigger" href="#"><i class="fa fa-bars"></i></a>
+</div>
+
+<div id="user-nav">
+    <ul class="btn-group">
+        <li class="btn" ><a title="" href="/party/page/profile.ftl"><i class="fa fa-user"></i> <span class="text">我的</span></a></li>
+        <li class="btn dropdown" id="menu-messages"><a href="#" data-toggle="dropdown" data-target="#menu-messages" class="dropdown-toggle"><i class="fa fa-envelope"></i> <span class="text">消息</span> <span class="label label-danger">5</span> <b class="caret"></b></a>
+            <ul class="dropdown-menu messages-menu">
+                <li class="title"><i class="fa fa-envelope-alt"></i>Messages<a class="title-btn" href="#" title="Write new message"><i class="fa fa-share"></i></a></li>
+                <li class="message-item">
+                    <a href="#">
+                        <img alt="User Icon" src="/unicorn/style/images/demo/av1.jpg" />
+                        <div class="message-content">
+		                            	<span class="message-time">
+			                                3 mins ago
+			                            </span>
+		                                <span class="message-sender">
+		                                    Nunc Cenenatis
+		                                </span>
+		                                <span class="message">
+		                                    Hi, can you meet me at the office tomorrow morning?
+		                                </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="message-item">
+                    <a href="#">
+                        <img alt="User Icon" src="/unicorn/style/images/demo/av1.jpg" />
+                        <div class="message-content">
+		                            	<span class="message-time">
+			                                3 mins ago
+			                            </span>
+		                                <span class="message-sender">
+		                                    Nunc Cenenatis
+		                                </span>
+		                                <span class="message">
+		                                    Hi, can you meet me at the office tomorrow morning?
+		                                </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="message-item">
+                    <a href="#">
+                        <img alt="User Icon" src="/unicorn/style/images/demo/av1.jpg" />
+                        <div class="message-content">
+		                            	<span class="message-time">
+			                                3 mins ago
+			                            </span>
+		                                <span class="message-sender">
+		                                    Nunc Cenenatis
+		                                </span>
+		                                <span class="message">
+		                                    Hi, can you meet me at the office tomorrow morning?
+		                                </span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="btn "><a title="" href="/party/page/secparam.ftl"><i class="fa fa-cog"></i> <span class="text">设置</span></a></li>
+        <li class="btn "><a title="" href="${ctx}/common/logout"><i class="fa fa-share"></i> <span class="text">注销</span></a></li>
+
     </ul>
 </div>

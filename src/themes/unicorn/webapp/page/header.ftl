@@ -14,41 +14,34 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <title>EasyFK</title>
 
+    <title>EasyFK</title>
     <meta charset="UTF-8"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/images/ofbiz.ico"/>
-
-    <link rel="stylesheet" href="/images/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="/images/css/bootstrap-responsive.min.css"/>
-    <link rel="stylesheet" href="/images/css/fullcalendar.css"/>
-    <link rel="stylesheet" href="/images/css/jquery.gritter.css" />
-    <link rel="stylesheet" href="/images/css/bootstrap-switch.min.css" />
-
-
-    <script src="/images/js/jquery/jquery.min.js" ></script>
-    <script src="/images/js/jquery/jquery.ui.custom.js"></script>
+    <link rel="stylesheet" href="/images/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/images/css/font-awesome.css" />
+    <link rel="stylesheet" href="/images/css/jquery.jscrollpane.css" />
+    <script src="/images/js/jquery/jquery.min.js"></script>
+    <script src="/images/js/jquery/jquery-ui.custom.js"></script>
     <script src="/images/js/jquery/bootstrap.min.js"></script>
-    <script src="/images/js/jquery/jquery.gritter.min.js"></script>
-    <script src="/images/js/jquery/jquery.peity.min.js"></script>
-    <script src="/images/js/jquery/bootstrap-switch.min.js"></script>
-
-
+    <script src="/images/js/jquery/jquery.nicescroll.min.js"></script>
     <script charset="utf-8" type="text/javascript" src="/images/js/common.js"></script>
      ${EASYFK_HEADER_ATTACH?default("")}
     <script src="/unicorn/js/commonex.js"></script>
     <style>
         .datepicker, .select2-drop{z-index:99999;}
     </style>
-    <link rel="stylesheet" href="/unicorn/style/css/unicorn.main.css"/>
-    <link rel="stylesheet" href="/unicorn/style/css/unicorn.grey.css" class="skin-color"/>
+    <link rel="stylesheet" href="/unicorn/style/css/unicorn.css" />
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="/images/js/jquery/respond.min.js"></script>
+    <![endif]-->
 </head>
-
-<body>
-<div id="unicornAlertDailog" class="modal hide">
+<body  data-color="grey" class="flat">
+<div id="wrapper">
+    <#--
+<div id="unicornAlertDailog" class="modal ">
     <div class="modal-header">
         <button data-dismiss="modal" class="close" type="button">×</button>
         <h3 id="unicornAlertDailog_title">提示</h3>
@@ -62,7 +55,7 @@
     </div>
 </div>
 
-<div id="processBarDailog" class="modal hide">
+<div id="processBarDailog" class="modal ">
     <div class="modal-header">
         <h3 id="processBarDailog_title">正在处理，请稍候...</h3>
     </div>
@@ -72,3 +65,4 @@
         </div>
     </div>
 </div>
+-->

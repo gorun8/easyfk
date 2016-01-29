@@ -34,7 +34,7 @@ easyfk.validate=function(formId,rulesJson){
 
     $("#"+formId).validate({
         submitHandler:function(form){
-            if(easyfk.isFormSubmited("partyPersonForm")){
+            if(easyfk.isFormSubmited(formId)){
                 return ;
             }
             form.submit();
@@ -43,11 +43,22 @@ easyfk.validate=function(formId,rulesJson){
         errorClass: "help-inline",
         errorElement: "span",
         highlight:function(element, errorClass, validClass) {
-            $(element).parents('.control-group').addClass('error');
-        },
+            $(element).parents('.form-group').addClass('has-error');
+         },
         unhighlight: function(element, errorClass, validClass) {
-            $(element).parents('.control-group').removeClass('error');
-            $(element).parents('.control-group').addClass('success');
+            $(element).parents('.form-group').removeClass('has-error');
+            $(element).parents('.form-group').addClass('has-success');
+         },
+        success:function(element){
+            $(element).parents('.form-group').removeClass('has-error');
+            $(element).parents('.form-group').addClass('has-success');
+        }
+        ,
+        errorPlacement : function(error, element) {
+            var txt = error.text();
+            $(element).attr("title",txt);
+            $(element).tooltip('destroy');
+            $(element).tooltip('show');
         }
     });
 }
@@ -66,11 +77,23 @@ easyfk.validateAndSubmit=function(formId,rulesJson ,submitHandler){
         errorClass: "help-inline",
         errorElement: "span",
         highlight:function(element, errorClass, validClass) {
-            $(element).parents('.control-group').addClass('error');
+            $(element).parents('.form-group').addClass('has-error');
         },
         unhighlight: function(element, errorClass, validClass) {
-            $(element).parents('.control-group').removeClass('error');
-            $(element).parents('.control-group').addClass('success');
+            $(element).parents('.form-group').removeClass('has-error');
+
+        },
+        success:function(element){
+            $(element).parents('.form-group').removeClass('has-error');
+            $(element).parents('.form-group').addClass('has-success');
+
+        }
+        ,
+        errorPlacement : function(error, element) {
+             var txt = error.text();
+            $(element).attr("title",txt);
+            $(element).tooltip('destroy');
+            $(element).tooltip('show');
         }
     });
 }

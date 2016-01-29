@@ -182,7 +182,7 @@
 
 
 <input type="hidden" id="userLoginFormAction">
-<div id="userCertFormPanel" class="modal hide fade" role="dialog" aria-labelledby="userCertFormLabel" aria-hidden="true">
+<div id="userCertFormPanel" class="modal  fade" role="dialog" aria-labelledby="userCertFormLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="userCertFormLabel">

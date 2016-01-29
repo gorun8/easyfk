@@ -59,34 +59,47 @@
         </div>
     </div>
 </div>
-
-<div class="row-fluid">
-    <div class="span12">
+<div class="row">
+    <div class="col-xs-12">
+        <div class="alert alert-info">
+            Welcome in the <strong>Unicorn Admin Theme</strong>. Don't forget to check all the pages!
+            <a href="#" data-dismiss="alert" class="close">×</a>
+        </div>
         <div class="widget-box">
             <div class="widget-title">
-								<span class="icon">
-									<i class="icon-signal"></i>
-								</span>
-                <h5>CPU和内存</h5>
+                <span class="icon"><i class="fa fa-signal"></i></span>
+                <h5>Site Statistics</h5>
+                <div class="buttons">
+                    <a href="#" class="btn"><i class="fa fa-refresh"></i> <span class="text">Update stats</span></a>
+                </div>
             </div>
             <div class="widget-content">
-                <!--
-                <div class="chart" style="padding: 0px; position: relative;"><canvas class="base" width="972" height="300"></canvas><canvas class="overlay" width="972" height="300" style="position: absolute; left: 0px; top: 0px;"></canvas><div class="tickLabels" style="font-size:smaller"><div class="xAxis x1Axis" style="color:#545454"><div class="tickLabel" style="position:absolute;text-align:center;left:-4px;top:280px;width:64px">0</div><div class="tickLabel" style="position:absolute;text-align:center;left:66px;top:280px;width:64px">1</div><div class="tickLabel" style="position:absolute;text-align:center;left:135px;top:280px;width:64px">2</div><div class="tickLabel" style="position:absolute;text-align:center;left:205px;top:280px;width:64px">3</div><div class="tickLabel" style="position:absolute;text-align:center;left:275px;top:280px;width:64px">4</div><div class="tickLabel" style="position:absolute;text-align:center;left:344px;top:280px;width:64px">5</div><div class="tickLabel" style="position:absolute;text-align:center;left:414px;top:280px;width:64px">6</div><div class="tickLabel" style="position:absolute;text-align:center;left:483px;top:280px;width:64px">7</div><div class="tickLabel" style="position:absolute;text-align:center;left:553px;top:280px;width:64px">8</div><div class="tickLabel" style="position:absolute;text-align:center;left:623px;top:280px;width:64px">9</div><div class="tickLabel" style="position:absolute;text-align:center;left:692px;top:280px;width:64px">10</div><div class="tickLabel" style="position:absolute;text-align:center;left:762px;top:280px;width:64px">11</div><div class="tickLabel" style="position:absolute;text-align:center;left:832px;top:280px;width:64px">12</div><div class="tickLabel" style="position:absolute;text-align:center;left:901px;top:280px;width:64px">13</div></div><div class="yAxis y1Axis" style="color:#545454"><div class="tickLabel" style="position:absolute;text-align:right;top:255px;right:951px;width:21px">-1.5</div><div class="tickLabel" style="position:absolute;text-align:right;top:213px;right:951px;width:21px">-1.0</div><div class="tickLabel" style="position:absolute;text-align:right;top:171px;right:951px;width:21px">-0.5</div><div class="tickLabel" style="position:absolute;text-align:right;top:129px;right:951px;width:21px">0.0</div><div class="tickLabel" style="position:absolute;text-align:right;top:86px;right:951px;width:21px">0.5</div><div class="tickLabel" style="position:absolute;text-align:right;top:44px;right:951px;width:21px">1.0</div><div class="tickLabel" style="position:absolute;text-align:right;top:2px;right:951px;width:21px">1.5</div></div></div><div class="legend"><div style="position: absolute; width: 55px; height: 44px; top: 9px; right: 9px; opacity: 0.85; background-color: rgb(255, 255, 255);"> </div><table style="position:absolute;top:9px;right:9px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #BA1E20;overflow:hidden"></div></div></td><td class="legendLabel">sin(x)</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #459D1C;overflow:hidden"></div></div></td><td class="legendLabel">cos(x)</td></tr></tbody></table></div></div>
-                -->
-                <div class="chart"></div>
-                <!--
-                <img src="${ctx}/style/images/2.png" >
-                -->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <ul class="site-stats">
+                            <li><div class="cc"><i class="fa fa-user"></i> <strong>1433</strong> <small>Total Users</small></div></li>
+                            <li><div class="cc"><i class="fa fa-arrow-right"></i> <strong>16</strong> <small>New Users (last week)</small></div></li>
+                            <li class="divider"></li>
+                            <li><div class="cc"><i class="fa fa-shopping-cart"></i> <strong>259</strong> <small>Total Shop Items</small></div></li>
+                            <li><div class="cc"><i class="fa fa-tag"></i> <strong>8650</strong> <small>Total Orders</small></div></li>
+                            <li><div class="cc"><i class="fa fa-repeat"></i> <strong>29</strong> <small>Pending Orders</small></div></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-8">
+                        <div class="chart"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<div class="row-fluid">
-    <div class="span4">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-4">
         <div class="widget-box">
             <div class="widget-title">
 								<span class="icon">
-									<i class="icon-th-list"></i>
+									<i class="fa fa-th-list"></i>
 								</span>
                 <h5>服务器环境</h5>
             </div>
@@ -121,11 +134,13 @@
             </div>
         </div>
     </div>
-    <div class="span4">
+
+
+    <div class="col-xs-12 col-sm-4">
         <div class="widget-box">
             <div class="widget-title">
 								<span class="icon">
-									<i class="icon-arrow-right"></i>
+									<i class="fa fa-arrow-right"></i>
 								</span>
                 <h5>快捷链接</h5>
             </div>
@@ -163,18 +178,18 @@
             </div>
         </div>
     </div>
-    <div class="span4">
+    <div class="col-xs-12 col-sm-4">
         <div class="widget-box">
             <div class="widget-title">
 								<span class="icon">
-									<i class="icon-envelope"></i>
+									<i class="fa fa-envelope"></i>
 								</span>
                 <h5>公告通知</h5>
 
                 <button class="btn   btn-mini" onclick="easyfk.gotoInbox();" style="float: right;margin: 9px 15px 0 0;"><i class="icon-eye-open"></i>详细</button>
 
             </div>
-            <div class="widget-content nopadding">
+            <div class="widget-content">
 
                     <div class="alert">
                         <strong>张三</strong><p></p> 老板，该加工资了吧！.老板，该加工资了吧！.
@@ -182,9 +197,19 @@
                     <div class="alert alert-success">
                          <strong>王二</strong><p></p> 老板，该加工资了吧！.老板，该加工资了吧！.
                     </div>
+
+                    <div class="alert alert-block alert-warning">
+                        <a class="close" data-dismiss="alert" href="#">×</a>
+                        <h4 class="alert-heading">Warning!</h4>
+                        Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+                    </div>
             </div>
+
+
         </div>
     </div>
+
+
 </div>
 
 <script type="text/javascript">
@@ -199,7 +224,7 @@ easyfk.gotoInbox  = function() {
 
 </script>
 
-<div id="alertDetailPanel" class="modal hide fade" role="dialog" aria-labelledby="alertDetailLabel" aria-hidden="true">
+<div id="alertDetailPanel" class="modal  fade" role="dialog" aria-labelledby="alertDetailLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="alertDetailLabel">

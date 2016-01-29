@@ -464,6 +464,20 @@ public class StringUtil {
         return removeRegex(str,"[\\ ]");
     }
 
+    /**
+     * 删除各种空格、回车、制表符
+     * @param str
+     * @return
+     */
+    public static String removeAllBlank(String str) {
+        String dest = "";
+        if (str!=null) {
+            Pattern p = Pattern.compile("\\s*|\t|\r|\n");
+            Matcher m = p.matcher(str);
+            dest = m.replaceAll("");
+        }
+        return dest;
+    }
     public static String toHexString(byte[] bytes) {
         return new String(Hex.encodeHex(bytes));
     }

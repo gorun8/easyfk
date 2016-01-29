@@ -2,7 +2,7 @@
  **/
 $(document).ready(function(){
 	
-	$('input[type=checkbox],input[type=radio],input[type=file]').uniform();
+	//$('input[type=checkbox],input[type=radio],input[type=file]').uniform();
 	// Form Validation
     $("#partyClsGroupForm").validate({
 		rules:{

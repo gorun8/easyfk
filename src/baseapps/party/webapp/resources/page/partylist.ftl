@@ -111,7 +111,7 @@
 
 
 <input type="hidden" id="partyPersonFormAction">
-<div id="partyPersonFormPanel" class="modal hide fade" role="dialog" aria-labelledby="partyPersonFormLabel" aria-hidden="true">
+<div id="partyPersonFormPanel" class="modal  fade" role="dialog" aria-labelledby="partyPersonFormLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="partyPersonFormLabel">
@@ -151,7 +151,7 @@
 </div>
 
 <input type="hidden" id="partyGroupFormAction">
-<div id="partyGroupFormPanel" class="modal hide fade" role="dialog" aria-labelledby="partyGroupFormLabel" aria-hidden="true">
+<div id="partyGroupFormPanel" class="modal  fade" role="dialog" aria-labelledby="partyGroupFormLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="partyGroupFormLabel">

@@ -174,7 +174,7 @@
 </script>
 
 <input type="hidden" id="interfaceFormAction">
-<div id="interfaceFormPanel" class="modal hide fade" role="dialog" aria-labelledby="interfaceFormLabel" aria-hidden="true">
+<div id="interfaceFormPanel" class="modal  fade" role="dialog" aria-labelledby="interfaceFormLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="interfaceFormLabel">

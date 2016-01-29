@@ -149,7 +149,7 @@
 
 <input type="hidden"   id="currentSelectedGroupId" value="">
 <input type="hidden"   id="partyClsGroupFormAction" value="">
-<div id="partyClsGroupFormDailog" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div id="partyClsGroupFormDailog" class="modal   fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="formDailogLabel">

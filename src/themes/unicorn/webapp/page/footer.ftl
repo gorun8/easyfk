@@ -13,7 +13,11 @@
 -->
 
 <script src="/unicorn/js/unicorn.js"></script>
+<#--
+<script src="/unicorn/js/unicorn.dashboard.js"></script>
+-->
 
 ${EASYFK_FOOTER_ATTACH?default("")}
+</div>
 </body>
 </html>

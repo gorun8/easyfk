@@ -20,6 +20,8 @@ import org.apache.commons.validator.EmailValidator;
 import java.sql.Timestamp;
 import java.util.Collection;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * General input/data validation methods
@@ -1403,6 +1405,17 @@ public class UtilValidate {
         }
         return isValid;
     }
-    
 
+    /**
+     * 是否为字母、数字、汉字
+     * @param name
+     * @return
+     */
+    public static boolean isCharNumbers(String name){
+        String regex="^[a-zA-Z0-9\u4E00-\u9FA5]+$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher match=pattern.matcher(name);
+        boolean b=match.matches();
+        return b;
+    }
 }

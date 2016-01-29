@@ -297,7 +297,7 @@
 </script>
 
 <input type="hidden" id="partyRightFormAction">
-<div id="partyRightFormPanel" class="modal hide fade" role="dialog" aria-labelledby="partyRightFormLabel" aria-hidden="true">
+<div id="partyRightFormPanel" class="modal  fade" role="dialog" aria-labelledby="partyRightFormLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="partyRightFormLabel">
@@ -476,7 +476,7 @@
 
 
 <input type="hidden" id="partyRoleFormAction">
-<div id="partyRoleFormPanel" class="modal hide fade" role="dialog" aria-labelledby="partyRoleFormLabel" aria-hidden="true">
+<div id="partyRoleFormPanel" class="modal  fade" role="dialog" aria-labelledby="partyRoleFormLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="partyRoleFormLabel">

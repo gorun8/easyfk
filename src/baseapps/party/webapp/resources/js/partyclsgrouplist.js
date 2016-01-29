@@ -222,7 +222,7 @@ easyfk.renderTree = function(data,thisItemId,childCount){
 		html+=">"+item.description +"</span>";
 
 		if(item.childCount > 0) {
-			html += "<span class=\"label\" style='margin-left:50px;'>" + item.childCount + "</span>";
+			html += "<span class=\"label label-default\" style='margin-left:50px;'>" + item.childCount + "</span>";
 		}
 
 		html+="</a></li>";
@@ -350,6 +350,6 @@ easyfk.disableParty = function(partyId){
 }
 
 $(document).ready(function(){
-	$('input[type=checkbox],input[type=radio],input[type=file]').uniform();
+	//$('input[type=checkbox],input[type=radio],input[type=file]').uniform();
 
 });

@@ -318,7 +318,7 @@
 </script>
 
 <input type="hidden" id="userLoginFormAction">
-<div id="userLoginFormPanel" class="modal hide fade" role="dialog" aria-labelledby="userLoginFormLabel" aria-hidden="true">
+<div id="userLoginFormPanel" class="modal fade" role="dialog" aria-labelledby="userLoginFormLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="userLoginFormLabel">
@@ -371,7 +371,7 @@
 
 
 <input type="hidden" id="userInfoFormAction">
-<div id="userInfoFormPanel" class="modal hide fade" role="dialog" aria-labelledby="userInfoFormLabel" aria-hidden="true">
+<div id="userInfoFormPanel" class="modal fade" role="dialog" aria-labelledby="userInfoFormLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="userInfoFormLabel">
@@ -436,7 +436,7 @@
 </script>
 
 <input type="hidden" id="addressFormAction">
-<div id="addressFormPanel" class="modal hide fade" role="dialog" aria-labelledby="addressFormLabel" aria-hidden="true">
+<div id="addressFormPanel" class="modal fade" role="dialog" aria-labelledby="addressFormLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="addressFormLabel">
@@ -486,7 +486,7 @@
 </div>
 
 <input type="hidden" id="emailFormAction">
-<div id="emailFormPanel" class="modal hide fade" role="dialog" aria-labelledby="emailFormLabel" aria-hidden="true">
+<div id="emailFormPanel" class="modal fade" role="dialog" aria-labelledby="emailFormLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="emailFormLabel">
@@ -511,7 +511,7 @@
 </div>
 
 <input type="hidden" id="telFormAction">
-<div id="telFormPanel" class="modal hide fade" role="dialog" aria-labelledby="telFormLabel" aria-hidden="true">
+<div id="telFormPanel" class="modal fade" role="dialog" aria-labelledby="telFormLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="telFormLabel">
@@ -551,7 +551,7 @@
 </div>
 
 <input type="hidden" id="mobileFormAction">
-<div id="mobileFormPanel" class="modal hide fade" role="dialog" aria-labelledby="mobileFormLabel" aria-hidden="true">
+<div id="mobileFormPanel" class="modal fade" role="dialog" aria-labelledby="mobileFormLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="mobileFormLabel">添加新手机号
@@ -576,7 +576,7 @@
 
 
 <input type="hidden" id="selectConactTypeFormAction">
-<div id="selectConactTypeFormPanel" class="modal hide fade" role="dialog" aria-labelledby="selectConactTypeFormLabel" aria-hidden="true">
+<div id="selectConactTypeFormPanel" class="modal fade" role="dialog" aria-labelledby="selectConactTypeFormLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="selectConactTypeFormLabel">新建联系信息
@@ -605,7 +605,7 @@
 
 
 <input type="hidden" id="userLoginFormAction">
-<div id="userCertFormPanel" class="modal hide fade" role="dialog" aria-labelledby="userCertFormLabel" aria-hidden="true">
+<div id="userCertFormPanel" class="modal fade" role="dialog" aria-labelledby="userCertFormLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="userCertFormLabel">

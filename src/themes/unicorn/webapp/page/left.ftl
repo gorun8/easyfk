@@ -13,6 +13,7 @@
 -->
 <#macro renderMenu menudata>
 <ul>
+
     <#list menudata as item>
         <#if item.sub?has_content>
             <#assign  liclass = ""/>
@@ -22,7 +23,7 @@
 
         <li id="${item.id?default('')}" class="${liclass} submenu "  >
             <a href="#" >
-                <i class="icon ${item.style?default('')}"></i>
+                <i class="fa ${item.style?default('')}"></i>
                 <span>${item.title?default('')}</span>
                 <span class="label">${item.sub.size()}</span>
             </a>
@@ -36,7 +37,7 @@
 
         <li id="${item.id?default('')}" class="${liclass} tip-top"   data-original-title="${item.desc?default('')}">
             <a href="${item.href?default('')}" target="${item.target?default('')}">
-                <i class="icon ${item.style?default('')}"></i>
+                <i class="fa ${item.style?default('')}"></i>
                 <span>${item.title?default('')} </span>
             </a>
         </li>
@@ -47,7 +48,10 @@
 
 
 <div id="sidebar">
-    <a href="#" class="visible-phone"><i class="icon icon-home"></i>菜单</a>
+    <div id="search">
+        <input type="text" placeholder="请输入关键字..."/><button type="submit" class="tip-right" title="Search"><i class="fa fa-search"></i></button>
+    </div>
+
 
     <#if EASYFK_MENU?has_content>
         <#if EASYFK_MENU.MENU_DATA?has_content>

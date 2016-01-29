@@ -15,7 +15,11 @@
     easyfk.changePage = function(url){
         $("#listdatacontainer").load(url);
     }
+    $(function(){
+        var param ={"onColor":"primary","onText":"个人","offText":"团体","size":"small"};
+        $("#party-type-switch").bootstrapSwitch(param);
 
+    });
 </script>
     <#list parentClsGroupList as item>
     <#--    {id:'navid${item.partyClassificationGroupId}',tip:'${item.description}',title:'${item.description}'},-->
@@ -25,10 +29,13 @@
     <div class="widget-box">
         <div class="widget-title">
             <span class="icon">
-                <i class="icon-th"></i>
+                <i class="fa fa-th"></i>
             </span>
             <h5>会员列表</h5>
 
+            <div style="float: right;margin-right:10px;margin-top:2px;">
+                <input type="checkbox" checked id="party-type-switch" data-switch-no-init/>
+            </div>
         </div>
         <div class="widget-content nopadding">
             <table class="table table-bordered table-striped">
@@ -45,6 +52,7 @@
                     <td>${item.description} </td>
                     <td>${uiLabelMap[item.partyTypeId]}</td>
                     <td>
+                        <#--
                         <div class="btn-group">
                             <button class="btn  btn-mini">操作</button>
                             <button data-toggle="dropdown" class="btn  btn-mini dropdown-toggle"><span class="caret"></span></button>
@@ -53,6 +61,16 @@
                                 <li><a href="#" onclick="easyfk.disableParty('${item.partyId}');"><i class=" icon-trash "></i>${uiLabelMap.CommonRemove}</a></li>
                             </ul>
                         </div>
+                        -->
+                        <div class="btn-group">
+                            <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle">操作 <span class="caret"></span></button>
+                            <ul class="dropdown-menu  pull-right">
+                                <li><a href="#" onclick="easyfk.partyDetial('${item.partyId}')"><i class="fa fa-eye"></i>  ${uiLabelMap.CommonView}</a></li>
+                                <li><a href="#" onclick="easyfk.disableParty('${item.partyId}');"><i class="fa fa-trash-o"></i> ${uiLabelMap.CommonRemove}</a></li>
+                            </ul>
+                        </div>
+
+
                     </td>
                 </tr>
                 </#list>

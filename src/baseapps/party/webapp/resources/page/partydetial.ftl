@@ -16,7 +16,7 @@
 </@easyfkSetAppMenu>
 
 <@easyfkSetNavBar subTitle="会员列表">
- {NAV_BAR_DATA:[{id:'navid1',title:'首页',tip:'返回首页',style:'icon-home',href:'${ctx}'},
+ {NAV_BAR_DATA:[{id:'navid1',title:'首页',tip:'返回首页',style:'fa  fa-home',href:'${ctx}'},
     {id:'navid2',title:'组织机构',tip:'管理组织机构',href:'${ctx}/partyclsgroup/list'},
     <#list parentClsGroupList as item>
     {id:'navid${item.partyClassificationGroupId}',tip:'${item.description}',title:'${item.description}'},
@@ -26,14 +26,12 @@
 </@easyfkSetNavBar>
 
 <@easyfkHeaderAttach>
-
+<link rel="stylesheet" href="/images/css/select2.css" />
 <link rel="stylesheet" href="/images/css/datepicker.css" />
-<link rel="stylesheet" href="/images/css/uniform.css" />
-
 <script src="/images/js/jquery/bootstrap-datepicker.js"></script>
 <script src="/images/js/jquery/validate/jquery.validate.min.js"></script>
 <script src="/images/js/jquery/validate/localization/messages_zh.min.js"></script>
-<script src="/images/js/jquery/jquery.uniform.js"></script>
+<script src="/images/js/jquery/select2.min.js"></script>
 </@easyfkHeaderAttach>
 <@easyfkFooterAttach>
 <script src="/party/js/partydetial.js"></script>
@@ -41,43 +39,42 @@
 
 
 <@easyfkDecoratorScreen name="body" location="component://party/webapp/resources/page/appcommon.ftl">
-<div class="row-fluid">
-    <div class="span12">
+<div class="row">
+    <div class="col-xs-12 col-sm-12">
         <#--@easyfkContextMenu  >
             {MENU_DATA:[
-            {id:'',title:'详情',desc:'显示会员详情汇总',toggle:'modal',href:'javascript:easyfk.noimplement()',style:'btn btn-primary tip-bottom',style2:' icon-map-marker icon-white'},
-            {id:'',title:'角色',desc:'显示会员具有的角色',toggle:'modal',href:'javascript:easyfk.noimplement()',style:'btn btn-primary tip-bottom',style2:' icon-map-marker icon-white'},
-            {id:'',title:'权限',desc:'显示会员权限',toggle:'modal',href:'javascript:easyfk.noimplement()',style:'btn btn-primary tip-bottom',style2:' icon-map-marker icon-white'},
-            {id:'',title:'组织',desc:'显示会员所属的组织机构',toggle:'modal',href:'javascript:easyfk.noimplement()',style:'btn btn-primary tip-bottom',style2:' icon-map-marker icon-white'},
-            {id:'',title:'日志',desc:'显示会员相关的日志',toggle:'modal',href:'javascript:easyfk.noimplement()',style:'btn btn-primary tip-bottom',style2:' icon-map-marker icon-white'},
+            {id:'',title:'详情',desc:'显示会员详情汇总',toggle:'modal',href:'javascript:easyfk.noimplement()',style:'btn btn-primary tip-bottom',style2:' fa  fa-map-marker fa  fa-white'},
+            {id:'',title:'角色',desc:'显示会员具有的角色',toggle:'modal',href:'javascript:easyfk.noimplement()',style:'btn btn-primary tip-bottom',style2:' fa  fa-map-marker fa  fa-white'},
+            {id:'',title:'权限',desc:'显示会员权限',toggle:'modal',href:'javascript:easyfk.noimplement()',style:'btn btn-primary tip-bottom',style2:' fa  fa-map-marker fa  fa-white'},
+            {id:'',title:'组织',desc:'显示会员所属的组织机构',toggle:'modal',href:'javascript:easyfk.noimplement()',style:'btn btn-primary tip-bottom',style2:' fa  fa-map-marker fa  fa-white'},
+            {id:'',title:'日志',desc:'显示会员相关的日志',toggle:'modal',href:'javascript:easyfk.noimplement()',style:'btn btn-primary tip-bottom',style2:' fa  fa-map-marker fa  fa-white'},
 
             ]}
         </@easyfkContextMenu-->
 
-            <div class="row-fluid">
-                <div class="span6">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
                     <div class="widget-box">
                         <div class="widget-title">
 								<span class="icon">
-									<i class="icon-th-list"></i>
+									<i class="fa  fa-th-list"></i>
 								</span>
                             <h5>简介</h5>
-                            <button class="btn btn-info btn-mini" onclick="easyfk.editUserInfo()" style="float: right;margin: 9px 15px 0 0;">编辑</button>
+                            <button class="btn btn-info btn-mini" onclick="easyfk.editUserInfo()" style="float: right;margin: 1px 10px 0 0;">编辑</button>
                         </div>
                         <div class="widget-content">
                             这是关于这个会员的简要介绍.....这是关于这个会员的简要介绍.....这是关于这个会员的简要介绍.....这是关于这个会员的简要介绍.....这是关于这个会员的简要介绍.....这是关于这个会员的简要介绍.....这是关于这个会员的简要介绍.....这是关于这个会员的简要介绍.....这是关于这个会员的简要介绍.....这是关于这个会员的简要介绍.....这是关于这个会员的简要介绍.....这是关于这个会员的简要介绍.....这是关于这个会员的简要介绍.....这是关于这个会员的简要介绍.....这是关于这个会员的简要介绍.....这是关于这个会员的简要介绍.....这是关于这个会员的简要介绍.....这是关于这个会员的简要介绍.....这是关于这个会员的简要介绍.....这是关于这个会员的简要介绍.....这是关于这个会员的简要介绍.....
                         </div>
                     </div>
                 </div>
-                <div class="span6">
+                <div class="col-xs-12 col-sm-6">
                     <div class="widget-box">
                         <div class="widget-title">
 								<span class="icon">
-									<i class="icon-th-list"></i>
+									<i class="fa  fa-th-list"></i>
 								</span>
                             <h5>联系信息</h5>
-                            <button class="btn btn-info btn-mini" onclick="easyfk.selectConactType();" style="float: right;margin: 9px 15px 0 0;">添加</button>
-
+                            <button class="btn btn-info btn-mini" onclick="easyfk.selectConactType();" style="float: right;margin: 1px 15px 0 0;">添加</button>
                         </div>
                         <div class="widget-content">
                             <table class="table table-bordered table-striped">
@@ -98,9 +95,8 @@
                                     </td>
                                     <td>
                                         <div class="btn-group">
-                                            <button class="btn btn-mini">操作</button>
-                                            <button data-toggle="dropdown" class="btn   btn-mini dropdown-toggle"><span class="caret"></span></button>
-                                            <ul class="dropdown-menu pull-right">
+                                            <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"> 操作 <span class="caret"></span></a>
+                                            <ul class="dropdown-menu dropdown-primary pull-right">
                                                 <li><a href="#" onclick="easyfk.removeUserLogin()">重新启用</a></li>
                                                 <li><a href="#" onclick="easyfk.newMobile()">添加新的</a></li>
                                             </ul>
@@ -116,10 +112,10 @@
 
                                     </td>
                                     <td>
+
                                         <div class="btn-group">
-                                            <button class="btn btn-mini">操作</button>
-                                            <button data-toggle="dropdown" class="btn   btn-mini dropdown-toggle"><span class="caret"></span></button>
-                                            <ul class="dropdown-menu pull-right">
+                                            <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"> 操作 <span class="caret"></span></a>
+                                            <ul class="dropdown-menu dropdown-primary pull-right">
                                                 <li><a href="#" onclick="easyfk.removeUserLogin()">重新启用</a></li>
                                                 <li><a href="#" onclick="easyfk.newMobile()">添加新的</a></li>
                                             </ul>
@@ -136,10 +132,9 @@
                                     </td>
                                     <td>
                                         <div class="btn-group">
-                                            <button class="btn  btn-mini">操作</button>
-                                            <button data-toggle="dropdown" class="btn  btn-mini dropdown-toggle"><span class="caret"></span></button>
-                                            <ul class="dropdown-menu pull-right">
-                                                <li><a href="#" onclick="easyfk.removeUserLogin()">停用</a></li>
+                                            <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"> 操作 <span class="caret"></span></a>
+                                            <ul class="dropdown-menu dropdown-primary pull-right">
+                                                <li><a href="#" onclick="easyfk.removeUserLogin()">重新启用</a></li>
                                                 <li><a href="#" onclick="easyfk.newTel()">添加新的</a></li>
                                             </ul>
                                         </div>
@@ -154,10 +149,9 @@
                                     </td>
                                     <td>
                                         <div class="btn-group">
-                                            <button class="btn  btn-mini">操作</button>
-                                            <button data-toggle="dropdown" class="btn  btn-mini dropdown-toggle"><span class="caret"></span></button>
-                                            <ul class="dropdown-menu pull-right">
-                                                <li><a href="#" onclick="easyfk.removeUserLogin()">启用</a></li>
+                                            <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"> 操作 <span class="caret"></span></a>
+                                            <ul class="dropdown-menu dropdown-primary pull-right">
+                                                <li><a href="#" onclick="easyfk.removeUserLogin()">重新启用</a></li>
                                                 <li><a href="#" onclick="easyfk.newEmail()">添加新的</a></li>
                                             </ul>
                                         </div>
@@ -172,10 +166,9 @@
                                     </td>
                                     <td>
                                         <div class="btn-group">
-                                            <button class="btn  btn-mini">操作</button>
-                                            <button data-toggle="dropdown" class="btn  btn-mini dropdown-toggle"><span class="caret"></span></button>
-                                            <ul class="dropdown-menu pull-right">
-                                                <li><a href="#" onclick="easyfk.removeUserLogin()">启用</a></li>
+                                            <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"> 操作 <span class="caret"></span></a>
+                                            <ul class="dropdown-menu dropdown-primary pull-right">
+                                                <li><a href="#" onclick="easyfk.removeUserLogin()">重新启用</a></li>
                                                 <li><a href="#" onclick="easyfk.newAddress()">添加新的</a></li>
                                             </ul>
                                         </div>
@@ -186,23 +179,21 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
     </div>
 </div>
 
 
 
-<div class="row-fluid">
-    <div class="span12">
+<div class="row">
+    <div class="col-xs-12 col-sm-12">
         <div class="widget-box">
             <div class="widget-title">
 								<span class="icon">
-									<i class="icon-th-list"></i>
+									<i class="fa  fa-th-list"></i>
 								</span>
                 <h5>登录账号</h5>
-                <button class="btn btn-info btn-mini" onclick="easyfk.newUserLogin();" style="float: right;margin: 9px 15px 0 0;">添加</button>
+                <button class="btn btn-info btn-mini" onclick="easyfk.newUserLogin();" style="float: right;margin: 1px 15px 0 0;">添加</button>
 
             </div>
             <div class="widget-content">
@@ -238,9 +229,8 @@
 
                         <td>
                             <div class="btn-group">
-                                <button class="btn btn-mini">操作</button>
-                                <button data-toggle="dropdown" class="btn   btn-mini dropdown-toggle"><span class="caret"></span></button>
-                                <ul class="dropdown-menu pull-right">
+                                <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"> 操作 <span class="caret"></span></a>
+                                <ul class="dropdown-menu dropdown-primary pull-right">
                                     <li><a href="#" onclick="easyfk.partydetial(1)">会员详情</a></li>
                                     <li><a href="#" onclick="easyfk.showLog()">关联日志</a></li>
                                 </ul>
@@ -267,9 +257,8 @@
 
                         <td>
                             <div class="btn-group">
-                                <button class="btn  btn-mini">操作</button>
-                                <button data-toggle="dropdown" class="btn  btn-mini dropdown-toggle"><span class="caret"></span></button>
-                                <ul class="dropdown-menu pull-right">
+                                <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"> 操作 <span class="caret"></span></a>
+                                <ul class="dropdown-menu dropdown-primary pull-right">
                                     <li><a href="#" onclick="easyfk.removeUserLogin()">停用</a></li>
                                     <li><a href="#" onclick="easyfk.changePassword()">修改</a></li>
                                     <li><a href="#" onclick="easyfk.setUserCert(false)">关联证书</a></li>
@@ -298,9 +287,8 @@
 
                         <td>
                             <div class="btn-group">
-                                <button class="btn  btn-mini">操作</button>
-                                <button data-toggle="dropdown" class="btn  btn-mini dropdown-toggle"><span class="caret"></span></button>
-                                <ul class="dropdown-menu pull-right">
+                                <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"> 操作 <span class="caret"></span></a>
+                                <ul class="dropdown-menu dropdown-primary pull-right">
                                     <li><a href="#" onclick="easyfk.removeUserLogin()">启用</a></li>
                                     <li><a href="#" onclick="easyfk.changePassword()">修改</a></li>
                                     <li><a href="#" onclick="easyfk.setUserCert(true)">关联证书</a></li>
@@ -313,14 +301,11 @@
             </div>
         </div>
     </div>
-
 </div>
 
 
 <script type="text/javascript">
-    easyfk.noimplement= function(){
-        alert("该功能还未实现");
-    }
+
     easyfk.showLog = function(){
         document.location.href = "${ctx}/page/oploglist.ftl";
     }
@@ -352,7 +337,6 @@
     }
 
     easyfk.editUserInfo = function () {
-
         $("#userInfoFormPanel").modal("show");
     }
 
@@ -405,88 +389,97 @@
             return false;
         });
 
+
+        $('select').select2();
+
     });
 
 </script>
 
 <input type="hidden" id="userLoginFormAction">
-<div id="userLoginFormPanel" class="modal hide fade" role="dialog" aria-labelledby="userLoginFormLabel" aria-hidden="true">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="userLoginFormLabel">
-            新建登录账号
-        </h3>
-    </div>
-    <div class="modal-body">
-        <form action="" method="post" class="form-horizontal" name="userLoginForm" id="userLoginForm">
-            <input type="hidden" name="partyId" id="partyId">
-            <div class="control-group">
-                <label class="control-label">帐号</label>
-                <div class="controls">
-                    <input type="text" id="userLoginId" name="userLoginId"/>
-                </div>
+<div id="userLoginFormPanel" class="modal fade" role="dialog" aria-labelledby="userLoginFormLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="userLoginFormLabel">
+                    新建登录账号
+                </h3>
             </div>
-            <div class="control-group">
-                <label class="control-label">角色类型</label>
-                <div class="controls">
-                    <select   multiple="">
-                        <option value=""/>一般用户
-                        <option value=""/>系统管理员
-                        <option value=""/>系统安全员
-                        <option value=""/>安全保密管理员
-                        <option value=""/>自定义角色XX
-                    </select>
-                </div>
-            </div>
-            <div class="control-group">
-                <label class="control-label">${uiLabelMap.CommonPassword}</label>
-                <div class="controls">
-                    <input type="password" id="password" name="password"/>
-                </div>
-            </div>
+            <div class="modal-body">
+                <form action="" method="post" class="form-horizontal" name="userLoginForm" id="userLoginForm">
+                    <input type="hidden" name="partyId" id="partyId">
+                    <div class="form-group">
+                        <label class="col-sm-4 col-md-4 col-lg-3 col-sm-4 col-md-4 col-lg-3 control-label">帐号</label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input   class="form-control input-sm" type="text"  id="userLoginId" name="userLoginId" class="form-control input-sm"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 col-md-4 col-lg-3 col-sm-4 col-md-4 col-lg-3 control-label">角色类型</label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <select   multiple="">
+                                <option value=""/>一般用户
+                                <option value=""/>系统管理员
+                                <option value=""/>系统安全员
+                                <option value=""/>安全保密管理员
+                                <option value=""/>自定义角色XX
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 col-md-4 col-lg-3 col-sm-4 col-md-4 col-lg-3 control-label">${uiLabelMap.CommonPassword}</label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input   class="form-control input-sm" type="password" id="password" name="password" class="form-control input-sm"/>
 
-            <div class="control-group">
-                <label class="control-label">${uiLabelMap.CommonPasswordConfirm}</label>
-                <div class="controls">
-                    <input type="password" id="password2" name="password2"/>
-                </div>
-            </div>
-            <div class="control-group">
-                <label class="control-label">密码提示</label>
-                <div class="controls">
-                    <input type="text" id="password2" name="password2"/>
-                </div>
-            </div>
+                        </div>
+                    </div>
 
-        </form>
-    </div>
-    <div class="modal-footer">
-        <button class="btn btn-primary" id="userLoginFormSubmit" >保存</button>
-        <button class="btn" id="userLoginFormClose" data-dismiss="modal" aria-hidden="true">关闭</button>
+                    <div class="form-group">
+                        <label class="col-sm-4 col-md-4 col-lg-3 col-sm-4 col-md-4 col-lg-3 control-label">${uiLabelMap.CommonPasswordConfirm}</label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input   class="form-control input-sm" type="password" id="password2" name="password2" class="form-control input-sm"/>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="userLoginFormSubmit" >保存</button>
+                <button class="btn" id="userLoginFormClose" data-dismiss="modal" aria-hidden="true">关闭</button>
+            </div>
+        </div>
     </div>
 </div>
 
 
 <input type="hidden" id="userInfoFormAction">
-<div id="userInfoFormPanel" class="modal hide fade" role="dialog" aria-labelledby="userInfoFormLabel" aria-hidden="true">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="userInfoFormLabel">
-            编辑个人简介
-        </h3>
-    </div>
-    <div class="modal-body">
-        <form action="" method="post" class="form-horizontal" name="userInfoForm" id="userInfoForm">
-            <input type="hidden" name="partyId" id="partyId">
-            <div class="control-group">
-               <textarea>这是关于这个会员的简要介绍.....</textarea>
+<div id="userInfoFormPanel" class="modal fade" role="dialog" aria-labelledby="userInfoFormLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="userInfoFormLabel">
+                    编辑个人简介
+                </h3>
             </div>
+            <div class="modal-body">
+                <form action="" method="post" class="form-horizontal" name="userInfoForm" id="userInfoForm">
+                    <input type="hidden" name="partyId" id="partyId">
 
-        </form>
-    </div>
-    <div class="modal-footer">
-        <button class="btn btn-primary" id="userLoginFormSubmit" >保存</button>
-        <button class="btn" id="userLoginFormClose" data-dismiss="modal" aria-hidden="true">关闭</button>
+                    <div class="form-group">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <textarea rows="5" class="form-control focus"></textarea>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="userLoginFormSubmit" >保存</button>
+                <button class="btn" id="userLoginFormClose" data-dismiss="modal" aria-hidden="true">关闭</button>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -533,216 +526,252 @@
 </script>
 
 <input type="hidden" id="addressFormAction">
-<div id="addressFormPanel" class="modal hide fade" role="dialog" aria-labelledby="addressFormLabel" aria-hidden="true">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="addressFormLabel">
-            地址信息
-        </h3>
-    </div>
-    <div class="modal-body">
-        <form action="" method="post" class="form-horizontal" name="userLoginForm" id="userLoginForm">
-            <input type="hidden" name="partyId" id="partyId">
-            <div class="control-group">
-                <label class="control-label">国家</label>
-                <div class="controls">
-                    <input type="text" id="userLoginId" name="userLoginId"/>
-                </div>
-            </div>
-            <div class="control-group">
-                <label class="control-label">省/市</label>
-                <div class="controls">
-                    <input type="text" id="userLoginId" name="userLoginId"/>
-                </div>
-            </div>
-            <div class="control-group">
-                <label class="control-label">县/区</label>
-                <div class="controls">
-                    <input type="text" id="userLoginId" name="userLoginId"/>
-                </div>
-            </div>
+<div id="addressFormPanel" class="modal fade" role="dialog" aria-labelledby="addressFormLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="addressFormLabel">
+                地址信息
+            </h3>
+        </div>
+        <div class="modal-body">
+            <form action="" method="post" class="form-horizontal" name="userLoginForm" id="userLoginForm">
+                <input type="hidden" name="partyId" id="partyId">
 
-            <div class="control-group">
-                <label class="control-label">街道</label>
-                <div class="controls">
-                    <input type="text" id="userLoginId" name="userLoginId"/>
+                <div class="form-group">
+                    <label class="col-sm-3 col-md-3 col-lg-2 control-label">国家</label>
+                    <div class="col-sm-9 col-md-9 col-lg-10">
+                        <input   class="form-control input-sm" type="text"   class="form-control input-sm"/>
+                    </div>
                 </div>
-            </div>
-            <div class="control-group">
-                <label class="control-label">邮编</label>
-                <div class="controls">
-                    <input type="text" id="userLoginId" name="userLoginId"/>
+
+
+                <div class="form-group">
+                    <label class="col-sm-3 col-md-3 col-lg-2 control-label">地址</label>
+                    <div class="col-sm-9 col-md-9 col-lg-10">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input type="text" class="form-control input-sm">
+                                <span class="help-block text-left">省</span>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control input-sm">
+                                <span class="help-block text-center">市/县</span>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </form>
+
+                <div class="form-group">
+                    <label class="col-sm-3 col-md-3 col-lg-2 control-label">地址</label>
+                    <div class="col-sm-9 col-md-9 col-lg-10">
+                        <input type="text" class="form-control input-sm">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 col-md-3 col-lg-2 control-label">邮编</label>
+                    <div class="col-sm-9 col-md-9 col-lg-10">
+                        <input type="text" class="form-control input-sm">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" id="userLoginFormSubmit" >保存</button>
+            <button class="btn" id="userLoginFormClose" data-dismiss="modal" aria-hidden="true">关闭</button>
+        </div>
     </div>
-    <div class="modal-footer">
-        <button class="btn btn-primary" id="userLoginFormSubmit" >保存</button>
-        <button class="btn" id="userLoginFormClose" data-dismiss="modal" aria-hidden="true">关闭</button>
     </div>
 </div>
 
 <input type="hidden" id="emailFormAction">
-<div id="emailFormPanel" class="modal hide fade" role="dialog" aria-labelledby="emailFormLabel" aria-hidden="true">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="emailFormLabel">
-            邮件地址
-        </h3>
-    </div>
-    <div class="modal-body">
-        <form action="" method="post" class="form-horizontal" name="emailForm" id="emailForm">
-            <input type="hidden" name="partyId" id="partyId">
-            <div class="control-group">
-                <label class="control-label">邮件地址</label>
-                <div class="controls">
-                    <input type="text" id="userLoginId" name="userLoginId"/>
-                </div>
+<div id="emailFormPanel" class="modal fade" role="dialog" aria-labelledby="emailFormLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="emailFormLabel">
+                    邮件地址
+                </h3>
             </div>
-         </form>
-    </div>
-    <div class="modal-footer">
-        <button class="btn btn-primary" id="userLoginFormSubmit" >保存</button>
-        <button class="btn" id="userLoginFormClose" data-dismiss="modal" aria-hidden="true">关闭</button>
+            <div class="modal-body">
+                <form action="" method="post" class="form-horizontal" name="emailForm" id="emailForm">
+                    <input type="hidden" name="partyId" id="partyId">
+
+                    <div class="form-group">
+                        <label class="col-sm-4 col-md-4 col-lg-3 col-sm-4 col-md-4 col-lg-3 control-label">邮件地址</label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input   class="form-control input-sm" type="text"  class="form-control input-sm"/>
+                        </div>
+                    </div>
+                 </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="userLoginFormSubmit" >保存</button>
+                <button class="btn" id="userLoginFormClose" data-dismiss="modal" aria-hidden="true">关闭</button>
+            </div>
+        </div>
     </div>
 </div>
 
 <input type="hidden" id="telFormAction">
-<div id="telFormPanel" class="modal hide fade" role="dialog" aria-labelledby="telFormLabel" aria-hidden="true">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="telFormLabel">
-            新建电话
-        </h3>
-    </div>
-    <div class="modal-body">
-        <form action="" method="post" class="form-horizontal" name="telForm" id="telForm">
-            <input type="hidden" name="partyId" id="partyId">
-            <div class="control-group">
-                <label class="control-label">区号</label>
-                <div class="controls">
-                    <input type="text"  style="width:30px;"/>
-                </div>
+<div id="telFormPanel" class="modal fade" role="dialog" aria-labelledby="telFormLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="telFormLabel">
+                    新建电话
+                </h3>
             </div>
+            <div class="modal-body">
+                <form action="" method="post" class="form-horizontal" name="telForm" id="telForm">
+                    <input type="hidden" name="partyId" id="partyId">
 
-            <div class="control-group">
-                <label class="control-label">号码</label>
-                <div class="controls">
-                    <input type="password" id="password" name="password"/>
-                </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 col-md-3 col-lg-2 control-label">电话</label>
+                        <div class="col-sm-9 col-md-9 col-lg-10">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control input-sm">
+                                    <span class="help-block text-left">区号</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control input-sm">
+                                    <span class="help-block text-center">号码</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control input-sm">
+                                    <span class="help-block text-right">分机</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </form>
             </div>
-
-            <div class="control-group">
-                <label class="control-label">分机</label>
-                <div class="controls">
-                    <input type="password" id="password2" name="password2"/>
-                </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="userLoginFormSubmit" >保存</button>
+                <button class="btn" id="userLoginFormClose" data-dismiss="modal" aria-hidden="true">关闭</button>
             </div>
-
-        </form>
-    </div>
-    <div class="modal-footer">
-        <button class="btn btn-primary" id="userLoginFormSubmit" >保存</button>
-        <button class="btn" id="userLoginFormClose" data-dismiss="modal" aria-hidden="true">关闭</button>
+        </div>
     </div>
 </div>
 
 <input type="hidden" id="mobileFormAction">
-<div id="mobileFormPanel" class="modal hide fade" role="dialog" aria-labelledby="mobileFormLabel" aria-hidden="true">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="mobileFormLabel">添加新手机号
-        </h3>
-    </div>
-    <div class="modal-body">
-        <form action="" method="post" class="form-horizontal" name="mobileForm" id="mobileForm">
-            <input type="hidden" name="partyId" id="partyId">
-            <div class="control-group">
-                <label class="control-label">手机</label>
-                <div class="controls">
-                    <input type="text" id="userLoginId" name="userLoginId"/>
-                </div>
+<div id="mobileFormPanel" class="modal fade" role="dialog" aria-labelledby="mobileFormLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="mobileFormLabel">添加新手机号
+                </h3>
             </div>
-        </form>
-    </div>
-    <div class="modal-footer">
-        <button class="btn btn-primary" id="userLoginFormSubmit" >保存</button>
-        <button class="btn" id="userLoginFormClose" data-dismiss="modal" aria-hidden="true">关闭</button>
+            <div class="modal-body">
+                <form action="" method="post" class="form-horizontal" name="mobileForm" id="mobileForm">
+                    <input type="hidden" name="partyId" id="partyId">
+                    <div class="form-group">
+                        <label class="col-sm-4 col-md-4 col-lg-3 col-sm-4 col-md-4 col-lg-3 control-label">手机</label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input   class="form-control input-sm" type="text"  class="form-control input-sm"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="userLoginFormSubmit" >保存</button>
+                <button class="btn" id="userLoginFormClose" data-dismiss="modal" aria-hidden="true">关闭</button>
+            </div>
+        </div>
     </div>
 </div>
 
 
 <input type="hidden" id="selectConactTypeFormAction">
-<div id="selectConactTypeFormPanel" class="modal hide fade" role="dialog" aria-labelledby="selectConactTypeFormLabel" aria-hidden="true">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="selectConactTypeFormLabel">新建联系信息
-        </h3>
-    </div>
-    <div class="modal-body">
-        <form action="" method="post" class="form-horizontal" name="selectConactTypeForm" id="selectConactTypeForm">
-            <div class="control-group">
-                <label class="control-label">类型</label>
-                <div class="controls">
-                    <select id="conactType">
-                        <option value="mobile"/>手机
-                        <option value="tel"/>办公电话
-                        <option value="email"/>电子邮件
-                        <option value="address"/>公司地址
-                    </select>
-                </div>
+<div id="selectConactTypeFormPanel" class="modal fade" role="dialog" aria-labelledby="selectConactTypeFormLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="selectConactTypeFormLabel">新建联系信息
+                </h3>
             </div>
-        </form>
-    </div>
-    <div class="modal-footer">
-        <button class="btn btn-primary" id="selectConactTypeFormSubmit" >保存</button>
-        <button class="btn" id="selectConactTypeFormClose" data-dismiss="modal" aria-hidden="true">关闭</button>
+            <div class="modal-body">
+                <form action="" method="post" class="form-horizontal" name="selectConactTypeForm" id="selectConactTypeForm">
+                    <div class="form-group">
+                        <label class="col-sm-4 col-md-4 col-lg-3 col-sm-4 col-md-4 col-lg-3 control-label">类型</label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <select id="conactType">
+                                <option value="mobile"/>手机
+                                <option value="tel"/>办公电话
+                                <option value="email"/>电子邮件
+                                <option value="address"/>公司地址
+                            </select>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="selectConactTypeFormSubmit" >保存</button>
+                <button class="btn" id="selectConactTypeFormClose" data-dismiss="modal" aria-hidden="true">关闭</button>
+            </div>
+        </div>
     </div>
 </div>
 
 
 <input type="hidden" id="userLoginFormAction">
-<div id="userCertFormPanel" class="modal hide fade" role="dialog" aria-labelledby="userCertFormLabel" aria-hidden="true">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="userCertFormLabel">
-            关联证书
-        </h3>
-    </div>
-    <div class="modal-body">
-        <form action="" method="post" class="form-horizontal" name="userCertForm" id="userCertForm">
-            <input type="hidden" name="partyId" id="partyId">
-            <div class="control-group certcontent">
-                <label class="control-label">主题</label>
-                <div class="controls">
-                    CN = XX,E = admin@gorun8.cn.cn
-                </div>
+<div id="userCertFormPanel" class="modal fade" role="dialog" aria-labelledby="userCertFormLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="userCertFormLabel">
+                    关联证书
+                </h3>
             </div>
-            <div class="control-group certcontent">
-                <label class="control-label">生效时间</label>
-                <div class="controls">
-                    2012年2月15日 20:50:53
-                </div>
-            </div>
-            <div class="control-group certcontent">
-                <label class="control-label">失效时间</label>
-                <div class="controls">
-                    2017年2月13日 20:50:53
-                </div>
-            </div>
+            <div class="modal-body">
+                <form action="" method="post" class="form-horizontal" name="userCertForm" id="userCertForm">
+                    <input type="hidden" name="partyId" id="partyId">
+                    <div class="form-group certcontent">
+                        <label class="col-sm-4 col-md-4 col-lg-3 col-sm-4 col-md-4 col-lg-3 control-label">主题</label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            CN = XX,E = admin@gorun8.cn.cn
+                        </div>
+                    </div>
 
-            <div class="control-group">
-                <label class="control-label">证书文件</label>
-                <div class="controls">
-                    <input type="file" id="cert" name="cert"/>
-                </div>
-            </div>
+                    <div class="form-group certcontent">
+                        <label class="col-sm-4 col-md-4 col-lg-3 col-sm-4 col-md-4 col-lg-3 control-label">生效时间</label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            2012年2月15日 20:50:53
+                        </div>
+                    </div>
+                    <div class="form-group certcontent">
+                        <label class="col-sm-4 col-md-4 col-lg-3 col-sm-4 col-md-4 col-lg-3 control-label">失效时间</label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            2012年2月15日 20:50:53
+                        </div>
+                    </div>
+                    <div class="form-group certcontent">
+                        <label class="col-sm-4 col-md-4 col-lg-3 col-sm-4 col-md-4 col-lg-3 control-label">证书文件</label>
+                        <div class="col-sm-8 col-md-8 col-lg-9">
+                            <input type="file" id="cert" name="cert"/>
+                        </div>
+                    </div>
 
-        </form>
-    </div>
-    <div class="modal-footer">
-        <button class="btn btn-primary" id="userCertFormSubmit" >保存</button>
-        <button class="btn" id="userCertFormClose" data-dismiss="modal" aria-hidden="true">关闭</button>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="userCertFormSubmit" >保存</button>
+                <button class="btn" id="userCertFormClose" data-dismiss="modal" aria-hidden="true">关闭</button>
+            </div>
+        </div>
     </div>
 </div>
 </@easyfkDecoratorScreen>

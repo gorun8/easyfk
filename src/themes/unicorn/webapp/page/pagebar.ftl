@@ -16,8 +16,8 @@
 
 <#if PAGE_DATA?has_content>
 
-<div class="pagination">
-    <ul>
+<div >
+    <ul class="pagination alternate">
         <#if hasPrev?has_content>
             <li><a href="javascript:easyfk.changePage('${pageUrl?default('')}1')" class="active">首页</a></li>
         <#else>
@@ -37,3 +37,4 @@
     </ul>
 </div>
 </#if>
+
