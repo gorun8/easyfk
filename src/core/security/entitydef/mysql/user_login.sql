@@ -30,7 +30,6 @@ CREATE TABLE IF NOT EXISTS `user_login` (
   `SUCCESSIVE_FAILED_LOGINS` decimal(20,0) default NULL,
   `EXTERNAL_AUTH_ID` varchar(250) default NULL,
   `USER_LDAP_DN` varchar(250) default NULL,
-  `SSOKEY` varchar(250) default NULL,
   `LAST_UPDATED_STAMP` datetime default NULL,
   `LAST_UPDATED_TX_STAMP` datetime default NULL,
   `CREATED_STAMP` datetime default NULL,

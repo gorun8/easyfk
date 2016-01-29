@@ -444,6 +444,16 @@ public class StringUtil {
         return newMap;
     }
 
+    /**
+     * 控制字符的长度，如果超过了指定的长度，就用...代替
+     */
+    public static String ctlStrLength(String src,int length){
+        if(UtilValidate.isEmpty(src)|| src.length() <= length){
+            return src;
+        }
+
+        return src.substring(0,length)+"...";
+    }
     /** Make sure the string starts with a forward slash but does not end with one; converts back-slashes to forward-slashes; if in String is null or empty, returns zero length string. */
     public static String cleanUpPathPrefix(String prefix) {
         if (UtilValidate.isEmpty(prefix)) return "";

@@ -18,7 +18,8 @@ import cn.gorun8.easyfk.base.util.UtilMisc;
 import cn.gorun8.easyfk.base.util.UtilValidate;
 import cn.gorun8.easyfk.entity.GenericEntityException;
 import cn.gorun8.easyfk.entity.GenericValue;
-import cn.gorun8.easyfk.party.dao.PartyDao;
+import cn.gorun8.easyfk.party.dao.PartyReadDao;
+import cn.gorun8.easyfk.party.dao.PartyReadDao;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -34,7 +35,7 @@ public class PartyTypeUtil {
 
     public static final String module = PartyTypeUtil.class.getName();
 
-    public static boolean isType(PartyDao partyDao, Collection<GenericValue> thisCollection, String typeRelation, GenericValue targetType) {
+    public static boolean isType(PartyReadDao partyDao, Collection<GenericValue> thisCollection, String typeRelation, GenericValue targetType) {
         for (GenericValue value: thisCollection) {
             try {
                 GenericValue related =  partyDao.findPartyTypeById(typeRelation);
@@ -51,7 +52,7 @@ public class PartyTypeUtil {
 
 
 
-    private static GenericValue getParentType(PartyDao partyDao, GenericValue typeValue) {
+    private static GenericValue getParentType(PartyReadDao partyDao, GenericValue typeValue) {
         // assumes Parent relation is "Parent<entityName>"
         try {
             String partyTypeId = typeValue.getString("parentTypeId");
@@ -66,7 +67,7 @@ public class PartyTypeUtil {
         }
     }
 
-    public static List<GenericValue> getDescendantTypes(PartyDao partyDao,GenericValue typeValue) {
+    public static List<GenericValue> getDescendantTypes(PartyReadDao partyDao,GenericValue typeValue) {
         // assumes Child relation is "Child<entityName>"
         List<GenericValue> descendantTypes = new ArrayList<GenericValue>();
 
@@ -97,7 +98,7 @@ public class PartyTypeUtil {
         return descendantTypes;
     }
 
-    public static boolean isType(PartyDao partyDao,GenericValue thisType, GenericValue targetType) {
+    public static boolean isType(PartyReadDao partyDao,GenericValue thisType, GenericValue targetType) {
         if (thisType == null) {
             return false;
         } else if (targetType.equals(thisType)) {
@@ -118,7 +119,7 @@ public class PartyTypeUtil {
      * @param parentType      Value of the parent type against which check is performed.
      * @return boolean value based on the check results.
      */
-    public static boolean hasParentType(PartyDao partyDao,String entityName, String primaryKey, String childType, String parentTypeField, String parentType) {
+    public static boolean hasParentType(PartyReadDao partyDao,String entityName, String primaryKey, String childType, String parentTypeField, String parentType) {
         GenericValue childTypeValue = null;
         try {
             childTypeValue = partyDao.findPartyTypeById(childType);

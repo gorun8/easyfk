@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Project:Easy Web Framework
+Description:
+EasyFK stands for Easy Web Framework.It's an open source product for E-Business / E-Commerce.It
+was launched by a chinese Hezhiping(QQ:110476592) in 2015.The goal of EasyFK is to  provide a
+foundation and starting point for reliable, secure , simple-to-use ,cost-effective ,scalable
+and suitable-for-Chinese E-Business / E-Commerce solutions. With EasyFK, you can get started
+right away without the huge deployment and maintenance costs of E-Business / E-Commerce systems.
+Of course, you can customize it or use it as a framework to implement your most challenging business needs.
+EasyFk is licensed under the Apache License Version 2.0.  You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0
+Author:hezhiping   Email:110476592@qq.com
+-->
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gorun8.easyfk.party.dao.PartyWriteDao">
+
+    <insert id="createParty" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+        INSERT INTO party(
+        PARTY_ID
+        <if test=" PARTY_TYPE_ID!= null">,PARTY_TYPE_ID</if>
+        <if test=" EXTERNAL_ID!= null">,EXTERNAL_ID</if>
+        <if test=" PREFERRED_CURRENCY_UOM_ID!= null">,PREFERRED_CURRENCY_UOM_ID</if>
+        <if test=" DESCRIPTION!= null">,DESCRIPTION</if>
+        <if test=" STATUS_ID!= null">,STATUS_ID</if>
+        <if test=" CREATED_DATE!= null">,CREATED_DATE</if>
+        <if test=" CREATED_BY_USER_LOGIN!= null">,CREATED_BY_USER_LOGIN</if>
+        <if test=" LAST_MODIFIED_DATE!= null">,LAST_MODIFIED_DATE</if>
+        <if test=" LAST_MODIFIED_BY_USER_LOGIN!= null">,LAST_MODIFIED_BY_USER_LOGIN</if>
+        <if test=" DATA_SOURCE_ID!= null">,DATA_SOURCE_ID</if>
+        <if test=" IS_UNREAD!= null">,IS_UNREAD</if>
+        )
+        VALUES (
+        #{PARTY_ID}
+        <if test=" PARTY_TYPE_ID!= null">,#{PARTY_TYPE_ID}</if>
+        <if test=" EXTERNAL_ID!= null">,#{EXTERNAL_ID}</if>
+        <if test=" PREFERRED_CURRENCY_UOM_ID!= null">,#{PREFERRED_CURRENCY_UOM_ID}</if>
+        <if test=" DESCRIPTION!= null">,#{DESCRIPTION}</if>
+        <if test=" STATUS_ID!= null">,#{STATUS_ID}</if>
+        <if test=" CREATED_DATE!= null">,#{CREATED_DATE}</if>
+        <if test=" CREATED_BY_USER_LOGIN!= null">,#{CREATED_BY_USER_LOGIN}</if>
+        <if test=" LAST_MODIFIED_DATE!= null">,#{LAST_MODIFIED_DATE}</if>
+        <if test=" LAST_MODIFIED_BY_USER_LOGIN!= null">,#{LAST_MODIFIED_BY_USER_LOGIN}</if>
+        <if test=" DATA_SOURCE_ID!= null">,#{DATA_SOURCE_ID}</if>
+        <if test=" IS_UNREAD!= null">,#{IS_UNREAD}</if>
+        )
+
+    </insert>
+
+    <update id="saveParty" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+        UPDATE party
+        SET
+        DESCRIPTION =#{DESCRIPTION}
+        <if test=" PARTY_TYPE_ID!= null">
+          ,PARTY_TYPE_ID=#{PARTY_TYPE_ID}
+        </if>
+        <if test="  EXTERNAL_ID!= null">
+            , EXTERNAL_ID=#{EXTERNAL_ID }
+        </if>
+        <if test="  PREFERRED_CURRENCY_UOM_ID!= null">
+            , PREFERRED_CURRENCY_UOM_ID=#{PREFERRED_CURRENCY_UOM_ID}
+        </if>
+        <if test="  STATUS_ID!= null">
+            , STATUS_ID=#{STATUS_ID }
+        </if>
+        <if test="  LAST_MODIFIED_DATE!= null">
+            , LAST_MODIFIED_DATE=#{LAST_MODIFIED_DATE }
+        </if>
+        <if test="  LAST_MODIFIED_BY_USER_LOGIN!= null">
+            , LAST_MODIFIED_BY_USER_LOGIN=#{LAST_MODIFIED_BY_USER_LOGIN }
+        </if>
+        <if test="  DATA_SOURCE_ID!= null">
+            , DATA_SOURCE_ID=#{DATA_SOURCE_ID }
+        </if>
+        <if test="  IS_UNREAD!= null">
+            , IS_UNREAD=#{IS_UNREAD }
+        </if>
+        WHERE
+        PARTY_ID=#{PARTY_ID}
+    </update>
+
+
+    <insert id="createPartyStatus" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+        INSERT INTO party_status(STATUS_ID ,PARTY_ID,STATUS_DATE)
+        VALUES (#{STATUS_ID},#{PARTY_ID},#{STATUS_DATE})
+    </insert>
+
+    <update id="savePartyStatus" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+        UPDATE party_status
+        SET STATUS_ID =#{STATUS_ID},STATUS_DATE  =#{STATUS_DATE},
+        WHERE PARTY_ID =#{PARTY_ID}
+    </update>
+
+    <insert id="createPerson" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+        INSERT INTO person(
+          PARTY_ID
+        <if test="SALUTATION != null">
+          ,SALUTATION
+        </if>
+        <if test="FIRST_NAME != null">
+          ,FIRST_NAME
+        </if>
+
+        <if test="MIDDLE_NAME != null">
+          ,MIDDLE_NAME
+        </if>
+        <if test="LAST_NAME != null">
+          ,LAST_NAME
+        </if>
+        <if test="PERSONAL_TITLE != null">
+          ,PERSONAL_TITLE
+        </if>
+        <if test="SUFFIX != null">
+           ,SUFFIX
+        </if>
+        <if test="NICKNAME != null">
+           ,NICKNAME
+        </if>
+        <if test="FIRST_NAME_LOCAL != null">
+           ,FIRST_NAME_LOCAL
+        </if>
+        <if test="MIDDLE_NAME_LOCAL != null">
+           ,MIDDLE_NAME_LOCAL
+        </if>
+        <if test="LAST_NAME_LOCAL != null">
+            ,LAST_NAME_LOCAL
+        </if>
+        <if test="MEMBER_ID != null">
+           ,MEMBER_ID
+        </if>
+        <if test="GENDER != null">
+           ,GENDER
+        </if>
+        <if test="BIRTH_DATE != null">
+           ,BIRTH_DATE
+        </if>
+        <if test="COMMENTS != null">
+           ,COMMENTS
+        </if>
+        <if test="CARD_ID != null">
+           ,CARD_ID
+        </if>
+          <!-- uncomment below if necessary!
+          OTHER_LOCAL=,
+          PASSPORT_NUMBER=
+          PASSPORT_EXPIRE_DATE=
+          DECEASED_DATE=
+          HEIGHT=
+          WEIGHT=
+          MOTHERS_MAIDEN_NAME=
+          MARITAL_STATUS=
+          SOCIAL_SECURITY_NUMBER=
+          TOTAL_YEARS_WORK_EXPERIENCE=
+          EMPLOYMENT_STATUS_ENUM_ID=
+          RESIDENCE_STATUS_ENUM_ID=
+          OCCUPATION=
+          YEARS_WITH_EMPLOYER=
+          MONTHS_WITH_EMPLOYER=
+          EXISTING_CUSTOMER=
+          -->
+        )
+        VALUES (
+        #{PARTY_ID}
+        <if test="SALUTATION != null">
+            ,#{SALUTATION}
+        </if>
+        <if test="FIRST_NAME != null">
+            ,#{FIRST_NAME}
+        </if>
+
+        <if test="MIDDLE_NAME != null">
+            ,  #{MIDDLE_NAME}
+        </if>
+        <if test="LAST_NAME != null">
+            ,#{LAST_NAME}
+        </if>
+        <if test="PERSONAL_TITLE != null">
+            , #{PERSONAL_TITLE}
+        </if>
+        <if test="SUFFIX != null">
+            ,#{SUFFIX}
+        </if>
+        <if test="NICKNAME != null">
+            ,#{NICKNAME}
+        </if>
+        <if test="FIRST_NAME_LOCAL != null">
+            ,#{FIRST_NAME_LOCAL}
+        </if>
+        <if test="MIDDLE_NAME_LOCAL != null">
+            , #{MIDDLE_NAME_LOCAL}
+        </if>
+        <if test="LAST_NAME_LOCAL != null">
+            ,#{LAST_NAME_LOCAL}
+        </if>
+        <if test="MEMBER_ID != null">
+            ,#{MEMBER_ID}
+        </if>
+        <if test="GENDER != null">
+            ,  #{GENDER}
+        </if>
+        <if test="BIRTH_DATE != null">
+            ,#{BIRTH_DATE}
+        </if>
+        <if test="COMMENTS != null">
+            ,#{COMMENTS}
+        </if>
+        <if test="CARD_ID != null">
+            , #{CARD_ID}
+        </if>
+
+        <!--uncomment below if necessary!
+        #{OTHER_LOCAL},
+        #{PASSPORT_NUMBER},
+        #{PASSPORT_EXPIRE_DATE},
+        #{DECEASED_DATE},
+        #{HEIGHT},
+        #{WEIGHT},
+        #{MOTHERS_MAIDEN_NAME},
+        #{MARITAL_STATUS},
+        #{SOCIAL_SECURITY_NUMBER},
+        #{TOTAL_YEARS_WORK_EXPERIENCE},
+        #{EMPLOYMENT_STATUS_ENUM_ID},
+        #{RESIDENCE_STATUS_ENUM_ID},
+        #{OCCUPATION},
+        #{YEARS_WITH_EMPLOYER} ,
+        #{MONTHS_WITH_EMPLOYER} ,
+        #{EXISTING_CUSTOMER}
+        -->
+        );
+    </insert>
+
+
+    <update id="savePerson" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+        UPDATE person
+        SET
+          NICKNAME=#{NICKNAME},
+        <if test="  SALUTATION!= null">
+            ,SALUTATION=#{SALUTATION}
+        </if>
+        <if test="  FIRST_NAME!= null">
+            ,FIRST_NAME=#{FIRST_NAME}
+        </if>
+        <if test="  MIDDLE_NAME!= null">
+            ,MIDDLE_NAME=#{MIDDLE_NAME}
+        </if>
+        <if test="  LAST_NAME!= null">
+            ,LAST_NAME=#{LAST_NAME}
+        </if>
+        <if test="  PERSONAL_TITLE!= null">
+            ,PERSONAL_TITLE=#{PERSONAL_TITLE}
+        </if>
+        <if test="  SUFFIX!= null">
+            ,SUFFIX=#{SUFFIX}
+        </if>
+        <if test="  MEMBER_ID!= null">
+            ,MEMBER_ID=#{MEMBER_ID}
+        </if>
+        <if test="  GENDER!= null">
+            ,GENDER=#{GENDER}
+        </if>
+        <if test="  COMMENTS!= null">
+            ,COMMENTS=#{COMMENTS}
+        </if>
+        <if test="  CARD_ID!= null">
+            ,CARD_ID=#{CARD_ID}
+        </if>
+         <!-- uncomment below if necessary!
+          OTHER_LOCAL=#{OTHER_LOCAL},
+          PASSPORT_NUMBER=#{PASSPORT_NUMBER},
+          PASSPORT_EXPIRE_DATE=#{PASSPORT_EXPIRE_DATE},
+          DECEASED_DATE=#{DECEASED_DATE},
+          HEIGHT=#{HEIGHT},
+          WEIGHT=#{WEIGHT},
+          MOTHERS_MAIDEN_NAME=#{MOTHERS_MAIDEN_NAME},
+          MARITAL_STATUS=#{MARITAL_STATUS},
+          SOCIAL_SECURITY_NUMBER=#{SOCIAL_SECURITY_NUMBER},
+          TOTAL_YEARS_WORK_EXPERIENCE=#{TOTAL_YEARS_WORK_EXPERIENCE},
+          EMPLOYMENT_STATUS_ENUM_ID=#{EMPLOYMENT_STATUS_ENUM_ID},
+          RESIDENCE_STATUS_ENUM_ID=#{RESIDENCE_STATUS_ENUM_ID},
+          OCCUPATION=#{OCCUPATION},
+          YEARS_WITH_EMPLOYER=#{YEARS_WITH_EMPLOYER} ,
+          MONTHS_WITH_EMPLOYER=#{MONTHS_WITH_EMPLOYER} ,
+          EXISTING_CUSTOMER=#{EXISTING_CUSTOMER}
+            -->
+        WHERE
+          PARTY_ID=#{PARTY_ID}
+    </update>
+
+    <insert id="createPartyGroup" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+        INSERT INTO party_group(
+        PARTY_ID,
+        GROUP_NAME,
+        GROUP_NAME_LOCAL,
+        OFFICE_SITE_NAME,
+        ANNUAL_REVENUE,
+        NUM_EMPLOYEES,
+        TICKER_SYMBOL,
+        COMMENTS)
+        VALUES (
+        #{PARTY_ID},
+        #{GROUP_NAME},
+        #{GROUP_NAME_LOCAL},
+        #{OFFICE_SITE_NAME},
+        #{ANNUAL_REVENUE},
+        #{NUM_EMPLOYEES},
+        #{TICKER_SYMBOL},
+        #{COMMENTS}
+        );
+
+    </insert>
+
+    <update id="savePartyGroup" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+        UPDATE party_group
+        SET
+        GROUP_NAME =#{GROUP_NAME},
+        GROUP_NAME_LOCAL =#{GROUP_NAME_LOCAL},
+        OFFICE_SITE_NAME = #{OFFICE_SITE_NAME},
+        ANNUAL_REVENUE =  #{ANNUAL_REVENUE},
+        NUM_EMPLOYEES = #{NUM_EMPLOYEES},
+        TICKER_SYMBOL = #{TICKER_SYMBOL},
+        COMMENTS =#{COMMENTS}
+        WHERE
+        PARTY_ID =#{PARTY_ID}
+    </update>
+
+    <delete id="removePartyGroupByPrimaryKey" parameterType="java.lang.String">
+        DELETE  FROM party_group
+        WHERE   PARTY_ID =#{PARTY_ID}
+    </delete>
+
+
+    <insert id="createPartyRole" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+        INSERT INTO party_role(
+        PARTY_ID,
+        ROLE_TYPE_ID
+        <if test="LAST_UPDATED_STAMP != null">,LAST_UPDATED_STAMP</if>
+        <if test="LAST_UPDATED_TX_STAMP != null">,LAST_UPDATED_TX_STAMP</if>
+        <if test="CREATED_STAMP != null">,CREATED_STAMP</if>
+        <if test="CREATED_TX_STAMP != null">,CREATED_TX_STAMP</if>
+        )
+        VALUES (
+        #{PARTY_ID},
+        #{ROLE_TYPE_ID}
+        <if test="LAST_UPDATED_STAMP != null">,#{LAST_UPDATED_STAMP}</if>
+        <if test="LAST_UPDATED_TX_STAMP != null">,#{LAST_UPDATED_TX_STAMP}</if>
+        <if test="CREATED_STAMP != null">,#{CREATED_STAMP}</if>
+        <if test="CREATED_TX_STAMP != null">,#{CREATED_TX_STAMP}</if>
+        );
+
+    </insert>
+
+
+    <delete id="removePartyRole" parameterType="java.lang.String">
+        DELETE  FROM party_role
+        WHERE   PARTY_ID = #{PARTY_ID}
+    </delete>
+
+</mapper>

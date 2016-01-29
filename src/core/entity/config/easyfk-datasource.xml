@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   Project:Easy Web Framework
+   Description:
+   EasyFK stands for Easy Web Framework.It's an open source product for E-Business / E-Commerce.It
+   was launched by a chinese Hezhiping(QQ:110476592) in 2015.The goal of EasyFK is to  provide a
+   foundation and starting point for reliable, secure , simple-to-use ,cost-effective ,scalable
+   and suitable-for-Chinese E-Business / E-Commerce solutions. With EasyFK, you can get started
+   right away without the huge deployment and maintenance costs of E-Business / E-Commerce systems.
+   Of course, you can customize it or use it as a framework to implement your most challenging business needs.
+   EasyFk is licensed under the Apache License Version 2.0.  You may obtain a copy of the License at
+   http://www.apache.org/licenses/LICENSE-2.0
+   Author:hezhiping   Email:110476592@qq.com
+-->
+<!--
+本文件负责数据源配置.
+注意：该文件被所有组件共享，建议不要修改该文件，除非你非常明确用途。
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:c="http://www.springframework.org/schema/c" xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- 配置数据连接池 -->
+	<!--通用配置-->
+	<bean id="commonDataSource"  class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="url" value="${db.dburl}" />
+		<property name="username" value="${db.dbusername}" />
+		<property name="password" value="${db.dbpassword}" />
+		<property name="driverClassName" value="${db.dbdriver}" />
+		<property name="initialSize" value="30"></property>
+		<property name="maxActive" value="100" />
+		<property name="maxIdle" value="30" />
+		<property name="maxWait" value="1000" />
+		<property name="testWhileIdle" value="true"></property>
+		<property name="testOnBorrow" value="true"></property>
+		<property name="validationQuery" value="select 1"></property>
+		<property name="defaultAutoCommit" value="false"/>
+		<property name="timeBetweenEvictionRunsMillis" value="3600000"/>
+		<property name="minEvictableIdleTimeMillis" value="3600000"/>
+	</bean>
+
+	<bean id="partyReadDataSource"  class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="url" value="${db.dburl}" />
+		<property name="username" value="${db.dbusername}" />
+		<property name="password" value="${db.dbpassword}" />
+		<property name="driverClassName" value="${db.dbdriver}" />
+		<property name="initialSize" value="30"></property>
+		<property name="maxActive" value="100" />
+		<property name="maxIdle" value="30" />
+		<property name="maxWait" value="1000" />
+		<property name="testWhileIdle" value="true"></property>
+		<property name="testOnBorrow" value="true"></property>
+		<property name="validationQuery" value="select 1"></property>
+		<property name="defaultAutoCommit" value="false"/>
+		<property name="timeBetweenEvictionRunsMillis" value="3600000"/>
+		<property name="minEvictableIdleTimeMillis" value="3600000"/>
+	</bean>
+
+
+	<bean id="partyWriteDataSource"  class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+	<property name="url" value="${db.dburl}" />
+	<property name="username" value="${db.dbusername}" />
+	<property name="password" value="${db.dbpassword}" />
+	<property name="driverClassName" value="${db.dbdriver}" />
+	<property name="initialSize" value="30"></property>
+	<property name="maxActive" value="100" />
+	<property name="maxIdle" value="30" />
+	<property name="maxWait" value="1000" />
+	<property name="testWhileIdle" value="true"></property>
+	<property name="testOnBorrow" value="true"></property>
+	<property name="validationQuery" value="select 1"></property>
+	<property name="defaultAutoCommit" value="false"/>
+	<property name="timeBetweenEvictionRunsMillis" value="3600000"/>
+	<property name="minEvictableIdleTimeMillis" value="3600000"/>
+	</bean>
+
+</beans>

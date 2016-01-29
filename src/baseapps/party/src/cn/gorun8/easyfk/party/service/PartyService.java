@@ -25,7 +25,14 @@ public interface PartyService {
      * @param context
      * @return
      */
-    public List<Map> listParty(Map<String, ? extends Object> context);
+    public Map<String,Object> listParty(Map<String, ? extends Object> context);
+
+    /**
+     * find party
+     * @param context
+     * @return
+     */
+    public Map<String,Object> findPartyById(Map<String, ? extends Object> context);
 
     /**
      * get a party group
@@ -53,10 +60,24 @@ public interface PartyService {
     public Map<String, Object> createPerson(Map<String, ? extends Object> context);
 
     /**
+     * 导入电子表格文件，创建会员
+     * @param context
+     */
+    public  Map<String,Object> importPersonFromFile(Map<String, ? extends Object> context);
+
+    /**
      * Sets a party status.
      * <b>security check</b>: the status change must be defined in StatusValidChange.
      */
     public Map<String, Object> setPartyStatus(Map<String, ? extends Object> context);
+
+    /**
+     * Updates a party desc.
+     *
+     * @param context Map containing the input parameters.
+     * @return Map with the result of the service, the output parameters.
+     */
+    public Map<String, Object> updatePartyDesc(Map<String, ? extends Object> context);
 
     /**
      * Updates a Person.

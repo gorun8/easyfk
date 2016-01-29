@@ -41,6 +41,28 @@
 		</#if>
 	});
 </script>
-</#macro> 
- 
- 
+</#macro>
+
+
+<#macro renderPortalPage columnList portalList params>
+
+	<#list columnList as colum>
+		<div class="col-xs-12 col-sm-${colum.columnWidthPercentage?default('')}">
+			<#list portalList  as portal>
+				<#if portal.columnSeqId == colum.columnSeqId >
+					<div id="${colum.portalPageId}_${colum.columnSeqId}_${portal_index}">
+						<#--
+						<script type="text/javascript">
+							$(document).ready(function() {
+								easyfk.loadPortlet("${colum.portalPageId}_${colum.columnSeqId}_${portal_index}", "${portal.screenLocation}?${params}");
+							});
+						</script>-->
+						${portal}
+					</div>
+				</#if>
+			</#list>
+		</div>
+	</#list>
+
+</#macro>
+

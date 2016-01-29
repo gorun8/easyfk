@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Project:Easy Web Framework
+Description:
+EasyFK stands for Easy Web Framework.It's an open source product for E-Business / E-Commerce.It
+was launched by a chinese Hezhiping(QQ:110476592) in 2015.The goal of EasyFK is to  provide a
+foundation and starting point for reliable, secure , simple-to-use ,cost-effective ,scalable
+and suitable-for-Chinese E-Business / E-Commerce solutions. With EasyFK, you can get started
+right away without the huge deployment and maintenance costs of E-Business / E-Commerce systems.
+Of course, you can customize it or use it as a framework to implement your most challenging business needs.
+EasyFk is licensed under the Apache License Version 2.0.  You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0
+Author:hezhiping   Email:110476592@qq.com
+-->
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gorun8.easyfk.party.dao.PartyClsGroupReadDao">
+
+    <select id="findPartyClsGroupByName" parameterType="java.lang.String"    resultType="cn.gorun8.easyfk.entity.GenericValue">
+        SELECT  * FROM party_classification_group WHERE  DESCRIPTION =#{DESCRIPTION}
+    </select>
+
+    <select id="findChildPartyClsGroupList" parameterType="java.lang.String"    resultType="cn.gorun8.easyfk.entity.GenericValue">
+        SELECT  PARTY_CLASSIFICATION_GROUP_ID,PARTY_CLASSIFICATION_TYPE_ID,PARENT_GROUP_ID,DESCRIPTION FROM party_classification_group WHERE PARENT_GROUP_ID = #{PARENT_GROUP_ID}
+    </select>
+
+    <select id="findChildPartyClsGroupCount" parameterType="java.lang.String"    resultType="java.lang.Integer">
+        SELECT  count(*) FROM party_classification_group where PARENT_GROUP_ID = #{PARENT_GROUP_ID}
+    </select>
+
+    <select id="findChildPartyClsGroupByName" parameterType="java.lang.String"    resultType="cn.gorun8.easyfk.entity.GenericValue">
+        SELECT  * FROM party_classification_group WHERE PARENT_GROUP_ID = #{PARENT_GROUP_ID} AND DESCRIPTION =#{DESCRIPTION}
+    </select>
+
+    <select id="findPartyClsGroupById" parameterType="java.lang.String"    resultType="cn.gorun8.easyfk.entity.GenericValue">
+        SELECT  PARTY_CLASSIFICATION_GROUP_ID,PARTY_CLASSIFICATION_TYPE_ID,PARENT_GROUP_ID,DESCRIPTION FROM party_classification_group WHERE PARTY_CLASSIFICATION_GROUP_ID = #{PARTY_CLASSIFICATION_GROUP_ID}
+    </select>
+
+    <insert id="createPartyClsGroup" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+            INSERT INTO party_classification_group(
+             PARTY_CLASSIFICATION_GROUP_ID,
+             PARTY_CLASSIFICATION_TYPE_ID,
+             PARENT_GROUP_ID,
+             DESCRIPTION)
+            VALUES (
+            #{PARTY_CLASSIFICATION_GROUP_ID},
+            #{PARTY_CLASSIFICATION_TYPE_ID},
+            #{PARENT_GROUP_ID},
+            #{DESCRIPTION}
+            )
+
+    </insert>
+
+    <update id="savePartyClsGroup" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+          UPDATE party_classification_group
+          SET
+           PARENT_GROUP_ID = #{PARENT_GROUP_ID},
+           DESCRIPTION = #{DESCRIPTION}
+          WHERE
+            PARTY_CLASSIFICATION_GROUP_ID =#{PARTY_CLASSIFICATION_GROUP_ID}
+    </update>
+
+    <delete id="removePartyClsGroupByPrimaryKey" parameterType="java.lang.String">
+            DELETE  FROM party_classification_group
+            WHERE   PARTY_CLASSIFICATION_GROUP_ID =#{PARTY_CLASSIFICATION_GROUP_ID}
+    </delete>
+
+
+
+    <insert id="setPartyClassification" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+    INSERT INTO party_classification(
+             PARTY_ID,
+             PARTY_CLASSIFICATION_GROUP_ID,
+             FROM_DATE
+        <if test="THRU_DATE != null">
+            ,THRU_DATE
+        </if>
+        <if test="LAST_UPDATED_STAMP != null">
+            ,LAST_UPDATED_STAMP
+        </if>
+        <if test="LAST_UPDATED_TX_STAMP != null">
+            ,LAST_UPDATED_TX_STAMP
+        </if>
+        <if test="CREATED_STAMP != null">
+            ,CREATED_STAMP
+        </if>
+        <if test="CREATED_TX_STAMP != null">
+            ,CREATED_TX_STAMP
+        </if>
+        )VALUES (
+            #{PARTY_ID},
+            #{PARTY_CLASSIFICATION_GROUP_ID},
+            #{FROM_DATE}
+            <if test="THRU_DATE != null">
+                ,#{THRU_DATE}
+            </if>
+            <if test="LAST_UPDATED_STAMP != null">
+                ,#{LAST_UPDATED_STAMP}
+            </if>
+            <if test="LAST_UPDATED_TX_STAMP != null">
+                ,#{LAST_UPDATED_TX_STAMP}
+            </if>
+            <if test="CREATED_STAMP != null">
+                ,#{CREATED_STAMP}
+            </if>
+            <if test="CREATED_TX_STAMP != null">
+                ,#{CREATED_TX_STAMP}
+            </if>
+            )
+    </insert>
+
+</mapper>

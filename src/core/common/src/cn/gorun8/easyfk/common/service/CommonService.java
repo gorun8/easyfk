@@ -16,5 +16,5 @@ package cn.gorun8.easyfk.common.service;
 
 public interface CommonService {
 
-    public String getName();
+
 }

@@ -16,6 +16,7 @@ package cn.gorun8.easyfk.entity;
 import cn.gorun8.easyfk.base.util.Assert;
 import cn.gorun8.easyfk.base.util.UtilDateTime;
 import cn.gorun8.easyfk.base.util.UtilMisc;
+import cn.gorun8.easyfk.base.util.UtilValidate;
 import cn.gorun8.easyfk.entity.util.ModelUtil;
 import javolution.util.FastMap;
 
@@ -27,10 +28,19 @@ import java.util.*;
 public class GenericValue extends HashMap<String, Object> {
 
     public GenericValue(){
-        Timestamp now = UtilDateTime.nowTimestamp();
-        set("lastUpdatedStamp", now);
-        set("lastUpdatedTxStamp",now);
+
     }
+
+    public GenericValue(boolean create){
+        Timestamp now = UtilDateTime.nowTimestamp();
+        setString("lastUpdatedStamp", now);
+        setString("lastUpdatedTxStamp", now);
+        if(create){
+            setString("createdStamp", now);
+            setString("createdTxStamp", now);
+        }
+    }
+
     /**
      * 读取指定key的指，先按指定key读取，如果读取不再将key进行进行java命名到数据库命名的转换，再取。
      *注：会自动进行java命名到数据库命名的转换。 如：userName，会自动转换为USER_NAME。
@@ -44,7 +54,11 @@ public class GenericValue extends HashMap<String, Object> {
         return (String)o;
     }
 
-    public void set(String key,Object o)
+    /**
+     * 设置值。
+     *注：会自动进行java命名到数据库命名的转换。 如：userName，会自动转换为USER_NAME。
+     */
+    public void setString(String key,Object o)
     {
         String key1 = ModelUtil.javaNameToDbName(key);
         put(key1,o);
@@ -54,7 +68,7 @@ public class GenericValue extends HashMap<String, Object> {
         for (String fd :fields) {
             Object v = context.get(fd);
             if(v != null){
-                set(fd,v);
+                setString(fd, v);
             }
         }
     }
@@ -63,7 +77,7 @@ public class GenericValue extends HashMap<String, Object> {
         for (Map.Entry<String, ? extends  Object> e : context.entrySet()) {
             String key = e.getKey();
             Object v = e.getValue();
-            set(key,v);
+            setString(key,v);
         }//end for
     }
 
@@ -86,7 +100,8 @@ public class GenericValue extends HashMap<String, Object> {
      * 注：参数支持Java命名规则到数据库命名的自动转换。
      */
     public String newPrimaryKey(String tableName,String fieldName){
-        String id = SequenceFactory.getInstance().getNextSeqId(tableName);
+        String tmp = ModelUtil.javaNameToDbName(tableName);
+        String id = SequenceFactory.getInstance().getNextSeqId(tmp.toLowerCase());
         this.put(ModelUtil.javaNameToDbName(fieldName), id);
         return id;
     }
@@ -97,9 +112,9 @@ public class GenericValue extends HashMap<String, Object> {
      * @param map
      * @return
      */
-    public static GenericValue fromMap(Map<String, Object> map) {
-        GenericValue v = new GenericValue();
-        for (Map.Entry<String, Object> e : map.entrySet()) {
+    public static GenericValue fromMap(Map<String, ? extends Object> map,boolean create) {
+        GenericValue v = new GenericValue(create);
+        for (Map.Entry<String, ? extends  Object> e : map.entrySet()) {
             v.put(ModelUtil.javaNameToDbName(e.getKey()), e.getValue());
         }
         return v;
@@ -116,5 +131,22 @@ public class GenericValue extends HashMap<String, Object> {
             v.put(ModelUtil.dbNameToVarName(e.getKey()), e.getValue());
         }
         return v;
+    }
+
+
+    public Timestamp  getTimestamp(String fieldName){
+        String v = this.getString(fieldName);
+        return UtilDateTime.toTimestamp(v);
+    }
+
+    public boolean matchesFields(Map<String, ? extends Object> keyValuePairs) {
+
+        if (UtilValidate.isEmpty(keyValuePairs)) return true;
+        for (Map.Entry<String, ? extends Object> anEntry: keyValuePairs.entrySet()) {
+            if (!UtilValidate.areEqual(anEntry.getValue(), this.get(anEntry.getKey()))) {
+                return false;
+            }
+        }
+        return true;
     }
 }

@@ -88,7 +88,7 @@ public class InitServiceImpl implements InitService {
 
 		Collection<ComponentConfig> allComponentList = ComponentConfig.getAllComponents();
 		List<String> modelList = FastList.newInstance();
-		List<String> seedlList = FastList.newInstance();
+		List<String> datalList = FastList.newInstance();
 		List<String> demoList = FastList.newInstance();
 
 
@@ -102,12 +102,14 @@ public class InitServiceImpl implements InitService {
 				if(f.isFile()){
 					if("model".equals(it.type)){
 						modelList.add(f.getAbsolutePath());
-					}else if("seed".equals(it.type)){
-						seedlList.add(f.getAbsolutePath());
+					}else if("data".equals(it.type)){
+						datalList.add(f.getAbsolutePath());
 					}else if("demo".equals(it.type)){
 						demoList.add(f.getAbsolutePath());
 					}
 
+				}else{
+					Debug.logError(f.getAbsolutePath()+"is not a sql file ,please check",module);
 				}
 			}
 		}//end for
@@ -115,8 +117,8 @@ public class InitServiceImpl implements InitService {
 		if(!modelList.isEmpty()){
 			initDao.initDB(dbtype,modelList);
 
-			if(!seedlList.isEmpty()){
-				initDao.initDB(dbtype,seedlList);
+			if(!datalList.isEmpty()){
+				initDao.initDB(dbtype,datalList);
 			}
 
 			if("Demo".equals(dataType)){

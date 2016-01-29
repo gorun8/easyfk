@@ -31,7 +31,7 @@
   
    <container name="catalina-container" class="cn.gorun8.easyfk.catalina.container.CatalinaContainer">
         <property name="run-setup-mode" value="true"/>
-        <property name="enable-app-list" value="install,images"/><!--加载的应用列表，多个应用之间用“，”分开-->
+        <property name="enable-app-list" value="install,static"/><!--加载的应用列表，多个应用之间用“，”分开-->
         <property name="delegator-name" value="default"/>
         <property name="use-naming" value="false"/>
         <property name="debug" value="0"/>

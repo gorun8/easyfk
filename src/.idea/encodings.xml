@@ -4,7 +4,7 @@
     <file url="file://$PROJECT_DIR$/baseapps/party/entitydef/mysql/partyseed.sql" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/baseapps/party/entitydef/mysql/person.sql" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/core/base/lib/jcaptcha-1.0-all.jar" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/core/common/entitydef/mysql/portal_page.sql" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/common/entitydef/mysql/portal.sql" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/core/entity/lib/pagehelper-4.0.1.jar" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

@@ -23,12 +23,18 @@
     <classpath type="jar" location="build/lib/*"/>
     <classpath type="jar" location="lib/*"/>
 	<entity-resource type="model" reader-name="main" loader="main" location="entitydef/${db.type}/user_login.sql"/>
-    <entity-resource type="seed" reader-name="main" loader="main" location="entitydef/${db.type}/user_login_seed.sql"/>
+    <entity-resource type="model" reader-name="main" loader="main" location="entitydef/${db.type}/security.sql"/>
+    <entity-resource type="data" reader-name="main" loader="main" location="entitydef/${db.type}/user_login_seed.sql"/>
+    <entity-resource type="data" reader-name="main" loader="main" location="entitydef/${db.type}/security_seed.sql"/>
+    <entity-resource type="data" reader-name="main" loader="main" location="entitydef/${db.type}/role_seed.sql"/>
+
+    <!--service define-->
+    <service-resource type="model" loader="main" location="servicedef/services.xml"/>
 
     <!-- web baseapps; will be mounted when using the embedded container -->
     <webapp name="security"
         title="security"
         server="default-server"
-        location="webapp"
+        location="webapp/security"
         mount-point="/security"/>
 </easyfk-application>

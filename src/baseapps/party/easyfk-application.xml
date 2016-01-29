@@ -24,15 +24,21 @@
     <classpath type="jar" location="lib/*"/>
 	 <!-- please uncomment below if necessary -->
 
+    <entity-resource type="model" reader-name="main" loader="main" location="entitydef/${db.type}/contact.sql"/>
     <entity-resource type="model" reader-name="main" loader="main" location="entitydef/${db.type}/party.sql"/>
     <entity-resource type="model" reader-name="main" loader="main" location="entitydef/${db.type}/person.sql"/>
-    <entity-resource type="seed" reader-name="main" loader="main" location="entitydef/${db.type}/partyseed.sql"/>
+    <entity-resource type="data" reader-name="main" loader="main" location="entitydef/${db.type}/contactseed.sql"/>
+    <entity-resource type="data" reader-name="main" loader="main" location="entitydef/${db.type}/partyseed.sql"/>
+    <entity-resource type="data" reader-name="main" loader="main" location="entitydef/${db.type}/partyportalseed.sql"/>
+
+    <!--service define-->
+    <service-resource type="model" loader="main" location="servicedef/services.xml"/>
 
 
     <!-- web baseapps; will be mounted when using the embedded container -->
     <webapp name="party"
-        title="会员管理"
+        title="partyAppName"
         server="default-server"
-        location="webapp"
+        location="webapp/party"
         mount-point="/party"/>
 </easyfk-application>

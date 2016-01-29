@@ -11,7 +11,7 @@
   http://www.apache.org/licenses/LICENSE-2.0
   Author:hezhiping   Email:110476592@qq.com
 -->
-<@easyfkSetAppMenu menuName="EASYFK_MENU" focusItemIds="{['menuHomeId']}"  location="component://@component-name@/webapp/resources/page/appmenus.ftl">
+<@easyfkSetAppMenu menuName="EASYFK_MENU" focusItemIds="{['menuHomeId']}"  location="component://@component-name@/webapp/@component-name@/resources/page/appmenus.ftl">
 </@easyfkSetAppMenu>
 
 
@@ -21,7 +21,7 @@
 </@easyfkSetNavBar>
 
 
-<@easyfkDecoratorScreen name="body" location="component://@component-name@/webapp/resources/page/appcommon.ftl">
+<@easyfkDecoratorScreen name="body" location="component://@component-name@/webapp/@component-name@/resources/page/appcommon.ftl">
 ${uiLabelMap.@component-name@desc}
     <P>
         分页栏

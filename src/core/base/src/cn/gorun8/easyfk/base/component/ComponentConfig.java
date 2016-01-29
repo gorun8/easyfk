@@ -388,6 +388,11 @@ public class ComponentConfig {
         }
 
         // classpath - classpathInfos
+        String easyfkHome = System.getProperty("easyfk.home", ".");
+        easyfkHome += "/build";
+        ClasspathInfo baseclasspath = new ClasspathInfo(this, "dir",easyfkHome);
+        this.classpathInfos.add(baseclasspath);
+
         for (Element curElement: UtilXml.childElementList(easyfkComponentElement, "classpath")) {
             ClasspathInfo classpathInfo = new ClasspathInfo(this, curElement);
             this.classpathInfos.add(classpathInfo);
@@ -595,10 +600,17 @@ public class ComponentConfig {
         public String type;
         public String location;
 
+
         public ClasspathInfo(ComponentConfig componentConfig, Element element) {
             this.componentConfig = componentConfig;
             this.type = element.getAttribute("type");
             this.location = element.getAttribute("location");
+        }
+
+        public ClasspathInfo(ComponentConfig componentConfig, String type,String location) {
+            this.componentConfig = componentConfig;
+            this.type = type;
+            this.location = location;
         }
     }
 

@@ -36,11 +36,27 @@ Author:hezhiping   Email:110476592@qq.com
 		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
-	<!--
-	<bean id="transactionManager"
+
+	<bean id="commonDataSourceTx"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="dataSource" />
+		<property name="dataSource" ref="commonDataSource" />
+		<qualifier value="commonDataSourceTx"/>
 	</bean>
+
+	<tx:annotation-driven transaction-manager="commonDataSourceTx"/>
+
+	<bean id="partyWriteDataSourceTx"
+		  class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="partyWriteDataSource" />
+		<qualifier value="partyWriteDataSourceTx"/>
+	</bean>
+
+	<tx:annotation-driven transaction-manager="commonDataSourceTx"/>
+	<tx:annotation-driven transaction-manager="partyWriteDataSourceTx"/>
+
+
+
+	<!--
 	<tx:advice id="userTxAdvice" transaction-manager="transactionManager">
 		<tx:attributes>
 			<tx:method name="do*" propagation="SUPPORTS" />
@@ -70,6 +86,7 @@ Author:hezhiping   Email:110476592@qq.com
 	</aop:config>
 	-->
 	<!-- 配置数据库注解aop -->
+	<!--
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 	<bean id="entityGroupAspect" class="cn.gorun8.easyfk.entity.datasource.EntityGroupAspect"/>
 	<aop:config>
@@ -78,5 +95,6 @@ Author:hezhiping   Email:110476592@qq.com
 			<aop:before pointcut-ref="tx" method="before"/>
 		</aop:aspect>
 	</aop:config>
+	-->
 	<!-- 配置数据库注解aop -->
 </beans>

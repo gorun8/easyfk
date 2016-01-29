@@ -15,20 +15,29 @@
 package cn.gorun8.easyfk.party.service.impl;
 
 import cn.gorun8.easyfk.base.util.*;
-import cn.gorun8.easyfk.entity.dao.CommonDao;
+import cn.gorun8.easyfk.entity.GenericEntityException;
+import cn.gorun8.easyfk.common.dao.CommonReadDao;
 import cn.gorun8.easyfk.entity.GenericValue;
 import cn.gorun8.easyfk.entity.SequenceFactory;
-import cn.gorun8.easyfk.entity.page.UtilPage;
-import cn.gorun8.easyfk.party.dao.PartyClsGroupDao;
-import cn.gorun8.easyfk.party.dao.PartyDao;
+import cn.gorun8.easyfk.entity.util.UtilEntity;
+import cn.gorun8.easyfk.party.dao.PartyClsGroupReadDao;
+import cn.gorun8.easyfk.party.dao.PartyClsGroupWriteDao;
+import cn.gorun8.easyfk.party.dao.PartyReadDao;
+import cn.gorun8.easyfk.party.dao.PartyWriteDao;
 import cn.gorun8.easyfk.party.service.PartyService;
 import cn.gorun8.easyfk.party.utils.PartyTypeUtil;
-import cn.gorun8.easyfk.security.dao.UserLoginDao;
+import cn.gorun8.easyfk.security.dao.UserLoginReadDao;
+import cn.gorun8.easyfk.security.dao.UserLoginWriteDao;
+import cn.gorun8.easyfk.security.service.UserLoginService;
 import javolution.util.FastList;
 import javolution.util.FastMap;
+import jxl.Sheet;
+import jxl.Workbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.io.File;
 import java.sql.Timestamp;
 import java.util.List;
 import java.util.Locale;
@@ -36,7 +45,7 @@ import java.util.Map;
 
 
 /**
- * Services for Party/Person/Group maintenance
+ * 会员管理
  */
 @Service
 public class PartyServiceImpl implements PartyService {
@@ -46,30 +55,71 @@ public class PartyServiceImpl implements PartyService {
     public static final String resourceError = "PartyErrorUiLabels";
 
     @Autowired
-    private PartyDao partyDao;
+    private PartyReadDao partyReadDao;
     @Autowired
-    private CommonDao commonDao;
+    private PartyWriteDao partyWriteDao;
     @Autowired
-    private UserLoginDao userLoginDao;
+    private CommonReadDao commonReadDao;
+    @Autowired
+    private UserLoginReadDao userLoginReadDao;
 
     @Autowired
-    private PartyClsGroupDao partyClsGroupDao;
+    private UserLoginWriteDao userLoginWriteDao;
 
-    public List<Map> listParty(Map<String, ? extends Object> context){
-        List<Map> list2 = FastList.newInstance();
+    @Autowired
+    private UserLoginService userLoginService;
+
+    @Autowired
+    private PartyClsGroupReadDao partyClsGroupReadDao;
+    @Autowired
+    private PartyClsGroupWriteDao partyClsGroupWriteDao;
+
+    public Map<String,Object> listParty(Map<String, ? extends Object> context){
+        Locale locale = (Locale) context.get("locale");
+        String clsId = (String)context.get("clsId");
+        if(UtilValidate.isEmpty(clsId)){
+            return UtilMessages.returnParamError(locale, "clsId");
+        }
+
         try {
-             String clsId = (String)context.get("clsId");
-             List<GenericValue> list = partyDao.findPartyList(clsId);
+             List<Map> list2 = FastList.newInstance();
+             List<GenericValue> list = partyReadDao.findPartyList(clsId);
              for (GenericValue it: list){
                  list2.add(it.toMap());
              }
+            return  UtilMessages.returnSuccessWithData(list2);
         }catch(Exception e){
             e.printStackTrace();
+            return UtilMessages.returnError(UtilProperties.getMessage(resourceError,
+                    "party.find.err", locale));
         }
 
-        return list2;
     }
 
+    public Map<String,Object> findPartyById(Map<String, ? extends Object> context){
+
+        Locale locale = (Locale) context.get("locale");
+        String partyId = (String) context.get("partyId");
+        if(UtilValidate.isEmpty(partyId)){
+            return UtilMessages.returnParamError(locale, "partyId");
+        }
+
+        GenericValue data = null;
+        try {
+            data = partyReadDao.findPartyById(partyId);
+        } catch (GenericEntityException e) {
+            e.printStackTrace();
+            return UtilMessages.returnError(UtilProperties.getMessage(resourceError,
+                    "party.found.error", locale));
+        }
+
+        if(data == null|| data.size() <=0){
+            return UtilMessages.returnError(UtilProperties.getMessage(resourceError,
+                    "party.not_found", locale));
+        }
+
+        return UtilMessages.returnSuccessWithData(data);
+    }
     /**
      * get a party group
      * @param context Map containing the input parameters.
@@ -78,19 +128,26 @@ public class PartyServiceImpl implements PartyService {
     public Map<String,Object> findPartyGorup(Map<String,Object> context)
     {
         Locale locale = (Locale) context.get("locale");
-        Map<String, Object> result = FastMap.newInstance();
         String partyId = (String) context.get("partyId");
-        GenericValue data = partyDao.findPartyGroupById(partyId);
-        if(data == null){
-            return UtilMessages.returnError(UtilProperties.getMessage(resourceError,
-                "person.update.not_found", locale));
+        if(UtilValidate.isEmpty(partyId)){
+            return UtilMessages.returnParamError(locale, "partyId");
         }
 
-        result.put("data", data);
-        result.put(UtilMessages.RESPONSE_MESSAGE, UtilMessages.RESPOND_SUCCESS);
+        GenericValue data = null;
+        try {
+            data = partyReadDao.findPartyGroupById(partyId);
+        } catch (GenericEntityException e) {
+            e.printStackTrace();
+            return UtilMessages.returnError(UtilProperties.getMessage(resourceError,
+                    "party.cls.found.error", locale));
+        }
 
-        return result;
+        if(data == null|| data.size() <=0){
+            return UtilMessages.returnError(UtilProperties.getMessage(resourceError,
+                "party.not_found", locale));
+        }
 
+        return UtilMessages.returnSuccessWithData(data);
     }
 
     /**
@@ -136,6 +193,20 @@ public class PartyServiceImpl implements PartyService {
 
         String partyId = (String) context.get("partyId");
         String description = (String) context.get("description");
+        Boolean successIfExist =(Boolean)context.get("successIfExist");
+
+
+        FastList<String> roleTypeIds = FastList.newInstance();
+        Object tmpRoleTypeId =  context.get("roleTypeId");
+        if(tmpRoleTypeId instanceof  List) {
+            roleTypeIds = (FastList) context.get("roleTypeId");
+        }else{
+            roleTypeIds.add((String)tmpRoleTypeId);
+        }
+
+        if(UtilValidate.isEmpty(roleTypeIds)){
+            return UtilMessages.returnParamError(locale, "roleTypeId");
+        }
 
         // if specified partyId starts with a number, return an error
         if (UtilValidate.isNotEmpty(partyId) && partyId.matches("\\d+")) {
@@ -155,7 +226,7 @@ public class PartyServiceImpl implements PartyService {
 
         // check to see if party object exists, if so make sure it is PERSON type party
         try{
-            GenericValue party =  partyDao.findPartyById(partyId);
+            GenericValue party =  partyReadDao.findPartyById(partyId);
             if (party != null) {
                 if (!"PERSON".equals(party.getString("partyTypeId"))) {
                     return UtilMessages.returnError(UtilProperties.getMessage(resourceError,
@@ -184,21 +255,27 @@ public class PartyServiceImpl implements PartyService {
                     newPartyMap.put("createdByUserLogin", userLogin.get("userLoginId"));
                     newPartyMap.put("lastModifiedByUserLogin", userLogin.get("userLoginId"));
                 }
-                party = GenericValue.fromMap(newPartyMap);
-                partyDao.createParty(party);
+                party = GenericValue.fromMap(newPartyMap,true);
+                partyWriteDao.createParty(party);
                 // create the status history
-                GenericValue partyStatus = GenericValue.fromMap(UtilMisc.toMap("partyId", partyId, "statusId", statusId, "statusDate", now));
-                partyDao.createPartyStatus(partyStatus);
+                GenericValue partyStatus = GenericValue.fromMap(UtilMisc.toMap("partyId", partyId, "statusId", statusId, "statusDate", now),true);
+                partyWriteDao.createPartyStatus(partyStatus);
             }
 
             GenericValue person = null;
-            person = partyDao.findPersonById(partyId);
+            person = partyReadDao.findPersonById(partyId);
             if (person != null) {
-                return UtilMessages.returnError(UtilProperties.getMessage(resourceError,
-                        "person.create.person_exists", locale));
+                if(!successIfExist) {
+                    return UtilMessages.returnError(UtilProperties.getMessage(resourceError,
+                            "person.create.person_exists", locale));
+                }else {
+                    result.put("partyId", partyId);
+                    result.put(UtilMessages.RESPONSE_TYPE, UtilMessages.RESPOND_SUCCESS);
+                    return result;
+                }
             }
 
-            person = GenericValue.fromMap(UtilMisc.toMap("partyId", partyId));
+            person = GenericValue.fromMap(UtilMisc.toMap("partyId", partyId),true);
 //            List<String> fields = UtilMisc.toList("salutation","firstName","middleName","lastName");
 //                fields.add("personalTitle");
 //                fields.add("suffix");
@@ -212,22 +289,160 @@ public class PartyServiceImpl implements PartyService {
 //                fields.add("comments");
 //                fields.add("cardId");
             person.setNonPKFields(context);
-            person.set("partyId", partyId);
-            partyDao.createPerson(person);
+            person.setString("partyId", partyId);
+            partyWriteDao.createPerson(person);
+            // set party roles
+            GenericValue param = new GenericValue(true);
+            param.setString("partyId",partyId);
+            partyWriteDao.removePartyRole(param);
 
-            //setparty to class
+            for(String roleTypeId : roleTypeIds) {
+                param.setString("roleTypeId", roleTypeId);
+                partyWriteDao.createPartyRole(param);
+            }
+
+            //set party to class
             String partyClassificationGroupId =(String) context.get("partyClassificationGroupId");
-            GenericValue partyCls = GenericValue.fromMap(UtilMisc.toMap("partyId", partyId,"partyClassificationGroupId",partyClassificationGroupId,"fromDate",now));
-            partyClsGroupDao.setPartyClassification(partyCls);
+            GenericValue partyCls = GenericValue.fromMap(UtilMisc.toMap("partyId", partyId,"partyClassificationGroupId",partyClassificationGroupId,"fromDate",now),true);
+            partyClsGroupWriteDao.setPartyClassification(partyCls);
         }catch(Exception e){
             e.printStackTrace();
             return UtilMessages.returnError(UtilProperties.getMessage(resourceError,
                     "person.create.db_error", locale));
         }
-        result.put("partyId", partyId);
-        result.put(UtilMessages.RESPONSE_MESSAGE, UtilMessages.RESPOND_SUCCESS);
-        return result;
-}
+
+        return UtilMessages.returnSuccessWithData("partyId",partyId);
+    }
+
+    /**
+     * 导入电子表格文件，创建会员
+     * @param context
+     */
+    //@Transactional
+    public  Map<String,Object> importPersonFromFile(Map<String, ? extends Object> context){
+        Locale locale = (Locale) context.get("locale");
+        String filePath = (String)context.get("filePath");
+        String categoryKey = (String)context.get("categoryKey");
+
+        if(UtilValidate.isEmpty(filePath)){
+            return UtilMessages.returnParamError(locale, "filePath");
+        }
+
+        if(UtilValidate.isEmpty(categoryKey)){
+            return UtilMessages.returnParamError(locale, "categoryKey");
+        }
+
+        Workbook fromWorkbook = null;
+        File fromFile = new File(filePath);
+        UtilMessageCache.clearMessageCache(categoryKey);
+        String percent ="";
+        try {
+            fromWorkbook = Workbook.getWorkbook(fromFile);
+            Sheet fromSheet = fromWorkbook.getSheet(0);
+            int rows = fromSheet.getRows();
+            int succCount = 0 ;
+            int dataRows = rows -1 ;
+            // 从第二行开始读取
+            for (int line = 1; line < rows; line++) {
+                final Map<String, Object> params  = FastMap.newInstance();
+                String partyId ="";
+                percent = String.valueOf(((line-1)*100/dataRows));
+
+                try {
+                    String partyTypeId = "PERSON";
+                    partyId = fromSheet.getCell(0, line).getContents();
+                    String partyClassificationGroupId = fromSheet.getCell(1,line).getContents();//
+                    String firstName = fromSheet.getCell(2, line).getContents();
+                    String tel = fromSheet.getCell(3, line).getContents();
+                    String title = fromSheet.getCell(4, line).getContents();
+                    String description = fromSheet.getCell(5, line).getContents();
+
+
+                    if(UtilValidate.isEmpty(partyId)){
+                        UtilMessageCache.addErrorMessage(categoryKey, String.format("%s行出错：个人编号不能为空", line + 1),percent, true);
+                        return UtilMessages.returnParamError(locale, "partyId");
+                    }
+
+                    if(UtilValidate.isEmpty(partyClassificationGroupId)){
+                        UtilMessageCache.addErrorMessage(categoryKey, String.format("%s行出错：部门编号不能为空", line + 1),percent, true);
+                        return UtilMessages.returnParamError(locale, "partyClassificationGroupId");
+                    }
+
+                    if(UtilValidate.isEmpty(firstName)){
+                        UtilMessageCache.addErrorMessage(categoryKey, String.format("%s行出错：真实姓名不能为空", line + 1),percent, true);
+                        return UtilMessages.returnParamError(locale, "firstName");
+                    }
+
+                    if(UtilValidate.isEmpty(tel)){
+                        UtilMessageCache.addErrorMessage(categoryKey, String.format("%s行出错：联系电话不能为空", line + 1),percent, true);
+                        return UtilMessages.returnParamError(locale, "tel");
+                    }
+
+                    if(UtilValidate.isEmpty(title)){
+                        UtilMessageCache.addErrorMessage(categoryKey, String.format("%s行出错：职位不能为空", line + 1),percent, true);
+                        return UtilMessages.returnParamError(locale, "tel");
+                    }
+
+                    if(UtilValidate.isEmpty(description)){
+                        description = firstName;
+                    }
+
+                    params.put("partyTypeId",partyTypeId);
+                    params.put("partyId",partyId);
+                    params.put("partyClassificationGroupId",partyClassificationGroupId);
+                    params.put("firstName",firstName);
+                    params.put("tel",tel);
+                    params.put("title",title);
+                    params.put("description",description);
+                    params.put("locale",locale);
+                    params.put("successIfExist",true);
+
+                    Map<String,Object>  result= createPerson(params);
+                    if(UtilMessages.isError(result)){
+                        String errorMessage = (String)result.get("errorMessage");
+                        UtilMessageCache.addErrorMessage(categoryKey, String.format("%s行出错：%s", line + 1,errorMessage),percent, true);
+                        continue;
+                    }
+
+                    params.clear();
+                    String currentPassword = "gorun8.cn";
+                    String userLoginId = partyId;
+
+                    params.put("userLoginId",true);
+                    params.put("currentPassword",currentPassword);
+                    params.put("partyId",partyId);
+                    params.put("successIfExist",true);
+                    params.put("locale",locale);
+
+                    Map<String,Object> result2 = userLoginService.createUserLogin(params);
+                    if(UtilMessages.isError(result2)){
+                        String errorMessage = (String)result.get("errorMessage");
+                        UtilMessageCache.addErrorMessage(categoryKey, String.format("%s行出错：%s", line + 1,errorMessage),percent, true);
+                        continue;
+                    }
+
+                } catch (Exception e) {
+                    UtilMessageCache.addErrorMessage(categoryKey, String.format("%s行出错", line + 1),percent, true);
+                    return UtilMessages.returnError("");
+                }
+
+                ++succCount ;
+                UtilMessageCache.addSuccessMessage(categoryKey, String.format("%s行, %s 成功", line + 1, partyId),percent, false);
+            }//end for
+
+            UtilMessageCache.addSuccessMessage(categoryKey, "导入用户结束，成功记录数：" + succCount,percent, true);
+        } catch (Exception e) {
+            e.printStackTrace();
+            UtilMessageCache.addErrorMessage(categoryKey, "导入用户失败",percent, true);
+            return UtilMessages.returnError("");
+        } finally {
+            if(fromWorkbook != null) {
+                fromWorkbook.close();
+            }
+        }
+
+        return UtilMessages.returnSuccess();
+    }
 
     /**
      * Sets a party status.
@@ -243,18 +458,18 @@ public class PartyServiceImpl implements PartyService {
         }
 
         try {
-            GenericValue party = partyDao.findPartyById(partyId);
+            GenericValue party = partyReadDao.findPartyById(partyId);
 
             if (party.getString("statusId") == null) { // old records
-                party.set("statusId", "PARTY_ENABLED");
+                party.setString("statusId", "PARTY_ENABLED");
             }
 
             String oldStatusId =  party.getString("statusId");
             if (!party.getString("statusId").equals(statusId)) {
 
                 // check that status is defined as a valid change
-                GenericValue status = GenericValue.fromMap(UtilMisc.toMap("statusId", party.getString("statusId"), "statusIdTo", statusId));
-                GenericValue statusValidChange = commonDao.findStatusValidChange(status);
+                GenericValue status = GenericValue.fromMap(UtilMisc.toMap("statusId", party.getString("statusId"), "statusIdTo", statusId),true);
+                GenericValue statusValidChange = commonReadDao.findStatusValidChange(status);
                 if (statusValidChange == null) {
                     String errorMsg = "Cannot change party status from " + party.getString("statusId") + " to " + statusId;
                     Debug.logWarning(errorMsg, module);
@@ -264,21 +479,23 @@ public class PartyServiceImpl implements PartyService {
                             "partyToStatusId", statusId), locale)); 
                 }
 
-                party.set("statusId", statusId);
-                partyDao.saveParty(party);
+                party.setString("statusId", statusId);
+                partyWriteDao.saveParty(party);
 
                 // record this status change in PartyStatus table
-                GenericValue partyStatus = GenericValue.fromMap(UtilMisc.toMap("partyId", partyId, "statusId", statusId, "statusDate", statusDate));
-                partyDao.createPartyStatus(partyStatus);
+                GenericValue partyStatus = GenericValue.fromMap(UtilMisc.toMap("partyId", partyId, "statusId", statusId, "statusDate", statusDate),true);
+                partyWriteDao.createPartyStatus(partyStatus);
 
 
                 // disable all userlogins for this user when the new status is disabled
                 if (("PARTY_DISABLED").equals(statusId)) {
-                    List <GenericValue> userLogins = userLoginDao.findUserLoginByPartyId(partyId);
+                    GenericValue param = new GenericValue();
+                    param.setString("partyId",partyId);
+                    List <GenericValue> userLogins = userLoginReadDao.findUserLoginByPartyId(param);
                     for(GenericValue userLogin : userLogins) {
                         if (!"N".equals(userLogin.getString("ENABLED"))) {
-                            userLogin.set("ENABLED", "N");
-                            userLoginDao.saveUserLogin(userLogin);
+                            userLogin.setString("ENABLED", "N");
+                            userLoginWriteDao.saveUserLogin(userLogin);
                         }
                     }
                 }
@@ -302,19 +519,18 @@ public class PartyServiceImpl implements PartyService {
     public   Map<String, Object> updatePerson(Map<String, ? extends Object> context) {
         Map<String, Object> result = FastMap.newInstance();
         Locale locale = (Locale) context.get("locale");
+        String partyId = (String) context.get("partyId");
 
-        String partyId = getPartyId(context);
         if (UtilValidate.isEmpty(partyId)) {
-            return UtilMessages.returnError(UtilProperties.getMessage(UtilMessages.resource, 
-                    "UtilMessages.party_id_missing", locale));
+            return UtilMessages.returnParamError(locale, "partyId");
         }
 
         GenericValue person = null;
         GenericValue party = null;
 
         try {
-            person = partyDao.findPersonById(partyId);
-            party = partyDao.findPartyById(partyId);
+            person = partyReadDao.findPersonById(partyId);
+            party = partyReadDao.findPartyById(partyId);
         } catch (Exception e) {
             Debug.logWarning(e, module);
             return UtilMessages.returnError(UtilProperties.getMessage(resourceError, 
@@ -329,7 +545,7 @@ public class PartyServiceImpl implements PartyService {
         // update status by separate service
          String oldStatusId = party.getString("statusId");
 //         if (party.getString("statusId") == null) { // old records
-//             party.set("statusId", "PARTY_ENABLED");
+//             party.setString("statusId", "PARTY_ENABLED");
 //         }
 
         List<String> fields = UtilMisc.toList("salutation","firstName","middleName","lastName");
@@ -355,11 +571,11 @@ public class PartyServiceImpl implements PartyService {
         fields.add("isUnread");
         party.setNonPKFields(context, fields);
 
-        party.set("statusId", oldStatusId);
+        party.setString("statusId", oldStatusId);
 
         try {
-            partyDao.savePerson(person);
-            partyDao.saveParty(party);
+            partyWriteDao.savePerson(person);
+            partyWriteDao.saveParty(party);
         } catch (Exception e) {
             Debug.logWarning(e.getMessage(), module);
             return UtilMessages.returnError(UtilProperties.getMessage(resourceError, 
@@ -376,11 +592,47 @@ public class PartyServiceImpl implements PartyService {
             }
         }
 
-        result.put(UtilMessages.RESPONSE_MESSAGE, UtilMessages.RESPOND_SUCCESS);
-        result.put(UtilMessages.SUCCESS_MESSAGE, 
-                UtilProperties.getMessage(resourceError, "person.update.success", locale));
-        return result;
+        return UtilMessages.returnSuccess(UtilProperties.getMessage(resourceError, "person.update.success", locale));
     }
+
+    public Map<String, Object> updatePartyDesc(Map<String, ? extends Object> context){
+
+        Map<String, Object> result = FastMap.newInstance();
+        Locale locale = (Locale) context.get("locale");
+        String partyId = (String) context.get("partyId");
+        String description = (String) context.get("description");
+
+        if (UtilValidate.isEmpty(partyId)) {
+            return UtilMessages.returnParamError(locale, "partyId");
+        }
+
+        GenericValue party = null;
+        try {
+            party = partyReadDao.findPartyById(partyId);
+        } catch (Exception e) {
+            Debug.logWarning(e, module);
+            return UtilMessages.returnError(UtilProperties.getMessage(resourceError,
+                    "person.update.read_failure", new Object[] { e.getMessage() }, locale));
+        }
+
+        if (  party == null) {
+            return UtilMessages.returnError(UtilProperties.getMessage(resourceError,
+                    "person.update.not_found", locale));
+        }
+
+        party.setString("description",description);
+
+        try {
+            partyWriteDao.saveParty(party);
+        } catch (Exception e) {
+            Debug.logWarning(e.getMessage(), module);
+            return UtilMessages.returnError(UtilProperties.getMessage(resourceError,
+                    "person.update.write_failure", new Object[] { e.getMessage() }, locale));
+        }
+
+        return UtilMessages.returnSuccess(UtilProperties.getMessage(resourceError, "person.update.success", locale));
+   }
+
 
     /**
      * Creates a PartyGroup.
@@ -415,8 +667,8 @@ public class PartyServiceImpl implements PartyService {
         try {
             // check to see if party object exists, if so make sure it is PARTY_GROUP type party
             // delegator.findByPrimaryKey("Party", UtilMisc.toMap("partyId", partyId));
-            GenericValue party = partyDao.findPartyById(partyId);
-            GenericValue partyGroupPartyType = partyDao.findPartyTypeById("PARTY_GROUP");
+            GenericValue party = partyReadDao.findPartyById(partyId);
+            GenericValue partyGroupPartyType = partyReadDao.findPartyTypeById("PARTY_GROUP");
             //delegator.findByPrimaryKeyCache("PartyType", UtilMisc.toMap("partyTypeId", "PARTY_GROUP"));
 
             if (partyGroupPartyType == null) {
@@ -426,10 +678,10 @@ public class PartyServiceImpl implements PartyService {
 
             if (party != null) {
                 String myPartyId = party.getString("PartyTypeId");
-                GenericValue partyType =partyDao.findPartyTypeById(myPartyId);
+                GenericValue partyType =partyReadDao.findPartyTypeById(myPartyId);
                 //party.getRelatedOneCache("PartyType");
 
-                if (!PartyTypeUtil.isType(partyDao,partyType, partyGroupPartyType)) {
+                if (!PartyTypeUtil.isType(partyReadDao,partyType, partyGroupPartyType)) {
                     return UtilMessages.returnError(UtilProperties.getMessage(resourceError,
                             "partyservices.partyservices.cannot_create_party_group_already_exists_not_PARTY_GROUP_type", locale));
                 }
@@ -439,9 +691,9 @@ public class PartyServiceImpl implements PartyService {
 
                 if (UtilValidate.isNotEmpty(context.get("partyTypeId"))) {
                     //GenericValue desiredPartyType = delegator.findByPrimaryKeyCache("PartyType", UtilMisc.toMap("partyTypeId", context.get("partyTypeId")));
-                    GenericValue desiredPartyType =partyDao.findPartyTypeById((String)context.get("partyTypeId"));
+                    GenericValue desiredPartyType =partyReadDao.findPartyTypeById((String)context.get("partyTypeId"));
 
-                    if (desiredPartyType != null && PartyTypeUtil.isType(partyDao,desiredPartyType, partyGroupPartyType)) {
+                    if (desiredPartyType != null && PartyTypeUtil.isType(partyReadDao,desiredPartyType, partyGroupPartyType)) {
                         partyTypeId = desiredPartyType.getString("partyTypeId");
                     } else {
                         return UtilMessages.returnError(UtilProperties.getMessage(resource,
@@ -455,7 +707,7 @@ public class PartyServiceImpl implements PartyService {
                     newPartyMap.put("lastModifiedByUserLogin", userLogin.get("userLoginId"));
                 }
 
-                party = GenericValue.fromMap(newPartyMap);
+                party = GenericValue.fromMap(newPartyMap,true);
                 //party = delegator.makeValue("Party", newPartyMap);
                 List<String> fields =UtilMisc.toList("partyId","partyTypeId","externalId","preferredCurrencyUomId","description");
                 fields.add("createdDate");
@@ -470,32 +722,32 @@ public class PartyServiceImpl implements PartyService {
                 if (statusId == null) {
                     statusId = "PARTY_ENABLED";
                 }
-                party.set("statusId", statusId);
-                partyDao.createParty(party);
-                GenericValue partyStat = GenericValue.fromMap(UtilMisc.toMap("partyId", partyId, "statusId", statusId, "statusDate", now));
+                party.setString("statusId", statusId);
+                partyWriteDao.createParty(party);
+                GenericValue partyStat = GenericValue.fromMap(UtilMisc.toMap("partyId", partyId, "statusId", statusId, "statusDate", now),true);
                 // create the status history
-                partyDao.createPartyStatus(partyStat);
+                partyWriteDao.createPartyStatus(partyStat);
 //                GenericValue partyStat =delegator.makeValue("PartyStatus",statusgv);
 //                partyStat.create();
             }
 
-            GenericValue partyGroup = partyDao.findPartyGroupById(partyId);
+            GenericValue partyGroup = partyReadDao.findPartyGroupById(partyId);
             //delegator.findByPrimaryKey("PartyGroup", UtilMisc.toMap("partyId", partyId));
             if (partyGroup != null) {
                 return UtilMessages.returnError(UtilProperties.getMessage(resourceError,
                         "partyservices.cannot_create_party_group_already_exists", locale));
             }
            //delegator.makeValue("PartyGroup", UtilMisc.toMap("partyId", partyId));
-            partyGroup = GenericValue.fromMap(UtilMisc.toMap("partyId", partyId));
+            partyGroup = GenericValue.fromMap(UtilMisc.toMap("partyId", partyId),true);
 
             List<String> fields = UtilMisc.toList("groupName", "groupNameLocal", "officeSiteName", "annualRevenue", "numEmployees", "tickerSymbol");
             fields.add("comments");
             fields.add("logoImageUrl");
             partyGroup.setNonPKFields(context, fields);
-            partyGroup.set("lastUpdatedStamp", now);
-            partyGroup.set("lastUpdatedTxStamp",now);
+            partyGroup.setString("lastUpdatedStamp", now);
+            partyGroup.setString("lastUpdatedTxStamp",now);
             //partyGroup.create();
-            partyDao.createPartyGroup(partyGroup);
+            partyWriteDao.createPartyGroup(partyGroup);
 
         } catch (Exception e) {
             Debug.logWarning(e, module);
@@ -505,7 +757,7 @@ public class PartyServiceImpl implements PartyService {
         }
 
         result.put("partyId", partyId);
-        result.put(UtilMessages.RESPONSE_MESSAGE, UtilMessages.RESPOND_SUCCESS);
+        result.put(UtilMessages.RESPONSE_TYPE, UtilMessages.RESPOND_SUCCESS);
         return result;
     }
 
@@ -517,20 +769,19 @@ public class PartyServiceImpl implements PartyService {
     public   Map<String, Object> updatePartyGroup(Map<String, ? extends Object> context) {
         Map<String, Object> result = FastMap.newInstance();
         Locale locale = (Locale) context.get("locale");
+        String partyId = (String) context.get("partyId");
 
-        String partyId = getPartyId(context);
         if (UtilValidate.isEmpty(partyId)) {
-            return UtilMessages.returnError(UtilProperties.getMessage(UtilMessages.resource,
-                    "UtilMessages.party_id_missing", locale));
+            return UtilMessages.returnParamError(locale, "partyId");
         }
 
         GenericValue partyGroup = null;
         GenericValue party = null;
 
         try {
-            partyGroup = partyDao.findPartyGroupById(partyId) ;
+            partyGroup = partyReadDao.findPartyGroupById(partyId) ;
             //delegator.findByPrimaryKey("PartyGroup", UtilMisc.toMap("partyId", partyId));
-            party = partyDao.findPartyById(partyId);
+            party = partyReadDao.findPartyById(partyId);
             //party = delegator.findByPrimaryKey("Party", UtilMisc.toMap("partyId", partyId));
         } catch (Exception e) {
             Debug.logWarning(e, module);
@@ -559,11 +810,11 @@ public class PartyServiceImpl implements PartyService {
         fields.add("dataSourceId");
         fields.add("isUnread");
         party.setNonPKFields(context, fields);
-        party.set("statusId", oldStatusId);
+        party.setString("statusId", oldStatusId);
 
         try {
-            partyDao.savePartyGroup(partyGroup);
-            partyDao.saveParty(party);
+            partyWriteDao.savePartyGroup(partyGroup);
+            partyWriteDao.saveParty(party);
         } catch (Exception e) {
             Debug.logWarning(e.getMessage(), module);
             return UtilMessages.returnError(UtilProperties.getMessage(resourceError,
@@ -581,7 +832,7 @@ public class PartyServiceImpl implements PartyService {
             }
         }
 
-        result.put(UtilMessages.RESPONSE_MESSAGE, UtilMessages.RESPOND_SUCCESS);
+        result.put(UtilMessages.RESPONSE_TYPE, UtilMessages.RESPOND_SUCCESS);
         return result;
     }
 //
@@ -644,7 +895,7 @@ public class PartyServiceImpl implements PartyService {
 //
 //        affiliate = delegator.makeValue("Affiliate", UtilMisc.toMap("partyId", partyId));
 //        affiliate.setNonPKFields(context);
-//        affiliate.set("dateTimeCreated", now, false);
+//        affiliate.setString("dateTimeCreated", now, false);
 //
 //        try {
 //            delegator.create(affiliate);
@@ -1679,7 +1930,7 @@ public class PartyServiceImpl implements PartyService {
 //        }
 //
 //        for (GenericValue attr: rolesToMove) {
-//            attr.set("partyId", partyIdTo);
+//            attr.setString("partyId", partyIdTo);
 //            try {
 //                if (delegator.findByPrimaryKey("PartyRole", attr.getPrimaryKey()) == null) {
 //                    attr.create();
@@ -1771,7 +2022,7 @@ public class PartyServiceImpl implements PartyService {
 //        }
 //
 //        for (GenericValue attr: attrsToMove) {
-//            attr.set("partyId", partyIdTo);
+//            attr.setString("partyId", partyIdTo);
 //            try {
 //                if (delegator.findByPrimaryKey("PartyAttribute", attr.getPrimaryKey()) == null) {
 //                    attr.create();
@@ -1790,9 +2041,9 @@ public class PartyServiceImpl implements PartyService {
 //
 //        // create a party link attribute
 //        GenericValue linkAttr = delegator.makeValue("PartyAttribute");
-//        linkAttr.set("partyId", partyId);
-//        linkAttr.set("attrName", "LINKED_TO");
-//        linkAttr.set("attrValue", partyIdTo);
+//        linkAttr.setString("partyId", partyId);
+//        linkAttr.setString("attrName", "LINKED_TO");
+//        linkAttr.setString("attrValue", partyIdTo);
 //        try {
 //            delegator.create(linkAttr);
 //        } catch (GenericEntityException e) {
@@ -1803,7 +2054,7 @@ public class PartyServiceImpl implements PartyService {
 //        // disable the party
 //        String currentStatus = party.getString("statusId");
 //        if (currentStatus == null || !"PARTY_DISABLED".equals(currentStatus)) {
-//            party.set("statusId", "PARTY_DISABLED");
+//            party.setString("statusId", "PARTY_DISABLED");
 //
 //            try {
 //                party.store();
@@ -1874,16 +2125,7 @@ public class PartyServiceImpl implements PartyService {
 //        return UtilMessages.returnSuccess();
 //    }
 //
-    public static String getPartyId(Map<String, ? extends Object> context) {
-        String partyId = (String) context.get("partyId");
-        if (UtilValidate.isEmpty(partyId)) {
-            GenericValue userLogin = (GenericValue) context.get("userLogin");
-            if (userLogin != null) {
-                partyId = userLogin.getString("partyId");
-            }
-        }
-        return partyId;
-    }
+
 //
 //
 //    /**
@@ -1924,5 +2166,7 @@ public class PartyServiceImpl implements PartyService {
 //
 //        return result;
 //    }
+
+
 
 }

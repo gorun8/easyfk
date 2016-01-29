@@ -15,15 +15,15 @@ Author:hezhiping   Email:110476592@qq.com
 <resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <property key="commeventservices.communication_event_from_contact_mech_must_be_email">
         <value xml:lang="en">ERROR: Communication event must have a from contact mech that is an email for comm event Id</value>
-        <value xml:lang="zh">错误：沟通事件必须来自一个电子邮件联系方式，沟通事件标识</value>
+        <value xml:lang="zh_CN">错误：沟通事件必须来自一个电子邮件联系方式，沟通事件标识</value>
     </property>
     <property key="commeventservices.communication_event_must_be_email_for_email">
         <value xml:lang="en">ERROR: Communication event is not an email communication and cannot be emailed for communication event Id </value>
-        <value xml:lang="zh">错误：沟通事件不是电子邮件沟通，所以不能发邮件，沟通事件标识 </value>
+        <value xml:lang="zh_CN">错误：沟通事件不是电子邮件沟通，所以不能发邮件，沟通事件标识 </value>
     </property>
     <property key="commeventservices.communication_event_not_found_failure">
         <value xml:lang="en">ERROR: Communication Event not found for communication event Id</value>
-        <value xml:lang="zh">错误：没有找到沟通事件，沟通实践标识</value>
+        <value xml:lang="zh_CN">错误：没有找到沟通事件，沟通实践标识</value>
     </property>
     <property key="commeventservices.communication_event_role_status">
         <value xml:lang="en">ERROR: Status is not a valid change; old Status: ${communicationEventRole.statusId}, new status: ${parameters.statusId}</value>
@@ -33,124 +33,158 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="commeventservices.communication_event_to_contact_mech_must_be_email">
         <value xml:lang="en">ERROR: Communication event must have a to contact mech that is an email for comm event Id</value>
-        <value xml:lang="zh">错误：沟通事件必须到一个电子邮件联系方式，沟通事件标识</value>
+        <value xml:lang="zh_CN">错误：沟通事件必须到一个电子邮件联系方式，沟通事件标识</value>
     </property>
     <property key="commeventservices.errorCallingSendEmailToContactListService">
         <value xml:lang="en">Error calling sendEmailToContactList service</value>
-        <value xml:lang="zh">调用发送电子邮件到联系列表服务时出错</value>
+        <value xml:lang="zh_CN">调用发送电子邮件到联系列表服务时出错</value>
     </property>
     <property key="commeventservices.errorCallingSendMailService">
         <value xml:lang="en">Error calling sendMail service</value>
-        <value xml:lang="zh">调用发送邮件服务时出错</value>
+        <value xml:lang="zh_CN">调用发送邮件服务时出错</value>
     </property>
     <property key="commeventservices.errorCallingUpdateContactListPartyService">
         <value xml:lang="en">Error calling updateContactListParty service</value>
-        <value xml:lang="zh">调用更新联系列表会员服务时出错</value>
+        <value xml:lang="zh_CN">调用更新联系列表会员服务时出错</value>
     </property>
     <property key="commeventservices.errorInSendEmailToContactListService">
         <value xml:lang="en">Error in sendEmailToContactList service</value>
-        <value xml:lang="zh">在发送电子邮件到联系列表服务中有错误</value>
+        <value xml:lang="zh_CN">在发送电子邮件到联系列表服务中有错误</value>
     </property>
     <property key="commeventservices.skippingInvalidEmailAddress">
         <value xml:lang="en">Skipping invalid email address</value>
-        <value xml:lang="zh">跳过无效的电子邮件地址</value>
+        <value xml:lang="zh_CN">跳过无效的电子邮件地址</value>
     </property>
     <property key="contactmechservices.cannot_update_specified_contact_info_not_corresponds">
         <value xml:lang="en">ERROR: Cannot update specified contact info because it does not correspond to the specified party.</value>
-        <value xml:lang="zh">错误：不能更新指定的联系信息，因为它没有与指定的会员关联。</value>
+        <value xml:lang="zh_CN">错误：不能更新指定的联系信息，因为它没有与指定的会员关联。</value>
     </property>
     <property key="contactmechservices.could_not_add_purpose_write">
         <value xml:lang="en">ERROR: Could not add purpose to contact mechanism (write failure): ${errMessage}.</value>
-        <value xml:lang="zh">错误：无法为联系方式添加目的 (写失败)：${errMessage}。</value>
+        <value xml:lang="zh_CN">错误：无法为联系方式添加目的 (写失败)：${errMessage}。</value>
     </property>
     <property key="contactmechservices.could_not_change_contact_info_id_generation_failure">
         <value xml:lang="en">ERROR: Could not change contact info (id generation failure).</value>
-        <value xml:lang="zh">错误：无法修改联系信息 (生成标识时失败)。</value>
+        <value xml:lang="zh_CN">错误：无法修改联系信息 (生成标识时失败)。</value>
     </property>
     <property key="contactmechservices.could_not_change_contact_info_read">
         <value xml:lang="en">ERROR: Could not change contact info (read purpose failure): ${errMessage}.</value>
-        <value xml:lang="zh">错误：无法修改联系信息 (读目的时失败)：${errMessage}。</value>
+        <value xml:lang="zh_CN">错误：无法修改联系信息 (读目的时失败)：${errMessage}。</value>
     </property>
     <property key="contactmechservices.could_not_change_contact_info_write">
         <value xml:lang="en">ERROR: Could not change contact info (write failure): ${errMessage}.</value>
-        <value xml:lang="zh">错误：无法修改联系信息 (写失败)：${errMessage}。</value>
+        <value xml:lang="zh_CN">错误：无法修改联系信息 (写失败)：${errMessage}。</value>
     </property>
     <property key="contactmechservices.could_not_create_contact_info_id_generation_failure">
         <value xml:lang="en">ERROR: Could not create contact info (id generation failure).</value>
-        <value xml:lang="zh">错误：无法创建联系信息(生成标识时失败)。</value>
+        <value xml:lang="zh_CN">错误：无法创建联系信息(生成标识时失败)。</value>
     </property>
     <property key="contactmechservices.could_not_create_contact_info_write">
         <value xml:lang="en">Could not create contact info (write failure): ${errMessage}.</value>
-        <value xml:lang="zh">无法创建联系信息 (写失败)：${errMessage}。</value>
+        <value xml:lang="zh_CN">无法创建联系信息 (写失败)：${errMessage}。</value>
     </property>
     <property key="contactmechservices.could_not_create_new_purpose_already_exists">
         <value xml:lang="en">Could not create new purpose, a purpose with that type already exists.</value>
-        <value xml:lang="zh">无法新建目的，那个类型的目的已存在。</value>
+        <value xml:lang="zh_CN">无法新建目的，那个类型的目的已存在。</value>
     </property>
     <property key="contactmechservices.could_not_delete_contact_info_no_contact_found">
         <value xml:lang="en">Could not delete contact info (party contact mech not found).</value>
-        <value xml:lang="zh">无法删除联系信息 (没有找到会员联系方式)。</value>
+        <value xml:lang="zh_CN">无法删除联系信息 (没有找到会员联系方式)。</value>
     </property>
     <property key="contactmechservices.could_not_delete_contact_info_read">
         <value xml:lang="en">Could not delete contact info (read failure): ${errMessage}.</value>
-        <value xml:lang="zh">无法删除联系信息 (读失败)：${errMessage}。</value>
+        <value xml:lang="zh_CN">无法删除联系信息 (读失败)：${errMessage}。</value>
     </property>
     <property key="contactmechservices.could_not_delete_contact_info_write">
         <value xml:lang="en">Could not delete contact info (write failure).</value>
-        <value xml:lang="zh">无法删除联系信息 (写失败)。</value>
+        <value xml:lang="zh_CN">无法删除联系信息 (写失败)。</value>
     </property>
     <property key="contactmechservices.could_not_delete_purpose_from_contact_mechanism_not_found">
         <value xml:lang="en">Could not delete purpose from contact mechanism (record not found).</value>
-        <value xml:lang="zh">无法从联系方式删除目的 (没有找到记录)。</value>
+        <value xml:lang="zh_CN">无法从联系方式删除目的 (没有找到记录)。</value>
     </property>
     <property key="contactmechservices.could_not_delete_purpose_from_contact_mechanism_read">
         <value xml:lang="en">Could not delete purpose from contact mechanism (read failure): ${errMessage}.</value>
-        <value xml:lang="zh">无法从联系方式删除目的 (读失败)：${errMessage}。</value>
+        <value xml:lang="zh_CN">无法从联系方式删除目的 (读失败)：${errMessage}。</value>
     </property>
     <property key="contactmechservices.could_not_delete_purpose_from_contact_mechanism_write">
         <value xml:lang="en">Could not delete purpose from contact mechanism (write failure): ${errMessage}.</value>
-        <value xml:lang="zh">无法从联系方式删除目的 (写失败)：${errMessage}。</value>
+        <value xml:lang="zh_CN">无法从联系方式删除目的 (写失败)：${errMessage}。</value>
     </property>
     <property key="contactmechservices.could_not_find_specified_contact_info_read">
         <value xml:lang="en">ERROR: Could not find specified contact info (read error).</value>
-        <value xml:lang="zh">错误：无法找到指定的联系信息 (读错误)。</value>
+        <value xml:lang="zh_CN">错误：无法找到指定的联系信息 (读错误)。</value>
     </property>
     <property key="contactmechservices.could_not_update_contact_as_POSTAL_ADDRESS_specified">
         <value xml:lang="en">Could not update this contact mech as a POSTAL_ADDRESS the specified contact mech is a ${contactMechTypeId}.</value>
-        <value xml:lang="zh">无法把这个联系方式作为通信地址更新，联系方式是 ${contactMechTypeId}。</value>
+        <value xml:lang="zh_CN">无法把这个联系方式作为通信地址更新，联系方式是 ${contactMechTypeId}。</value>
     </property>
     <property key="contactmechservices.could_not_update_contact_as_TELECOM_NUMBER_specified">
         <value xml:lang="en">Could not update this contact mech as a TELECOM_NUMBER the specified contact mech is a ${contactMechTypeId}.</value>
-        <value xml:lang="zh">无法把这个联系方式作为电话号码更新，指定的联系方式是 ${contactMechTypeId}。</value>
+        <value xml:lang="zh_CN">无法把这个联系方式作为电话号码更新，指定的联系方式是 ${contactMechTypeId}。</value>
     </property>
     <property key="contactmechservices.no_changes_made_not_updating">
         <value xml:lang="en">No changes made, not updating contact mechanism.</value>
-        <value xml:lang="zh">没有改动，所以没有更新联系方式。</value>
+        <value xml:lang="zh_CN">没有改动，所以没有更新联系方式。</value>
     </property>
     <property key="contactmechservices.service_createContactMech_not_be_used_for_POSTAL_ADDRESS">
         <value xml:lang="en">This service (createContactMech) should not be used for POSTAL_ADDRESS type ContactMechs, use the createPostalAddress service.</value>
-        <value xml:lang="zh">本服务 (创建联系方式) 不应用于通信地址类型的联系方式，请使用创建通信地址服务。</value>
+        <value xml:lang="zh_CN">本服务 (创建联系方式) 不应用于通信地址类型的联系方式，请使用创建通信地址服务。</value>
     </property>
     <property key="contactmechservices.service_createContactMech_not_be_used_for_TELECOM_NUMBER">
         <value xml:lang="en">This service (createContactMech) should not be used for TELECOM_NUMBER type ContactMechs, use the createTelecomNumber service.</value>
-        <value xml:lang="zh">本服务 (创建联系方式) 不应用于电话号码类型的联系方式，请使用创建电话号码服务。</value>
+        <value xml:lang="zh_CN">本服务 (创建联系方式) 不应用于电话号码类型的联系方式，请使用创建电话号码服务。</value>
     </property>
     <property key="contactmechservices.service_updateContactMech_not_be_used_for_POSTAL_ADDRESS">
         <value xml:lang="en">This service (updateContactMech) should not be used for POSTAL_ADDRESS type ContactMechs, use the updatePostalAddress service.</value>
-        <value xml:lang="zh">本服务 (更新联系方式) 不应用做通信地址类型的联系方式，请使用更新通信地址服务。</value>
+        <value xml:lang="zh_CN">本服务 (更新联系方式) 不应用做通信地址类型的联系方式，请使用更新通信地址服务。</value>
     </property>
     <property key="contactmechservices.service_updateContactMech_not_be_used_for_TELECOM_NUMBER">
         <value xml:lang="en">This service (updateContactMech) should not be used for TELECOM_NUMBER type ContactMechs, use the updateTelecomNumber service.</value>
-        <value xml:lang="zh">本服务 (更新联系方式) 不应用于电话号码类型的联系方式，请使用更新电话号码服务。</value>
+        <value xml:lang="zh_CN">本服务 (更新联系方式) 不应用于电话号码类型的联系方式，请使用更新电话号码服务。</value>
     </property>
     <property key="party.id_generation_failure">
         <value xml:lang="en">ERROR: Failure generating new party ID</value>
-        <value xml:lang="zh">错误：生成新会员标识时失败</value>
+        <value xml:lang="zh_CN">错误：生成新会员标识时失败</value>
     </property>
     <property key="party.id_is_digit">
         <value xml:lang="en">Specified party ID cannot be a digit, numeric IDs are reserved for auto-generated IDs</value>
-        <value xml:lang="zh">指定的会员标识不能以数字开始，数字标识为自动生成的标识预留</value>
+        <value xml:lang="zh_CN">指定的会员标识不能以数字开始，数字标识为自动生成的标识预留</value>
     </property>
+    <property key="party.find.err">
+        <value xml:lang="en">Find party error </value>
+        <value xml:lang="zh_CN">查找会员出错</value>
+    </property>
+
+    <property key="party.not_found">
+        <value xml:lang="en">Party not found </value>
+        <value xml:lang="zh_CN">没有找到会员</value>
+    </property>
+    <property key="party.cls.found.error">
+        <value xml:lang="en">Find classfication error</value>
+        <value xml:lang="zh_CN">查找组织机构出错</value>
+    </property>
+    <property key="party.cls.not_found">
+        <value xml:lang="en">Party classfication not found </value>
+        <value xml:lang="zh_CN">没有找到会员分类</value>
+    </property>
+
+    <property key="party.cls.create.error">
+        <value xml:lang="en">新建组织结构出错</value>
+        <value xml:lang="zh_CN">新建组织结构出错</value>
+    </property>
+
+    <property key="party.cls.update.error">
+        <value xml:lang="en">更新组织结构出错</value>
+        <value xml:lang="zh_CN">更新组织结构出错</value>
+    </property>
+
+    <property key="party.cls.remove.error">
+        <value xml:lang="en">更新组织结构出错</value>
+        <value xml:lang="zh_CN">更新组织结构出错</value>
+    </property>
+
+
     <property key="partytypehelper.NotPersonType">
         <value xml:lang="en">The party ${0} is not a PERSON type party</value>
     </property>
@@ -159,182 +193,200 @@ Author:hezhiping   Email:110476592@qq.com
     </property>    
     <property key="partyrelationshipservices.cannot_create_party_relationship_partyIdFrom_not_in_role">
         <value xml:lang="en">Cannot create party relationship, partyIdFrom is not in specified role.</value>
-        <value xml:lang="zh">不能创建会员关系，partyIdFrom 不是指定的角色。</value>
+        <value xml:lang="zh_CN">不能创建会员关系，partyIdFrom 不是指定的角色。</value>
     </property>
     <property key="partyrelationshipservices.cannot_create_party_relationship_partyIdTo_not_in_role">
         <value xml:lang="en">Cannot create party relationship, partyIdTo is not in specified role.</value>
-        <value xml:lang="zh">不能创建会员关系，partyIdTo 不是指定的角色。</value>
+        <value xml:lang="zh_CN">不能创建会员关系，partyIdTo 不是指定的角色。</value>
     </property>
     <property key="partyrelationshipservices.cannot_create_party_relationship_partyIdTo_null">
         <value xml:lang="en">Cannot create party relationship, partyIdTo cannot be null.</value>
-        <value xml:lang="zh">不能创建会员关系，partyIdTo 不能是 null。</value>
+        <value xml:lang="zh_CN">不能创建会员关系，partyIdTo 不能是 null。</value>
     </property>
     <property key="partyrelationshipservices.could_not_create_party_role_exists">
         <value xml:lang="en">Could not create party relationship: already exists.</value>
-        <value xml:lang="zh">无法创建会员关系：已经存在了。</value>
+        <value xml:lang="zh_CN">无法创建会员关系：已经存在了。</value>
     </property>
     <property key="partyrelationshipservices.could_not_create_party_role_read">
         <value xml:lang="en">Could not create party role (read failure): ${errMessage}.</value>
-        <value xml:lang="zh">无法创建会员角色 (读失败)：${errMessage}。</value>
+        <value xml:lang="zh_CN">无法创建会员角色 (读失败)：${errMessage}。</value>
     </property>
     <property key="partyrelationshipservices.could_not_create_party_role_write">
         <value xml:lang="en">Could not create party relationship (write failure): ${errMessage}.</value>
-        <value xml:lang="zh">无法创建会员关系 (写失败)：${errMessage}。</value>
+        <value xml:lang="zh_CN">无法创建会员关系 (写失败)：${errMessage}。</value>
     </property>
     <property key="partyrelationshipservices.could_not_update_party_relation_not_found">
         <value xml:lang="en">Could not update party relationship (relationship not found).</value>
-        <value xml:lang="zh">无法更新会员关系 (没有找到关系)。</value>
+        <value xml:lang="zh_CN">无法更新会员关系 (没有找到关系)。</value>
     </property>
     <property key="partyrelationshipservices.could_not_update_party_relation_read">
         <value xml:lang="en">Could not update party relation (read failure): ${errMessage}.</value>
-        <value xml:lang="zh">无法更新会员关系 (读错误)：${errMessage}。</value>
+        <value xml:lang="zh_CN">无法更新会员关系 (读错误)：${errMessage}。</value>
     </property>
     <property key="partyrelationshipservices.could_not_update_party_relation_write">
         <value xml:lang="en">Could not update party relationship (write failure): ${errMessage}.</value>
-        <value xml:lang="zh">无法更新会员关系 (写错误)：${errMessage}。</value>
+        <value xml:lang="zh_CN">无法更新会员关系 (写错误)：${errMessage}。</value>
     </property>
     <property key="partyroleservices.could_not_create_party_role_exists">
         <value xml:lang="en">could not create party role exists</value>
-        <value xml:lang="zh">无法新建已存在的会员角色</value>
+        <value xml:lang="zh_CN">无法新建已存在的会员角色</value>
     </property>
     <property key="partyroleservices.could_not_create_party_role_read">
         <value xml:lang="en">could not create party role read</value>
-        <value xml:lang="zh">无法新建会员读角色</value>
+        <value xml:lang="zh_CN">无法新建会员读角色</value>
     </property>
     <property key="partyroleservices.could_not_create_party_role_write">
         <value xml:lang="en">could not create party role write</value>
-        <value xml:lang="zh">无法新建会员写角色</value>
+        <value xml:lang="zh_CN">无法新建会员写角色</value>
     </property>
     <property key="partyroleservices.could_not_delete_party_role_not_found">
         <value xml:lang="en">could not delete party role not found</value>
-        <value xml:lang="zh">无法删除找不到的会员角色</value>
+        <value xml:lang="zh_CN">无法删除找不到的会员角色</value>
     </property>
     <property key="partyroleservices.could_not_delete_party_role_read">
         <value xml:lang="en">could not delete party role read</value>
-        <value xml:lang="zh">无法删除会员读角色</value>
+        <value xml:lang="zh_CN">无法删除会员读角色</value>
     </property>
     <property key="partyroleservices.could_not_delete_party_role_write">
         <value xml:lang="en">could not delete party role write</value>
-        <value xml:lang="zh">无法删除会员写角色</value>
+        <value xml:lang="zh_CN">无法删除会员写角色</value>
     </property>
     <property key="partyservices.both_names_cannot_be_empty">
         <value xml:lang="en">Both 'lastName' and 'firstName' cannot be empty.</value>
-        <value xml:lang="zh">'姓' 和 '名字' 不能为空。</value>
+        <value xml:lang="zh_CN">'姓' 和 '名字' 不能为空。</value>
     </property>
     <property key="partyservices.cannot_create_affiliate_ID_already_exists">
         <value xml:lang="en">Cannot create, an affiliate with the specified party ID already exists.</value>
-        <value xml:lang="zh">不能创建，已经存在指定会员标识的附属。</value>
+        <value xml:lang="zh_CN">不能创建，已经存在指定会员标识的附属。</value>
     </property>
     <property key="partyservices.cannot_create_affiliate_digit">
         <value xml:lang="en">Cannot create affiliate, specified party ID cannot be a digit, numeric IDs are reserved for auto-generated IDs.</value>
-        <value xml:lang="zh">无法创建附属，指定的会员标识不能以数字开始，数字标识为自动生成的标识预留。</value>
+        <value xml:lang="zh_CN">无法创建附属，指定的会员标识不能以数字开始，数字标识为自动生成的标识预留。</value>
     </property>
     <property key="partyservices.cannot_create_affiliate_generation_failure">
         <value xml:lang="en">ERROR: Could not create affiliate (id generation failure).</value>
-        <value xml:lang="zh">错误：无法创建附属 (生成标识失败)。</value>
+        <value xml:lang="zh_CN">错误：无法创建附属 (生成标识失败)。</value>
     </property>
     <property key="partyservices.cannot_create_affiliate_no_party_entity">
         <value xml:lang="en">Cannot create affiliate; no party entity found.</value>
-        <value xml:lang="zh">无法创建附属；没有找到会员实体。</value>
+        <value xml:lang="zh_CN">无法创建附属；没有找到会员实体。</value>
     </property>
     <property key="partyservices.cannot_create_party_group_already_exists">
         <value xml:lang="en">Cannot create party group, a party group with the specified party ID already exists.</value>
-        <value xml:lang="zh">无法创建会员组，已经存在指定会员标识的会员组。</value>
+        <value xml:lang="zh_CN">无法创建会员组，已经存在指定会员标识的会员组。</value>
     </property>
     <property key="partyservices.cannot_create_party_group_already_exists_not_PARTY_GROUP_type">
         <value xml:lang="en">Cannot create party group, a party with the specified party ID already exists and is not a PARTY_GROUP type party, or a child of the PARTY_GROUP type.</value>
-        <value xml:lang="zh">无法创建会员组，已经存在指定会员标识的会员，不是 PARTY_GROUP 类型会员，或者不是 PARTY_GROUP 的子类型。</value>
+        <value xml:lang="zh_CN">无法创建会员组，已经存在指定会员标识的会员，不是 PARTY_GROUP 类型会员，或者不是 PARTY_GROUP 的子类型。</value>
     </property>
     <property key="partyservices.cannot_delete_party_not_implemented">
         <value xml:lang="en">Cannot delete party, operation not yet implemented.</value>
-        <value xml:lang="zh">无法删除会员，操作还没有完成。</value>
+        <value xml:lang="zh_CN">无法删除会员，操作还没有完成。</value>
     </property>
     <property key="partyservices.cannot_get_party_entities_read">
         <value xml:lang="en">Cannot get party entities (read failure): ${errMessage}.</value>
-        <value xml:lang="zh">无法获得会员实体 (读失败)：${errMessage}。</value>
+        <value xml:lang="zh_CN">无法获得会员实体 (读失败)：${errMessage}。</value>
     </property>
     <property key="partyservices.could_not_add_affiliate_info_write">
         <value xml:lang="en">Could not add affiliate info (write failure): ${errMessage}.</value>
-        <value xml:lang="zh">无法添加附属信息 (写失败)：${errMessage}。</value>
+        <value xml:lang="zh_CN">无法添加附属信息 (写失败)：${errMessage}。</value>
     </property>
     <property key="partyservices.could_not_create_party_ID_digit">
         <value xml:lang="en">Cannot create party group, specified party ID cannot be a digit, numeric IDs are reserved for auto-generated IDs.</value>
-        <value xml:lang="zh">无法创建会员组，指定的会员标识不能以数字开始，数字标识预留为自动生成标识了。</value>
+        <value xml:lang="zh_CN">无法创建会员组，指定的会员标识不能以数字开始，数字标识预留为自动生成标识了。</value>
     </property>
     <property key="partyservices.could_not_create_party_group_generation_failure">
         <value xml:lang="en">ERROR: Could not create party group (id generation failure).</value>
-        <value xml:lang="zh">错误：无法创建会员组 (生成标识失败)。</value>
+        <value xml:lang="zh_CN">错误：无法创建会员组 (生成标识失败)。</value>
     </property>
     <property key="partyservices.could_not_update_affiliate_information_not_found">
         <value xml:lang="en">Could not update affiliate information (affiliate not found).</value>
-        <value xml:lang="zh">无法更新附属信息 (没有找到附属)。</value>
+        <value xml:lang="zh_CN">无法更新附属信息 (没有找到附属)。</value>
     </property>
     <property key="partyservices.could_not_update_affiliate_information_read">
         <value xml:lang="en">Could not update affiliate information (read failure): ${errMessage}.</value>
-        <value xml:lang="zh">无法更新附属信息 (读失败)：${errMessage}。</value>
+        <value xml:lang="zh_CN">无法更新附属信息 (读失败)：${errMessage}。</value>
     </property>
     <property key="partyservices.could_not_update_affiliate_information_write">
         <value xml:lang="en">Could not update affiliate information (write failure): ${errMessage}.</value>
-        <value xml:lang="zh">无法更新附属信息 (写失败)：${errMessage}。</value>
+        <value xml:lang="zh_CN">无法更新附属信息 (写失败)：${errMessage}。</value>
     </property>
     <property key="partyservices.could_not_update_party_information_not_found">
         <value xml:lang="en">Could not update party or party group information (party or partyGroup not found).</value>
-        <value xml:lang="zh">无法更新会员或会员组信息 (没有找到会员或会员组)。</value>
+        <value xml:lang="zh_CN">无法更新会员或会员组信息 (没有找到会员或会员组)。</value>
     </property>
     <property key="partyservices.could_not_update_party_information_read">
         <value xml:lang="en">Could not update party or party group information (read failure): ${errMessage}.</value>
-        <value xml:lang="zh">无法更新会员或会员组信息 (读失败)：${errMessage}。</value>
+        <value xml:lang="zh_CN">无法更新会员或会员组信息 (读失败)：${errMessage}。</value>
     </property>
     <property key="partyservices.could_not_update_party_information_write">
         <value xml:lang="en">Could not update party or party group information (write failure): ${errMessage}.</value>
-        <value xml:lang="zh">无法更新会员或会员组信息 (写失败)：${errMessage}。</value>
+        <value xml:lang="zh_CN">无法更新会员或会员组信息 (写失败)：${errMessage}。</value>
     </property>
     <property key="partyservices.data_source_error_adding_party_group">
         <value xml:lang="en">Data source error occurred while adding party group: ${errMessage}.</value>
-        <value xml:lang="zh">添加会员组时发生数据源错误：${errMessage}。</value>
+        <value xml:lang="zh_CN">添加会员组时发生数据源错误：${errMessage}。</value>
     </property>
     <property key="partyservices.party_type_not_found_in_database_cannot_create_party_group">
         <value xml:lang="en">The party type with ID PARTY_GROUP was not found in the database, cannot create new party group.</value>
-        <value xml:lang="zh">标识为 PARTY_GROUP 的会员类型在数据库里没有找到，无法新建会员组。</value>
+        <value xml:lang="zh_CN">标识为 PARTY_GROUP 的会员类型在数据库里没有找到，无法新建会员组。</value>
     </property>
     <property key="partyservices.problem_associating_note_with_party">
         <value xml:lang="en">Problem associating note with party "${errMessage}".</value>
-        <value xml:lang="zh">把便笺与会员关联时出错 "${errMessage}"。</value>
+        <value xml:lang="zh_CN">把便笺与会员关联时出错 "${errMessage}"。</value>
     </property>
     <property key="partyservices.problem_creating_note_no_noteId_returned">
         <value xml:lang="en">Problem creating the note, no noteId returned.</value>
-        <value xml:lang="zh">创建便笺时出错，没有返回便笺标识。</value>
+        <value xml:lang="zh_CN">创建便笺时出错，没有返回便笺标识。</value>
     </property>
     <property key="partyservices.required_parameter_email_cannot_be_empty">
         <value xml:lang="en">Required parameter 'email' cannot be empty.</value>
-        <value xml:lang="zh">必须的参数 'email' 不能为空。</value>
+        <value xml:lang="zh_CN">必须的参数 'email' 不能为空。</value>
     </property>
     <property key="person.create.db_error">
         <value xml:lang="en">Could not add person info (write failure): ${0}</value>
-        <value xml:lang="zh">无法添加人员信息 (写失败): ${0}</value>
+        <value xml:lang="zh_CN">无法添加人员信息 (写失败): ${0}</value>
     </property>
     <property key="person.create.party_exists_not_person_type">
         <value xml:lang="en">Cannot create person, a party with the specified party ID already exists and is not a PERSON type party</value>
-        <value xml:lang="zh">无法创建人员，已经存在指定会员标识的会员，而且这个会员不是人员类型的</value>
+        <value xml:lang="zh_CN">无法创建人员，已经存在指定会员标识的会员，而且这个会员不是人员类型的</value>
     </property>
     <property key="person.create.person_exists">
         <value xml:lang="en">Cannot create person, a person with the specified party ID already exists</value>
-        <value xml:lang="zh">无法创建人员，已经存在指定会员标识的人员</value>
+        <value xml:lang="zh_CN">无法创建人员，已经存在指定会员标识的人员</value>
     </property>
     <property key="person.update.not_found">
         <value xml:lang="en">Could not update person information (person not found)</value>
-        <value xml:lang="zh">无法更新人员信息 (没有找到人员)</value>
+        <value xml:lang="zh_CN">无法更新人员信息 (没有找到人员)</value>
     </property>
     <property key="person.update.read_failure">
         <value xml:lang="en">Could not update person information (read failure): ${0}</value>
-        <value xml:lang="zh">无法更新人员信息 (读失败)：${0}</value>
+        <value xml:lang="zh_CN">无法更新人员信息 (读失败)：${0}</value>
     </property>
     <property key="person.update.success">
         <value xml:lang="en">Person successfully updated.</value>
-        <value xml:lang="zh">已成功更新人员。</value>
+        <value xml:lang="zh_CN">已成功更新人员。</value>
     </property>
     <property key="person.update.write_failure">
         <value xml:lang="en">Could not update person information (write failure): ${0}</value>
-        <value xml:lang="zh">无法更新人员信息 (写失败)：${0}</value>
+        <value xml:lang="zh_CN">无法更新人员信息 (写失败)：${0}</value>
     </property>
+
+    <property key="partycls.create.error">
+        <value xml:lang="en">Could not create party and classification</value>
+        <value xml:lang="zh_CN">创建会员与分组关系出错</value>
+    </property>
+
+    <property key="partycls.update.error">
+        <value xml:lang="en">Could not update party and classification</value>
+        <value xml:lang="zh_CN">更新会员与分组关系出错</value>
+    </property>
+
+    <property key="partycls.delete.error">
+        <value xml:lang="en">Could not delete party and classification</value>
+        <value xml:lang="zh_CN">删除会员与分组关系出错</value>
+    </property>
+
+
+
 </resource>

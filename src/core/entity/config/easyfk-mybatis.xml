@@ -37,14 +37,12 @@
 		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
-	
-	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean" >
-		<property name="dataSource" ref="dataSource" />
-		<!--configLocation属性指定mybatis的核心配置文件-->
-		<property name="configLocation" value="classpath:mybatis-configuration.xml" />
+
+	<bean id="commonReadSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean" >
+		<property name="dataSource" ref="commonDataSource" />
+		<property name="configLocation" value="classpath:mybatis-read-configuration.xml" />
 		<property name="mapperLocations"
               value="classpath*:sql/${db.dbtype}/*Mapper.xml" />
-
 		<property name="plugins">
 			<array>
 				<bean class="com.github.pagehelper.PageHelper">
@@ -57,15 +55,80 @@
 				</bean>
 			</array>
 		</property>
-
 	</bean>
 
-	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" >
-		<constructor-arg index="0" ref="sqlSessionFactory" />
+	<bean id="commonWriteSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean" >
+		<property name="dataSource" ref="commonDataSource" />
+		<!--configLocation属性指定mybatis的核心配置文件-->
+		<property name="configLocation" value="classpath:mybatis-write-configuration.xml" />
+		<property name="mapperLocations"
+				  value="classpath*:sql/${db.dbtype}/*Mapper.xml" />
+		<property name="plugins">
+			<array>
+				<bean class="com.github.pagehelper.PageHelper">
+					<property name="properties">
+						<value>
+							dialect=mysql
+							reasonable=true
+						</value>
+					</property>
+				</bean>
+			</array>
+		</property>
 	</bean>
 
-	<!--加载数据库-->
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="cn.gorun8.easyfk.**.dao"  />
+	<bean id="partyReadSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean" >
+		<property name="dataSource" ref="partyReadDataSource" />
+		<!--configLocation属性指定mybatis的核心配置文件-->
+		<property name="configLocation" value="classpath:mybatis-read-configuration.xml" />
+		<property name="mapperLocations"
+				  value="classpath*:sql/${db.dbtype}/*Mapper.xml" />
+		<property name="plugins">
+			<array>
+				<bean class="com.github.pagehelper.PageHelper">
+					<property name="properties">
+						<value>
+							dialect=mysql
+							reasonable=true
+						</value>
+					</property>
+				</bean>
+			</array>
+		</property>
 	</bean>
+
+	<bean id="partyWriteSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean" >
+		<property name="dataSource" ref="partyWriteDataSource" />
+		<!--configLocation属性指定mybatis的核心配置文件-->
+		<property name="configLocation" value="classpath:mybatis-write-configuration.xml" />
+		<property name="mapperLocations"
+				  value="classpath*:sql/${db.dbtype}/*Mapper.xml" />
+		<property name="plugins">
+			<array>
+				<bean class="com.github.pagehelper.PageHelper">
+					<property name="properties">
+						<value>
+							dialect=mysql
+							reasonable=true
+						</value>
+					</property>
+				</bean>
+			</array>
+		</property>
+	</bean>
+
+	<bean id="commonReadSqlSession" class="cn.gorun8.easyfk.entity.datasource.ReadSqlSessionTemplate" >
+		<constructor-arg index="0" ref="commonReadSqlSessionFactory" />
+	</bean>
+	<bean id="commonWriteSqlSession" class="cn.gorun8.easyfk.entity.datasource.WriteSqlSessionTemplate" >
+		<constructor-arg index="0" ref="commonWriteSqlSessionFactory" />
+	</bean>
+
+	<bean id="partyReadSqlSession" class="cn.gorun8.easyfk.entity.datasource.ReadSqlSessionTemplate" >
+		<constructor-arg index="0" ref="partyReadSqlSessionFactory" />
+	</bean>
+	<bean id="partyWriteSqlSession" class="cn.gorun8.easyfk.entity.datasource.WriteSqlSessionTemplate" >
+		<constructor-arg index="0" ref="partyWriteSqlSessionFactory" />
+	</bean>
+
 </beans>

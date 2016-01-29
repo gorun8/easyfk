@@ -26,8 +26,8 @@
 
     <!-- web baseapps; will be mounted when using the embedded container -->
     <webapp name="install"
-        title="系统初始化"
+        title="install"
         server="default-server"
-        location="webapp"
+        location="webapp/install"
         mount-point="/"/>
 </easyfk-application>

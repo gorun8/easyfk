@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   Project:Easy Web Framework
+   Description:
+   EasyFK stands for Easy Web Framework.It's an open source product for E-Business / E-Commerce.It
+   was launched by a chinese Hezhiping(QQ:110476592) in 2015.The goal of EasyFK is to  provide a
+   foundation and starting point for reliable, secure , simple-to-use ,cost-effective ,scalable
+   and suitable-for-Chinese E-Business / E-Commerce solutions. With EasyFK, you can get started
+   right away without the huge deployment and maintenance costs of E-Business / E-Commerce systems.
+   Of course, you can customize it or use it as a framework to implement your most challenging business needs.
+   EasyFk is licensed under the Apache License Version 2.0.  You may obtain a copy of the License at
+   http://www.apache.org/licenses/LICENSE-2.0
+   Author:hezhiping   Email:110476592@qq.com
+-->
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <property key="userlogin.find.error">
+        <value xml:lang="en">find user login account error</value>
+        <value xml:lang="zh_CN">查询登录账号出错</value>
+    </property>
+
+    <property key=" userlogin.create.error">
+        <value xml:lang="en">create user login account error</value>
+        <value xml:lang="zh_CN">创建登录账号出错</value>
+    </property>
+
+    <property key="userlogin.update.error">
+        <value xml:lang="en">update user login account error</value>
+        <value xml:lang="zh_CN">更新登录账号出错</value>
+    </property>
+
+    <property key="userlogin.remove.error">
+        <value xml:lang="en">remove user login account error</value>
+        <value xml:lang="zh_CN">删除登录账号出错</value>
+    </property>
+    <property key="userlogin.checkexist.error">
+        <value xml:lang="en">check exist for user login account error</value>
+        <value xml:lang="zh_CN">检测登录账号是否存在出错</value>
+    </property>
+
+    <property key="userlogin.exist.error">
+        <value xml:lang="en"> user login account exist</value>
+        <value xml:lang="zh_CN">登录账号已经存在，请用其它的</value>
+    </property>
+
+    <property key="userlogin.changestatus.error">
+        <value xml:lang="en"> change enable error</value>
+        <value xml:lang="zh_CN">更改账号可用状态出错</value>
+    </property>
+
+
+    <property key="securitygroup.find.error">
+        <value xml:lang="en"> find security group error</value>
+        <value xml:lang="zh_CN">查询安全组信息出错</value>
+    </property>
+
+    <property key="securitygroup.exist">
+        <value xml:lang="en"> same name security group exist</value>
+        <value xml:lang="zh_CN">相同的安全组名已经存在</value>
+    </property>
+
+    <property key="securitygroup.create.error">
+        <value xml:lang="en"> find security group error</value>
+        <value xml:lang="zh_CN">相同的安全组名已经存在</value>
+    </property>
+
+    <property key="securitygroup.remove.error">
+        <value xml:lang="en"> remove security group error</value>
+        <value xml:lang="zh_CN">删除安全组出错</value>
+    </property>
+
+    <property key="securitygroup.save.error">
+        <value xml:lang="en"> remove security group error</value>
+        <value xml:lang="zh_CN">更新安全组出错</value>
+    </property>
+    <property key="security.permission.find.error">
+        <value xml:lang="en"> fine security permission error</value>
+        <value xml:lang="zh_CN">获取权限资源出错</value>
+    </property>
+
+    <property key="security.permission.create.error">
+        <value xml:lang="en"> create security permission error</value>
+        <value xml:lang="zh_CN">创建权限资源出错</value>
+    </property>
+
+    <property key="securitygroup.remove.existuserlogin">
+        <value xml:lang="en">has user login  related to this security gorup</value>
+        <value xml:lang="zh_CN">存在与该安全组关联的登录账号，不能删除</value>
+    </property>
+
+    <property key="role.type.find.error">
+        <value xml:lang="en"> fine role type error</value>
+        <value xml:lang="zh_CN">获取角色类型出错</value>
+    </property>
+
+
+
+
+
+</resource>

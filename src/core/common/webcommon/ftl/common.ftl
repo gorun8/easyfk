@@ -13,6 +13,7 @@
 -->
    
 <@easyfkHeader> </@easyfkHeader>
-<@easyfkDecoratorBody name="common-body"/>
 <@easyfkMessage></@easyfkMessage>
+<@easyfkDecoratorBody name="common-body"/>
+
 <@easyfkFooter> </@easyfkFooter>

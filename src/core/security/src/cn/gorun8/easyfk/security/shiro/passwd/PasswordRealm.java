@@ -15,16 +15,24 @@ package cn.gorun8.easyfk.security.shiro.passwd;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
+import cn.gorun8.easyfk.base.util.UtilMessages;
+import cn.gorun8.easyfk.entity.util.UtilEntity;
+import cn.gorun8.easyfk.security.service.SecurityService;
+import javolution.util.FastMap;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.SimpleAuthenticationInfo;
 import org.apache.shiro.authc.UnknownAccountException;
+import org.apache.shiro.authz.AuthorizationInfo;
+import org.apache.shiro.authz.SimpleAuthorizationInfo;
+import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import cn.gorun8.easyfk.base.util.UtilValidate;
 import cn.gorun8.easyfk.entity.GenericValue;
-import cn.gorun8.easyfk.security.service.LoginService;
+import cn.gorun8.easyfk.security.service.UserLoginService;
 import cn.gorun8.easyfk.security.shiro.AbstractAuthRealm;
 
 
@@ -35,15 +43,14 @@ import cn.gorun8.easyfk.security.shiro.AbstractAuthRealm;
  */
 public class PasswordRealm extends AbstractAuthRealm{
 	
-	@Autowired
-	private LoginService loginService;
 
-	public LoginService getLoginService() {
-		return loginService;
+
+	public UserLoginService getUserLoginService() {
+		return userLoginService;
 	}
 
-	public void setLoginService(LoginService loginService) {
-		this.loginService = loginService;
+	public void setUserLoginService(UserLoginService userLoginService) {
+		this.userLoginService = userLoginService;
 	}
 
 	@Override
@@ -60,11 +67,14 @@ public class PasswordRealm extends AbstractAuthRealm{
 		UsernamePasswordCaptchaToken upToken = (UsernamePasswordCaptchaToken)arg0;
 		String password = String.valueOf(upToken.getPassword());
 		String userLoginId = upToken.getUsername();
-			
-		GenericValue userLogin = loginService.findUserLogin(userLoginId);
-	 	if(UtilValidate.isEmpty(userLogin))
+		Map<String,Object> context = FastMap.newInstance();
+		context.put("userLoginId",userLoginId);
+		Map<String,Object> result = userLoginService.findUserLogin(context);
+		GenericValue userLogin =(GenericValue)result.get(UtilMessages.RESPONSE_DATA);
+
+		if(!UtilMessages.isSuccess(result)||UtilValidate.isEmpty(userLogin))
 		{
-			throw new UnknownAccountException("错误的用户账号");
+			throw new UnknownAccountException("没有找到用户账号");
 		}
 	 	
 		List<GenericValue> li = new ArrayList<GenericValue>();
@@ -72,7 +82,6 @@ public class PasswordRealm extends AbstractAuthRealm{
 		SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(li, password.toCharArray(),getName());
 	
 		return info;		
-	}  
-	
-	 
-}  
+	}
+
+}

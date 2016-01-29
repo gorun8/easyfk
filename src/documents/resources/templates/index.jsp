@@ -11,6 +11,6 @@
   http://www.apache.org/licenses/LICENSE-2.0
   Author:hezhiping   Email:110476592@qq.com
 --%>
-<H1>Hello EasyFK! @webapp-name@ is running!</H1>
+<H1>Hello EasyFK! @component-name@ is running!</H1>
 
 

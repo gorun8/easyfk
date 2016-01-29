@@ -26,7 +26,7 @@ import cn.gorun8.easyfk.@component-name@.service.DemoService;
  * 
  */
 @Controller("@component-name@DemoController")
-@RequestMapping("@component-name@demo")
+@RequestMapping("/dyn/@component-name@demo")
 public class DemoController {
 	
 	@Autowired

@@ -297,6 +297,9 @@ public class UtilSecurity {
         }
         return passwordMatches;
     }
- 
-	
+
+	public static String cryptPassword(String password){
+		return  cn.gorun8.easyfk.base.crypto.HashCrypt.cryptPassword(password);
+	}
+
 }

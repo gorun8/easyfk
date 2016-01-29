@@ -15,6 +15,6 @@ Author:hezhiping   Email:110476592@qq.com
 <resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <property key="@component-name@desc">
         <value xml:lang="en">Welcome to EasyFK!This is @component-name@</value>
-        <value xml:lang="zh">欢迎使用EasyFK！这是@component-title@组件</value>
+        <value xml:lang="zh_CN">欢迎使用EasyFK！这是@component-name@组件</value>
     </property>
 </resource>

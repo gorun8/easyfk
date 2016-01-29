@@ -77,11 +77,17 @@
         <property name="exposeRequestAttributes" value="true" />
         <property name="exposeSessionAttributes" value="true" />
     </bean>
+	<!-- 指定所上传文件的总大小不能超过指定大小的bytes[这里设定为100M]。注意maxUploadSize属性的限制不是针对单个文件，而是所有文件的容量之和 -->
+	<!--如果需要上传文件，打开如下配置
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="104857600" />
+	</bean>
+	-->
 	<!-- Freemaerker 配置 结束 -->
 	
-	<mvc:resources mapping="/style/**" location="/resources/style/" />
-	<mvc:resources mapping="/js/**" location="/resources/js/" />
-	<mvc:resources mapping="/config/**" location="/resources/config/" />
+	<mvc:resources mapping="/style/**" location="/style/" />
+	<mvc:resources mapping="/js/**" location="/js/" />
+	<mvc:resources mapping="/config/**" location="/config/" />
 
 	<mvc:view-controller path="/" view-name="page/index" />
 	<mvc:view-controller path="/page/**" />

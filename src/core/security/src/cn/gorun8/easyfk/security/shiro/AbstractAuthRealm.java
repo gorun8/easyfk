@@ -17,14 +17,19 @@ package cn.gorun8.easyfk.security.shiro;
 import java.util.List;
 import java.util.Map;
 
+import cn.gorun8.easyfk.base.util.UtilMessages;
+import cn.gorun8.easyfk.security.service.SecurityService;
+import cn.gorun8.easyfk.security.service.UserLoginService;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.AuthorizationInfo;
+import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.PrincipalCollection;
 
 import cn.gorun8.easyfk.entity.GenericValue;
+import org.springframework.beans.factory.annotation.Autowired;
 
 
 /**
@@ -33,48 +38,52 @@ import cn.gorun8.easyfk.entity.GenericValue;
  *
  */
 public abstract class AbstractAuthRealm extends AuthorizingRealm{
+    @Autowired
+    protected UserLoginService userLoginService ;
+
+    @Autowired
+    protected SecurityService securityService;
+
 	/**
 	 * 默认最大失败次数
 	 */
 	protected final int DEFAULT_MAX_FAIL_TIMES = 3;
- 
-	/**
-	 * 授权
-	 */
-	@Override
-	protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection arg0) {
-//	   String	loginId =((SysUserMember) arg0.asList().get(0)).getId();
-//       SimpleAuthorizationInfo sazi = new SimpleAuthorizationInfo();
-//       List<String> idLi = new ArrayList<String>();
-//    
-//       for(Map<String, String> map :sysUserDao.queryRoleFromAuthorizationInfo(loginId)){
-//    	   if( sazi.getRoles()==null || (!map.get("roleName").toString().equals("") && !sazi.getRoles().contains(map.get("roleName")))){
-//    		   sazi.addRole(map.get("roleName"));
-//    	   }
-//    	   if(!idLi.contains(map.get("roleId"))){
-//    		   idLi.add(map.get("roleId"));
-//    	   }
-//       }
-//       
-//       sazi.addStringPermissions(sysResourceRepository.findByUserId(loginId));
-//       if(idLi!=null && idLi.size()>0){
-//    	   sazi.addStringPermissions(sysResourceRepository.findByRoleIds(idLi));
-//    	   sazi.addStringPermissions(this.queryParentResOfRoles(new ArrayList<String>(), idLi));
-//       }
-       return null;//sazi;
-	}
-	public List<String> queryParentResOfRoles(List<String> strngli,List<String> idLi){
-//		List<String>  parentRoleIdLi =	sysRoleRelationRepository.findParentIdOfRoleId(idLi);
-//		if(parentRoleIdLi!=null && parentRoleIdLi.size()>0){
-//			strngli.addAll(sysResourceRepository.findByRoleIds(parentRoleIdLi));
-//			strngli=this.queryParentResOfRoles(strngli,parentRoleIdLi);
-//		}
-		return null;//strngli;
-	}
-	
-	 
-	 
-	/**
+
+    /**
+     * 授权
+     */
+    @Override
+    protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection arg0) {
+        GenericValue	userLogin =(GenericValue) arg0.asList().get(0);
+
+        SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
+        //关联角色
+        //包括继承的角色
+        userLogin.setString("tree","Y");
+        Map<String, Object>  result = securityService.findPartyRoles(userLogin.toMap());
+        if(UtilMessages.isSuccess(result)){
+            List<Map> roleList = (List<Map>)result.get(UtilMessages.RESPONSE_DATA);
+            if(roleList != null){
+                for(Map role: roleList){
+                    simpleAuthorizationInfo.addRole((String)role.get("roleTypeId"));
+                }
+            }
+        }
+        //关联权限
+        result = securityService.findUserLoginPermissions(userLogin.toMap());
+        if(UtilMessages.isSuccess(result)){
+            List<Map> permissionList = (List<Map>)result.get(UtilMessages.RESPONSE_DATA);
+            if(permissionList != null){
+                for(Map permission: permissionList){
+                    simpleAuthorizationInfo.addStringPermission((String) permission.get("permissionTag"));
+                }
+            }
+        }
+
+        return simpleAuthorizationInfo;
+    }
+
+    /**
 	 * 清楚授权信息
 	 */
     @Override

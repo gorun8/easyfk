@@ -26,10 +26,10 @@ import net.sf.json.JSONObject;
 
 public class UtilMessages {
     public static final String module = UtilMessages.class.getName();
-    public static final String resource = "ServiceErrorUiLabels";
+    public static final String resourceError = "CommonErrorUiLabels";
 
     /**
-     * 响应类型，一般用于ajax请求中作判断
+     * 响应类型 ,可以为RESPOND_SUCCESS ,RESPOND_ERROR,RESPOND_FAIL
      */
     public static final String RESPONSE_TYPE = "responseType";
     /**
@@ -37,26 +37,31 @@ public class UtilMessages {
      */
     public static final String RESPOND_SUCCESS = "success";
     /**
-     * 失败响应
+     * 错误响应
      */
     public static final String RESPOND_ERROR = "error";
 
     /**
-     * 错误消息
+     * 失败响应
      */
+    public static final String RESPOND_FAIL = "fail";
+
+    /**
+     * 错误消息内容
+     */
+    public static final String ERROR_MESSAGE = "errorMessage";
     public static final String ERROR_MESSAGE_LIST = "errorMessageList";
     /**
-     * 提示消息
+     * 消息内容
      */
+    public static final String EVENT_MESSAGE = "eventMessage";
     public static final String EVENT_MESSAGE_LIST = "eventMessageList";
 
-
-    public static final String RESPONSE_MESSAGE = "responseMessage";
-    public static final String RESPOND_FAIL = "fail";
-    public static final String ERROR_MESSAGE = "errorMessage";
     public static final String ERROR_MESSAGE_MAP = "errorMessageMap";
-    public static final String SUCCESS_MESSAGE = "successMessage";
-    public static final String SUCCESS_MESSAGE_LIST = "successMessageList";
+    /**
+     * 响应数据
+     */
+    public static final String RESPONSE_DATA = "responseData";
 
     /**
      * 保存提示消息
@@ -65,14 +70,14 @@ public class UtilMessages {
      * @param msg
      */
     public static void saveMessages(HttpServletRequest request, String msg) {
-//        List<String> msgList = UtilGenerics.toList(request.getAttribute(EVENT_MESSAGE_LIST));
-//        if (msgList == null) {
-//            msgList = FastList.newInstance();
-//            request.setAttribute(EVENT_MESSAGE_LIST, msgList);
-//        }
-//
-//        msgList.add(msg);
-        request.setAttribute(EVENT_MESSAGE_LIST, msg);
+        List<String> msgList = UtilGenerics.toList(request.getAttribute(EVENT_MESSAGE_LIST));
+        if (msgList == null) {
+            msgList = FastList.newInstance();
+            request.setAttribute(EVENT_MESSAGE_LIST, msgList);
+        }
+        msgList.add(msg);
+        request.setAttribute(EVENT_MESSAGE_LIST, msgList);
+
     }
 
     /**
@@ -81,22 +86,18 @@ public class UtilMessages {
      * @param error
      */
     public static void saveErrors(HttpServletRequest request, String error) {
-//        List<String> errorList = UtilGenerics.toList(request.getAttribute(ERROR_MESSAGE_LIST));
-//        if (errorList == null) {
-//            errorList = FastList.newInstance();
-//            request.setAttribute(ERROR_MESSAGE_LIST, errorList);
-//        }
-//        errorList.add(error);
-        request.setAttribute(ERROR_MESSAGE_LIST, error);
+        List<String> errorList = UtilGenerics.toList(request.getAttribute(ERROR_MESSAGE_LIST));
+        if (errorList == null) {
+            errorList = FastList.newInstance();
+            request.setAttribute(ERROR_MESSAGE_LIST, errorList);
+        }
+        errorList.add(error);
+        request.setAttribute(ERROR_MESSAGE_LIST, errorList);
     }
 
-    /**
-     * 保存结果信息，可能是成功信息，也可能是失败信息
-     * @param request
-     * @param result
-     */
-    public static void saveResult(HttpServletRequest request, Map<String,Object> result) {
-        //unimplement
+    public static void saveErrors(HttpServletRequest request,  Map<String,Object> result){
+        String error = UtilMessages.getErrorMessage(result);
+        UtilMessages.saveErrors(request,error);
     }
 
 
@@ -180,17 +181,17 @@ public class UtilMessages {
 
     /** A little short-cut method to check to see if a service returned an error */
     public static boolean isError(Map<String, ? extends Object> results) {
-        if (results == null || results.get(UtilMessages.RESPONSE_MESSAGE) == null) {
+        if (results == null || results.get(UtilMessages.RESPONSE_TYPE) == null) {
             return false;
         }
-        return UtilMessages.RESPOND_ERROR.equals(results.get(UtilMessages.RESPONSE_MESSAGE));
+        return UtilMessages.RESPOND_ERROR.equals(results.get(UtilMessages.RESPONSE_TYPE));
     }
 
     public static boolean isFailure(Map<String, ? extends Object> results) {
-        if (results == null || results.get(UtilMessages.RESPONSE_MESSAGE) == null) {
+        if (results == null || results.get(UtilMessages.RESPONSE_TYPE) == null) {
             return false;
         }
-        return UtilMessages.RESPOND_FAIL.equals(results.get(UtilMessages.RESPONSE_MESSAGE));
+        return UtilMessages.RESPOND_FAIL.equals(results.get(UtilMessages.RESPONSE_TYPE));
     }
 
     /** A little short-cut method to check to see if a service was successful (neither error or failed) */
@@ -204,6 +205,25 @@ public class UtilMessages {
     /** A small routine used all over to improve code efficiency, make a result map with the message and the error response code */
     public static Map<String, Object> returnError(String errorMessage) {
         return returnProblem(UtilMessages.RESPOND_ERROR, errorMessage, null, null, null);
+    }
+
+    public static Map<String, Object> returnParamError(Locale locale,String param) {
+        List<String> params = FastList.newInstance();
+        params.add(param);
+        return returnParamError(locale,params);
+    }
+
+    public static Map<String, Object> returnParamError(Locale locale,List<String> params) {
+        String errorMessage =  UtilProperties.getMessage(resourceError,
+                "required_parameter_missing", locale);
+        StringBuffer paraStr = new StringBuffer();
+        paraStr.append(errorMessage);
+
+        for(String p:params){
+            paraStr.append(",");
+            paraStr.append(p);
+        }
+        return returnProblem(UtilMessages.RESPOND_ERROR, paraStr.toString(), null, null, null);
     }
 
     /** A small routine used all over to improve code efficiency, make a result map with the message and the error response code */
@@ -233,9 +253,11 @@ public class UtilMessages {
         return returnProblem(UtilMessages.RESPOND_ERROR, errorMessage, errorMessageList, errorMessageMap, nestedResult);
     }
 
+
+
     public static Map<String, Object> returnProblem(String returnType, String errorMessage, List<? extends Object> errorMessageList, Map<String, ? extends Object> errorMessageMap, Map<String, ? extends Object> nestedResult) {
         Map<String, Object> result = FastMap.newInstance();
-        result.put(UtilMessages.RESPONSE_MESSAGE, returnType);
+        result.put(UtilMessages.RESPONSE_TYPE, returnType);
         if (errorMessage != null) {
             result.put(UtilMessages.ERROR_MESSAGE, errorMessage);
         }
@@ -277,6 +299,17 @@ public class UtilMessages {
     }
 
     /** A small routine used all over to improve code efficiency, make a result map with the message and the success response code */
+    public static Map<String, Object> returnSuccessWithData(Object data) {
+        return returnSuccessWithData(UtilMessages.RESPONSE_DATA,data);
+    }
+
+    public static Map<String, Object> returnSuccessWithData(String key,Object data) {
+        Map<String, Object>  relmap =  returnMessage(UtilMessages.RESPOND_SUCCESS, null);
+        relmap.put(key,data);
+        return relmap;
+    }
+
+    /** A small routine used all over to improve code efficiency, make a result map with the message and the success response code */
     public static Map<String, Object> returnSuccess() {
         return returnMessage(UtilMessages.RESPOND_SUCCESS, null);
     }
@@ -284,7 +317,7 @@ public class UtilMessages {
     /** A small routine used all over to improve code efficiency, make a result map with the message and the success response code */
     public static Map<String, Object> returnSuccess(List<String> successMessageList) {
         Map<String, Object> result = returnMessage(UtilMessages.RESPOND_SUCCESS, null);
-        result.put(UtilMessages.SUCCESS_MESSAGE_LIST, successMessageList);
+        result.put(UtilMessages.EVENT_MESSAGE_LIST, successMessageList);
         return result;
     }
 
@@ -294,8 +327,8 @@ public class UtilMessages {
      */
     public static Map<String, Object> returnMessage(String code, String message) {
         Map<String, Object> result = FastMap.newInstance();
-        if (code != null) result.put(UtilMessages.RESPONSE_MESSAGE, code);
-        if (message != null) result.put(UtilMessages.SUCCESS_MESSAGE, message);
+        if (code != null) result.put(UtilMessages.RESPONSE_TYPE, code);
+        if (message != null) result.put(UtilMessages.EVENT_MESSAGE, message);
         return result;
     }
 
@@ -387,8 +420,8 @@ public class UtilMessages {
         if (result == null) {
             return "";
         }
-        String successMsg = (String) result.get(UtilMessages.SUCCESS_MESSAGE);
-        List<? extends Object> successMsgList = UtilGenerics.checkList(result.get(UtilMessages.SUCCESS_MESSAGE_LIST));
+        String successMsg = (String) result.get(UtilMessages.EVENT_MESSAGE);
+        List<? extends Object> successMsgList = UtilGenerics.checkList(result.get(UtilMessages.EVENT_MESSAGE_LIST));
         StringBuilder outMsg = new StringBuilder();
 
         outMsg.append(makeMessageList(successMsgList, msgPrefix, msgSuffix));

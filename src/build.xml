@@ -231,7 +231,6 @@
           <fileset dir="${easyfk.home.dir}/core/base/lib/scripting" includes="*.jar"/>
           <fileset dir="${easyfk.home.dir}/core/catalina/lib" includes="*.jar"/>
           <fileset dir="${easyfk.home.dir}/core/entity/lib" includes="*.jar"/>
-          <fileset dir="${easyfk.home.dir}/core/service/lib" includes="*.jar"/>
           <fileset dir="${easyfk.home.dir}/core/testtools/lib" includes="*.jar"/>
           <fileset dir="${easyfk.home.dir}/core/webapp/lib" includes="*.jar"/>
           <fileset dir="${easyfk.home.dir}/core/webapp/build/lib" includes="*.jar"/>
@@ -460,9 +459,10 @@
     <!-- ================================================================== -->
 	<target name="apply-create-component"
 	            description="创建新基础组件.">
-	        <input addproperty="component-name" message="基础组件名称,只能由字母和数字组成: (如: myTestApp) [必须]"/>
-	         
-	        <echo>基础组件已经创建成功，并保存在hot-deploy目录下:
+	    <input addproperty="component-name" message="基础组件名称,只能由字母和数字组成: (如: myTestApp) [必须]"/>
+        <input addproperty="resource-name" message="应用资源文件名称,只能由英文字母组成，首字母大写: (如: Mytest) [必须]"/>
+
+        <echo>基础组件已经创建成功，并保存在hot-deploy目录下:
 	                                组件名称: ${component-name}
 	                                存放目录: ${basedir}/hot-deploy/${component-name}
 	        </echo>
@@ -478,16 +478,22 @@
 	            </condition>
 	        </fail>
 
+            <fail message="资源文件名称必须填写">
+                <condition>
+                    <equals arg1="${resource-name}" arg2="" casesensitive="false" trim="yes"/>
+                </condition>
+            </fail>
+
 	        <filterset id="replacePlaceholders">
 	            <filter token="component-name" value="${component-name}"/>
+                <filter token="resource-name" value="${resource-name}"/>
 	        </filterset>
 	        
 	        <mkdir dir="${basedir}/hot-deploy/${component-name}/lib"/>
 	    	<mkdir dir="${basedir}/hot-deploy/${component-name}/config"/>
 			<mkdir dir="${basedir}/hot-deploy/${component-name}/config/sql/mysql"/>
 		    <mkdir dir="${basedir}/hot-deploy/${component-name}/config/sql/oracle"/>
-			<mkdir dir="${basedir}/hot-deploy/${component-name}/entitydef/mysql"/>
-					
+
 	        <mkdir dir="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/service"/>
 	        <mkdir dir="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/service/impl"/>
 	        <mkdir dir="${basedir}/hot-deploy/${component-name}/documents"/>
@@ -495,42 +501,62 @@
 	        <copy file="${basedir}/documents/resources/templates/easyfk-component.xml" tofile="${basedir}/hot-deploy/${component-name}/easyfk-application.xml" encoding="utf-8">
 	            <filterset refid="replacePlaceholders"/>
 	        </copy>
-			<copy file="${basedir}/documents/resources/templates/template.sql" tofile="${basedir}/hot-deploy/${component-name}/entitydef/sql/mysql/${component-name}.sql" encoding="utf-8">
+            <copy file="${basedir}/documents/resources/templates/services.xml" tofile="${basedir}/hot-deploy/${component-name}/servicedef/services.xml" encoding="utf-8">
+                <filterset refid="replacePlaceholders"/>
+            </copy>
+
+			<copy file="${basedir}/documents/resources/templates/template.sql" tofile="${basedir}/hot-deploy/${component-name}/entitydef/mysql/${component-name}.sql" encoding="utf-8">
 			    <filterset refid="replacePlaceholders"/>
 			</copy>
 					
-			<copy file="${basedir}/documents/resources/templates/template.sql" tofile="${basedir}/hot-deploy/${component-name}/entitydef/sql/oracle/${component-name}.sql" encoding="utf-8">
+			<copy file="${basedir}/documents/resources/templates/template.sql" tofile="${basedir}/hot-deploy/${component-name}/entitydef/oracle/${component-name}.sql" encoding="utf-8">
 			    <filterset refid="replacePlaceholders"/>
 			</copy>
 
-            <copy file="${basedir}/documents/resources/templates/DemoMapper.xml" tofile="${basedir}/hot-deploy/${component-name}/config/sql/mysql/DemoMapper.xml" encoding="utf-8">
+            <copy file="${basedir}/documents/resources/templates/DemoReadMapper.xml" tofile="${basedir}/hot-deploy/${component-name}/config/sql/mysql/DemoReadMapper.xml" encoding="utf-8">
+                <filterset refid="replacePlaceholders"/>
+            </copy>
+            <copy file="${basedir}/documents/resources/templates/DemoWriteMapper.xml" tofile="${basedir}/hot-deploy/${component-name}/config/sql/mysql/DemoWriteMapper.xml" encoding="utf-8">
                 <filterset refid="replacePlaceholders"/>
             </copy>
 
-            <copy file="${basedir}/documents/resources/templates/DemoMapper.xml" tofile="${basedir}/hot-deploy/${component-name}/config/sql/oracle/DemoMapper.xml" encoding="utf-8">
+            <copy file="${basedir}/documents/resources/templates/DemoUiLabels.xml" tofile="${basedir}/hot-deploy/${component-name}/config/${resource-name}UiLabels.xml" encoding="utf-8">
                 <filterset refid="replacePlaceholders"/>
             </copy>
-			
-			<copy file="${basedir}/documents/resources/templates/DemoDao.java" tofile="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/dao/DemoDao.java" encoding="utf-8">
+            <copy file="${basedir}/documents/resources/templates/DemoUiLabels.xml" tofile="${basedir}/hot-deploy/${component-name}/config/${resource-name}ErrorLabels.xml" encoding="utf-8">
+                <filterset refid="replacePlaceholders"/>
+            </copy>
+
+            <copy file="${basedir}/documents/resources/templates/DemoReadDao.java" tofile="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/dao/DemoReadDao.java" encoding="utf-8">
+                <filterset refid="replacePlaceholders"/>
+            </copy>
+
+            <copy file="${basedir}/documents/resources/templates/DemoWriteDao.java" tofile="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/dao/DemoWriteDao.java" encoding="utf-8">
+                <filterset refid="replacePlaceholders"/>
+            </copy>
+
+            <copy file="${basedir}/documents/resources/templates/DemoReadDaoImpl.java" tofile="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/dao/impl/DemoReadDaoImpl.java" encoding="utf-8">
+                <filterset refid="replacePlaceholders"/>
+            </copy>
+
+            <copy file="${basedir}/documents/resources/templates/DemoWriteDaoImpl.java" tofile="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/dao/impl/DemoWriteDaoImpl.java" encoding="utf-8">
                 <filterset refid="replacePlaceholders"/>
             </copy>
 	        
 	        <copy file="${basedir}/documents/resources/templates/build.xml" tofile="${basedir}/hot-deploy/${component-name}/build.xml" encoding="utf-8">
 	            <filterset refid="replacePlaceholders"/>
 	        </copy>
-	         
-	        
+
 	    </target>
 	
 	<target name="apply-create-web"
             description="创建新WEB应用组件.">
-        <input addproperty="component-name" message="WEB应用组件名称,只能由字母和数字组成: (如: myTestApp) [必须]"/>
-        <input addproperty="webapp-name" message="webURI名称,只能由小写字母和数字组成: (如: mytestapp) [必须]"/>
-        <input addproperty="component-title" message="应用组件标题，请写汉字: (如: 我的应用) [必须]"/>
+        <input addproperty="component-name" message="WEB应用组件名称,只能由小写字母组成: (如: mytest) [必须]"/>
+        <input addproperty="resource-name" message="应用资源文件名称,只能由英文字母组成，首字母大写: (如: Mytest) [必须]"/>
         
         <echo>应用组件已经创建成功，并保存在hot-deploy目录下:
                                 组件名称: ${component-name}
-              web名称: ${webapp-name}
+              web名称: ${component-name}
                                 存放目录: ${basedir}/hot-deploy/${component-name}
         </echo>
         <input addproperty="confirm-component-creation" message="Confirm: " defaultvalue="N" validargs="Y,N,y,n"/>
@@ -544,24 +570,23 @@
                 <equals arg1="${component-name}" arg2="" casesensitive="false" trim="yes"/>
             </condition>
         </fail>
-       
-        <fail message="web名称必须填写">
+
+        <fail message="应用资源文件名称必须填写">
             <condition>
-                <equals arg1="${webapp-name}" arg2="" casesensitive="false" trim="yes"/>
+                <equals arg1="${resource-name}" arg2="" casesensitive="false" trim="yes"/>
             </condition>
         </fail>
-         
+
+
         <filterset id="replacePlaceholders">
             <filter token="component-name" value="${component-name}"/>
-            <filter token="webapp-name" value="${webapp-name}"/>
-            <filter token="component-title" value="${component-title}"/>
+            <filter token="resource-name" value="${resource-name}"/>
         </filterset>
         
         <mkdir dir="${basedir}/hot-deploy/${component-name}/lib"/>
     	<mkdir dir="${basedir}/hot-deploy/${component-name}/config/sql/mysql"/>
     	<mkdir dir="${basedir}/hot-deploy/${component-name}/config/sql/oracle"/>
-	   	<mkdir dir="${basedir}/hot-deploy/${component-name}/entitydef/mysql"/>
-		  
+
         <mkdir dir="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/controller"/>
         <mkdir dir="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/service"/>
         <mkdir dir="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/service/impl"/>
@@ -571,38 +596,46 @@
         <mkdir dir="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/tag"/>
         <mkdir dir="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/dao"/>
         
-        <mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/META-INF"/>
-        <mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/WEB-INF/classes"/>
-        <mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/WEB-INF/lib"/>
-		<mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/resources/js"/>
-        <mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/resources/page"/>
-        <mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/resources/style/icons"/>
-        <mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/resources/style/images"/>
-        <mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/resources/config"/>
+        <mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/${component-name}/META-INF"/>
+        <mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/${component-name}/WEB-INF/classes"/>
+        <mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/${component-name}/WEB-INF/lib"/>
+		<mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/${component-name}/js"/>
+        <mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/${component-name}/resources/page"/>
+        <mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/${component-name}/style/icons"/>
+        <mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/${component-name}/style/images"/>
+        <mkdir dir="${basedir}/hot-deploy/${component-name}/webapp/${component-name}/config"/>
 
         <mkdir dir="${basedir}/hot-deploy/${component-name}/documents"/>
         
         <copy file="${basedir}/documents/resources/templates/easyfk-application.xml" tofile="${basedir}/hot-deploy/${component-name}/easyfk-application.xml" encoding="utf-8">
             <filterset refid="replacePlaceholders"/>
         </copy>
-		
-		<copy file="${basedir}/documents/resources/templates/template.sql" tofile="${basedir}/hot-deploy/${component-name}/entitydef/sql/mysql/${component-name}.sql" encoding="utf-8">
+
+        <copy file="${basedir}/documents/resources/templates/services.xml" tofile="${basedir}/hot-deploy/${component-name}/servicedef/services.xml" encoding="utf-8">
+            <filterset refid="replacePlaceholders"/>
+        </copy>
+
+		<copy file="${basedir}/documents/resources/templates/template.sql" tofile="${basedir}/hot-deploy/${component-name}/entitydef/mysql/${component-name}.sql" encoding="utf-8">
 		    <filterset refid="replacePlaceholders"/>
 		</copy>
 				
-		<copy file="${basedir}/documents/resources/templates/template.sql" tofile="${basedir}/hot-deploy/${component-name}/entitydef/sql/oracle/${component-name}.sql" encoding="utf-8">
+		<copy file="${basedir}/documents/resources/templates/template.sql" tofile="${basedir}/hot-deploy/${component-name}/entitydef/oracle/${component-name}.sql" encoding="utf-8">
 		    <filterset refid="replacePlaceholders"/>
 		</copy>
 
-
-        <copy file="${basedir}/documents/resources/templates/DemoUiLabels.xml" tofile="${basedir}/hot-deploy/${component-name}/config/Demo${component-name}UiLabels.xml" encoding="utf-8">
+        <copy file="${basedir}/documents/resources/templates/DemoUiLabels.xml" tofile="${basedir}/hot-deploy/${component-name}/config/${resource-name}UiLabels.xml" encoding="utf-8">
+            <filterset refid="replacePlaceholders"/>
+        </copy>
+        <copy file="${basedir}/documents/resources/templates/DemoUiLabels.xml" tofile="${basedir}/hot-deploy/${component-name}/config/${resource-name}ErrorLabels.xml" encoding="utf-8">
             <filterset refid="replacePlaceholders"/>
         </copy>
 
-        <copy file="${basedir}/documents/resources/templates/DemoMapper.xml" tofile="${basedir}/hot-deploy/${component-name}/config/sql/mysql/DemoMapper.xml" encoding="utf-8">
+        <copy file="${basedir}/documents/resources/templates/DemoReadMapper.xml" tofile="${basedir}/hot-deploy/${component-name}/config/sql/mysql/DemoReadMapper.xml" encoding="utf-8">
             <filterset refid="replacePlaceholders"/>
         </copy>
-
+        <copy file="${basedir}/documents/resources/templates/DemoWriteMapper.xml" tofile="${basedir}/hot-deploy/${component-name}/config/sql/mysql/DemoWriteMapper.xml" encoding="utf-8">
+            <filterset refid="replacePlaceholders"/>
+        </copy>
 
         <copy file="${basedir}/documents/resources/templates/build.xml" tofile="${basedir}/hot-deploy/${component-name}/build.xml" encoding="utf-8">
             <filterset refid="replacePlaceholders"/>
@@ -620,49 +653,57 @@
             <filterset refid="replacePlaceholders"/>
         </copy>
 		
-		<copy file="${basedir}/documents/resources/templates/DemoDao.java" tofile="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/dao/DemoDao.java" encoding="utf-8">
+		<copy file="${basedir}/documents/resources/templates/DemoReadDao.java" tofile="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/dao/DemoReadDao.java" encoding="utf-8">
                <filterset refid="replacePlaceholders"/>
         </copy>
-        <copy file="${basedir}/documents/resources/templates/index.ftl" tofile="${basedir}/hot-deploy/${component-name}/webapp/resources/page/index.ftl" encoding="utf-8">
+
+        <copy file="${basedir}/documents/resources/templates/DemoWriteDao.java" tofile="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/dao/DemoWriteDao.java" encoding="utf-8">
+            <filterset refid="replacePlaceholders"/>
+        </copy>
+
+        <copy file="${basedir}/documents/resources/templates/DemoReadDaoImpl.java" tofile="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/dao/impl/DemoReadDaoImpl.java" encoding="utf-8">
+            <filterset refid="replacePlaceholders"/>
+        </copy>
+
+        <copy file="${basedir}/documents/resources/templates/DemoWriteDaoImpl.java" tofile="${basedir}/hot-deploy/${component-name}/src/cn/gorun8/easyfk/${component-name}/dao/impl/DemoWriteDaoImpl.java" encoding="utf-8">
+            <filterset refid="replacePlaceholders"/>
+        </copy>
+
+        <copy file="${basedir}/documents/resources/templates/index.ftl" tofile="${basedir}/hot-deploy/${component-name}/webapp/${component-name}/resources/page/index.ftl" encoding="utf-8">
             <filterset refid="replacePlaceholders"/>
         </copy>
 		
-		<copy file="${basedir}/documents/resources/templates/appcommon.ftl" tofile="${basedir}/hot-deploy/${component-name}/webapp/resources/page/appcommon.ftl" encoding="utf-8">
+		<copy file="${basedir}/documents/resources/templates/appcommon.ftl" tofile="${basedir}/hot-deploy/${component-name}/webapp/${component-name}/resources/page/appcommon.ftl" encoding="utf-8">
 	        <filterset refid="replacePlaceholders"/>
 	    </copy>
     	
-    	<copy file="${basedir}/documents/resources/templates/appmenus.ftl" tofile="${basedir}/hot-deploy/${component-name}/webapp/resources/page/appmenus.ftl" encoding="utf-8">
+    	<copy file="${basedir}/documents/resources/templates/appmenus.ftl" tofile="${basedir}/hot-deploy/${component-name}/webapp/${component-name}/resources/page/appmenus.ftl" encoding="utf-8">
     	    <filterset refid="replacePlaceholders"/>
     	</copy>
 
-        <copy file="${basedir}/documents/resources/templates/web.xml" tofile="${basedir}/hot-deploy/${component-name}/webapp/WEB-INF/web.xml" encoding="utf-8">
+        <copy file="${basedir}/documents/resources/templates/web.xml" tofile="${basedir}/hot-deploy/${component-name}/webapp/${component-name}/WEB-INF/web.xml" encoding="utf-8">
             <filterset refid="replacePlaceholders"/>
         </copy>
         
-        <copy file="${basedir}/documents/resources/templates/MANIFEST.MF" tofile="${basedir}/hot-deploy/${component-name}/webapp/META-INF/MANIFEST.MF" encoding="utf-8">
+        <copy file="${basedir}/documents/resources/templates/MANIFEST.MF" tofile="${basedir}/hot-deploy/${component-name}/webapp/${component-name}/META-INF/MANIFEST.MF" encoding="utf-8">
             <filterset refid="replacePlaceholders"/>
         </copy>
-        <copy file="${basedir}/documents/resources/templates/private-context.xml" tofile="${basedir}/hot-deploy/${component-name}/webapp/WEB-INF/classes/private-context.xml" encoding="utf-8">
+        <copy file="${basedir}/documents/resources/templates/private-context.xml" tofile="${basedir}/hot-deploy/${component-name}/webapp/${component-name}/WEB-INF/classes/private-context.xml" encoding="utf-8">
             <filterset refid="replacePlaceholders"/>
         </copy>
-        <copy file="${basedir}/documents/resources/templates/springmvc.xml" tofile="${basedir}/hot-deploy/${component-name}/webapp/WEB-INF/classes/springmvc.xml" encoding="utf-8">
+        <copy file="${basedir}/documents/resources/templates/springmvc.xml" tofile="${basedir}/hot-deploy/${component-name}/webapp/${component-name}/WEB-INF/classes/springmvc.xml" encoding="utf-8">
             <filterset refid="replacePlaceholders"/>
         </copy>
-
-
-        
     </target>
- 
-	
+
 	<target name="apply-create-themes"
 	            description="创建风格组件.">
 			<input addproperty="component-name" message="应用组件名称,只能由字母和数字组成: (如: myTestApp) [必须]"/>
-	        <input addproperty="webapp-name" message="webURI名称,只能由小写字母和数字组成: (如: mytestapp) [必须]"/>
-	        <input addproperty="component-title" message="应用程序标题，请写汉字: (如: 新风格) [必须]"/>
-	        
-	        <echo>风格组件已经创建成功，并保存在hot-deploy目录下:
+            <input addproperty="resource-name" message="应用资源文件名称,只能由英文字母组成，首字母大写: (如: Mytest) [必须]"/>
+
+            <echo>风格组件已经创建成功，并保存在hot-deploy目录下:
 	                                组件名称: ${component-name}
-	              web名称: ${webapp-name}
+	              web名称: ${component-name}
 	                                存放目录: ${basedir}/themes/${component-name}
 	        </echo>
 	        <input addproperty="confirm-component-creation" message="Confirm: " defaultvalue="N" validargs="Y,N,y,n"/>
@@ -676,26 +717,25 @@
 	                <equals arg1="${component-name}" arg2="" casesensitive="false" trim="yes"/>
 	            </condition>
 	        </fail>
-	       
-	        <fail message="web名称必须填写">
+
+	        <fail message="应用资源文件名称必须填写">
 	            <condition>
-	                <equals arg1="${webapp-name}" arg2="" casesensitive="false" trim="yes"/>
+	                <equals arg1="${resource-name}" arg2="" casesensitive="false" trim="yes"/>
 	            </condition>
 	        </fail>
-		         
-	    
+
+
 	        <filterset id="replacePlaceholders">
 	            <filter token="component-name" value="${component-name}"/>
-	            <filter token="webapp-name" value="${webapp-name}"/>
-	            <filter token="component-title" value="${component-title}"/>
+	            <filter token="resource-name" value="${resource-name}"/>
 	        </filterset>
 		
 			<mkdir dir="${basedir}/themes/${component-name}/config"/>
 			<mkdir dir="${basedir}/themes/${component-name}/webapp"/>
-		    <mkdir dir="${basedir}/themes/${component-name}/webapp/js"/>
-	        <mkdir dir="${basedir}/themes/${component-name}/webapp/page"/>
-	        <mkdir dir="${basedir}/themes/${component-name}/webapp/style/icons"/>
-	        <mkdir dir="${basedir}/themes/${component-name}/webapp/style/images"/>
+		    <mkdir dir="${basedir}/themes/${component-name}/webapp/${component-name}/js"/>
+	        <mkdir dir="${basedir}/themes/${component-name}/webapp/${component-name}/page"/>
+	        <mkdir dir="${basedir}/themes/${component-name}/webapp/${component-name}/style/icons"/>
+	        <mkdir dir="${basedir}/themes/${component-name}/webapp/${component-name}/style/images"/>
 	         
 	        <mkdir dir="${basedir}/themes/${component-name}/documents"/>
 	        
@@ -711,49 +751,49 @@
 			    <filterset refid="replacePlaceholders"/>
 			</copy>
 	        
-	        <copy file="${basedir}/documents/resources/templates/MANIFEST.MF" tofile="${basedir}/themes/${component-name}/webapp/META-INF/MANIFEST.MF" encoding="utf-8">
+	        <copy file="${basedir}/documents/resources/templates/MANIFEST.MF" tofile="${basedir}/themes/${component-name}/webapp/${component-name}/META-INF/MANIFEST.MF" encoding="utf-8">
 	            <filterset refid="replacePlaceholders"/>
 	        </copy>
 		
-			<copy file="${basedir}/documents/resources/templates/themepart.ftl" tofile="${basedir}/themes/${component-name}/webapp/page/header.ftl" encoding="utf-8">
+			<copy file="${basedir}/documents/resources/templates/themepart.ftl" tofile="${basedir}/themes/${component-name}/webapp/${component-name}/page/header.ftl" encoding="utf-8">
 			    <filterset refid="replacePlaceholders"/>
 			</copy>
-			<copy file="${basedir}/documents/resources/templates/themepart.ftl" tofile="${basedir}/themes/${component-name}/webapp/page/footer.ftl" encoding="utf-8">
+			<copy file="${basedir}/documents/resources/templates/themepart.ftl" tofile="${basedir}/themes/${component-name}/webapp/${component-name}/page/footer.ftl" encoding="utf-8">
 			    <filterset refid="replacePlaceholders"/>
 			</copy>
-			<copy file="${basedir}/documents/resources/templates/themepart.ftl" tofile="${basedir}/themes/${component-name}/webapp/page/message.ftl" encoding="utf-8">
+			<copy file="${basedir}/documents/resources/templates/themepart.ftl" tofile="${basedir}/themes/${component-name}/webapp/${component-name}/page/message.ftl" encoding="utf-8">
 		        <filterset refid="replacePlaceholders"/>
 			</copy>
-			<copy file="${basedir}/documents/resources/templates/themepart.ftl" tofile="${basedir}/themes/${component-name}/webapp/page/top.ftl" encoding="utf-8">
+			<copy file="${basedir}/documents/resources/templates/themepart.ftl" tofile="${basedir}/themes/${component-name}/webapp/${component-name}/page/top.ftl" encoding="utf-8">
 		        <filterset refid="replacePlaceholders"/>
 			</copy>
-			<copy file="${basedir}/documents/resources/templates/themepart.ftl" tofile="${basedir}/themes/${component-name}/webapp/page/left.ftl" encoding="utf-8">
+			<copy file="${basedir}/documents/resources/templates/themepart.ftl" tofile="${basedir}/themes/${component-name}/webapp/${component-name}/page/left.ftl" encoding="utf-8">
 		        <filterset refid="replacePlaceholders"/>
 			</copy>
-			<copy file="${basedir}/documents/resources/templates/themepart.ftl" tofile="${basedir}/themes/${component-name}/webapp/page/right.ftl" encoding="utf-8">
+			<copy file="${basedir}/documents/resources/templates/themepart.ftl" tofile="${basedir}/themes/${component-name}/webapp/${component-name}/page/right.ftl" encoding="utf-8">
 		        <filterset refid="replacePlaceholders"/>
 			</copy>
-            <copy file="${basedir}/documents/resources/templates/themepart.ftl" tofile="${basedir}/themes/${component-name}/webapp/page/404.ftl" encoding="utf-8">
+            <copy file="${basedir}/documents/resources/templates/themepart.ftl" tofile="${basedir}/themes/${component-name}/webapp/${component-name}/page/404.ftl" encoding="utf-8">
                 <filterset refid="replacePlaceholders"/>
             </copy>
 
-            <copy file="${basedir}/documents/resources/templates/themepart.ftl" tofile="${basedir}/themes/${component-name}/webapp/page/login.ftl" encoding="utf-8">
+            <copy file="${basedir}/documents/resources/templates/themepart.ftl" tofile="${basedir}/themes/${component-name}/webapp/${component-name}/page/login.ftl" encoding="utf-8">
                 <filterset refid="replacePlaceholders"/>
             </copy>
 
-            <copy file="${basedir}/documents/resources/templates/themepart.ftl" tofile="${basedir}/themes/${component-name}/webapp/page/navbar.ftl" encoding="utf-8">
+            <copy file="${basedir}/documents/resources/templates/themepart.ftl" tofile="${basedir}/themes/${component-name}/webapp/${component-name}/page/navbar.ftl" encoding="utf-8">
                 <filterset refid="replacePlaceholders"/>
             </copy>
-            <copy file="${basedir}/documents/resources/templates/themepart.ftl" tofile="${basedir}/themes/${component-name}/webapp/page/pagebar.ftl" encoding="utf-8">
+            <copy file="${basedir}/documents/resources/templates/themepart.ftl" tofile="${basedir}/themes/${component-name}/webapp/${component-name}/page/pagebar.ftl" encoding="utf-8">
                 <filterset refid="replacePlaceholders"/>
             </copy>
-            <copy file="${basedir}/documents/resources/templates/themepart.ftl" tofile="${basedir}/themes/${component-name}/webapp/page/contextmenu.ftl" encoding="utf-8">
+            <copy file="${basedir}/documents/resources/templates/themepart.ftl" tofile="${basedir}/themes/${component-name}/webapp/${component-name}/page/contextmenu.ftl" encoding="utf-8">
                 <filterset refid="replacePlaceholders"/>
             </copy>
 	    </target>
 	 
     <!-- ================================================================== -->
-    <!-- Deploy Applicitions depends="clean-all ,build"                                                 -->
+    <!-- Deploy Applicitions depends="clean-all ,build" -->
     <!-- ================================================================== -->
 	
 	<target name="dist" description="编译整个工程生成安装包" depends="clean-all ,build">
@@ -764,6 +804,7 @@
 		<mkdir dir="${basedir}/build/release/core"/>
 		<mkdir dir="${basedir}/build/release/themes"/>
 		<mkdir dir="${basedir}/build/release/runtime"/>
+        <mkdir dir="${basedir}/build/release/runtime/logs"/>
 		<mkdir dir="${basedir}/build/release/baseapps"/>
 		<mkdir dir="${basedir}/build/release/hot-deploy"/>
 		
@@ -777,9 +818,10 @@
             	<exclude name="**/appserver/**"/>
             	<exclude name="**/resources/**"/>
             	<exclude name="**/appserver/templates/**"/>
+                <exclude name="**/base/config/install.lock"/>
             	<!--
             	<exclude name="**/base/config/installwithxml-containers.xml"/>
-				<exclude name="**/base/config/install.lock"/>
+
 				-->
 		    </fileset>
         </copy>

@@ -24,20 +24,66 @@ import java.util.Map;
  *
  */
 public interface PartyClsGroupService {
+	/*
+	<service name="createPartyClassification" engine="simple" default-entity-name="PartyClassification"
+            location="component://party/script/org/ofbiz/party/party/PartyServices.xml" invoke="createPartyClassification">
+        <description>create PartyClassification</description>
+        <permission-service service-name="partyBasePermissionCheck" main-action="CREATE"/>
+        <auto-attributes mode="IN" include="pk" optional="false"/>
+        <auto-attributes mode="IN" include="nonpk" optional="true"/>
+        <override name="fromDate" optional="true"/>
+    </service>
+    */
+	public Map<String,Object>  createPartyClassification(Map<String, ? extends Object> context);
+
+	/*
+    <service name="updatePartyClassification" engine="simple" default-entity-name="PartyClassification"
+        location="component://party/script/org/ofbiz/party/party/PartyServices.xml" invoke="updatePartyClassification">
+        <description>update PartyClassification</description>
+        <permission-service service-name="partyBasePermissionCheck" main-action="UPDATE"/>
+        <auto-attributes mode="IN" include="pk" optional="false"/>
+        <auto-attributes mode="IN" include="nonpk" optional="true"/>
+    </service>
+    */
+	public Map<String,Object>  updatePartyClassification(Map<String, ? extends Object> context);
+
+	/*
+    <service name="deletePartyClassification" engine="simple" default-entity-name="PartyClassification"
+            location="component://party/script/org/ofbiz/party/party/PartyServices.xml" invoke="deletePartyClassification">
+        <description>delete PartyClassification</description>
+        <permission-service service-name="partyBasePermissionCheck" main-action="DELETE"/>
+        <auto-attributes mode="IN" include="pk" optional="false"/>
+    </service>
+	*/
+	public Map<String,Object>  deletePartyClassification(Map<String, ? extends Object> context);
 
 	/**
 	 * 获取根组织机构
 	 * @param context
 	 * @return
 	 */
-	public List<Map>  listRootNode(Map<String, ? extends Object> context);
+	//public Map<String,Object> listRootNode(Map<String, ? extends Object> context);
+
+	/**
+	 * 获取下级组织机构的数目
+	 * @param context
+	 * @return
+	 */
+	public Map<String,Object>  getChildPartyClassificationGroupCount(Map<String, ? extends Object> context);
 
 	/**
 	 * 获取下级组织机构
 	 * @param context
 	 * @return
 	 */
-	public List<Map>  listChildNode(Map<String, ? extends Object> context);
+	public Map<String,Object> listChildPartyClassificationGroup(Map<String, ? extends Object> context);
+
+	/**
+	 * 获取所有的组织机构
+	 * @param context
+	 * @return
+	 */
+	public Map<String,  Object> getPartyClassificationGroupTree(Map<String, ? extends Object> context);
 
 
 	/**
@@ -45,50 +91,77 @@ public interface PartyClsGroupService {
 	 * @param context
 	 * @return
 	 */
-	public List<Map>  searchNode(Map<String, ? extends Object> context);
+	public Map<String,Object>  searchPartyClassificationGroup(Map<String, ? extends Object> context);
 
 
 	/**
 	 * 是否存在获取下级组织机构
-	 * @param parentId
+	 * @param context
 	 * @return
 	 */
-	public boolean hasChildrenPartyClsGroup(String parentId);
+	public Map<String,Object> hasChildPartyClassificationGroup(Map<String, ? extends Object> context);
 
 
 	/**
 	 * 获取指定组织机构
-	 * @param partyClsGroupId
+	 * @param context
 	 * @return
 	 */
-	public GenericValue findPartyClsGroupById(String partyClsGroupId);
+	public Map<String,Object> findPartyClassificationGroupById(Map<String, ? extends Object> context);
 
 	/**
 	 * 相同组织机构下是否存在同名
-	 * @param parentId
+	 * @param context
 	 * @return
 	 */
-	public boolean hasPartyClsGroupName(String parentId,String description);
+	public Map<String,Object>  hasPartyClassificationGroupName(Map<String, ? extends Object> context);
 
 
+	/**
+	 * 移动组织机构
+	 * @param context
+	 * @return
+	 */
+	public Map<String,Object>  movePartyClassificationGroup(Map<String, ? extends Object> context);
 
 
 	/**
 	 * 创建组织机构
-	 * @param partyGroup
+	 * <service name="createPartyClassificationGroup" engine="simple" default-entity-name="PartyClassificationGroup"
+	 location="component://party/script/org/ofbiz/party/party/PartyServices.xml" invoke="createPartyClassificationGroup">
+	 <description>create PartyClassificationGroup</description>
+	 <permission-service service-name="partyBasePermissionCheck" main-action="CREATE"/>
+	 <auto-attributes mode="OUT" include="pk" optional="false"/>
+	 <auto-attributes mode="IN" include="nonpk" optional="true"/>
+	 </service>
+	 * @param context
 	 */
-	public void createPartyClsGroup(  GenericValue partyGroup);
+	public  Map<String,Object> createPartyClassificationGroup(Map<String, ? extends Object> context);
+
 
 	/**
 	 * 更新组织机构
-	 * @param partyClsGroup
+	 * <service name="updatePartyClassificationGroup" engine="simple" default-entity-name="PartyClassificationGroup"
+	 location="component://party/script/org/ofbiz/party/party/PartyServices.xml" invoke="updatePartyClassificationGroup">
+	 <description>update PartyClassificationGroup</description>
+	 <permission-service service-name="partyBasePermissionCheck" main-action="UPDATE"/>
+	 <auto-attributes mode="IN" include="pk" optional="false"/>
+	 <auto-attributes mode="IN" include="nonpk" optional="true"/>
+	 </service>
+	 * @param context
 	 */
-	public void savePartyClsGroup( GenericValue partyClsGroup);
+	public Map<String,Object>  updatePartyClassificationGroup( Map<String, ? extends Object> context);
 
 	/**
 	 * 删除组织机构
-	 * @param partyClsGroupId
+	 * <service name="deletePartyClassificationGroup" engine="simple" default-entity-name="PartyClassificationGroup"
+	 location="component://party/script/org/ofbiz/party/party/PartyServices.xml" invoke="deletePartyClassificationGroup">
+	 <description>delete PartyClassificationGroup</description>
+	 <permission-service service-name="partyBasePermissionCheck" main-action="DELETE"/>
+	 <auto-attributes mode="IN" include="pk" optional="false"/>
+	 </service>
+	 * @param context
 	 */
-	public void removePartyClsGroupByPrimaryKey(String partyClsGroupId);
+	public Map<String,Object>  deletePartyClassificationGroup(Map<String, ? extends Object> context);
 
 }

@@ -27,6 +27,9 @@
     <!-- 
     <entity-resource type="model" reader-name="main" loader="main" location="entitydef/${db.type}/@component-name@.sql"/>
      -->
-	
- 
+    <!-- please uncomment below if necessary -->
+    <!--
+    <service-resource type="model" loader="main" location="servicedef/services.xml"/>
+     -->
+
 </easyfk-application>

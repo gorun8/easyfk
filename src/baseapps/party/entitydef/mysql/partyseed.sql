@@ -21,7 +21,7 @@
 -- ----------------------------
 INSERT INTO `party_classification_type` VALUES ('ORGANIZATION_CLASSIF', null, 'N', '组织', '2014-06-11 15:21:30', '2014-06-11 15:21:30', '2014-06-11 15:21:30', '2014-06-11 15:21:30');
 INSERT INTO `party_classification_type` VALUES ('PERSON_CLASSIFICATIO', null, 'N', '人员', '2014-06-11 15:21:30', '2014-06-11 15:21:30', '2014-06-11 15:21:30', '2014-06-11 15:21:30');
-
+INSERT INTO `party_classification_group` VALUES ('_NA_', 'ORGANIZATION_CLASSIF', '', '组织机构目录', '2014-06-11 15:21:30', '2014-06-11 15:21:30', '2014-06-11 15:21:30', '2014-06-11 15:21:30');
 -- ----------------------------
 --  party status change defined
 -- ----------------------------

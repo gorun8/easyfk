@@ -16,7 +16,8 @@ package cn.gorun8.easyfk.@component-name@.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import cn.gorun8.easyfk.entity.GenericValue;
-import cn.gorun8.easyfk.@component-name@.dao.DemoDao;
+import cn.gorun8.easyfk.@component-name@.dao.DemoReadDao;
+import cn.gorun8.easyfk.@component-name@.dao.DemoWriteDao;
 import java.util.List;
 import cn.gorun8.easyfk.@component-name@.service.DemoService;
 
@@ -30,18 +31,19 @@ import cn.gorun8.easyfk.@component-name@.service.DemoService;
 public class DemoServiceImpl implements DemoService{
 
 	@Autowired
-	private DemoDao demoDao;
+	private DemoReadDao demoReadDao;
+	@Autowired
+	private DemoWriteDao demoWriteDao;
 
 	@Override
 	public void getDemo() {
-		demoDao.saveMaster();
-		demoDao.saveSlave();
+
 		System.out.println("sevice autowired success");
 	}
 
 	public List<GenericValue> listByPage()
 	{
-		return  demoDao.listByPage();
+		return null;
 	}
 
 }

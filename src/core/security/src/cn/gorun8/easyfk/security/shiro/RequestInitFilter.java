@@ -30,6 +30,15 @@ import org.apache.shiro.web.servlet.OncePerRequestFilter;
 public class RequestInitFilter extends OncePerRequestFilter {
     private final  static String module = RequestInitFilter.class.getName();
     private final  static String FILTERED_FLG = "FILTERED_FLG";
+    private ResourceBundleMessageSource uiLabelMap;
+
+    public ResourceBundleMessageSource getUiLabelMap() {
+        return uiLabelMap;
+    }
+
+    public void setUiLabelMap(ResourceBundleMessageSource uiLabelMap) {
+        this.uiLabelMap = uiLabelMap;
+    }
 
     @Override
     protected void doFilterInternal(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
@@ -42,9 +51,11 @@ public class RequestInitFilter extends OncePerRequestFilter {
         request.setAttribute(FILTERED_FLG, true);
 
         try {
-            ResourceBundleMessageSource uiLabelMap = UtilIOC.getBean(ResourceBundleMessageSource.class);
-            String labelMapName = uiLabelMap.getLabelMapName();
-            request.setAttribute(labelMapName, uiLabelMap);
+            if(uiLabelMap != null) {
+                String labelMapName = uiLabelMap.getLabelMapName();
+                request.setAttribute(labelMapName, uiLabelMap);
+            }
+
         }catch (Exception e){
             e.printStackTrace();
             Debug.logWarning("i18n resource not found",module);

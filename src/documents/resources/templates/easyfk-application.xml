@@ -27,10 +27,15 @@
     type:指明location指定的文件的数据用途类型，可以为model:表结构， seed:初始化数据，demo:示例数据。
     <entity-resource type="model" reader-name="main" loader="main" location="entitydef/${db.type}/@component-name@.sql"/>
      -->
+
+    <!-- please uncomment below if necessary -->
+    <!--
+    <service-resource type="model" loader="main" location="servicedef/services.xml"/>
+     -->
     <!-- web baseapps; will be mounted when using the embedded container -->
-    <webapp name="@webapp-name@"
-        title="@component-title@"
+    <webapp name="@component-name@"
+        title="@component-name@desc"
         server="default-server"
-        location="webapp"
-        mount-point="/@webapp-name@"/>
+        location="webapp/@component-name@"
+        mount-point="/@component-name@"/>
 </easyfk-application>

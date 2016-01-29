@@ -76,8 +76,8 @@ public class PageBarDirective extends AbstractDirective {
 			long viewSize = page.getPageSize();
 			long viewIndex = page.getPageNum();
 			long pages = page.getPages();
-			long startShowIndex = pages - 5 ;
-			long endShowIndex = pages + 5;
+			long startShowIndex = viewIndex - 5 ;
+			long endShowIndex = viewIndex + 5;
 
 			if(startShowIndex <= 0){
 				startShowIndex = 1L;

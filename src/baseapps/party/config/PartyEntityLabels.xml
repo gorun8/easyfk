@@ -15,141 +15,141 @@ Author:hezhiping   Email:110476592@qq.com
 <resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <property key="AgreementItemType.description.AGREEMENT_COMMISSION">
         <value xml:lang="en">Commission rate</value>
-        <value xml:lang="zh">节</value>
+        <value xml:lang="zh_CN">节</value>
     </property>
     <property key="AgreementItemType.description.AGREEMENT_EXHIBIT">
         <value xml:lang="en">Exhibit</value>
-        <value xml:lang="zh">展览</value>
+        <value xml:lang="zh_CN">展览</value>
     </property>
     <property key="AgreementItemType.description.AGREEMENT_PRICING_PR">
         <value xml:lang="en">Pricing</value>
-        <value xml:lang="zh">价格</value>
+        <value xml:lang="zh_CN">价格</value>
     </property>
     <property key="AgreementItemType.description.AGREEMENT_SECTION">
         <value xml:lang="en">Section</value>
-        <value xml:lang="zh">节</value>
+        <value xml:lang="zh_CN">节</value>
     </property>
     <property key="AgreementItemType.description.SUBAGREEMENT">
         <value xml:lang="en">Sub-Agreement</value>
-        <value xml:lang="zh">子合同</value>
+        <value xml:lang="zh_CN">子合同</value>
     </property>
     <property key="AgreementType.description.COMMISSION_AGREEMENT">
         <value xml:lang="en">Commission</value>
-        <value xml:lang="zh">佣金</value>
+        <value xml:lang="zh_CN">佣金</value>
     </property>
     <property key="AgreementType.description.EMPLOYMENT_AGREEMENT">
         <value xml:lang="en">Employment</value>
-        <value xml:lang="zh">工作</value>
+        <value xml:lang="zh_CN">工作</value>
     </property>
     <property key="AgreementType.description.EULA">
         <value xml:lang="en">End User License Agreement</value>
-        <value xml:lang="zh">最终用户版权协议</value>
+        <value xml:lang="zh_CN">最终用户版权协议</value>
     </property>
     <property key="AgreementType.description.OTHER_AGREEMENT">
         <value xml:lang="en">Other</value>
-        <value xml:lang="zh">其它</value>
+        <value xml:lang="zh_CN">其它</value>
     </property>
     <property key="AgreementType.description.PRODUCT_AGREEMENT">
         <value xml:lang="en">Product</value>
-        <value xml:lang="zh">宝贝</value>
+        <value xml:lang="zh_CN">宝贝</value>
     </property>
     <property key="AgreementType.description.PURCHASE_AGREEMENT">
         <value xml:lang="en">Purchase</value>
-        <value xml:lang="zh">购买</value>
+        <value xml:lang="zh_CN">购买</value>
     </property>
     <property key="AgreementType.description.SALES_AGREEMENT">
         <value xml:lang="en">Sales</value>
-        <value xml:lang="zh">销售</value>
+        <value xml:lang="zh_CN">销售</value>
     </property>
     <property key="CommunicationEventPrpTyp.description.ACTIVITY_REQUEST">
         <value xml:lang="en">Activity Request</value>
-        <value xml:lang="zh">活动请求</value>
+        <value xml:lang="zh_CN">活动请求</value>
     </property>
     <property key="CommunicationEventPrpTyp.description.CONFERENCE">
         <value xml:lang="en">Conference</value>
-        <value xml:lang="zh">讨论会</value>
+        <value xml:lang="zh_CN">讨论会</value>
     </property>
     <property key="CommunicationEventPrpTyp.description.CUSTOMER_SERVICE_CAL">
         <value xml:lang="en">Customer Service Call</value>
-        <value xml:lang="zh">客户服务电话</value>
+        <value xml:lang="zh_CN">客户服务电话</value>
     </property>
     <property key="CommunicationEventPrpTyp.description.INQUIRY">
         <value xml:lang="en">Inquiry</value>
-        <value xml:lang="zh">查询</value>
+        <value xml:lang="zh_CN">查询</value>
     </property>
     <property key="CommunicationEventPrpTyp.description.MEETING">
         <value xml:lang="en">Meeting</value>
-        <value xml:lang="zh">会议</value>
+        <value xml:lang="zh_CN">会议</value>
     </property>
     <property key="CommunicationEventPrpTyp.description.SALES_FOLLOW_UP">
         <value xml:lang="en">Sales Follow Up</value>
-        <value xml:lang="zh">销售跟进</value>
+        <value xml:lang="zh_CN">销售跟进</value>
     </property>
     <property key="CommunicationEventPrpTyp.description.SEMINAR">
         <value xml:lang="en">Seminar</value>
-        <value xml:lang="zh">研讨会</value>
+        <value xml:lang="zh_CN">研讨会</value>
     </property>
     <property key="CommunicationEventPrpTyp.description.SUPPORT_CALL">
         <value xml:lang="en">Support Call</value>
-        <value xml:lang="zh">支持电话</value>
+        <value xml:lang="zh_CN">支持电话</value>
     </property>
     <property key="CommunicationEventType.description.AUTO_EMAIL_COMM">
         <value xml:lang="en">Auto Email</value>
-        <value xml:lang="zh">自动电子邮件</value>
+        <value xml:lang="zh_CN">自动电子邮件</value>
     </property>
     <property key="CommunicationEventType.description.COMMENT_NOTE">
         <value xml:lang="en">Comment/Note</value>
-        <value xml:lang="zh">评论/便笺</value>
+        <value xml:lang="zh_CN">评论/便笺</value>
     </property>
     <property key="CommunicationEventType.description.EMAIL_COMMUNICATION">
         <value xml:lang="en">Email</value>
-        <value xml:lang="zh">电子邮件</value>
+        <value xml:lang="zh_CN">电子邮件</value>
     </property>
     <property key="CommunicationEventType.description.FACE_TO_FACE_COMMUNI">
         <value xml:lang="en">Face-To-Face</value>
-        <value xml:lang="zh">当面</value>
+        <value xml:lang="zh_CN">当面</value>
     </property>
     <property key="CommunicationEventType.description.FAX_COMMUNICATION">
         <value xml:lang="en">Fax</value>
-        <value xml:lang="zh">传真</value>
+        <value xml:lang="zh_CN">传真</value>
     </property>
     <property key="CommunicationEventType.description.LETTER_CORRESPONDENC">
         <value xml:lang="en">Letter</value>
-        <value xml:lang="zh">信件</value>
+        <value xml:lang="zh_CN">信件</value>
     </property>
     <property key="CommunicationEventType.description.PHONE_COMMUNICATION">
         <value xml:lang="en">Phone</value>
-        <value xml:lang="zh">电话</value>
+        <value xml:lang="zh_CN">电话</value>
     </property>
     <property key="CommunicationEventType.description.WEB_SITE_COMMUNICATI">
         <value xml:lang="en">Web Site</value>
-        <value xml:lang="zh">网站</value>
+        <value xml:lang="zh_CN">网站</value>
     </property>
     <property key="ContactMechPurposeType.description.BILLING_EMAIL">
         <value xml:lang="en">Billing (AP) Email</value>
-        <value xml:lang="zh">寄账单电子邮件</value>
+        <value xml:lang="zh_CN">寄账单电子邮件</value>
     </property>
     <property key="ContactMechPurposeType.description.BILLING_LOCATION">
         <value xml:lang="en">Billing (AP) Address</value>
-        <value xml:lang="zh">寄账单地址</value>
+        <value xml:lang="zh_CN">寄账单地址</value>
     </property>
     <property key="ContactMechPurposeType.description.FAX_BILLING">
         <value xml:lang="en">Billing Destination Fax Number</value>
     </property>
     <property key="ContactMechPurposeType.description.FAX_NUMBER">
         <value xml:lang="en">Main Fax Number</value>
-        <value xml:lang="zh">主要传真号码</value>
+        <value xml:lang="zh_CN">主要传真号码</value>
     </property>
     <property key="ContactMechPurposeType.description.FAX_NUMBER_SEC">
         <value xml:lang="en">Secondary Fax Number</value>
-        <value xml:lang="zh">第二个传真号码</value>
+        <value xml:lang="zh_CN">第二个传真号码</value>
     </property>
     <property key="ContactMechPurposeType.description.FAX_SHIPPING">
         <value xml:lang="en">Shipping Destination Fax Number</value>
     </property>
     <property key="ContactMechPurposeType.description.GENERAL_LOCATION">
         <value xml:lang="en">General Correspondence Address</value>
-        <value xml:lang="zh">通信地址</value>
+        <value xml:lang="zh_CN">通信地址</value>
     </property>
     <property key="ContactMechPurposeType.description.ICAL_URL">
         <value xml:lang="en">iCalendar URL</value>
@@ -159,213 +159,213 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="ContactMechPurposeType.description.ORDER_EMAIL">
         <value xml:lang="en">Order Notification Email Address</value>
-        <value xml:lang="zh">订单通知电子邮件地址</value>
+        <value xml:lang="zh_CN">订单通知电子邮件地址</value>
     </property>
     <property key="ContactMechPurposeType.description.OTHER_EMAIL">
         <value xml:lang="en">Other Email Address</value>
-        <value xml:lang="zh">其它电子邮件地址</value>
+        <value xml:lang="zh_CN">其它电子邮件地址</value>
     </property>
     <property key="ContactMechPurposeType.description.PAYMENT_EMAIL">
         <value xml:lang="en">Payment (AR) Email</value>
-        <value xml:lang="zh">支付电子邮件</value>
+        <value xml:lang="zh_CN">支付电子邮件</value>
     </property>
     <property key="ContactMechPurposeType.description.PAYMENT_LOCATION">
         <value xml:lang="en">Payment (AR) Address</value>
-        <value xml:lang="zh">支付地址</value>
+        <value xml:lang="zh_CN">支付地址</value>
     </property>
     <property key="ContactMechPurposeType.description.PHONE_ASSISTANT">
         <value xml:lang="en">Assistant's Phone Number</value>
-        <value xml:lang="zh">助理的电话号码</value>
+        <value xml:lang="zh_CN">助理的电话号码</value>
     </property>
     <property key="ContactMechPurposeType.description.PHONE_BILLING">
         <value xml:lang="en">Billing (AP) Phone Number</value>
-        <value xml:lang="zh">寄账单电话号码</value>
+        <value xml:lang="zh_CN">寄账单电话号码</value>
     </property>
     <property key="ContactMechPurposeType.description.PHONE_DID">
         <value xml:lang="en">Direct Inward Dialing Phone Number</value>
-        <value xml:lang="zh">直拨电话号码</value>
+        <value xml:lang="zh_CN">直拨电话号码</value>
     </property>
     <property key="ContactMechPurposeType.description.PHONE_HOME">
         <value xml:lang="en">Main Home Phone Number</value>
-        <value xml:lang="zh">主要家庭电话号码</value>
+        <value xml:lang="zh_CN">主要家庭电话号码</value>
     </property>
     <property key="ContactMechPurposeType.description.PHONE_MOBILE">
         <value xml:lang="en">Main Mobile Phone Number</value>
-        <value xml:lang="zh">主要移动电话号码</value>
+        <value xml:lang="zh_CN">主要移动电话号码</value>
     </property>
     <property key="ContactMechPurposeType.description.PHONE_PAYMENT">
         <value xml:lang="en">Payment (AR) Phone Number</value>
-        <value xml:lang="zh">支付电话号码</value>
+        <value xml:lang="zh_CN">支付电话号码</value>
     </property>
     <property key="ContactMechPurposeType.description.PHONE_QUICK">
         <value xml:lang="en">Quick Calls Phone Number</value>
-        <value xml:lang="zh">快速呼叫电话号码</value>
+        <value xml:lang="zh_CN">快速呼叫电话号码</value>
     </property>
     <property key="ContactMechPurposeType.description.PHONE_SHIPPING">
         <value xml:lang="en">Shipping Destination Phone Number</value>
-        <value xml:lang="zh">货运目的地电话号码</value>
+        <value xml:lang="zh_CN">货运目的地电话号码</value>
     </property>
     <property key="ContactMechPurposeType.description.PHONE_SHIP_ORIG">
         <value xml:lang="en">Shipping Origin Phone Number</value>
-        <value xml:lang="zh">货运发货地电话号码</value>
+        <value xml:lang="zh_CN">货运发货地电话号码</value>
     </property>
     <property key="ContactMechPurposeType.description.PHONE_WORK">
         <value xml:lang="en">Main Work Phone Number</value>
-        <value xml:lang="zh">主要工作电话号码</value>
+        <value xml:lang="zh_CN">主要工作电话号码</value>
     </property>
     <property key="ContactMechPurposeType.description.PHONE_WORK_SEC">
         <value xml:lang="en">Secondary Work Phone Number</value>
-        <value xml:lang="zh">第二个工作电话号码</value>
+        <value xml:lang="zh_CN">第二个工作电话号码</value>
     </property>
     <property key="ContactMechPurposeType.description.PREVIOUS_LOCATION">
         <value xml:lang="en">Previous Address</value>
-        <value xml:lang="zh">上一个地址</value>
+        <value xml:lang="zh_CN">上一个地址</value>
     </property>
     <property key="ContactMechPurposeType.description.PRIMARY_EMAIL">
         <value xml:lang="en">Primary Email Address</value>
-        <value xml:lang="zh">第一个电子邮件地址</value>
+        <value xml:lang="zh_CN">第一个电子邮件地址</value>
     </property>
     <property key="ContactMechPurposeType.description.PRIMARY_LOCATION">
         <value xml:lang="en">Primary Address</value>
-        <value xml:lang="zh">首选地址</value>
+        <value xml:lang="zh_CN">首选地址</value>
     </property>
     <property key="ContactMechPurposeType.description.PRIMARY_PHONE">
         <value xml:lang="en">Primary Phone Number</value>
-        <value xml:lang="zh">第一个电话号码</value>
+        <value xml:lang="zh_CN">第一个电话号码</value>
     </property>
     <property key="ContactMechPurposeType.description.PRIMARY_WEB_URL">
         <value xml:lang="en">Primary Website URL</value>
-        <value xml:lang="zh">第一个网站网址</value>
+        <value xml:lang="zh_CN">第一个网站网址</value>
     </property>
     <property key="ContactMechPurposeType.description.PUR_RET_LOCATION">
         <value xml:lang="en">Purchase Return Address</value>
-        <value xml:lang="zh">购物退货地址</value>
+        <value xml:lang="zh_CN">购物退货地址</value>
     </property>
     <property key="ContactMechPurposeType.description.SHIPPING_LOCATION">
         <value xml:lang="en">Shipping Destination Address</value>
-        <value xml:lang="zh">货运目的地址</value>
+        <value xml:lang="zh_CN">货运目的地址</value>
     </property>
     <property key="ContactMechPurposeType.description.SHIP_ORIG_LOCATION">
         <value xml:lang="en">Shipping Origin Address</value>
-        <value xml:lang="zh">货运发货地址</value>
+        <value xml:lang="zh_CN">货运发货地址</value>
     </property>
     <property key="ContactMechType.description.DOMAIN_NAME">
         <value xml:lang="en">Internet Domain Name</value>
-        <value xml:lang="zh">互联网域名</value>
+        <value xml:lang="zh_CN">互联网域名</value>
     </property>
     <property key="ContactMechType.description.ELECTRONIC_ADDRESS">
         <value xml:lang="en">Electronic Address</value>
-        <value xml:lang="zh">电子地址</value>
+        <value xml:lang="zh_CN">电子地址</value>
     </property>
     <property key="ContactMechType.description.EMAIL_ADDRESS">
         <value xml:lang="en">Email Address</value>
-        <value xml:lang="zh">电子邮件地址</value>
+        <value xml:lang="zh_CN">电子邮件地址</value>
     </property>
     <property key="ContactMechType.description.INTERNAL_PARTYID">
         <value xml:lang="en">Internal Party Note</value>
     </property>
     <property key="ContactMechType.description.IP_ADDRESS">
         <value xml:lang="en">Internet IP Address</value>
-        <value xml:lang="zh">互联网IP地址</value>
+        <value xml:lang="zh_CN">互联网IP地址</value>
     </property>
     <property key="ContactMechType.description.LDAP_ADDRESS">
         <value xml:lang="en">LDAP Address</value>
     </property>
     <property key="ContactMechType.description.POSTAL_ADDRESS">
         <value xml:lang="en">Postal Address</value>
-        <value xml:lang="zh">邮政地址</value>
+        <value xml:lang="zh_CN">邮政地址</value>
     </property>
     <property key="ContactMechType.description.TELECOM_NUMBER">
         <value xml:lang="en">Phone Number</value>
-        <value xml:lang="zh">电话号码</value>
+        <value xml:lang="zh_CN">电话号码</value>
     </property>
     <property key="ContactMechType.description.WEB_ADDRESS">
         <value xml:lang="en">Web URL/Address</value>
-        <value xml:lang="zh">网站网址</value>
+        <value xml:lang="zh_CN">网站网址</value>
     </property>
     <property key="PartyClassificationGroup.description.ASSEMBLY">
         <value xml:lang="en">ASSEMBLY</value>
-        <value xml:lang="zh">装配</value>
+        <value xml:lang="zh_CN">装配</value>
     </property>
     <property key="PartyClassificationGroup.description.CADRE">
         <value xml:lang="en">CADRE</value>
-        <value xml:lang="zh">骨干</value>
+        <value xml:lang="zh_CN">骨干</value>
     </property>
     <property key="PartyClassificationGroup.description.CHEMICAL">
         <value xml:lang="en">CHEMICAL</value>
-        <value xml:lang="zh">化学</value>
+        <value xml:lang="zh_CN">化学</value>
     </property>
     <property key="PartyClassificationGroup.description.DIRECTEUR">
         <value xml:lang="en">DIRECTEUR</value>
-        <value xml:lang="zh">经理</value>
+        <value xml:lang="zh_CN">经理</value>
     </property>
     <property key="PartyClassificationGroup.description.EMPLOYE">
         <value xml:lang="en">EMPLOYEE</value>
-        <value xml:lang="zh">雇员</value>
+        <value xml:lang="zh_CN">雇员</value>
     </property>
     <property key="PartyClassificationGroup.description.MANUFACTURING">
         <value xml:lang="en">MANUFACTURING</value>
-        <value xml:lang="zh">制造</value>
+        <value xml:lang="zh_CN">制造</value>
     </property>
     <property key="PartyClassificationType.description.ANNUAL_REVENUE">
         <value xml:lang="en">Annual Revenue</value>
-        <value xml:lang="zh">年收入</value>
+        <value xml:lang="zh_CN">年收入</value>
     </property>
     <property key="PartyClassificationType.description.EEOC_CLASSIFICATION">
         <value xml:lang="en">EEOC (Equal Employment Opportunity Commission)</value>
-        <value xml:lang="zh">公平就业机会委员会</value>
+        <value xml:lang="zh_CN">公平就业机会委员会</value>
     </property>
     <property key="PartyClassificationType.description.INCOME_CLASSIFICATIO">
         <value xml:lang="en">Income</value>
-        <value xml:lang="zh">收入</value>
+        <value xml:lang="zh_CN">收入</value>
     </property>
     <property key="PartyClassificationType.description.INDUSTRY_CLASSIFICAT">
         <value xml:lang="en">Industry</value>
-        <value xml:lang="zh">产业</value>
+        <value xml:lang="zh_CN">产业</value>
     </property>
     <property key="PartyClassificationType.description.MINORITY_CLASSIFICAT">
         <value xml:lang="en">Minority</value>
-        <value xml:lang="zh">少数</value>
+        <value xml:lang="zh_CN">少数</value>
     </property>
     <property key="PartyClassificationType.description.NUMBER_OF_EMPLOYEES">
         <value xml:lang="en">Number of Employees</value>
-        <value xml:lang="zh">雇员数量</value>
+        <value xml:lang="zh_CN">雇员数量</value>
     </property>
     <property key="PartyClassificationType.description.ORGANIZATION_CLASSIF">
         <value xml:lang="en">Organization</value>
-        <value xml:lang="zh">团体</value>
+        <value xml:lang="zh_CN">团体</value>
     </property>
     <property key="PartyClassificationType.description.OWNERSHIP">
         <value xml:lang="en">Ownership</value>
-        <value xml:lang="zh">所有权</value>
+        <value xml:lang="zh_CN">所有权</value>
     </property>
     <property key="PartyClassificationType.description.PERSON_CLASSIFICATIO">
         <value xml:lang="en">Person</value>
-        <value xml:lang="zh">人员</value>
+        <value xml:lang="zh_CN">人员</value>
     </property>
     <property key="PartyClassificationType.description.SIC_CODE">
         <value xml:lang="en">SIC Code</value>
-        <value xml:lang="zh">标准工业分类规则</value>
+        <value xml:lang="zh_CN">标准工业分类规则</value>
     </property>
     <property key="PartyClassificationType.description.SIZE_CLASSIFICATION">
         <value xml:lang="en">Size</value>
-        <value xml:lang="zh">规模</value>
+        <value xml:lang="zh_CN">规模</value>
     </property>
     <property key="PartyClassificationType.description.TRADE_CLASSIFICATION">
         <value xml:lang="en">Trade</value>
-        <value xml:lang="zh">贸易</value>
+        <value xml:lang="zh_CN">贸易</value>
     </property>
     <property key="PartyClassificationType.description.TRADE_RETAIL_CLASSIF">
         <value xml:lang="en">Retail</value>
-        <value xml:lang="zh">零售</value>
+        <value xml:lang="zh_CN">零售</value>
     </property>
     <property key="PartyClassificationType.description.TRADE_WHOLE_CLASSIFI">
         <value xml:lang="en">Wholesale</value>
-        <value xml:lang="zh">批发</value>
+        <value xml:lang="zh_CN">批发</value>
     </property>
     <property key="PartyClassificationType.description.VALUE_RATING">
         <value xml:lang="en">Value Rating</value>
-        <value xml:lang="zh">价值评级</value>
+        <value xml:lang="zh_CN">价值评级</value>
     </property>
     <property key="PartyContentType.description.INTERNAL">
         <value xml:lang="en">Internal Content</value>
@@ -381,781 +381,781 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.ACCOUNT">
         <value xml:lang="en">Account Owned by</value>
-        <value xml:lang="zh">账户</value>
+        <value xml:lang="zh_CN">账户</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.AGENT">
         <value xml:lang="en">Agent</value>
-        <value xml:lang="zh">代理</value>
+        <value xml:lang="zh_CN">代理</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.ASSISTANT">
         <value xml:lang="en">Assistant</value>
-        <value xml:lang="zh">助理</value>
+        <value xml:lang="zh_CN">助理</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.BLOG_PERMISSION">
         <value xml:lang="en">Blog Users</value>
-        <value xml:lang="zh">博客用户</value>
+        <value xml:lang="zh_CN">博客用户</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.CHILD">
         <value xml:lang="en">Child</value>
-        <value xml:lang="zh">下级</value>
+        <value xml:lang="zh_CN">下级</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.CONTACT_REL">
         <value xml:lang="en">Contact</value>
-        <value xml:lang="zh">联系</value>
+        <value xml:lang="zh_CN">联系</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.CUSTOMER_REL">
         <value xml:lang="en">Customer</value>
-        <value xml:lang="zh">客户</value>
+        <value xml:lang="zh_CN">客户</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.DISTRIBUTION_CHANNEL">
         <value xml:lang="en">Distributor</value>
-        <value xml:lang="zh">批发商</value>
+        <value xml:lang="zh_CN">批发商</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.EMPLOYMENT">
         <value xml:lang="en">Employee</value>
-        <value xml:lang="zh">职员</value>
+        <value xml:lang="zh_CN">职员</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.FRIEND">
         <value xml:lang="en">Friend</value>
-        <value xml:lang="zh">朋友</value>
+        <value xml:lang="zh_CN">朋友</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.GROUP_ROLLUP">
         <value xml:lang="en">Group Member</value>
-        <value xml:lang="zh">组成员</value>
+        <value xml:lang="zh_CN">组成员</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.HOST_SERVER_VISITOR">
         <value xml:lang="en">Host Server Visitor</value>
-        <value xml:lang="zh">主机服务器访问者</value>
+        <value xml:lang="zh_CN">主机服务器访问者</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.LEAD_OWNER">
         <value xml:lang="en">Lead owned by</value>
-        <value xml:lang="zh">线索拥有人</value>
+        <value xml:lang="zh_CN">线索拥有人</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.LEAD_REL">
         <value xml:lang="en">Lead relation</value>
-        <value xml:lang="zh">线索关系</value>
+        <value xml:lang="zh_CN">线索关系</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.MANAGER">
         <value xml:lang="en">Manager</value>
-        <value xml:lang="zh">经理</value>
+        <value xml:lang="zh_CN">经理</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.OWNER">
         <value xml:lang="en">Owner</value>
-        <value xml:lang="zh">拥有人</value>
+        <value xml:lang="zh_CN">拥有人</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.PARENT">
         <value xml:lang="en">Parent</value>
-        <value xml:lang="zh">上级</value>
+        <value xml:lang="zh_CN">上级</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.PARENT_ACCOUNT">
         <value xml:lang="en">Parent account</value>
-        <value xml:lang="zh">上级账户</value>
+        <value xml:lang="zh_CN">上级账户</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.PARTNERSHIP">
         <value xml:lang="en">Partner</value>
-        <value xml:lang="zh">合作伙伴</value>
+        <value xml:lang="zh_CN">合作伙伴</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.REPORTS_TO">
         <value xml:lang="en">Reports to</value>
-        <value xml:lang="zh">汇报给</value>
+        <value xml:lang="zh_CN">汇报给</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.SALES_AFFILIATE">
         <value xml:lang="en">Sales Affiliate</value>
-        <value xml:lang="zh">附属销售</value>
+        <value xml:lang="zh_CN">附属销售</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.SPOUSE">
         <value xml:lang="en">Spouse</value>
-        <value xml:lang="zh">配偶</value>
+        <value xml:lang="zh_CN">配偶</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.SUPPLIER_REL">
         <value xml:lang="en">Supplier</value>
-        <value xml:lang="zh">供货商</value>
+        <value xml:lang="zh_CN">供货商</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.VISITOR_ISP">
         <value xml:lang="en">ISP Visitor</value>
-        <value xml:lang="zh">互联网服务提供商访问者</value>
+        <value xml:lang="zh_CN">互联网服务提供商访问者</value>
     </property>
     <property key="PartyRelationshipType.partyRelationshipName.WEB_MASTER_ASSIGNMEN">
         <value xml:lang="en">Web Master</value>
-        <value xml:lang="zh">网站管理员</value>
+        <value xml:lang="zh_CN">网站管理员</value>
     </property>
     <property key="PartyType.description.AUTOMATED_AGENT">
         <value xml:lang="en">Automated Agent</value>
-        <value xml:lang="zh">自动代理人</value>
+        <value xml:lang="zh_CN">自动代理人</value>
     </property>
     <property key="PartyType.description.CORPORATION">
         <value xml:lang="en">Corporation</value>
-        <value xml:lang="zh">集团</value>
+        <value xml:lang="zh_CN">集团</value>
     </property>
     <property key="PartyType.description.FAMILY">
         <value xml:lang="en">Family</value>
-        <value xml:lang="zh">家庭</value>
+        <value xml:lang="zh_CN">家庭</value>
     </property>
     <property key="PartyType.description.GOVERNMENT_AGENCY">
         <value xml:lang="en">Government Agency</value>
-        <value xml:lang="zh">政府机构</value>
+        <value xml:lang="zh_CN">政府机构</value>
     </property>
     <property key="PartyType.description.INFORMAL_GROUP">
         <value xml:lang="en">Informal Group</value>
-        <value xml:lang="zh">非正式组</value>
+        <value xml:lang="zh_CN">非正式组</value>
     </property>
     <property key="PartyType.description.LEGAL_ORGANIZATION">
         <value xml:lang="en">Legal Organization</value>
-        <value xml:lang="zh">法务部门</value>
+        <value xml:lang="zh_CN">法务部门</value>
     </property>
     <property key="PartyType.description.PARTY_GROUP">
         <value xml:lang="en">Party Group</value>
-        <value xml:lang="zh">会员组</value>
+        <value xml:lang="zh_CN">会员组</value>
     </property>
     <property key="PartyType.description.PERSON">
         <value xml:lang="en">Person</value>
-        <value xml:lang="zh">人员</value>
+        <value xml:lang="zh_CN">人员</value>
     </property>
     <property key="PartyType.description.TEAM">
         <value xml:lang="en">Team</value>
-        <value xml:lang="zh">团队</value>
+        <value xml:lang="zh_CN">团队</value>
     </property>
     <property key="RoleType.description.ACCOUNT">
         <value xml:lang="en">Account</value>
-        <value xml:lang="zh">账户</value>
+        <value xml:lang="zh_CN">账户</value>
     </property>
     <property key="RoleType.description.ACCOUNT_LEAD">
         <value xml:lang="en">Account Lead</value>
-        <value xml:lang="zh">账户线索</value>
+        <value xml:lang="zh_CN">账户线索</value>
     </property>
     <property key="RoleType.description.ADDRESSEE">
         <value xml:lang="en">Addressee</value>
-        <value xml:lang="zh">收信人</value>
+        <value xml:lang="zh_CN">收信人</value>
     </property>
     <property key="RoleType.description.ADMIN">
         <value xml:lang="en">Administrator</value>
-        <value xml:lang="zh">管理员</value>
+        <value xml:lang="zh_CN">管理员</value>
     </property>
     <property key="RoleType.description.AFFILIATE">
         <value xml:lang="en">Affiliate</value>
-        <value xml:lang="zh">附属</value>
+        <value xml:lang="zh_CN">附属</value>
     </property>
     <property key="RoleType.description.AGENT">
         <value xml:lang="en">Agent</value>
-        <value xml:lang="zh">代理人</value>
+        <value xml:lang="zh_CN">代理人</value>
     </property>
     <property key="RoleType.description.APPROVER">
         <value xml:lang="en">Approver</value>
-        <value xml:lang="zh">批准人</value>
+        <value xml:lang="zh_CN">批准人</value>
     </property>
     <property key="RoleType.description.ASSOCIATION">
         <value xml:lang="en">Association</value>
-        <value xml:lang="zh">关联</value>
+        <value xml:lang="zh_CN">关联</value>
     </property>
     <property key="RoleType.description.AUTOMATED_AGENT_ROLE">
         <value xml:lang="en">Automated Agent</value>
-        <value xml:lang="zh">自动代理人</value>
+        <value xml:lang="zh_CN">自动代理人</value>
     </property>
     <property key="RoleType.description.BCC">
         <value xml:lang="en">Blind Copy</value>
-        <value xml:lang="zh">密送</value>
+        <value xml:lang="zh_CN">密送</value>
     </property>
     <property key="RoleType.description.BILL_FROM_VENDOR">
         <value xml:lang="en">Bill-From-Vendor</value>
-        <value xml:lang="zh">发出账单的厂家</value>
+        <value xml:lang="zh_CN">发出账单的厂家</value>
     </property>
     <property key="RoleType.description.BILL_TO_CUSTOMER">
         <value xml:lang="en">Bill-To Customer</value>
-        <value xml:lang="zh">接收账单的客户</value>
+        <value xml:lang="zh_CN">接收账单的客户</value>
     </property>
     <property key="RoleType.description.BLOG">
         <value xml:lang="en">Blog</value>
-        <value xml:lang="zh">博客</value>
+        <value xml:lang="zh_CN">博客</value>
     </property>
     <property key="RoleType.description.BLOG_ADMIN">
         <value xml:lang="en">Blog Administrator</value>
-        <value xml:lang="zh">博客管理员</value>
+        <value xml:lang="zh_CN">博客管理员</value>
     </property>
     <property key="RoleType.description.BLOG_AUTHOR">
         <value xml:lang="en">Blog Author</value>
-        <value xml:lang="zh">博客作者</value>
+        <value xml:lang="zh_CN">博客作者</value>
     </property>
     <property key="RoleType.description.BLOG_EDITOR">
         <value xml:lang="en">Blog Editor</value>
-        <value xml:lang="zh">博客编辑</value>
+        <value xml:lang="zh_CN">博客编辑</value>
     </property>
     <property key="RoleType.description.BLOG_GUEST">
         <value xml:lang="en">Blog Guest</value>
-        <value xml:lang="zh">博客访客</value>
+        <value xml:lang="zh_CN">博客访客</value>
     </property>
     <property key="RoleType.description.BLOG_PUBLISHER">
         <value xml:lang="en">Blog Publisher</value>
-        <value xml:lang="zh">博客发布者</value>
+        <value xml:lang="zh_CN">博客发布者</value>
     </property>
     <property key="RoleType.description.BLOG_USER">
         <value xml:lang="en">Blog User</value>
-        <value xml:lang="zh">博客用户</value>
+        <value xml:lang="zh_CN">博客用户</value>
     </property>
     <property key="RoleType.description.BULK_CUSTOMER">
         <value xml:lang="en">Bulk Customer</value>
-        <value xml:lang="zh">大宗客户</value>
+        <value xml:lang="zh_CN">大宗客户</value>
     </property>
     <property key="RoleType.description.BUYER">
         <value xml:lang="en">Buyer</value>
-        <value xml:lang="zh">购买者</value>
+        <value xml:lang="zh_CN">购买者</value>
     </property>
     <property key="RoleType.description.CALENDAR_ROLE">
         <value xml:lang="en">Calendar</value>
-        <value xml:lang="zh">日历</value>
+        <value xml:lang="zh_CN">日历</value>
     </property>
     <property key="RoleType.description.CAL_ATTENDEE">
         <value xml:lang="en">Calendar Attendee</value>
-        <value xml:lang="zh">日历参加者</value>
+        <value xml:lang="zh_CN">日历参加者</value>
     </property>
     <property key="RoleType.description.CAL_DELEGATE">
         <value xml:lang="en">Calendar Delegate</value>
-        <value xml:lang="zh">日历代表</value>
+        <value xml:lang="zh_CN">日历代表</value>
     </property>
     <property key="RoleType.description.CAL_HOST">
         <value xml:lang="en">Calendar Host</value>
-        <value xml:lang="zh">日历主机</value>
+        <value xml:lang="zh_CN">日历主机</value>
     </property>
     <property key="RoleType.description.CAL_ORGANIZER">
         <value xml:lang="en">Calendar Organizer</value>
-        <value xml:lang="zh">日历组织者</value>
+        <value xml:lang="zh_CN">日历组织者</value>
     </property>
     <property key="RoleType.description.CAL_OWNER">
         <value xml:lang="en">Calendar Owner</value>
-        <value xml:lang="zh">日历拥有者</value>
+        <value xml:lang="zh_CN">日历拥有者</value>
     </property>
     <property key="RoleType.description.CARRIER">
         <value xml:lang="en">Carrier</value>
-        <value xml:lang="zh">承运人</value>
+        <value xml:lang="zh_CN">承运人</value>
     </property>
     <property key="RoleType.description.CASHIER">
         <value xml:lang="en">Cashier</value>
-        <value xml:lang="zh">出纳员</value>
+        <value xml:lang="zh_CN">出纳员</value>
     </property>
     <property key="RoleType.description.CC">
         <value xml:lang="en">Carbon Copy</value>
-        <value xml:lang="zh">复印</value>
+        <value xml:lang="zh_CN">复印</value>
     </property>
     <property key="RoleType.description.CLIENT">
         <value xml:lang="en">Client</value>
-        <value xml:lang="zh">客户</value>
+        <value xml:lang="zh_CN">客户</value>
     </property>
     <property key="RoleType.description.CLIENT_ANALYST">
         <value xml:lang="en">Client Analyst</value>
-        <value xml:lang="zh">客户分析员</value>
+        <value xml:lang="zh_CN">客户分析员</value>
     </property>
     <property key="RoleType.description.CLIENT_BILLING">
         <value xml:lang="en">Client Billing</value>
-        <value xml:lang="zh">客户收款员</value>
+        <value xml:lang="zh_CN">客户收款员</value>
     </property>
     <property key="RoleType.description.CLIENT_MANAGER">
         <value xml:lang="en">Client Manager</value>
-        <value xml:lang="zh">客户经理</value>
+        <value xml:lang="zh_CN">客户经理</value>
     </property>
     <property key="RoleType.description.COMMEVENT_ROLE">
         <value xml:lang="en">Communication Participant</value>
-        <value xml:lang="zh">沟通参与人</value>
+        <value xml:lang="zh_CN">沟通参与人</value>
     </property>
     <property key="RoleType.description.COMPETITOR">
         <value xml:lang="en">Competitor</value>
-        <value xml:lang="zh">竞争对手</value>
+        <value xml:lang="zh_CN">竞争对手</value>
     </property>
     <property key="RoleType.description.CONSUMER">
         <value xml:lang="en">Consumer</value>
-        <value xml:lang="zh">消费者</value>
+        <value xml:lang="zh_CN">消费者</value>
     </property>
     <property key="RoleType.description.CONTACT">
         <value xml:lang="en">Contact</value>
-        <value xml:lang="zh">联系</value>
+        <value xml:lang="zh_CN">联系</value>
     </property>
     <property key="RoleType.description.CONTENT">
         <value xml:lang="en">Content Member</value>
-        <value xml:lang="zh">内容成员</value>
+        <value xml:lang="zh_CN">内容成员</value>
     </property>
     <property key="RoleType.description.CONTENT_ADMIN">
         <value xml:lang="en">Content Administrator</value>
-        <value xml:lang="zh">内容管理员</value>
+        <value xml:lang="zh_CN">内容管理员</value>
     </property>
     <property key="RoleType.description.CONTENT_AUTHOR">
         <value xml:lang="en">Content Author</value>
-        <value xml:lang="zh">内容作者</value>
+        <value xml:lang="zh_CN">内容作者</value>
     </property>
     <property key="RoleType.description.CONTENT_EDITOR">
         <value xml:lang="en">Content Editor</value>
-        <value xml:lang="zh">内容编辑</value>
+        <value xml:lang="zh_CN">内容编辑</value>
     </property>
     <property key="RoleType.description.CONTENT_GUEST">
         <value xml:lang="en">Content Guest</value>
-        <value xml:lang="zh">内容访客</value>
+        <value xml:lang="zh_CN">内容访客</value>
     </property>
     <property key="RoleType.description.CONTENT_PUBLISHER">
         <value xml:lang="en">Content Publisher</value>
-        <value xml:lang="zh">内容发布者</value>
+        <value xml:lang="zh_CN">内容发布者</value>
     </property>
     <property key="RoleType.description.CONTENT_USER">
         <value xml:lang="en">Content User</value>
-        <value xml:lang="zh">内容用户</value>
+        <value xml:lang="zh_CN">内容用户</value>
     </property>
     <property key="RoleType.description.CONTRACTOR">
         <value xml:lang="en">Contractor</value>
-        <value xml:lang="zh">订约人</value>
+        <value xml:lang="zh_CN">订约人</value>
     </property>
     <property key="RoleType.description.CUSTOMER">
         <value xml:lang="en">Customer</value>
-        <value xml:lang="zh">客户</value>
+        <value xml:lang="zh_CN">客户</value>
     </property>
     <property key="RoleType.description.DEPARTMENT">
         <value xml:lang="en">Department</value>
-        <value xml:lang="zh">部门</value>
+        <value xml:lang="zh_CN">部门</value>
     </property>
     <property key="RoleType.description.DISTRIBUTION_CHANNEL">
         <value xml:lang="en">Distribution Channel</value>
-        <value xml:lang="zh">分销渠道</value>
+        <value xml:lang="zh_CN">分销渠道</value>
     </property>
     <property key="RoleType.description.DISTRIBUTOR">
         <value xml:lang="en">Distributor</value>
-        <value xml:lang="zh">批发商</value>
+        <value xml:lang="zh_CN">批发商</value>
     </property>
     <property key="RoleType.description.DIVISION">
         <value xml:lang="en">Division</value>
-        <value xml:lang="zh">分部</value>
+        <value xml:lang="zh_CN">分部</value>
     </property>
     <property key="RoleType.description.EMAIL_ADMIN">
         <value xml:lang="en">Email Administrator</value>
-        <value xml:lang="zh">电子邮件管理员</value>
+        <value xml:lang="zh_CN">电子邮件管理员</value>
     </property>
     <property key="RoleType.description.EMPLOYEE">
         <value xml:lang="en">Employee</value>
-        <value xml:lang="zh">职员</value>
+        <value xml:lang="zh_CN">职员</value>
     </property>
     <property key="RoleType.description.END_USER_CUSTOMER">
         <value xml:lang="en">End-User Customer</value>
-        <value xml:lang="zh">最终客户</value>
+        <value xml:lang="zh_CN">最终客户</value>
     </property>
     <property key="RoleType.description.FAMILY_MEMBER">
         <value xml:lang="en">Family Member</value>
-        <value xml:lang="zh">家庭成员</value>
+        <value xml:lang="zh_CN">家庭成员</value>
     </property>
     <property key="RoleType.description.FAM_ASSIGNEE">
         <value xml:lang="en">Fixed Asset Maint Assignee</value>
-        <value xml:lang="zh">固定资产维修保养受托人</value>
+        <value xml:lang="zh_CN">固定资产维修保养受托人</value>
     </property>
     <property key="RoleType.description.FAM_MANAGER">
         <value xml:lang="en">Maintenance Manager or Supervisor</value>
-        <value xml:lang="zh">维修保养管理员或监管者</value>
+        <value xml:lang="zh_CN">维修保养管理员或监管者</value>
     </property>
     <property key="RoleType.description.FAM_SUPPLIER">
         <value xml:lang="en">Maintenance Supplier or Service</value>
-        <value xml:lang="zh">维修保养供应商或服务</value>
+        <value xml:lang="zh_CN">维修保养供应商或服务</value>
     </property>
     <property key="RoleType.description.FAM_WORKER">
         <value xml:lang="en">Maintenance Worker</value>
-        <value xml:lang="zh">维修保养工人</value>
+        <value xml:lang="zh_CN">维修保养工人</value>
     </property>
     <property key="RoleType.description.HOSTING_SERVER">
         <value xml:lang="en">Hosting Server</value>
-        <value xml:lang="zh">托管服务器</value>
+        <value xml:lang="zh_CN">托管服务器</value>
     </property>
     <property key="RoleType.description.HOUSEHOLD">
         <value xml:lang="en">Household</value>
-        <value xml:lang="zh">家庭</value>
+        <value xml:lang="zh_CN">家庭</value>
     </property>
     <property key="RoleType.description.ICAL_MEMBER">
         <value xml:lang="en">Calendar Member</value>
     </property>
     <property key="RoleType.description.INTERNAL_ORGANIZATIO">
         <value xml:lang="en">Internal Organization</value>
-        <value xml:lang="zh">内部团体</value>
+        <value xml:lang="zh_CN">内部团体</value>
     </property>
     <property key="RoleType.description.ISP">
         <value xml:lang="en">ISP</value>
-        <value xml:lang="zh">互联网服务提供商</value>
+        <value xml:lang="zh_CN">互联网服务提供商</value>
     </property>
     <property key="RoleType.description.LEAD">
         <value xml:lang="en">Lead</value>
-        <value xml:lang="zh">指挥</value>
+        <value xml:lang="zh_CN">指挥</value>
     </property>
     <property key="RoleType.description.LOGGEDIN">
         <value xml:lang="en">Logged In</value>
-        <value xml:lang="zh">已登录</value>
+        <value xml:lang="zh_CN">已登录</value>
     </property>
     <property key="RoleType.description.LTD_ADMIN">
         <value xml:lang="en">Limited Administrator</value>
-        <value xml:lang="zh">有限权力的管理员</value>
+        <value xml:lang="zh_CN">有限权力的管理员</value>
     </property>
     <property key="RoleType.description.MANAGER">
         <value xml:lang="en">Manager</value>
-        <value xml:lang="zh">经理</value>
+        <value xml:lang="zh_CN">经理</value>
     </property>
     <property key="RoleType.description.MANUFACTURER">
         <value xml:lang="en">Manufacturer</value>
-        <value xml:lang="zh">制造商</value>
+        <value xml:lang="zh_CN">制造商</value>
     </property>
     <property key="RoleType.description.ORDER_CLERK">
         <value xml:lang="en">Order Clerk</value>
-        <value xml:lang="zh">定货登记员</value>
+        <value xml:lang="zh_CN">定货登记员</value>
     </property>
     <property key="RoleType.description.ORGANIZATION_ROLE">
         <value xml:lang="en">Organization</value>
-        <value xml:lang="zh">团体</value>
+        <value xml:lang="zh_CN">团体</value>
     </property>
     <property key="RoleType.description.ORGANIZATION_UNIT">
         <value xml:lang="en">Organization Unit</value>
-        <value xml:lang="zh">团体单位</value>
+        <value xml:lang="zh_CN">团体单位</value>
     </property>
     <property key="RoleType.description.ORIGINATOR">
         <value xml:lang="en">Originator</value>
-        <value xml:lang="zh">发起人</value>
+        <value xml:lang="zh_CN">发起人</value>
     </property>
     <property key="RoleType.description.OTHER_INTERNAL_ORGAN">
         <value xml:lang="en">Other Internal</value>
-        <value xml:lang="zh">其它内部</value>
+        <value xml:lang="zh_CN">其它内部</value>
     </property>
     <property key="RoleType.description.OTHER_ORGANIZATION_U">
         <value xml:lang="en">Other Organization Unit</value>
-        <value xml:lang="zh">其它团体单位</value>
+        <value xml:lang="zh_CN">其它团体单位</value>
     </property>
     <property key="RoleType.description.OWNER">
         <value xml:lang="en">Owner</value>
-        <value xml:lang="zh">业主</value>
+        <value xml:lang="zh_CN">业主</value>
     </property>
     <property key="RoleType.description.PACKER">
         <value xml:lang="en">Packer</value>
-        <value xml:lang="zh">包装工</value>
+        <value xml:lang="zh_CN">包装工</value>
     </property>
     <property key="RoleType.description.PARENT_ORGANIZATION">
         <value xml:lang="en">Parent Organization</value>
-        <value xml:lang="zh">上级团体</value>
+        <value xml:lang="zh_CN">上级团体</value>
     </property>
     <property key="RoleType.description.PARTNER">
         <value xml:lang="en">Partner</value>
-        <value xml:lang="zh">合作伙伴</value>
+        <value xml:lang="zh_CN">合作伙伴</value>
     </property>
     <property key="RoleType.description.PERMISSION_GROUP">
         <value xml:lang="en">Permission Group</value>
-        <value xml:lang="zh">权限组</value>
+        <value xml:lang="zh_CN">权限组</value>
     </property>
     <property key="RoleType.description.PERMISSION_GROUP_MBR">
         <value xml:lang="en">Permission Group Member</value>
-        <value xml:lang="zh">权限组成员</value>
+        <value xml:lang="zh_CN">权限组成员</value>
     </property>
     <property key="RoleType.description.PERSON_ROLE">
         <value xml:lang="en">Person</value>
-        <value xml:lang="zh">人员</value>
+        <value xml:lang="zh_CN">人员</value>
     </property>
     <property key="RoleType.description.PICKER">
         <value xml:lang="en">Picker</value>
-        <value xml:lang="zh">分拣员</value>
+        <value xml:lang="zh_CN">分拣员</value>
     </property>
     <property key="RoleType.description.PLACING_CUSTOMER">
         <value xml:lang="en">Placing Customer</value>
-        <value xml:lang="zh">意向客户</value>
+        <value xml:lang="zh_CN">意向客户</value>
     </property>
     <property key="RoleType.description.PROJECT_TEAM">
         <value xml:lang="en">Project Team</value>
-        <value xml:lang="zh">项目团体</value>
+        <value xml:lang="zh_CN">项目团体</value>
     </property>
     <property key="RoleType.description.PROSPECT">
         <value xml:lang="en">Prospect</value>
-        <value xml:lang="zh">潜在客户</value>
+        <value xml:lang="zh_CN">潜在客户</value>
     </property>
     <property key="RoleType.description.PROVIDER_ACCOUNTING">
         <value xml:lang="en">Provider Accounting</value>
-        <value xml:lang="zh">供应商会计人员</value>
+        <value xml:lang="zh_CN">供应商会计人员</value>
     </property>
     <property key="RoleType.description.PROVIDER_ANALYST">
         <value xml:lang="en">Provider Analyst</value>
-        <value xml:lang="zh">供应商分析员</value>
+        <value xml:lang="zh_CN">供应商分析员</value>
     </property>
     <property key="RoleType.description.PROVIDER_FUNCTIONAL">
         <value xml:lang="en">Provider Functional</value>
-        <value xml:lang="zh">供应商实现人员</value>
+        <value xml:lang="zh_CN">供应商实现人员</value>
     </property>
     <property key="RoleType.description.PROVIDER_MANAGER">
         <value xml:lang="en">Provider Manager</value>
-        <value xml:lang="zh">供应商经理</value>
+        <value xml:lang="zh_CN">供应商经理</value>
     </property>
     <property key="RoleType.description.PROVIDER_TESTER">
         <value xml:lang="en">Provider Tester</value>
-        <value xml:lang="zh">供应商测试人员</value>
+        <value xml:lang="zh_CN">供应商测试人员</value>
     </property>
     <property key="RoleType.description.PROVIDER_VALIDATOR">
         <value xml:lang="en">Provider Validator</value>
-        <value xml:lang="zh">供应商检验人员</value>
+        <value xml:lang="zh_CN">供应商检验人员</value>
     </property>
     <property key="RoleType.description.RECEIVER">
         <value xml:lang="en">Receiver</value>
-        <value xml:lang="zh">接收人</value>
+        <value xml:lang="zh_CN">接收人</value>
     </property>
     <property key="RoleType.description.REFERRER">
         <value xml:lang="en">Referrer</value>
-        <value xml:lang="zh">引用</value>
+        <value xml:lang="zh_CN">引用</value>
     </property>
     <property key="RoleType.description.REGULATORY_AGENCY">
         <value xml:lang="en">Regulatory Agency</value>
-        <value xml:lang="zh">管理机构</value>
+        <value xml:lang="zh_CN">管理机构</value>
     </property>
     <property key="RoleType.description.REQ_MANAGER">
         <value xml:lang="en">Request Manager</value>
-        <value xml:lang="zh">请求管理</value>
+        <value xml:lang="zh_CN">请求管理</value>
     </property>
     <property key="RoleType.description.REQ_REQUESTER">
         <value xml:lang="en">Requesting Party</value>
-        <value xml:lang="zh">发出请求的会员</value>
+        <value xml:lang="zh_CN">发出请求的会员</value>
     </property>
     <property key="RoleType.description.REQ_TAKER">
         <value xml:lang="en">Request Taker</value>
-        <value xml:lang="zh">请求接受者</value>
+        <value xml:lang="zh_CN">请求接受者</value>
     </property>
     <property key="RoleType.description.REVIEWER">
         <value xml:lang="en">Reviewer</value>
-        <value xml:lang="zh">检查员</value>
+        <value xml:lang="zh_CN">检查员</value>
     </property>
     <property key="RoleType.description.SALES_REP">
         <value xml:lang="en">Sales Representative</value>
-        <value xml:lang="zh">销售代表</value>
+        <value xml:lang="zh_CN">销售代表</value>
     </property>
     <property key="RoleType.description.SHAREHOLDER">
         <value xml:lang="en">Shareholder</value>
-        <value xml:lang="zh">股东</value>
+        <value xml:lang="zh_CN">股东</value>
     </property>
     <property key="RoleType.description.SHIPMENT_CLERK">
         <value xml:lang="en">Shipment Clerk</value>
-        <value xml:lang="zh">货运登记员</value>
+        <value xml:lang="zh_CN">货运登记员</value>
     </property>
     <property key="RoleType.description.SHIP_FROM_VENDOR">
         <value xml:lang="en">Ship-From Vendor</value>
-        <value xml:lang="zh">发货的厂家</value>
+        <value xml:lang="zh_CN">发货的厂家</value>
     </property>
     <property key="RoleType.description.SHIP_TO_CUSTOMER">
         <value xml:lang="en">Ship-To Customer</value>
-        <value xml:lang="zh">收货的客户</value>
+        <value xml:lang="zh_CN">收货的客户</value>
     </property>
     <property key="RoleType.description.SPONSOR">
         <value xml:lang="en">Sponsor</value>
-        <value xml:lang="zh">赞助商</value>
+        <value xml:lang="zh_CN">赞助商</value>
     </property>
     <property key="RoleType.description.SPOUSE">
         <value xml:lang="en">Spouse</value>
-        <value xml:lang="zh">配偶</value>
+        <value xml:lang="zh_CN">配偶</value>
     </property>
     <property key="RoleType.description.STOCKER">
         <value xml:lang="en">Stocker</value>
-        <value xml:lang="zh">装卸工</value>
+        <value xml:lang="zh_CN">装卸工</value>
     </property>
     <property key="RoleType.description.SUBSCRIBER">
         <value xml:lang="en">Subscriber</value>
-        <value xml:lang="zh">用户</value>
+        <value xml:lang="zh_CN">用户</value>
     </property>
     <property key="RoleType.description.SUBSIDIARY">
         <value xml:lang="en">Subsidiary</value>
-        <value xml:lang="zh">子公司</value>
+        <value xml:lang="zh_CN">子公司</value>
     </property>
     <property key="RoleType.description.SUPPLIER">
         <value xml:lang="en">Supplier</value>
-        <value xml:lang="zh">供货商</value>
+        <value xml:lang="zh_CN">供货商</value>
     </property>
     <property key="RoleType.description.SUPPLIER_AGENT">
         <value xml:lang="en">Supplier Agent</value>
-        <value xml:lang="zh">供货代理商</value>
+        <value xml:lang="zh_CN">供货代理商</value>
     </property>
     <property key="RoleType.description.TAX_AUTHORITY">
         <value xml:lang="en">Tax Authority</value>
-        <value xml:lang="zh">税务机关</value>
+        <value xml:lang="zh_CN">税务机关</value>
     </property>
     <property key="RoleType.description.UNION">
         <value xml:lang="en">Union</value>
-        <value xml:lang="zh">工会</value>
+        <value xml:lang="zh_CN">工会</value>
     </property>
     <property key="RoleType.description.VENDOR">
         <value xml:lang="en">Vendor</value>
-        <value xml:lang="zh">厂家</value>
+        <value xml:lang="zh_CN">厂家</value>
     </property>
     <property key="RoleType.description.VISITOR">
         <value xml:lang="en">Visitor</value>
-        <value xml:lang="zh">访问者</value>
+        <value xml:lang="zh_CN">访问者</value>
     </property>
     <property key="RoleType.description.WEB_MASTER">
         <value xml:lang="en">Web Master</value>
-        <value xml:lang="zh">网站管理员</value>
+        <value xml:lang="zh_CN">网站管理员</value>
     </property>
     <property key="RoleType.description.WF_OWNER">
         <value xml:lang="en">Workflow Owner</value>
-        <value xml:lang="zh">工作流拥有者</value>
+        <value xml:lang="zh_CN">工作流拥有者</value>
     </property>
     <property key="RoleType.description.WORKER">
         <value xml:lang="en">Worker</value>
-        <value xml:lang="zh">工人</value>
+        <value xml:lang="zh_CN">工人</value>
     </property>
     <property key="RoleType.description.WORKFLOW_ROLE">
         <value xml:lang="en">Workflow</value>
-        <value xml:lang="zh">工作流</value>
+        <value xml:lang="zh_CN">工作流</value>
     </property>
     <property key="RoleType.description._NA_">
         <value xml:lang="en">Not Applicable</value>
-        <value xml:lang="zh">不可用</value>
+        <value xml:lang="zh_CN">不可用</value>
     </property>
     <property key="TermType.description.AGREEMENT_TERMINATIO">
         <value xml:lang="en">Agreement Termination</value>
-        <value xml:lang="zh">合同终止</value>
+        <value xml:lang="zh_CN">合同终止</value>
     </property>
     <property key="TermType.description.CFR">
         <value xml:lang="en">Incoterm Cost and Freight</value>
-        <value xml:lang="zh">国际贸易成本加运费价格</value>
+        <value xml:lang="zh_CN">国际贸易成本加运费价格</value>
     </property>
     <property key="TermType.description.CIF">
         <value xml:lang="en">Incoterm Cost, Insurance and Freight</value>
-        <value xml:lang="zh">国际贸易到岸价格（成本、保险费加运费）</value>
+        <value xml:lang="zh_CN">国际贸易到岸价格（成本、保险费加运费）</value>
     </property>
     <property key="TermType.description.CIP">
         <value xml:lang="en">Incoterm Carriage and Insurance Paid to</value>
-        <value xml:lang="zh">国际贸易运费、保险费付至</value>
+        <value xml:lang="zh_CN">国际贸易运费、保险费付至</value>
     </property>
     <property key="TermType.description.CLAUSE_FOR_RENEWAL">
         <value xml:lang="en">Clause For Renewal</value>
-        <value xml:lang="zh">延期条款</value>
+        <value xml:lang="zh_CN">延期条款</value>
     </property>
     <property key="TermType.description.COMMISSION_TERM">
         <value xml:lang="en">Commission</value>
-        <value xml:lang="zh">佣金</value>
+        <value xml:lang="zh_CN">佣金</value>
     </property>
     <property key="TermType.description.CPT">
         <value xml:lang="en">Incoterm Carriage Paid To</value>
-        <value xml:lang="zh">国际贸易运费付至</value>
+        <value xml:lang="zh_CN">国际贸易运费付至</value>
     </property>
     <property key="TermType.description.DAF">
         <value xml:lang="en">Incoterm Delivered At Frontier</value>
-        <value xml:lang="zh">国际贸易边境交货</value>
+        <value xml:lang="zh_CN">国际贸易边境交货</value>
     </property>
     <property key="TermType.description.DDP">
         <value xml:lang="en">Incoterm Delivered Duty Paid</value>
-        <value xml:lang="zh">国际贸易完税后交货价</value>
+        <value xml:lang="zh_CN">国际贸易完税后交货价</value>
     </property>
     <property key="TermType.description.DDU">
         <value xml:lang="en">Incoterm Delivered Duty Unpaid</value>
-        <value xml:lang="zh">国际贸易未完税交货价</value>
+        <value xml:lang="zh_CN">国际贸易未完税交货价</value>
     </property>
     <property key="TermType.description.DEQ">
         <value xml:lang="en">Incoterm Delivered Ex Quay</value>
-        <value xml:lang="zh">国际贸易目的港码头交货价</value>
+        <value xml:lang="zh_CN">国际贸易目的港码头交货价</value>
     </property>
     <property key="TermType.description.DES">
         <value xml:lang="en">Incoterm Delivered Ex Ship</value>
-        <value xml:lang="zh">国际贸易目的港船上交货</value>
+        <value xml:lang="zh_CN">国际贸易目的港船上交货</value>
     </property>
     <property key="TermType.description.EXCLUSIVE_RELATIONSH">
         <value xml:lang="en">Exclusive Relationship</value>
-        <value xml:lang="zh">排他关系</value>
+        <value xml:lang="zh_CN">排他关系</value>
     </property>
     <property key="TermType.description.EXW">
         <value xml:lang="en">Incoterm Ex Works</value>
-        <value xml:lang="zh">国际贸易工厂交货价</value>
+        <value xml:lang="zh_CN">国际贸易工厂交货价</value>
     </property>
     <property key="TermType.description.FAS">
         <value xml:lang="en">Incoterm Free Alongside Ship</value>
-        <value xml:lang="zh">国际贸易(启运地)船边交货价格</value>
+        <value xml:lang="zh_CN">国际贸易(启运地)船边交货价格</value>
     </property>
     <property key="TermType.description.FCA">
         <value xml:lang="en">Incoterm Free Carrier</value>
-        <value xml:lang="zh">国际贸易离岸价</value>
+        <value xml:lang="zh_CN">国际贸易离岸价</value>
     </property>
     <property key="TermType.description.FINANCIAL_TERM">
         <value xml:lang="en">Financial</value>
-        <value xml:lang="zh">财务</value>
+        <value xml:lang="zh_CN">财务</value>
     </property>
     <property key="TermType.description.FIN_COLLECT_TERM">
         <value xml:lang="en">Penalty For Collection Agency</value>
-        <value xml:lang="zh">催账公司的罚款</value>
+        <value xml:lang="zh_CN">催账公司的罚款</value>
     </property>
     <property key="TermType.description.FIN_COMM_FIXED">
         <value xml:lang="en">Commission Term Fixed Per Unit</value>
-        <value xml:lang="zh">每件固定佣金条款</value>
+        <value xml:lang="zh_CN">每件固定佣金条款</value>
     </property>
     <property key="TermType.description.FIN_COMM_MAX">
         <value xml:lang="en">Commission Term Maximum Per Unit</value>
-        <value xml:lang="zh">每件最大佣金条款</value>
+        <value xml:lang="zh_CN">每件最大佣金条款</value>
     </property>
     <property key="TermType.description.FIN_COMM_MIN">
         <value xml:lang="en">Commission Term Minimum Per Unit</value>
-        <value xml:lang="zh">每件最小佣金条款</value>
+        <value xml:lang="zh_CN">每件最小佣金条款</value>
     </property>
     <property key="TermType.description.FIN_COMM_VARIABLE">
         <value xml:lang="en">Commission Term Variable</value>
-        <value xml:lang="zh">变化的佣金条款</value>
+        <value xml:lang="zh_CN">变化的佣金条款</value>
     </property>
     <property key="TermType.description.FIN_LATE_FEE_TERM">
         <value xml:lang="en">Late Fee (percent)</value>
-        <value xml:lang="zh">滞纳金 (百分比)</value>
+        <value xml:lang="zh_CN">滞纳金 (百分比)</value>
     </property>
     <property key="TermType.description.FIN_NORTN_ITEM_TERM">
         <value xml:lang="en">Non-Returnable Sales Item</value>
-        <value xml:lang="zh">不可退换销售明细</value>
+        <value xml:lang="zh_CN">不可退换销售明细</value>
     </property>
     <property key="TermType.description.FIN_PAYMENT_DISC">
         <value xml:lang="en">Payment (discounted if paid within specified days)</value>
-        <value xml:lang="zh">支付 (如果在指定天数内支付可获得折扣)</value>
+        <value xml:lang="zh_CN">支付 (如果在指定天数内支付可获得折扣)</value>
     </property>
     <property key="TermType.description.FIN_PAYMENT_FIXDAY">
         <value xml:lang="en">Payment (due on specified day of month)</value>
-        <value xml:lang="zh">支付 (在每月的指定日期付款)</value>
+        <value xml:lang="zh_CN">支付 (在每月的指定日期付款)</value>
     </property>
     <property key="TermType.description.FIN_PAYMENT_TERM">
         <value xml:lang="en">Payment (net days)</value>
-        <value xml:lang="zh">支付 (工作日)</value>
+        <value xml:lang="zh_CN">支付 (工作日)</value>
     </property>
     <property key="TermType.description.FIN_PAY_NETDAYS_1">
         <value xml:lang="en">Payment net days, part 1</value>
-        <value xml:lang="zh">支付净天数，第一部分</value>
+        <value xml:lang="zh_CN">支付净天数，第一部分</value>
     </property>
     <property key="TermType.description.FIN_PAY_NETDAYS_2">
         <value xml:lang="en">Payment net days, part 2</value>
-        <value xml:lang="zh">支付净天数，第二部分</value>
+        <value xml:lang="zh_CN">支付净天数，第二部分</value>
     </property>
     <property key="TermType.description.FIN_PAY_NETDAYS_3">
         <value xml:lang="en">Payment net days, part 3</value>
-        <value xml:lang="zh">支付净天数，第三部分</value>
+        <value xml:lang="zh_CN">支付净天数，第三部分</value>
     </property>
     <property key="TermType.description.FOB">
         <value xml:lang="en">Incoterm Free On Board</value>
-        <value xml:lang="zh">国际贸易离岸价格</value>
+        <value xml:lang="zh_CN">国际贸易离岸价格</value>
     </property>
     <property key="TermType.description.INCENTIVE">
         <value xml:lang="en">Incentive</value>
-        <value xml:lang="zh">动机</value>
+        <value xml:lang="zh_CN">动机</value>
     </property>
     <property key="TermType.description.INCO_TERM">
         <value xml:lang="en">Incoterm</value>
-        <value xml:lang="zh">国际贸易</value>
+        <value xml:lang="zh_CN">国际贸易</value>
     </property>
     <property key="TermType.description.INDEMNIFICATION">
         <value xml:lang="en">Indemnification</value>
-        <value xml:lang="zh">赔偿</value>
+        <value xml:lang="zh_CN">赔偿</value>
     </property>
     <property key="TermType.description.LEGAL_TERM">
         <value xml:lang="en">Legal</value>
-        <value xml:lang="zh">法律</value>
+        <value xml:lang="zh_CN">法律</value>
     </property>
     <property key="TermType.description.NON_COMPETE">
         <value xml:lang="en">Non-Compete</value>
-        <value xml:lang="zh">竞业禁止</value>
+        <value xml:lang="zh_CN">竞业禁止</value>
     </property>
     <property key="TermType.description.OTHER_TERM">
         <value xml:lang="en">Other</value>
-        <value xml:lang="zh">其它</value>
+        <value xml:lang="zh_CN">其它</value>
     </property>
     <property key="TermType.description.PURCHASING">
         <value xml:lang="en">Purchasing</value>
-        <value xml:lang="zh">采购</value>
+        <value xml:lang="zh_CN">采购</value>
     </property>
     <property key="TermType.description.PURCH_FREIGHT">
         <value xml:lang="en">Preferred Freight</value>
-        <value xml:lang="zh">优先货运</value>
+        <value xml:lang="zh_CN">优先货运</value>
     </property>
     <property key="TermType.description.PURCH_VENDOR_ID">
         <value xml:lang="en">Vendor Customer ID</value>
-        <value xml:lang="zh">供货商客户标识</value>
+        <value xml:lang="zh_CN">供货商客户标识</value>
     </property>
     <property key="TermType.description.THRESHOLD">
         <value xml:lang="en">Threshold</value>
-        <value xml:lang="zh">阈值</value>
+        <value xml:lang="zh_CN">阈值</value>
     </property>
 </resource>

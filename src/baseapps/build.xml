@@ -16,7 +16,7 @@
 <project name="Basic Applications Build" default="build" basedir=".">
     <import file="../macros.xml"/>
 
-    <filelist id="baseapps-builds" dir="." files="workflow/build.xml,party/build.xml"/>
+    <filelist id="baseapps-builds" dir="." files="party/build.xml,product/build.xml"/>
    	 
     <!-- ================================================================== -->
     <!-- Removes all created files and directories                          -->

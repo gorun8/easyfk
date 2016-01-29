@@ -19,8 +19,5 @@ import org.springframework.stereotype.Service;
 
 @Service("commonServiceImpl")
 public class CommonServiceImpl implements CommonService {
-    @Override
-    public String getName() {
-        return "hzp";
-    }
+
 }

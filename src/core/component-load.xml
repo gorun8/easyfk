@@ -18,9 +18,9 @@
     <load-component component-location="base"/>
     <load-component component-location="entity"/>
     <load-component component-location="catalina"/>
+    <load-component component-location="security"/>
     <load-component component-location="webapp"/>
     <load-component component-location="common"/>
-    <load-component component-location="security"/>
-
-    <load-component component-location="images"/>
+    <load-component component-location="service"/>
+    <load-component component-location="static"/>
 </component-loader>

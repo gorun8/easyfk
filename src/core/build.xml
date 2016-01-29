@@ -19,11 +19,13 @@
     <filelist id="core-builds" dir="."
         files="start/build.xml,
                base/build.xml,
-               common/build.xml,
                entity/build.xml,
-			   catalina/build.xml,
+               catalina/build.xml,
+               security/build.xml,
                webapp/build.xml,
-    		   security/build.xml"/>
+               common/build.xml,
+               service/build.xml
+               "/>
 
     <filelist id="test-builds" dir="." files="base/build.xml"/>
     <property name="memory.max.param" value="-Xmx384M"/>

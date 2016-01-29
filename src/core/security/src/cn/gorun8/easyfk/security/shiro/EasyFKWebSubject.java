@@ -13,23 +13,13 @@
  */
 package cn.gorun8.easyfk.security.shiro;
 
-import cn.gorun8.easyfk.base.util.UtilIOC;
-import cn.gorun8.easyfk.base.util.UtilValidate;
-import cn.gorun8.easyfk.entity.GenericValue;
-import cn.gorun8.easyfk.security.service.LoginService;
-import cn.gorun8.easyfk.security.utils.UtilSecurity;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.PrincipalCollection;
-import org.apache.shiro.subject.SimplePrincipalCollection;
 import org.apache.shiro.web.subject.support.WebDelegatingSubject;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.List;
 
 public class EasyFKWebSubject extends WebDelegatingSubject {
 

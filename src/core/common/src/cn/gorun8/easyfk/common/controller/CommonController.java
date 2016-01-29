@@ -32,7 +32,7 @@ import java.util.Map;
  * 通用的Controller,该Controller中的方法将自动映射到其它组件，通过应用组件的上下文件即可访问。
  */
 @Controller("commonController")
-@RequestMapping("/common")
+@RequestMapping("/dyn/common")
 public class CommonController {
     /**
      *  从request中获取对象，产生Json响应

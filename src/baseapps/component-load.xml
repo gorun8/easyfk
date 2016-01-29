@@ -15,9 +15,6 @@
 
 <component-loader xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                   xsi:noNamespaceSchemaLocation="http://www.gorun8.cn/dtds/component-loader.xsd">
-    <load-component component-location="party"/>
-    <!--
-	<load-component component-location="workflow"/>
--->
-	
+   <load-component component-location="party"/>
+   <load-component component-location="product"/>
 </component-loader>

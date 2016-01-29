@@ -19,7 +19,4 @@
     <classpath type="dir" location="config"/>
     <classpath type="jar" location="lib/*"/>
     <classpath type="jar" location="build/lib/*"/>
-
-    <entity-resource type="model" reader-name="main" loader="main" location="entitydef/${db.type}/entitycommon.sql"/>
-
 </easyfk-application>

@@ -33,11 +33,12 @@
     <path id="local.class.path">
         <fileset dir="${lib.dir}" includes="*.jar"/>
         <fileset dir="../../core/base/lib" includes="*.jar"/>
-        <fileset dir="../../core/entity/lib" includes="*.jar"/>
-    	<fileset dir="../../core/entity/build/lib" includes="*.jar"/>
-    	<fileset dir="../../core/base/lib/commons" includes="*.jar"/>
+        <fileset dir="../../core/base/lib/commons" includes="*.jar"/>
         <fileset dir="../../core/base/lib/j2eespecs" includes="*.jar"/>
         <fileset dir="../../core/base/build/lib" includes="*.jar"/>
+        <fileset dir="../../core/entity/lib" includes="*.jar"/>
+    	<fileset dir="../../core/entity/build/lib" includes="*.jar"/>
+
    </path>
 
     <!-- ================================================================= -->

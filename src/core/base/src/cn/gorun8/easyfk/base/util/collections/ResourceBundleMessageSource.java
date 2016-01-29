@@ -66,7 +66,7 @@ public class ResourceBundleMessageSource extends ResourceBundleMapWrapper {
     }
 
     public void init(){
-        Locale locale = Locale.CHINA;
+        Locale locale =  Locale.getDefault();
         for (String resource :basenames){
             if(getInitialResourceBundle() == null) {
                 setInitialResourceBundle(UtilProperties.getResourceBundle(resource, locale));

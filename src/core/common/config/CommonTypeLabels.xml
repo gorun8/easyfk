@@ -16,10 +16,10 @@ Author:hezhiping   Email:110476592@qq.com
 
     <property key="PERSON">
         <value xml:lang="en">person</value>
-        <value xml:lang="zh">个人</value>
+        <value xml:lang="zh_CN">个人</value>
     </property>
     <property key="PARTY_GROUP">
         <value xml:lang="en">group</value>
-        <value xml:lang="zh">组织</value>
+        <value xml:lang="zh_CN">组织</value>
     </property>
 </resource>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Project:Easy Web Framework
+Description:
+EasyFK stands for Easy Web Framework.It's an open source product for E-Business / E-Commerce.It
+was launched by a chinese Hezhiping(QQ:110476592) in 2015.The goal of EasyFK is to  provide a
+foundation and starting point for reliable, secure , simple-to-use ,cost-effective ,scalable
+and suitable-for-Chinese E-Business / E-Commerce solutions. With EasyFK, you can get started
+right away without the huge deployment and maintenance costs of E-Business / E-Commerce systems.
+Of course, you can customize it or use it as a framework to implement your most challenging business needs.
+EasyFk is licensed under the Apache License Version 2.0.  You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0
+Author:hezhiping   Email:110476592@qq.com
+-->
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gorun8.easyfk.security.dao.UserLoginWriteDao">
+
+	<insert id="createUserLogin" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+		INSERT INTO user_login(
+		USER_LOGIN_ID
+		<if test="CURRENT_PASSWORD!=null"> ,CURRENT_PASSWORD</if>
+		<if test="PLAIN_PASSWORD!=null">,PLAIN_PASSWORD</if>
+		<if test="PASSWORD_HINT!=null">,PASSWORD_HINT</if>
+		<if test="ENABLED!=null">,ENABLED</if>
+		<if test="REQUIRE_PASSWORD_CHANGE!=null">,REQUIRE_PASSWORD_CHANGE</if>
+		<if test="EXTERNAL_AUTH_ID!=null">,EXTERNAL_AUTH_ID</if>
+		<if test="USER_LDAP_DN!=null">,USER_LDAP_DN</if>
+		<if test="LAST_UPDATED_STAMP!=null">,LAST_UPDATED_STAMP</if>
+		<if test="LAST_UPDATED_TX_STAMP!=null">,LAST_UPDATED_TX_STAMP</if>
+		<if test="CREATED_STAMP!=null">,CREATED_STAMP</if>
+		<if test="CREATED_TX_STAMP!=null">,CREATED_TX_STAMP</if>
+		,PARTY_ID
+		)
+		VALUES (
+		#{USER_LOGIN_ID}
+		<if test="CURRENT_PASSWORD!=null">,#{CURRENT_PASSWORD}</if>
+		<if test="PLAIN_PASSWORD!=null">,#{PLAIN_PASSWORD}</if>
+		<if test="PASSWORD_HINT!=null">,#{PASSWORD_HINT}</if>
+		<if test="ENABLED!=null">,#{ENABLED}</if>
+		<if test="REQUIRE_PASSWORD_CHANGE!=null">,#{REQUIRE_PASSWORD_CHANGE}</if>
+		<if test="EXTERNAL_AUTH_ID!=null">,#{EXTERNAL_AUTH_ID}</if>
+		<if test="USER_LDAP_DN!=null">,#{USER_LDAP_DN}</if>
+		<if test="LAST_UPDATED_STAMP!=null">,#{LAST_UPDATED_STAMP}</if>
+		<if test="LAST_UPDATED_TX_STAMP!=null">,#{LAST_UPDATED_TX_STAMP}</if>
+		<if test="CREATED_STAMP!=null">,#{CREATED_STAMP}</if>
+		<if test="CREATED_TX_STAMP!=null">,#{CREATED_TX_STAMP}</if>
+		,#{PARTY_ID}
+		)
+	</insert>
+	
+	<update id="saveUserLogin" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+        UPDATE user_login
+        SET
+		USER_LOGIN_ID = #{USER_LOGIN_ID}
+		<if test="CURRENT_PASSWORD!=null">,CURRENT_PASSWORD = #{CURRENT_PASSWORD}</if>
+		<if test="PLAIN_PASSWORD!=null">,PLAIN_PASSWORD = #{PLAIN_PASSWORD}</if>
+		<if test="PASSWORD_HINT!=null">,PASSWORD_HINT = #{PASSWORD_HINT}</if>
+		<if test="ENABLED!=null">,ENABLED = #{ENABLED}</if>
+		<if test="REQUIRE_PASSWORD_CHANGE!=null">,REQUIRE_PASSWORD_CHANGE = #{REQUIRE_PASSWORD_CHANGE}</if>
+		<if test="EXTERNAL_AUTH_ID!=null">,EXTERNAL_AUTH_ID = #{EXTERNAL_AUTH_ID}</if>
+		<if test="USER_LDAP_DN!=null">,USER_LDAP_DN = #{USER_LDAP_DN}</if>
+		<if test="LAST_UPDATED_STAMP!=null">,LAST_UPDATED_STAMP = #{LAST_UPDATED_STAMP}</if>
+		<if test="CREATED_STAMP!=null">,CREATED_STAMP = #{CREATED_STAMP}</if>
+		<if test="LAST_UPDATED_STAMP!=null">,LAST_UPDATED_STAMP= #{LAST_UPDATED_STAMP}</if>
+		<if test="LAST_UPDATED_TX_STAMP!=null">,LAST_UPDATED_TX_STAMP= #{LAST_UPDATED_TX_STAMP}</if>
+		WHERE
+        	USER_LOGIN_ID = #{USER_LOGIN_ID}
+		AND
+			PARTY_ID = #{PARTY_ID}
+    </update>
+
+	<delete id="removeUserLogin" parameterType="java.lang.String">
+		DELETE  FROM user_login
+		WHERE   PARTY_ID =#{PARTY_ID} AND USER_LOGIN_ID = #{USER_LOGIN_ID}
+	</delete>
+
+</mapper>

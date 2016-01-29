@@ -19,9 +19,9 @@
     <!-- place the config directory on the classpath to access configuration files -->
     <classpath type="dir" location="config"/>
     <!-- web baseapps; will be mounted when using the embedded container -->
-    <webapp name="@webapp-name@"
-        title="@component-title@"
+    <webapp name="@component-name@"
+        title="@component-name@desc"
         server="default-server"
-        location="webapp"
-        mount-point="/@webapp-name@"/>
+        location="webapp/@component-name@"
+        mount-point="/@component-name@"/>
 </easyfk-application>

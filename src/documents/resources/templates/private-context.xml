@@ -36,19 +36,22 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
 	<!--资源管理器-->
-	<bean  class="cn.gorun8.easyfk.base.util.collections.ResourceBundleMessageSource"
+	<bean id="uiLabelMap" class="cn.gorun8.easyfk.base.util.collections.ResourceBundleMessageSource"
 		   init-method="init">
 		<property name="labelMapName" value="uiLabelMap"></property>
 		<property name="basenames">
 			<list>
 				<value>CommonUiLabels</value>
 				<value>CommonTypeLabels</value>
-				<value>Demo@component-name@UiLabels</value>
+				<value>@resource-name@UiLabels</value>
+				<value>@resource-name@ErrorLabels</value>
 			</list>
 		</property>
 	</bean>
 
-	<bean id="requestInitFilter" class="cn.gorun8.easyfk.security.shiro.RequestInitFilter"/>
+	<bean id="requestInitFilter" class="cn.gorun8.easyfk.security.shiro.RequestInitFilter">
+		<property name="uiLabelMap" ref="uiLabelMap"/>
+	</bean>
 	<bean id="casFilter" class="cn.gorun8.easyfk.security.shiro.CasFilter">
 		<property name="domain" value="${security.sessionIdCookie.domain}"/>
         <property name="loginURL" value="${security.login.url}"/>
@@ -142,7 +145,9 @@
 		</property>
 
 		<property name="authenticator.authenticationStrategy" ref="exceptionStopStrategy" />
+		<!--  如果要用redis保存session。就去掉该处注释-->
 		<property name="sessionManager" ref="sessionManager" />
+
 		<property name="cacheManager" ref="easyFKCacheManager" />
 		<property name="subjectFactory" ref="easyFKSubjectFactory"/>
 		<property name="rememberMeManager" ref="rememberMeManager"/>

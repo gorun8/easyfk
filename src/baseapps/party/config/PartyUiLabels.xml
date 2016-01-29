@@ -13,335 +13,341 @@ http://www.apache.org/licenses/LICENSE-2.0
 Author:hezhiping   Email:110476592@qq.com
 -->
 <resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <property key="partyAppName">
+        <value xml:lang="en">会员管理</value>
+        <value xml:lang="zh_CN">会员管理</value>
+    </property>
+
     <property key="SecurityGroupList">
         <value xml:lang="en">安全组列表</value>
-        <value xml:lang="zh">安全组列表</value>
+        <value xml:lang="zh_CN">安全组列表</value>
     </property>
 
     <property key="GroupName">
         <value xml:lang="en">Group Name</value>
-        <value xml:lang="zh">组织机构名称</value>
+        <value xml:lang="zh_CN">组织机构名称</value>
     </property>
     <property key="PartyGroupName">
         <value xml:lang="en">Group Party Name</value>
-        <value xml:lang="zh">组织会员名称</value>
+        <value xml:lang="zh_CN">组织会员名称</value>
     </property>
 
     <property key="ExternalId">
         <value xml:lang="en">External ID</value>
-        <value xml:lang="zh">其它编号</value>
+        <value xml:lang="zh_CN">其它编号</value>
     </property>
 
     
     <property key="annualRevenue">
         <value xml:lang="en">Annual revenue</value>
-        <value xml:lang="zh">年收入</value>
+        <value xml:lang="zh_CN">年收入</value>
     </property>
     
     <property key="birthDate">
         <value xml:lang="en">Birth Date</value>
-        <value xml:lang="zh">生日</value>
+        <value xml:lang="zh_CN">生日</value>
     </property>
     <property key="certProvisionId">
         <value xml:lang="en">Cert Provision Id</value>
-        <value xml:lang="zh">证书提供编号</value>
+        <value xml:lang="zh_CN">证书提供编号</value>
     </property>
     <property key="certString">
         <value xml:lang="en">Cert String</value>
-        <value xml:lang="zh">证书字符串</value>
+        <value xml:lang="zh_CN">证书字符串</value>
     </property>
     <property key="cityLocality">
         <value xml:lang="en">City Locality</value>
-        <value xml:lang="zh">城市/所在地</value>
+        <value xml:lang="zh_CN">城市/所在地</value>
     </property>
     <property key="cmDetail">
         <value xml:lang="en">Contach Mech Detail</value>
-        <value xml:lang="zh">详细联系方式</value>
+        <value xml:lang="zh_CN">详细联系方式</value>
     </property>
     <property key="personalImage">
         <value xml:lang="en">头相</value>
-        <value xml:lang="zh">头相</value>
+        <value xml:lang="zh_CN">头相</value>
     </property>
     <property key="personalName">
         <value xml:lang="en">Name</value>
-        <value xml:lang="zh">姓名</value>
+        <value xml:lang="zh_CN">姓名</value>
     </property>
     <property key="newPerson">
         <value xml:lang="en">New Person</value>
-        <value xml:lang="zh">新建个人会员</value>
+        <value xml:lang="zh_CN">新建个人会员</value>
     </property>
 
     
     <property key="commonName">
         <value xml:lang="en">Common Name</value>
-        <value xml:lang="zh">通用名</value>
+        <value xml:lang="zh_CN">通用名</value>
     </property>
     <property key="communicationEventId">
         <value xml:lang="en">Communication Event Id</value>
-        <value xml:lang="zh">沟通事件编号</value>
+        <value xml:lang="zh_CN">沟通事件编号</value>
     </property>
     <property key="communicationEventPrpTypId">
         <value xml:lang="en">Communication Event Purpose Type Id</value>
-        <value xml:lang="zh">沟通事件目的类型编号</value>
+        <value xml:lang="zh_CN">沟通事件目的类型编号</value>
     </property>
     <property key="communicationEventTypeId">
         <value xml:lang="en">Comm.Type Id</value>
-        <value xml:lang="zh">沟通事件类型编号</value>
+        <value xml:lang="zh_CN">沟通事件类型编号</value>
     </property>
     <property key="communicationPartyId">
         <value xml:lang="en">Communication Party Id</value>
-        <value xml:lang="zh">沟通会员编号</value>
+        <value xml:lang="zh_CN">沟通会员编号</value>
     </property>
     <property key="contactListId">
         <value xml:lang="en">Contact List Id</value>
-        <value xml:lang="zh">联系列表编号</value>
+        <value xml:lang="zh_CN">联系列表编号</value>
     </property>
     <property key="contactListName">
         <value xml:lang="en">Contact List Name</value>
-        <value xml:lang="zh">联系列表名称</value>
+        <value xml:lang="zh_CN">联系列表名称</value>
     </property>
     <property key="contactListTypeId">
         <value xml:lang="en">Contact List Type Id</value>
-        <value xml:lang="zh">联系列表类型编号</value>
+        <value xml:lang="zh_CN">联系列表类型编号</value>
     </property>
     <property key="contactMechTypeId">
         <value xml:lang="en">Contact Mech Type Id</value>
-        <value xml:lang="zh">联系方式类型编号</value>
+        <value xml:lang="zh_CN">联系方式类型编号</value>
     </property>
     <property key="contentMimeTypeId">
         <value xml:lang="en">Content Mime Type Id</value>
-        <value xml:lang="zh">内容Mime类型编号</value>
+        <value xml:lang="zh_CN">内容Mime类型编号</value>
     </property>
     <property key="country">
         <value xml:lang="en">Country</value>
-        <value xml:lang="zh">国家</value>
+        <value xml:lang="zh_CN">国家</value>
     </property>
     <property key="deceasedDate">
         <value xml:lang="en">Deceased Date</value>
     </property>
     <property key="defaultRate">
         <value xml:lang="en">Default Rate</value>
-        <value xml:lang="zh">默认费率</value>
+        <value xml:lang="zh_CN">默认费率</value>
     </property>
     <property key="deleteEmail">
         <value xml:lang="en">Delete email</value>
-        <value xml:lang="zh">删除电子邮件</value>
+        <value xml:lang="zh_CN">删除电子邮件</value>
     </property>
     <property key="destinationFacilityId">
         <value xml:lang="en">Destination Facility Id</value>
-        <value xml:lang="zh">目的地设备编号</value>
+        <value xml:lang="zh_CN">目的地设备编号</value>
     </property>
     <property key="disabledDateTime">
         <value xml:lang="en">Disabled Date Time</value>
-        <value xml:lang="zh">无效的日期时间</value>
+        <value xml:lang="zh_CN">无效的日期时间</value>
     </property>
     <property key="editContent">
         <value xml:lang="en">Edit Content</value>
-        <value xml:lang="zh">编辑内容</value>
+        <value xml:lang="zh_CN">编辑内容</value>
     </property>
     <property key="emailAddress">
         <value xml:lang="en">Email Address</value>
-        <value xml:lang="zh">电子邮件地址</value>
+        <value xml:lang="zh_CN">电子邮件地址</value>
     </property>
     <property key="employmentStatusEnumId">
         <value xml:lang="en">Employment Status Enum Id</value>
-        <value xml:lang="zh">雇佣状态枚举编号</value>
+        <value xml:lang="zh_CN">雇佣状态枚举编号</value>
     </property>
     <property key="enabled">
         <value xml:lang="en">Enabled</value>
-        <value xml:lang="zh">启用</value>
+        <value xml:lang="zh_CN">启用</value>
     </property>
     <property key="existingCustomer">
         <value xml:lang="en">Existing Customer</value>
-        <value xml:lang="zh">已有客户</value>
+        <value xml:lang="zh_CN">已有客户</value>
     </property>
     <property key="firstName">
         <value xml:lang="en">First Name</value>
-        <value xml:lang="zh">名字</value>
+        <value xml:lang="zh_CN">名字</value>
     </property>
     <property key="firstNameLocal">
         <value xml:lang="en">First Name Local</value>
-        <value xml:lang="zh">名字本地语言</value>
+        <value xml:lang="zh_CN">名字本地语言</value>
     </property>
     <property key="fromPartyId">
         <value xml:lang="en">From Party Id</value>
-        <value xml:lang="zh">来自会员编号</value>
+        <value xml:lang="zh_CN">来自会员编号</value>
     </property>
     <property key="gender">
         <value xml:lang="en">Gender</value>
-        <value xml:lang="zh">性别</value>
+        <value xml:lang="zh_CN">性别</value>
     </property>
     <property key="groupName">
         <value xml:lang="en">Group Name</value>
-        <value xml:lang="zh">组名称</value>
+        <value xml:lang="zh_CN">组名称</value>
     </property>
     <property key="groupNameLocal">
         <value xml:lang="en">Group Name Local</value>
-        <value xml:lang="zh">组名称本地语言</value>
+        <value xml:lang="zh_CN">组名称本地语言</value>
     </property>
     <property key="height">
         <value xml:lang="en">Height</value>
-        <value xml:lang="zh">高度</value>
+        <value xml:lang="zh_CN">高度</value>
     </property>
     <property key="infoString">
         <value xml:lang="en">Info String</value>
-        <value xml:lang="zh">信息字符串</value>
+        <value xml:lang="zh_CN">信息字符串</value>
     </property>
     <property key="isExempt">
         <value xml:lang="en">Is Exempt</value>
-        <value xml:lang="zh">免税吗</value>
+        <value xml:lang="zh_CN">免税吗</value>
     </property>
     <property key="isNexus">
         <value xml:lang="en">Is Nexus</value>
-        <value xml:lang="zh">关联吗</value>
+        <value xml:lang="zh_CN">关联吗</value>
     </property>
     <property key="lastInviteDate">
         <value xml:lang="en">Last Invite Date</value>
-        <value xml:lang="zh">上次邀请日期</value>
+        <value xml:lang="zh_CN">上次邀请日期</value>
     </property>
     <property key="lastName">
         <value xml:lang="en">Last Name</value>
-        <value xml:lang="zh">姓</value>
+        <value xml:lang="zh_CN">姓</value>
     </property>
     <property key="lastNameLocal">
         <value xml:lang="en">Last Name Local</value>
-        <value xml:lang="zh">姓的本地语言</value>
+        <value xml:lang="zh_CN">姓的本地语言</value>
     </property>
     <property key="logoImageUrl">
         <value xml:lang="en">Logo Image Url</value>
-        <value xml:lang="zh">编号图片网址</value>
+        <value xml:lang="zh_CN">编号图片网址</value>
     </property>
     <property key="maritalStatus">
         <value xml:lang="en">Marital Status</value>
-        <value xml:lang="zh">婚姻状况</value>
+        <value xml:lang="zh_CN">婚姻状况</value>
     </property>
     <property key="marketingCampaignId">
         <value xml:lang="en">Marketing Campaign Id</value>
-        <value xml:lang="zh">市场攻势编号</value>
+        <value xml:lang="zh_CN">市场攻势编号</value>
     </property>
     <property key="memberId">
         <value xml:lang="en">Member Id</value>
-        <value xml:lang="zh">成员编号</value>
+        <value xml:lang="zh_CN">成员编号</value>
     </property>
     <property key="messageId">
         <value xml:lang="en">Message Id</value>
-        <value xml:lang="zh">消息编号</value>
+        <value xml:lang="zh_CN">消息编号</value>
     </property>
     <property key="middleName">
         <value xml:lang="en">Middle Name</value>
-        <value xml:lang="zh">中间名</value>
+        <value xml:lang="zh_CN">中间名</value>
     </property>
     <property key="middleNameLocal">
         <value xml:lang="en">Middle Name Local</value>
-        <value xml:lang="zh">中间名的本地语言</value>
+        <value xml:lang="zh_CN">中间名的本地语言</value>
     </property>
     <property key="monthsWithEmployer">
         <value xml:lang="en">Months With Employer</value>
-        <value xml:lang="zh">月为雇主</value>
+        <value xml:lang="zh_CN">月为雇主</value>
     </property>
     <property key="mothersMaidenName">
         <value xml:lang="en">Mothers Maiden Name</value>
-        <value xml:lang="zh">母亲未婚时名字</value>
+        <value xml:lang="zh_CN">母亲未婚时名字</value>
     </property>
     <property key="nickname">
         <value xml:lang="en">Nickname</value>
-        <value xml:lang="zh">昵称</value>
+        <value xml:lang="zh_CN">昵称</value>
     </property>
     <property key="note">
         <value xml:lang="en">Note</value>
-        <value xml:lang="zh">便笺</value>
+        <value xml:lang="zh_CN">便笺</value>
     </property>
     <property key="noteId">
         <value xml:lang="en">Note Id</value>
-        <value xml:lang="zh">便笺编号</value>
+        <value xml:lang="zh_CN">便笺编号</value>
     </property>
     <property key="noteName">
         <value xml:lang="en">Note Name</value>
-        <value xml:lang="zh">便笺名称</value>
+        <value xml:lang="zh_CN">便笺名称</value>
     </property>
     <property key="numEmployees">
         <value xml:lang="en">Number of employees</value>
-        <value xml:lang="zh">雇员数量</value>
+        <value xml:lang="zh_CN">雇员数量</value>
     </property>
     <property key="occupation">
         <value xml:lang="en">Occupation</value>
-        <value xml:lang="zh">职业</value>
+        <value xml:lang="zh_CN">职业</value>
     </property>
     <property key="officeSiteName">
         <value xml:lang="en">Office Site Name</value>
-        <value xml:lang="zh">办公站点名称</value>
+        <value xml:lang="zh_CN">办公站点名称</value>
     </property>
     <property key="optInVerifyCode">
         <value xml:lang="en">Opt-in Code</value>
-        <value xml:lang="zh">兴趣代码</value>
+        <value xml:lang="zh_CN">兴趣代码</value>
     </property>
     <property key="organizationName">
         <value xml:lang="en">Organization Name</value>
-        <value xml:lang="zh">机构名称</value>
+        <value xml:lang="zh_CN">机构名称</value>
     </property>
     <property key="organizationalUnit">
         <value xml:lang="en">Organizational Unit</value>
-        <value xml:lang="zh">机构部门</value>
+        <value xml:lang="zh_CN">机构部门</value>
     </property>
     <property key="origCommEventId">
         <value xml:lang="en">Orig Comm Event Id</value>
-        <value xml:lang="zh">初始沟通事件编号</value>
+        <value xml:lang="zh_CN">初始沟通事件编号</value>
     </property>
     <property key="originContactMechId">
         <value xml:lang="en">Origin Contact Mech Id</value>
-        <value xml:lang="zh">初始联系方法编号</value>
+        <value xml:lang="zh_CN">初始联系方法编号</value>
     </property>
     <property key="otherLocal">
         <value xml:lang="en">Other Local</value>
-        <value xml:lang="zh">其它语言</value>
+        <value xml:lang="zh_CN">其它语言</value>
     </property>
     <property key="paAddress1">
         <value xml:lang="en">Address 1</value>
-        <value xml:lang="zh">地址1</value>
+        <value xml:lang="zh_CN">地址1</value>
     </property>
     <property key="paAddress2">
         <value xml:lang="en">Address 2</value>
-        <value xml:lang="zh">地址2</value>
+        <value xml:lang="zh_CN">地址2</value>
     </property>
     <property key="paPostalCode">
         <value xml:lang="en">Postal Code</value>
-        <value xml:lang="zh">邮政编码</value>
+        <value xml:lang="zh_CN">邮政编码</value>
     </property>
     <property key="parentCommEventId">
         <value xml:lang="en">Parent Comm Event Id</value>
-        <value xml:lang="zh">上级沟通事件编号</value>
+        <value xml:lang="zh_CN">上级沟通事件编号</value>
     </property>
     <property key="parentGroupId">
         <value xml:lang="en">Parent Group Id</value>
-        <value xml:lang="zh">上级组编号</value>
+        <value xml:lang="zh_CN">上级组编号</value>
     </property>
     <property key="parentTypeId">
         <value xml:lang="en">Parent Type Id</value>
-        <value xml:lang="zh">上级类型编号</value>
+        <value xml:lang="zh_CN">上级类型编号</value>
     </property>
     <property key="partyClassificationGroupId">
         <value xml:lang="en">Party Classification Group Id</value>
-        <value xml:lang="zh">会员分类组编号</value>
+        <value xml:lang="zh_CN">会员分类组编号</value>
     </property>
     <property key="partyClassificationTypeId">
         <value xml:lang="en">Party Classification Type Id</value>
-        <value xml:lang="zh">会员分类类型编号</value>
+        <value xml:lang="zh_CN">会员分类类型编号</value>
     </property>
     <property key="partyContentTypeId">
         <value xml:lang="en">Parent Content Type Id</value>
-        <value xml:lang="zh">上级内容类型编号</value>
+        <value xml:lang="zh_CN">上级内容类型编号</value>
     </property>
     <property key="partyId">
         <value xml:lang="en">Party Id</value>
-        <value xml:lang="zh">会员编号</value>
+        <value xml:lang="zh_CN">会员编号</value>
     </property>
     <property key="partyIdFrom">
         <value xml:lang="en">From Party ID</value>
-        <value xml:lang="zh">自会员编号</value>
+        <value xml:lang="zh_CN">自会员编号</value>
     </property>
     <property key="partyIdTo">
         <value xml:lang="en">To Party ID</value>
-        <value xml:lang="zh">到会员编号</value>
+        <value xml:lang="zh_CN">到会员编号</value>
     </property>
     <property key="partyIdentTypeDesc">
         <value xml:lang="en">Identification Type</value>
@@ -351,313 +357,313 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="partyInvitationId">
         <value xml:lang="en">Party Invitation Id</value>
-        <value xml:lang="zh">会员邀请编号</value>
+        <value xml:lang="zh_CN">会员邀请编号</value>
     </property>
     <property key="partyRelationshipName">
         <value xml:lang="en">Party Relationship Name</value>
-        <value xml:lang="zh">会员关系名称</value>
+        <value xml:lang="zh_CN">会员关系名称</value>
     </property>
     <property key="partyRelationshipTypeId">
         <value xml:lang="en">Party Relationship Type Id</value>
-        <value xml:lang="zh">会员关系类型编号</value>
+        <value xml:lang="zh_CN">会员关系类型编号</value>
     </property>
     <property key="partyTaxId">
         <value xml:lang="en">Party Tax Id</value>
-        <value xml:lang="zh">会员税务编号</value>
+        <value xml:lang="zh_CN">会员税务编号</value>
     </property>
     <property key="partyTypeId">
         <value xml:lang="en">Party Type Id</value>
-        <value xml:lang="zh">会员类型编号</value>
+        <value xml:lang="zh_CN">会员类型编号</value>
     </property>
     <property key="passportExpireDate">
         <value xml:lang="en">Passport Expire Date</value>
-        <value xml:lang="zh">护照过期日期</value>
+        <value xml:lang="zh_CN">护照过期日期</value>
     </property>
     <property key="passportNumber">
         <value xml:lang="en">Passport Number</value>
-        <value xml:lang="zh">护照编号</value>
+        <value xml:lang="zh_CN">护照编号</value>
     </property>
     <property key="passwordHint">
         <value xml:lang="en">Password Hint</value>
-        <value xml:lang="zh">密码提示</value>
+        <value xml:lang="zh_CN">密码提示</value>
     </property>
     <property key="percentComplete">
         <value xml:lang="en">Percent Complete</value>
-        <value xml:lang="zh">百分数完成</value>
+        <value xml:lang="zh_CN">百分数完成</value>
     </property>
     <property key="percentageUsed">
         <value xml:lang="en">Percentage Used</value>
-        <value xml:lang="zh">已用百分比</value>
+        <value xml:lang="zh_CN">已用百分比</value>
     </property>
     <property key="personalTitle">
         <value xml:lang="en">Personal Title</value>
-        <value xml:lang="zh">称谓</value>
+        <value xml:lang="zh_CN">称谓</value>
     </property>
     <property key="personalImage">
         <value xml:lang="en">Personal Image</value>
     </property>
     <property key="preferredContactMechId">
         <value xml:lang="en">Preferred Contact Mech Id</value>
-        <value xml:lang="zh">优先使用的联系方式编号</value>
+        <value xml:lang="zh_CN">优先使用的联系方式编号</value>
     </property>
     <property key="preferredCurrencyUomId">
         <value xml:lang="en">Preferred Currency Uom Id</value>
-        <value xml:lang="zh">优先使用的币种编号</value>
+        <value xml:lang="zh_CN">优先使用的币种编号</value>
     </property>
     <property key="quickAssignPartyId">
         <value xml:lang="en">Quick Assign Party Id</value>
-        <value xml:lang="zh">快速指派会员编号</value>
+        <value xml:lang="zh_CN">快速指派会员编号</value>
     </property>
     <property key="rateDefaultAmount">
         <value xml:lang="en">Rate Default Amount</value>
-        <value xml:lang="zh">税金缺省金额</value>
+        <value xml:lang="zh_CN">税金缺省金额</value>
     </property>
     <property key="residenceStatusEnumId">
         <value xml:lang="en">Residence Status Enum Id</value>
-        <value xml:lang="zh">居住状态枚举类型</value>
+        <value xml:lang="zh_CN">居住状态枚举类型</value>
     </property>
     <property key="roleTypeId">
         <value xml:lang="en">Role Type Id</value>
-        <value xml:lang="zh">角色类型编号</value>
+        <value xml:lang="zh_CN">角色类型编号</value>
     </property>
     <property key="roleTypeIdFrom">
         <value xml:lang="en">Role Type Id From</value>
-        <value xml:lang="zh">角色类型编号来自</value>
+        <value xml:lang="zh_CN">角色类型编号来自</value>
     </property>
     <property key="roleTypeIdTo">
         <value xml:lang="en">Role Type Id To</value>
-        <value xml:lang="zh">角色类型编号到</value>
+        <value xml:lang="zh_CN">角色类型编号到</value>
     </property>
     <property key="roleTypeList">
         <value xml:lang="en">Role Type List</value>
-        <value xml:lang="zh">角色类型列表</value>
+        <value xml:lang="zh_CN">角色类型列表</value>
     </property>
     <property key="salutation">
         <value xml:lang="en">Salutation</value>
-        <value xml:lang="zh">问候</value>
+        <value xml:lang="zh_CN">问候</value>
     </property>
     <property key="socialSecurityNumber">
         <value xml:lang="en">Social Security Number</value>
-        <value xml:lang="zh">身份号码</value>
+        <value xml:lang="zh_CN">身份号码</value>
     </property>
     <property key="stateProvince">
         <value xml:lang="en">State Province</value>
-        <value xml:lang="zh">省/直辖市</value>
+        <value xml:lang="zh_CN">省/直辖市</value>
     </property>
     <property key="statusHistory">
         <value xml:lang="en">Status History</value>
-        <value xml:lang="zh">状态历史记录</value>
+        <value xml:lang="zh_CN">状态历史记录</value>
     </property>
     <property key="subject">
         <value xml:lang="en">Subject</value>
-        <value xml:lang="zh">主题</value>
+        <value xml:lang="zh_CN">主题</value>
     </property>
     <property key="successiveFailedLogins">
         <value xml:lang="en">Successive Failed Logins</value>
-        <value xml:lang="zh">连续失败的登录</value>
+        <value xml:lang="zh_CN">连续失败的登录</value>
     </property>
     <property key="suffix">
         <value xml:lang="en">Suffix</value>
-        <value xml:lang="zh">后缀</value>
+        <value xml:lang="zh_CN">后缀</value>
     </property>
     <property key="taxAuthPartyId">
         <value xml:lang="en">Tax Authority Party</value>
-        <value xml:lang="zh">税务机关会员</value>
+        <value xml:lang="zh_CN">税务机关会员</value>
     </property>
     <property key="tickerSymbol">
         <value xml:lang="en">Ticker symbol</value>
-        <value xml:lang="zh">股票代号</value>
+        <value xml:lang="zh_CN">股票代号</value>
     </property>
     <property key="toName">
         <value xml:lang="en">To Name</value>
-        <value xml:lang="zh">到名称</value>
+        <value xml:lang="zh_CN">到名称</value>
     </property>
     <property key="toPartyId">
         <value xml:lang="en">To Party Id</value>
-        <value xml:lang="zh">到会员编号</value>
+        <value xml:lang="zh_CN">到会员编号</value>
     </property>
     <property key="totalInvoiceNotApplied">
         <value xml:lang="en">Total Invoice Not Applied</value>
-        <value xml:lang="zh">未使用的发票合计</value>
+        <value xml:lang="zh_CN">未使用的发票合计</value>
     </property>
     <property key="totalPaymentNotApplied">
         <value xml:lang="en">Total Payment Not Applied</value>
-        <value xml:lang="zh">未使用的支付合计</value>
+        <value xml:lang="zh_CN">未使用的支付合计</value>
     </property>
     <property key="totalPaymentsIn">
         <value xml:lang="en">Total Payments In</value>
-        <value xml:lang="zh">收入合计</value>
+        <value xml:lang="zh_CN">收入合计</value>
     </property>
     <property key="totalPaymentsOut">
         <value xml:lang="en">Total Payments Out</value>
-        <value xml:lang="zh">支出合计</value>
+        <value xml:lang="zh_CN">支出合计</value>
     </property>
     <property key="totalPurchaseInvoice">
         <value xml:lang="en">Total Purchase Invoice</value>
-        <value xml:lang="zh">采购发票合计</value>
+        <value xml:lang="zh_CN">采购发票合计</value>
     </property>
     <property key="totalSalesInvoice">
         <value xml:lang="en">Total Sales Invoice</value>
-        <value xml:lang="zh">销售发票合计</value>
+        <value xml:lang="zh_CN">销售发票合计</value>
     </property>
     <property key="totalYearsWorkExperience">
         <value xml:lang="en">Total Years Work Experience</value>
-        <value xml:lang="zh">工作经历年数合计</value>
+        <value xml:lang="zh_CN">工作经历年数合计</value>
     </property>
     <property key="viewContent">
         <value xml:lang="en">View Content</value>
-        <value xml:lang="zh">浏览内容</value>
+        <value xml:lang="zh_CN">浏览内容</value>
     </property>
     <property key="weight">
         <value xml:lang="en">Weight</value>
-        <value xml:lang="zh">重量</value>
+        <value xml:lang="zh_CN">重量</value>
     </property>
     <property key="yearsWithEmployer">
         <value xml:lang="en">Years With Employer</value>
-        <value xml:lang="zh">年为雇主</value>
+        <value xml:lang="zh_CN">年为雇主</value>
     </property>
     <property key="PageTitleAddPartyContent">
         <value xml:lang="en">Add Party Content</value>
-        <value xml:lang="zh">添加会员内容</value>
+        <value xml:lang="zh_CN">添加会员内容</value>
     </property>
     <property key="PageTitleAddPartyInvitationGroupAssoc">
         <value xml:lang="en">Add Party Invitation Group Assoc</value>
-        <value xml:lang="zh">添加会员邀请组关联</value>
+        <value xml:lang="zh_CN">添加会员邀请组关联</value>
     </property>
     <property key="PageTitleAddPartyInvitationRoleAssoc">
         <value xml:lang="en">Add Party Invitation Role Assoc</value>
-        <value xml:lang="zh">添加会员邀请角色关联</value>
+        <value xml:lang="zh_CN">添加会员邀请角色关联</value>
     </property>
     <property key="PageTitleAddPartySegmentRoles">
         <value xml:lang="en">Add Party Segment Role</value>
-        <value xml:lang="zh">添加会员分区角色</value>
+        <value xml:lang="zh_CN">添加会员分区角色</value>
     </property>
     <property key="PageTitleAddPartyTaxAuthInfos">
         <value xml:lang="en">Add Party Tax Authority Info</value>
-        <value xml:lang="zh">添加会员税务机关信息</value>
+        <value xml:lang="zh_CN">添加会员税务机关信息</value>
     </property>
     <property key="PageTitleAddressMatchMap">
         <value xml:lang="en">Address Match Map</value>
-        <value xml:lang="zh">地址匹配地图</value>
+        <value xml:lang="zh_CN">地址匹配地图</value>
     </property>
     <property key="PageTitleAddressMatches">
         <value xml:lang="en">Address Matches</value>
-        <value xml:lang="zh">地址匹配</value>
+        <value xml:lang="zh_CN">地址匹配</value>
     </property>
     <property key="PageTitleAddRelatedCompany">
         <value xml:lang="en">Add Related Company</value>
     </property>
     <property key="PageTitleCommEvents">
         <value xml:lang="en">Communication Events</value>
-        <value xml:lang="zh">沟通事件</value>
+        <value xml:lang="zh_CN">沟通事件</value>
     </property>
     <property key="PageTitleCreateNewPartyDetail">
         <value xml:lang="en">Create New Party Detail</value>
-        <value xml:lang="zh">新建会员详细信息</value>
+        <value xml:lang="zh_CN">新建会员详细信息</value>
     </property>
     <property key="PageTitleEditAvsOverride">
         <value xml:lang="en">Edit AVS Override</value>
-        <value xml:lang="zh">编辑地址验证服务替代</value>
+        <value xml:lang="zh_CN">编辑地址验证服务替代</value>
     </property>
     <property key="PageTitleEditCommContent">
         <value xml:lang="en">Edit Comm Content</value>
-        <value xml:lang="zh">编辑沟通内容</value>
+        <value xml:lang="zh_CN">编辑沟通内容</value>
     </property>
     <property key="PageTitleEditCommunication">
         <value xml:lang="en">Edit Communication</value>
-        <value xml:lang="zh">编辑沟通</value>
+        <value xml:lang="zh_CN">编辑沟通</value>
     </property>
     <property key="PageTitleEditContactMech">
         <value xml:lang="en">Edit Contact Mech</value>
-        <value xml:lang="zh">编辑联系方式</value>
+        <value xml:lang="zh_CN">编辑联系方式</value>
     </property>
     <property key="PageTitleEditCreditCard">
         <value xml:lang="en">Edit Credit Card</value>
-        <value xml:lang="zh">编辑信用卡</value>
+        <value xml:lang="zh_CN">编辑信用卡</value>
     </property>
     <property key="PageTitleEditEftAccount">
         <value xml:lang="en">Edit EFT Account</value>
-        <value xml:lang="zh">编辑电子资金转账账户</value>
+        <value xml:lang="zh_CN">编辑电子资金转账账户</value>
     </property>
     <property key="PageTitleEditGiftCard">
         <value xml:lang="en">Edit Gift Card</value>
-        <value xml:lang="zh">编辑礼品卡</value>
+        <value xml:lang="zh_CN">编辑礼品卡</value>
     </property>
     <property key="PageTitleEditGroupInformation">
         <value xml:lang="en">Edit Group Information</value>
-        <value xml:lang="zh">编辑组信息</value>
+        <value xml:lang="zh_CN">编辑组信息</value>
     </property>
     <property key="PageTitleEditPartyAttribute">
         <value xml:lang="en">Edit Party Attribute</value>
-        <value xml:lang="zh">编辑会员属性</value>
+        <value xml:lang="zh_CN">编辑会员属性</value>
     </property>
     <property key="PageTitleEditPartyClassificationGroup">
         <value xml:lang="en">Edit Party Classification Group</value>
-        <value xml:lang="zh">编辑会员分类组</value>
+        <value xml:lang="zh_CN">编辑会员分类组</value>
     </property>
     <property key="PageTitleEditPartyClassificationGroupParties">
         <value xml:lang="en">Edit Classification Group Parties</value>
-        <value xml:lang="zh">编辑分类组会员</value>
+        <value xml:lang="zh_CN">编辑分类组会员</value>
     </property>
     <property key="PageTitleEditPartyInvitationGroupAssoc">
         <value xml:lang="en">Edit Party Invitation GroupAssoc</value>
-        <value xml:lang="zh">编辑会员邀请组关联</value>
+        <value xml:lang="zh_CN">编辑会员邀请组关联</value>
     </property>
     <property key="PageTitleEditPartyInvitationRoleAssoc">
         <value xml:lang="en">Edit Party Invitation RoleAssoc</value>
-        <value xml:lang="zh">编辑会员邀请角色关联</value>
+        <value xml:lang="zh_CN">编辑会员邀请角色关联</value>
     </property>
     <property key="PageTitleEditPartyRates">
         <value xml:lang="en">Edit Party Rates</value>
-        <value xml:lang="zh">编辑会员税率</value>
+        <value xml:lang="zh_CN">编辑会员税率</value>
     </property>
     <property key="PageTitleEditPartyRelationships">
         <value xml:lang="en">Edit Party Relationships</value>
-        <value xml:lang="zh">编辑会员关系</value>
+        <value xml:lang="zh_CN">编辑会员关系</value>
     </property>
     <property key="PageTitleEditPartyTaxAuthInfos">
         <value xml:lang="en">Edit Party Tax Authority Info</value>
-        <value xml:lang="zh">编辑会员税务机关信息</value>
+        <value xml:lang="zh_CN">编辑会员税务机关信息</value>
     </property>
     <property key="PageTitleEditPersonalInformation">
         <value xml:lang="en">Edit Personal Information</value>
-        <value xml:lang="zh">编辑人员信息</value>
+        <value xml:lang="zh_CN">编辑人员信息</value>
     </property>
     <property key="PageTitleEditSecurityGroupUserLogins">
         <value xml:lang="en">Edit Security Group UserLogins</value>
-        <value xml:lang="zh">编辑安全组用户登录</value>
+        <value xml:lang="zh_CN">编辑安全组用户登录</value>
     </property>
     <property key="PageTitleFindCommunicationEvents">
         <value xml:lang="en">Find Communications</value>
-        <value xml:lang="zh">查找沟通</value>
+        <value xml:lang="zh_CN">查找沟通</value>
     </property>
     <property key="PageTitleFindMatches">
         <value xml:lang="en">Find Matches</value>
-        <value xml:lang="zh">查找匹配</value>
+        <value xml:lang="zh_CN">查找匹配</value>
     </property>
     <property key="PageTitleFindParty">
         <value xml:lang="en">Find Party(s)</value>
-        <value xml:lang="zh">查找会员</value>
+        <value xml:lang="zh_CN">查找会员</value>
     </property>
     <property key="PageTitleFindPartyClassificationGroups">
         <value xml:lang="en">Find Party Classification Groups</value>
-        <value xml:lang="zh">查找会员分类组</value>
+        <value xml:lang="zh_CN">查找会员分类组</value>
     </property>
     <property key="PageTitleFindPartyInvitation">
         <value xml:lang="en">Find Party Invitation</value>
-        <value xml:lang="zh">查找会员邀请</value>
+        <value xml:lang="zh_CN">查找会员邀请</value>
     </property>
     <property key="PageTitleListCommCustRequests">
         <value xml:lang="en">List Comm Customer Requests</value>
-        <value xml:lang="zh">沟通客户请求列表</value>
+        <value xml:lang="zh_CN">沟通客户请求列表</value>
     </property>
     <property key="PageTitleListCommWorkEfforts">
         <value xml:lang="en">List Comm WorkEfforts</value>
-        <value xml:lang="zh">沟通人工服务列表</value>
+        <value xml:lang="zh_CN">沟通人工服务列表</value>
     </property>
     <property key="PageTitleListCommunications">
         <value xml:lang="en">List Communications</value>
-        <value xml:lang="zh">沟通列表</value>
+        <value xml:lang="zh_CN">沟通列表</value>
     </property>
     <property key="PageTitleListCommunicationsRelatedParties">
         <value xml:lang="en">List Communications of related parties</value>
@@ -670,106 +676,106 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PageTitleListUnknownPartyComms">
         <value xml:lang="en">Communications from Unknown origin</value>
-        <value xml:lang="zh">来自未知来源的沟通</value>
+        <value xml:lang="zh_CN">来自未知来源的沟通</value>
     </property>
     <property key="PageTitleNewPartyNote">
         <value xml:lang="en">New Party Note</value>
-        <value xml:lang="zh">新建会员便笺</value>
+        <value xml:lang="zh_CN">新建会员便笺</value>
     </property>
     <property key="PageTitlePartyCarrierAccount">
         <value xml:lang="en">Edit Party Carrier Account</value>
-        <value xml:lang="zh">编辑会员承运人账户</value>
+        <value xml:lang="zh_CN">编辑会员承运人账户</value>
     </property>
     <property key="PageTitlePartyGeoLocation">
         <value xml:lang="en">Party GeoLocation</value>
-        <value xml:lang="zh">会员的地理位置</value>
+        <value xml:lang="zh_CN">会员的地理位置</value>
     </property>
     <property key="PageTitlePartyInvitation">
         <value xml:lang="en">Party Invitation</value>
-        <value xml:lang="zh">会员邀请</value>
+        <value xml:lang="zh_CN">会员邀请</value>
     </property>
     <property key="PageTitlePendingCommunications">
         <value xml:lang="en">Pending Communications</value>
-        <value xml:lang="zh">待定的沟通</value>
+        <value xml:lang="zh_CN">待定的沟通</value>
     </property>
     <property key="PageTitleSecurityGroupsList">
         <value xml:lang="en">Security Groups List</value>
-        <value xml:lang="zh">安全组列表</value>
+        <value xml:lang="zh_CN">安全组列表</value>
     </property>
     
     <property key="FindSecurityGroup">
         <value xml:lang="en">Security Groups List</value>
-        <value xml:lang="zh">安全组列表</value>
+        <value xml:lang="zh_CN">安全组列表</value>
     </property>
     
     
     <property key="PageTitleShoppingList">
         <value xml:lang="en">Shopping List</value>
-        <value xml:lang="zh">购物列表</value>
+        <value xml:lang="zh_CN">购物列表</value>
     </property>
     <property key="PageTitleViewCommPurposes">
         <value xml:lang="en">View Communication Purposes</value>
-        <value xml:lang="zh">浏览沟通目的</value>
+        <value xml:lang="zh_CN">浏览沟通目的</value>
     </property>
     <property key="PageTitleViewCommRoles">
         <value xml:lang="en">View Communication Roles</value>
-        <value xml:lang="zh">浏览沟通角色</value>
+        <value xml:lang="zh_CN">浏览沟通角色</value>
     </property>
     <property key="PageTitleViewCommunication">
         <value xml:lang="en">View Communication Event Information</value>
-        <value xml:lang="zh">浏览沟通事件信息</value>
+        <value xml:lang="zh_CN">浏览沟通事件信息</value>
     </property>
     <property key="PageTitleViewPartyClassificationGroupParties">
         <value xml:lang="en">View Party Classification Group Parties</value>
-        <value xml:lang="zh">浏览会员分类组会员</value>
+        <value xml:lang="zh_CN">浏览会员分类组会员</value>
     </property>
     <property key="PageTitleViewPartyClassifications">
         <value xml:lang="en">View Party Classifications</value>
-        <value xml:lang="zh">浏览会员分类</value>
+        <value xml:lang="zh_CN">浏览会员分类</value>
     </property>
     <property key="PageTitleViewPartyPreferences">
         <value xml:lang="en">View Party Preference</value>
-        <value xml:lang="zh">浏览会员设置</value>
+        <value xml:lang="zh_CN">浏览会员设置</value>
     </property>
     <property key="PageTitleViewPartyProfile">
         <value xml:lang="en">View Party Profile</value>
-        <value xml:lang="zh">浏览会员档案</value>
+        <value xml:lang="zh_CN">浏览会员档案</value>
     </property>
     <property key="PageTitleViewPartyRole">
         <value xml:lang="en">View Party Roles</value>
-        <value xml:lang="zh">浏览会员角色</value>
+        <value xml:lang="zh_CN">浏览会员角色</value>
     </property>
     <property key="PageTitleViewPartySegmentRoles">
         <value xml:lang="en">View Party Segment Roles</value>
-        <value xml:lang="zh">浏览会员分区角色</value>
+        <value xml:lang="zh_CN">浏览会员分区角色</value>
     </property>
     <property key="PageTitleViewVendorParty">
         <value xml:lang="en">View Vendor Party Info</value>
-        <value xml:lang="zh">浏览厂商会员信息</value>
+        <value xml:lang="zh_CN">浏览厂商会员信息</value>
     </property>
     <property key="PageTitleVisitDetail">
         <value xml:lang="en">Visit Detail</value>
-        <value xml:lang="zh">访问详细</value>
+        <value xml:lang="zh_CN">访问详细</value>
     </property>
     <property key="PageTitleVisitList">
         <value xml:lang="en">Visit List</value>
-        <value xml:lang="zh">访问列表</value>
+        <value xml:lang="zh_CN">访问列表</value>
     </property>
     <property key="PartyAccount">
         <value xml:lang="en">Account</value>
-        <value xml:lang="zh">账户</value>
+        <value xml:lang="zh_CN">账户</value>
     </property>
     <property key="PartyActive">
         <value xml:lang="en">Active</value>
-        <value xml:lang="zh">有效</value>
+        <value xml:lang="zh_CN">有效</value>
     </property>
     <property key="PartyAddChildListsToCart">
         <value xml:lang="en">Add Child List To Cart</value>
-        <value xml:lang="zh">把子列表添加到购物车</value>
+        <value xml:lang="zh_CN">把子列表添加到购物车</value>
     </property>
     <property key="PartyAddCommContent">
         <value xml:lang="en">Add Communication Content</value>
-        <value xml:lang="zh">添加沟通内容</value>
+        <value xml:lang="zh_CN">添加沟通内容</value>
     </property>
     <property key="PartyAddCommEventOrder">
         <value xml:lang="en">Add Communication Event Order</value>
@@ -779,39 +785,39 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyAddListToCart">
         <value xml:lang="en">Add List To Cart</value>
-        <value xml:lang="zh">把列表添加到购物车</value>
+        <value xml:lang="zh_CN">把列表添加到购物车</value>
     </property>
     <property key="PartyAddNewAddress">
         <value xml:lang="en">New Address</value>
-        <value xml:lang="zh">新地址</value>
+        <value xml:lang="zh_CN">新地址</value>
     </property>
     <property key="PartyAddNewPersonalInformation">
         <value xml:lang="en">Add New Personal Information</value>
-        <value xml:lang="zh">新建个人信息</value>
+        <value xml:lang="zh_CN">新建个人信息</value>
     </property>
     <property key="PartyAddOtherRelationship">
         <value xml:lang="en">Add other party relationship</value>
-        <value xml:lang="zh">添加其他会员关系</value>
+        <value xml:lang="zh_CN">添加其他会员关系</value>
     </property>
     <property key="PartyAddProductToList">
         <value xml:lang="en">Add Product To List</value>
-        <value xml:lang="zh">把宝贝添加到列表</value>
+        <value xml:lang="zh_CN">把宝贝添加到列表</value>
     </property>
     <property key="PartyAddPurpose">
         <value xml:lang="en">Add Purpose</value>
-        <value xml:lang="zh">添加目的</value>
+        <value xml:lang="zh_CN">添加目的</value>
     </property>
     <property key="PartyAddRelatedAccount">
         <value xml:lang="en">Add Related Account</value>
-        <value xml:lang="zh">添加相关账户</value>
+        <value xml:lang="zh_CN">添加相关账户</value>
     </property>
     <property key="PartyAddRelatedContact">
         <value xml:lang="en">Add Related Contact</value>
-        <value xml:lang="zh">添加相关联系人</value>
+        <value xml:lang="zh_CN">添加相关联系人</value>
     </property>
     <property key="PartyAddRole">
         <value xml:lang="en">Add Role</value>
-        <value xml:lang="zh">添加角色</value>
+        <value xml:lang="zh_CN">添加角色</value>
     </property>
     <property key="PartyAddToMainRole">
         <value xml:lang="en">Add To Main Role</value>
@@ -824,171 +830,171 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyAddToRole">
         <value xml:lang="en">Add To Role</value>
-        <value xml:lang="zh">添加到角色</value>
+        <value xml:lang="zh_CN">添加到角色</value>
     </property>
     <property key="PartyAddToShoppingList">
         <value xml:lang="en">Add To Shopping List</value>
-        <value xml:lang="zh">添加到购物列表</value>
+        <value xml:lang="zh_CN">添加到购物列表</value>
     </property>
     <property key="PartyAdditionalPartyEntry">
         <value xml:lang="en">Additional Party Entry</value>
-        <value xml:lang="zh">附加会员记录</value>
+        <value xml:lang="zh_CN">附加会员记录</value>
     </property>
     <property key="PartyAdditionalPartyListing">
         <value xml:lang="en">Additional Party Listing</value>
-        <value xml:lang="zh">附加会员列表</value>
+        <value xml:lang="zh_CN">附加会员列表</value>
     </property>
     <property key="PartyAddrAttnName">
         <value xml:lang="en">Attn</value>
-        <value xml:lang="zh">收件人</value>
+        <value xml:lang="zh_CN">收件人</value>
     </property>
     <property key="PartyAddrToName">
         <value xml:lang="en">To</value>
-        <value xml:lang="zh">收件人</value>
+        <value xml:lang="zh_CN">收件人</value>
     </property>
     <property key="PartyAddressLine1">
         <value xml:lang="en">Address Line 1</value>
-        <value xml:lang="zh">地址行1</value>
+        <value xml:lang="zh_CN">地址行1</value>
     </property>
     <property key="PartyAddressLine1Missing">
         <value xml:lang="en">Address Line 1 is missing</value>
-        <value xml:lang="zh">缺少地址行1</value>
+        <value xml:lang="zh_CN">缺少地址行1</value>
     </property>
     <property key="PartyAddressLine1MissingError">
         <value xml:lang="en">Address Line 1 is missing</value>
-        <value xml:lang="zh">没有找到地址行1</value>
+        <value xml:lang="zh_CN">没有找到地址行1</value>
     </property>
     <property key="PartyAddressLine2">
         <value xml:lang="en">Address Line 2</value>
-        <value xml:lang="zh">地址行2</value>
+        <value xml:lang="zh_CN">地址行2</value>
     </property>
     <property key="PartyAddressMailingShipping">
         <value xml:lang="en">Mailing/Shipping Address</value>
-        <value xml:lang="zh">邮寄/货运地址</value>
+        <value xml:lang="zh_CN">邮寄/货运地址</value>
     </property>
     <property key="PartyAddressMatchKey">
         <value xml:lang="en">Match Key</value>
-        <value xml:lang="zh">匹配键</value>
+        <value xml:lang="zh_CN">匹配键</value>
     </property>
     <property key="PartyAddressMatchMessage1">
         <value xml:lang="en">Format: key,value,sequence (sequence is optional)</value>
-        <value xml:lang="zh">格式：键,值,序列 (序列是可选项)</value>
+        <value xml:lang="zh_CN">格式：键,值,序列 (序列是可选项)</value>
     </property>
     <property key="PartyAddressMatchValue">
         <value xml:lang="en">Match Value</value>
-        <value xml:lang="zh">匹配值</value>
+        <value xml:lang="zh_CN">匹配值</value>
     </property>
     <property key="PartyAddressMatching">
         <value xml:lang="en">Matching</value>
-        <value xml:lang="zh">匹配</value>
+        <value xml:lang="zh_CN">匹配</value>
     </property>
     <property key="PartyAdjustInAccountingComponent">
         <value xml:lang="en">Adjust in accounting component</value>
-        <value xml:lang="zh">在财务组件中调整</value>
+        <value xml:lang="zh_CN">在财务组件中调整</value>
     </property>
     <property key="PartyAffiliateCodeMissingError">
         <value xml:lang="en">Affiliate Code is missing</value>
-        <value xml:lang="zh">找不到附属码</value>
+        <value xml:lang="zh_CN">找不到附属码</value>
     </property>
     <property key="PartyAffiliateNameMissing">
         <value xml:lang="en">Affiliate Name is missing</value>
-        <value xml:lang="zh">找不到附属名</value>
+        <value xml:lang="zh_CN">找不到附属名</value>
     </property>
     <property key="PartyAllCommunicationEvents">
         <value xml:lang="en">All Communication Events</value>
-        <value xml:lang="zh">全部沟通事件</value>
+        <value xml:lang="zh_CN">全部沟通事件</value>
     </property>
     <property key="PartyAllEvents">
         <value xml:lang="en">All Communications</value>
-        <value xml:lang="zh">全部沟通</value>
+        <value xml:lang="zh_CN">全部沟通</value>
     </property>
     <property key="PartyAllPhoneNumbers">
         <value xml:lang="en">All phone numbers</value>
-        <value xml:lang="zh">全部电话号码</value>
+        <value xml:lang="zh_CN">全部电话号码</value>
     </property>
     <property key="PartyAllowAddressSolicitation">
         <value xml:lang="en">Allow Address Solicitation</value>
-        <value xml:lang="zh">允许地址提示</value>
+        <value xml:lang="zh_CN">允许地址提示</value>
     </property>
     <property key="PartyAllowSolicitation">
         <value xml:lang="en">Allow Solicitation</value>
-        <value xml:lang="zh">允许提示</value>
+        <value xml:lang="zh_CN">允许提示</value>
     </property>
     <property key="PartyAlreadyHaveAccount">
         <value xml:lang="en">If you already have an account</value>
-        <value xml:lang="zh">如果你已经有账户了</value>
+        <value xml:lang="zh_CN">如果你已经有账户了</value>
     </property>
     <property key="PartyAnyRole">
         <value xml:lang="en">(Any Role)</value>
-        <value xml:lang="zh">(任一角色)</value>
+        <value xml:lang="zh_CN">(任一角色)</value>
     </property>
     <property key="PartyAppliedPayments">
         <value xml:lang="en">Applied payments to payments</value>
-        <value xml:lang="zh">已应用支付到支付</value>
+        <value xml:lang="zh_CN">已应用支付到支付</value>
     </property>
     <property key="PartyAreaCode">
         <value xml:lang="en">Area Code</value>
-        <value xml:lang="zh">区号</value>
+        <value xml:lang="zh_CN">区号</value>
     </property>
     <property key="PartyAreaCodeMissingError">
         <value xml:lang="en">Area code is missing</value>
-        <value xml:lang="zh">找不到地区代码</value>
+        <value xml:lang="zh_CN">找不到地区代码</value>
     </property>
     <property key="PartyAttachContent">
         <value xml:lang="en">Attach Content</value>
-        <value xml:lang="zh">附加内容</value>
+        <value xml:lang="zh_CN">附加内容</value>
     </property>
     <property key="PartyAttachFile">
         <value xml:lang="en">Attach File</value>
-        <value xml:lang="zh">附加文件</value>
+        <value xml:lang="zh_CN">附加文件</value>
     </property>
     <property key="PartyAttentionName">
         <value xml:lang="en">Attention Name</value>
-        <value xml:lang="zh">收件人</value>
+        <value xml:lang="zh_CN">收件人</value>
     </property>
     <property key="PartyAttribute">
         <value xml:lang="en">Party Attribute</value>
-        <value xml:lang="zh">会员属性</value>
+        <value xml:lang="zh_CN">会员属性</value>
     </property>
     <property key="PartyAttributes">
         <value xml:lang="en">Party Attribute(s)</value>
-        <value xml:lang="zh">会员属性</value>
+        <value xml:lang="zh_CN">会员属性</value>
     </property>
     <property key="PartyAvsOver">
         <value xml:lang="en">AVS Override (CC Fraud Screening)</value>
-        <value xml:lang="zh">重载地址验证服务</value>
+        <value xml:lang="zh_CN">重载地址验证服务</value>
     </property>
     <property key="PartyAvsString">
         <value xml:lang="en">AVS String</value>
-        <value xml:lang="zh">地址验证服务字符串</value>
+        <value xml:lang="zh_CN">地址验证服务字符串</value>
     </property>
     <property key="PartyBank">
         <value xml:lang="en">Bank</value>
-        <value xml:lang="zh">银行</value>
+        <value xml:lang="zh_CN">银行</value>
     </property>
     <property key="PartyBasicInformation">
         <value xml:lang="en">Basic Information</value>
-        <value xml:lang="zh">基本信息</value>
+        <value xml:lang="zh_CN">基本信息</value>
     </property>
     <property key="PartyBillingAddress">
         <value xml:lang="en">Billing Address</value>
-        <value xml:lang="zh">寄账单地址</value>
+        <value xml:lang="zh_CN">寄账单地址</value>
     </property>
     <property key="PartyBillingAddressNotSelected">
         <value xml:lang="en">Billing Address Not Yet Selected</value>
-        <value xml:lang="zh">还没有选择寄账单地址</value>
+        <value xml:lang="zh_CN">还没有选择寄账单地址</value>
     </property>
     <property key="PartyBirthDate">
         <value xml:lang="en">Birth Date</value>
-        <value xml:lang="zh">生日</value>
+        <value xml:lang="zh_CN">生日</value>
     </property>
     <property key="PartyBirthDateMissingError">
         <value xml:lang="en">Birthdate is not formatted correctly: must be yyyy-mm-dd, like 1982-07-21</value>
-        <value xml:lang="zh">生日格式错误：必须是yyyy-mm-dd，如1982-07-21</value>
+        <value xml:lang="zh_CN">生日格式错误：必须是yyyy-mm-dd，如1982-07-21</value>
     </property>
     <property key="PartyBusinessPhone">
         <value xml:lang="en">Business phone</value>
-        <value xml:lang="zh">办公电话</value>
+        <value xml:lang="zh_CN">办公电话</value>
     </property>
     <property key="PartyCannotCreatePartyDataSource">
         <value xml:lang="en">Cannot create PartyDataSource</value>
@@ -1013,92 +1019,92 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyCannotUpdateContactBecauseNotWithSpecifiedParty">
         <value xml:lang="en">ERROR: Cannot update specified contact info because it does not correspond to the specified party.</value>
-        <value xml:lang="zh">错误：不能更新指定的联系信息，因为它没有与指定的会员联系起来。</value>
+        <value xml:lang="zh_CN">错误：不能更新指定的联系信息，因为它没有与指定的会员联系起来。</value>
     </property>
     <property key="PartyChangeParty">
         <value xml:lang="en">Change Party</value>
-        <value xml:lang="zh">修改会员</value>
+        <value xml:lang="zh_CN">修改会员</value>
     </property>
     <property key="PartyChangePassword">
         <value xml:lang="en">Change Password</value>
-        <value xml:lang="zh">修改密码</value>
+        <value xml:lang="zh_CN">修改密码</value>
     </property>
     <property key="PartyChildCommunicationEvents">
         <value xml:lang="en">Child Communication Events</value>
-        <value xml:lang="zh">子沟通事件</value>
+        <value xml:lang="zh_CN">子沟通事件</value>
     </property>
     <property key="PartyChildShoppingList">
         <value xml:lang="en">Child Shopping List</value>
-        <value xml:lang="zh">子购物列表</value>
+        <value xml:lang="zh_CN">子购物列表</value>
     </property>
     <property key="PartyCity">
         <value xml:lang="en">City</value>
-        <value xml:lang="zh">城市</value>
+        <value xml:lang="zh_CN">城市</value>
     </property>
     <property key="PartyCityMissing">
         <value xml:lang="en">City is Missing</value>
-        <value xml:lang="zh">找不到城市</value>
+        <value xml:lang="zh_CN">找不到城市</value>
     </property>
     <property key="PartyClassificationGroup">
         <value xml:lang="en">Classification Group</value>
-        <value xml:lang="zh">分类组</value>
+        <value xml:lang="zh_CN">分类组</value>
     </property>
     <property key="PartyClassificationGroupId">
         <value xml:lang="en">Classification Group Id</value>
-        <value xml:lang="zh">分类组编号</value>
+        <value xml:lang="zh_CN">分类组编号</value>
     </property>
     <property key="PartyClassificationGroupParties">
         <value xml:lang="en">Classification Group Parties</value>
-        <value xml:lang="zh">分类组会员</value>
+        <value xml:lang="zh_CN">分类组会员</value>
     </property>
     <property key="PartyClassificationGroups">
         <value xml:lang="en">Classification Groups</value>
-        <value xml:lang="zh">分类组</value>
+        <value xml:lang="zh_CN">分类组</value>
     </property>
     <property key="PartyClassifications">
         <value xml:lang="en">Classifications</value>
-        <value xml:lang="zh">会员分类</value>
+        <value xml:lang="zh_CN">会员分类</value>
     </property>
     
     <property key="classification">
         <value xml:lang="en">Classifications</value>
-        <value xml:lang="zh">会员分类</value>
+        <value xml:lang="zh_CN">会员分类</value>
     </property>
     
     
      <property key="SecurityMgr">
         <value xml:lang="en">安全管理</value>
-        <value xml:lang="zh">安全管理</value>
+        <value xml:lang="zh_CN">安全管理</value>
     </property>
      <property key="VisitsMgr">
         <value xml:lang="en">访问管理</value>
-        <value xml:lang="zh">访问管理</value>
+        <value xml:lang="zh_CN">访问管理</value>
     </property>
     
     
     <property key="PartyClient">
         <value xml:lang="en">Client</value>
-        <value xml:lang="zh">客户端</value>
+        <value xml:lang="zh_CN">客户端</value>
     </property>
     <property key="PartyClientIP">
         <value xml:lang="en">Client IP</value>
-        <value xml:lang="zh">客户端IP</value>
+        <value xml:lang="zh_CN">客户端IP</value>
     </property>
     <property key="PartyClientUser">
         <value xml:lang="en">Client User</value>
-        <value xml:lang="zh">客户端用户</value>
+        <value xml:lang="zh_CN">客户端用户</value>
     </property>
     <property key="PartyCommContent">
         <value xml:lang="en">Communication Content</value>
-        <value xml:lang="zh">沟通内容</value>
+        <value xml:lang="zh_CN">沟通内容</value>
     </property>
     <property key="PartyCommCustRequests">
         <value xml:lang="en">Communication Customer Requests</value>
-        <value xml:lang="zh">沟通客户请求</value>
+        <value xml:lang="zh_CN">沟通客户请求</value>
     </property>
     <property key="PartyCommEvent">
         <value xml:lang="en">Comm Event</value>
-        <value xml:lang="zh">沟通事件</value>
+        <value xml:lang="zh_CN">沟通事件</value>
     </property>
     <property key="PartyCommEventCreateOpportunity">
         <value xml:lang="en">Create Opportunity</value>
@@ -1120,61 +1126,61 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyCommEventPurposes">
         <value xml:lang="en">Communication Event Purposes</value>
-        <value xml:lang="zh">沟通事件目的</value>
+        <value xml:lang="zh_CN">沟通事件目的</value>
     </property>
     <property key="PartyCommEventRoles">
         <value xml:lang="en">Communication Event Roles</value>
-        <value xml:lang="zh">沟通事件角色</value>
+        <value xml:lang="zh_CN">沟通事件角色</value>
     </property>
     <property key="PartyCommEventSubject">
         <value xml:lang="en">Party Comm Event Subject</value>
-        <value xml:lang="zh">会员沟通事件主题</value>
+        <value xml:lang="zh_CN">会员沟通事件主题</value>
     </property>
     <property key="PartyCommEvents">
         <value xml:lang="en">Comm Events</value>
-        <value xml:lang="zh">沟通事件</value>
+        <value xml:lang="zh_CN">沟通事件</value>
     </property>
     <property key="PartyCommWorkEfforts">
         <value xml:lang="en">Communication Work Efforts</value>
-        <value xml:lang="zh">沟通人工服务</value>
+        <value xml:lang="zh_CN">沟通人工服务</value>
     </property>
     <property key="PartyComments">
         <value xml:lang="en">Comments</value>
-        <value xml:lang="zh">评论</value>
+        <value xml:lang="zh_CN">评论</value>
     </property>
     <property key="PartyCommunicationEvent">
         <value xml:lang="en">Communication Event</value>
-        <value xml:lang="zh">沟通事件</value>
+        <value xml:lang="zh_CN">沟通事件</value>
     </property>
     <property key="PartyCommunicationEventNotFound">
         <value xml:lang="en">Communication Event ID: ${parameters.commnicationEventId} not found</value>
     </property>
     <property key="PartyCommunications">
         <value xml:lang="en">Communications</value>
-        <value xml:lang="zh">沟通记录</value>
+        <value xml:lang="zh_CN">沟通记录</value>
     </property>
     
     <property key="FindCommunicationEvents">
         <value xml:lang="en">Communications</value>
-        <value xml:lang="zh">沟通记录</value>
+        <value xml:lang="zh_CN">沟通记录</value>
     </property>
     
     
     <property key="PartyCommunicationsOfParty">
         <value xml:lang="en">Communications of party</value>
-        <value xml:lang="zh">会员的沟通</value>
+        <value xml:lang="zh_CN">会员的沟通</value>
     </property>
     <property key="PartyCommunicationsWith">
         <value xml:lang="en">Communications with</value>
-        <value xml:lang="zh">沟通对象</value>
+        <value xml:lang="zh_CN">沟通对象</value>
     </property>
     <property key="PartyCompanyName">
         <value xml:lang="en">Gorun8: Party Manager</value>
-        <value xml:lang="zh">Gorun8: 会员管理程序</value>
+        <value xml:lang="zh_CN">Gorun8: 会员管理程序</value>
     </property>
     <property key="PartyCompanyNameMissingError">
         <value xml:lang="en">Company Name is missing</value>
-        <value xml:lang="zh">找不到公司名称</value>
+        <value xml:lang="zh_CN">找不到公司名称</value>
     </property>
     <property key="PartyCompanySubtitle">
         <!--value xml:lang="ar">جزء من عائلة أوفبيز للبرمجيات الحرة</value-->
@@ -1185,283 +1191,283 @@ Author:hezhiping   Email:110476592@qq.com
         <!--value xml:lang="ro">Parte accesibila pentru Business Family of Open Source Software</valuevalue xml:lang="ro">Parte din Open for Business Family of Open Source Software</value-->
         <!--value xml:lang="ru">Часть семейства ПО Gorun8 Ecommerce System</valuevalue xml:lang="ru">Часть семейства "Gorun8 Ecommerce System Family" программных продуктов Open Source </value-->
         <!--value xml:lang="th">เป็นส่วนหนึ่งของธุรกิจแบบครอบครัวที่เป็นซอฟต์แวร์โอเพนซอส</value-->
-        <!--value xml:lang="zh">开源软件Gorun8的组成部分</valuevalue xml:lang="zh">开源软件Gorun8的组成部分</value-->
-        <value xml:lang="zh">开源软件Gorun8家族的一部分</value>
+        <!--value xml:lang="zh_CN">开源软件Gorun8的组成部分</valuevalue xml:lang="zh_CN">开源软件Gorun8的组成部分</value-->
+        <value xml:lang="zh_CN">开源软件Gorun8家族的一部分</value>
     </property>
     <property key="PartyContactAllowAddressSolicitation">
         <value xml:lang="en">Allow Address Solicitation</value>
-        <value xml:lang="zh">允许地址提示</value>
+        <value xml:lang="zh_CN">允许地址提示</value>
     </property>
     <property key="PartyContactAllowSolicitation">
         <value xml:lang="en">Allow Solicitation</value>
-        <value xml:lang="zh">允许提示</value>
+        <value xml:lang="zh_CN">允许提示</value>
     </property>
     <property key="PartyContactEffectiveThru">
         <value xml:lang="en">Effective Thru</value>
-        <value xml:lang="zh">有效期</value>
+        <value xml:lang="zh_CN">有效期</value>
     </property>
     <property key="PartyContactExt">
         <value xml:lang="en">ext</value>
-        <value xml:lang="zh">转</value>
+        <value xml:lang="zh_CN">转</value>
     </property>
     <property key="PartyContactFaxPhoneNumber">
         <value xml:lang="en">Fax Number</value>
-        <value xml:lang="zh">传真号码</value>
+        <value xml:lang="zh_CN">传真号码</value>
     </property>
     <property key="PartyContactInfo">
         <value xml:lang="en">Contact Info</value>
-        <value xml:lang="zh">联系信息</value>
+        <value xml:lang="zh_CN">联系信息</value>
     </property>
     <property key="PartyContactInfoNotBelongToYou">
         <value xml:lang="en">The contact information specified does not belong to you, you may not view or edit it</value>
-        <value xml:lang="zh">指定的联系信息不属于你，你不能浏览或编辑它</value>
+        <value xml:lang="zh_CN">指定的联系信息不属于你，你不能浏览或编辑它</value>
     </property>
     <property key="PartyContactInformation">
         <value xml:lang="en">Contact Information</value>
-        <value xml:lang="zh">联系信息</value>
+        <value xml:lang="zh_CN">联系信息</value>
     </property>
     <property key="PartyContactListPartyCreate">
         <value xml:lang="en">Add Party to Contact List</value>
-        <value xml:lang="zh">把会员添加到联系列表</value>
+        <value xml:lang="zh_CN">把会员添加到联系列表</value>
     </property>
     <property key="PartyContactLists">
         <value xml:lang="en">Contact Lists</value>
-        <value xml:lang="zh">联系列表</value>
+        <value xml:lang="zh_CN">联系列表</value>
     </property>
     <property key="PartyContactMechIdMissing">
         <value xml:lang="en">Contact Mech ID is missing</value>
-        <value xml:lang="zh">找不到联系方法编号</value>
+        <value xml:lang="zh_CN">找不到联系方法编号</value>
     </property>
     <property key="PartyContactMechNotFoundCannotDelete">
         <value xml:lang="en">ERROR: Could not delete contact info (party contact mech not found)</value>
-        <value xml:lang="zh">错误：无法删除联系信息 (没有找到会员联系方式)</value>
+        <value xml:lang="zh_CN">错误：无法删除联系信息 (没有找到会员联系方式)</value>
     </property>
     <property key="PartyContactMechType">
         <value xml:lang="en">Contact Mech Type</value>
-        <value xml:lang="zh">联系方式类型</value>
+        <value xml:lang="zh_CN">联系方式类型</value>
     </property>
     <property key="PartyContactMechTypeIdMissing">
         <value xml:lang="en">Contact Mech Type ID is missing</value>
-        <value xml:lang="zh">缺少联系方式类型编号</value>
+        <value xml:lang="zh_CN">缺少联系方式类型编号</value>
     </property>
     <property key="PartyContactMechanismSuccessfullyCreated">
         <value xml:lang="en">Contact Mechanism successfully created.</value>
-        <value xml:lang="zh">已成功新建联系方式。</value>
+        <value xml:lang="zh_CN">已成功新建联系方式。</value>
     </property>
     <property key="PartyContactMechanismSuccessfullyUpdated">
         <value xml:lang="en">Contact Mechanism successfully updated.</value>
-        <value xml:lang="zh">已成功更新联系方式。</value>
+        <value xml:lang="zh_CN">已成功更新联系方式。</value>
     </property>
     <property key="PartyContactMechs">
         <value xml:lang="en">ContactMechs</value>
-        <value xml:lang="zh">联系方式</value>
+        <value xml:lang="zh_CN">联系方式</value>
     </property>
     <property key="PartyContactMobilePhoneNumber">
         <value xml:lang="en">Mobile Phone Number</value>
-        <value xml:lang="zh">手机号码</value>
+        <value xml:lang="zh_CN">手机号码</value>
     </property>
     <property key="PartyContactNumber">
         <value xml:lang="en">Contact Number</value>
-        <value xml:lang="zh">联系号码</value>
+        <value xml:lang="zh_CN">联系号码</value>
     </property>
     <property key="PartyContactNumberMissing">
         <value xml:lang="en">Contact Number is missing</value>
-        <value xml:lang="zh">找不到联系号码</value>
+        <value xml:lang="zh_CN">找不到联系号码</value>
     </property>
     <property key="PartyContactPurpose">
         <value xml:lang="en">Contact Purpose</value>
-        <value xml:lang="zh">联系目的</value>
+        <value xml:lang="zh_CN">联系目的</value>
     </property>
     <property key="PartyContactPurposes">
         <value xml:lang="en">Contact Purposes</value>
-        <value xml:lang="zh">联系目的</value>
+        <value xml:lang="zh_CN">联系目的</value>
     </property>
     <property key="PartyContactSolicitingOk">
         <value xml:lang="en">Soliciting OK?</value>
-        <value xml:lang="zh">提示吗?</value>
+        <value xml:lang="zh_CN">提示吗?</value>
     </property>
     <property key="PartyContactTelephoneMissing">
         <value xml:lang="en">Contact telephone is missing</value>
-        <value xml:lang="zh">缺少联系电话</value>
+        <value xml:lang="zh_CN">缺少联系电话</value>
     </property>
     <property key="PartyContactTelephoneMissingError">
         <value xml:lang="en">Contact telephone is missing</value>
-        <value xml:lang="zh">找不到联系电话</value>
+        <value xml:lang="zh_CN">找不到联系电话</value>
     </property>
     <property key="PartyContactType">
         <value xml:lang="en">Contact Type</value>
-        <value xml:lang="zh">联系类型</value>
+        <value xml:lang="zh_CN">联系类型</value>
     </property>
     <property key="PartyContactWorkPhoneNumber">
         <value xml:lang="en">Work Phone Number</value>
-        <value xml:lang="zh">办公电话号码</value>
+        <value xml:lang="zh_CN">办公电话号码</value>
     </property>
     <property key="PartyContent">
         <value xml:lang="en">Party Content</value>
-        <value xml:lang="zh">会员内容</value>
+        <value xml:lang="zh_CN">会员内容</value>
     </property>
     <property key="PartyContentId">
         <value xml:lang="en">Content ID</value>
-        <value xml:lang="zh">内容编号</value>
+        <value xml:lang="zh_CN">内容编号</value>
     </property>
     <property key="PartyCookie">
         <value xml:lang="en">Cookie</value>
-        <value xml:lang="zh">Cookie</value>
+        <value xml:lang="zh_CN">Cookie</value>
     </property>
     <property key="PartyCouldNotCreateNewPurpose">
         <value xml:lang="en">Could not create new purpose, a purpose with that type already exists</value>
     </property>
     <property key="CommonCountryCode">
         <value xml:lang="en">Country Code</value>
-        <value xml:lang="zh">国家代码</value>
+        <value xml:lang="zh_CN">国家代码</value>
     </property>
     <property key="CommonCountryCodeMissing">
         <value xml:lang="en">Country code is Missing</value>
-        <value xml:lang="zh">找不到国家代码</value>
+        <value xml:lang="zh_CN">找不到国家代码</value>
     </property>
     <property key="CommonCountryMissing">
         <value xml:lang="en">Country is Missing</value>
-        <value xml:lang="zh">找不到国家</value>
+        <value xml:lang="zh_CN">找不到国家</value>
     </property>
     <property key="PartyCreateAddEmail">
         <value xml:lang="en">Create/Add Email to Party</value>
-        <value xml:lang="zh">新建/添加电子邮件到会员</value>
+        <value xml:lang="zh_CN">新建/添加电子邮件到会员</value>
     </property>
     <property key="PartyCreateAddWebSiteRolePermissionError">
         <value xml:lang="en">Security Error: to run addWebSiteRole you must have the PARTYMGR_CREATE or PARTYMGR_ADMIN permission</value>
          
-        <value xml:lang="zh">安全错误: 要运行 addWebSiteRole，你必须具有 PARTYMGR_CREATE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 addWebSiteRole，你必须具有 PARTYMGR_CREATE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyCreateAttributePermissionError">
         <value xml:lang="en">Security Error: to run createPartyAttribute you must have the PARTYMGR_CREATE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 createPartyAttribute，你必须具有 PARTYMGR_CREATE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 createPartyAttribute，你必须具有 PARTYMGR_CREATE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyCreateCommunicationEventPermissionError">
         <value xml:lang="en">Security Error: to run createCommunicationEvent you must have the PARTYMGR_CREATE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 createCommunicationEvent，你必须具有 PARTYMGR_CREATE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 createCommunicationEvent，你必须具有 PARTYMGR_CREATE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyCreateCommunicationEventPurposePermissionError">
         <value xml:lang="en">Security Error: to run createCommunicationEventPurpose you must have the PARTYMGR_CREATE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 createCommunicationEventPurpose，你必须具有 PARTYMGR_CREATE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 createCommunicationEventPurpose，你必须具有 PARTYMGR_CREATE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyCreateCommunicationEventRolePermissionError">
         <value xml:lang="en">Security Error: to run createCommunicationEventRole you must have the PARTYMGR_CREATE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 createCommunicationEventRole，你必须具有 PARTYMGR_CREATE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 createCommunicationEventRole，你必须具有 PARTYMGR_CREATE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyCreateCommunicationEventUploadFileMissing">
         <value xml:lang="en">Upload file is missing...</value>
     </property>
     <property key="PartyCreateNewBillingAddress">
         <value xml:lang="en">Create a new billing address for this credit card</value>
-        <value xml:lang="zh">为这个信用卡新建一个寄账单地址</value>
+        <value xml:lang="zh_CN">为这个信用卡新建一个寄账单地址</value>
     </property>
     <property key="PartyCreateNewContact">
         <value xml:lang="en">Create New Contact Information</value>
-        <value xml:lang="zh">新建联系信息</value>
+        <value xml:lang="zh_CN">新建联系信息</value>
     </property>
     <property key="PartyCreateNewContactInfo">
         <value xml:lang="en">Create New Contact Information</value>
-        <value xml:lang="zh">新建联系信息</value>
+        <value xml:lang="zh_CN">新建联系信息</value>
     </property>
     <property key="PartyCreateNewCreditCard">
         <value xml:lang="en">Create New Credit Card</value>
-        <value xml:lang="zh">新建信用卡</value>
+        <value xml:lang="zh_CN">新建信用卡</value>
     </property>
     <property key="PartyCreateNewCustRequest">
         <value xml:lang="en">Create Request</value>
-        <value xml:lang="zh">新建请求</value>
+        <value xml:lang="zh_CN">新建请求</value>
     </property>
     <property key="PartyCreateNewCustomer">
         <value xml:lang="en">Create Customer</value>
-        <value xml:lang="zh">新建顾客</value>
+        <value xml:lang="zh_CN">新建顾客</value>
     </property>
     <property key="PartyCreateNewEftAccount">
         <value xml:lang="en">Create New EFT Account</value>
-        <value xml:lang="zh">新建电子资金转账账户</value>
+        <value xml:lang="zh_CN">新建电子资金转账账户</value>
     </property>
     <property key="PartyCreateNewEmployee">
         <value xml:lang="en">Create Employee</value>
-        <value xml:lang="zh">新建职员</value>
+        <value xml:lang="zh_CN">新建职员</value>
     </property>
     <property key="PartyCreateNewGiftCard">
         <value xml:lang="en">Create New Gift Card</value>
-        <value xml:lang="zh">新建礼品卡</value>
+        <value xml:lang="zh_CN">新建礼品卡</value>
     </property>
     <property key="PartyCreateNewParty">
         <value xml:lang="en">Create New Party Detail</value>
-        <value xml:lang="zh">新建会员详细</value>
+        <value xml:lang="zh_CN">新建会员详细</value>
     </property>
     <property key="PartyCreateNewPartyClassificationGroup">
         <value xml:lang="en">Create New Party Classification Group</value>
-        <value xml:lang="zh">新建会员分类组</value>
+        <value xml:lang="zh_CN">新建会员分类组</value>
     </property>
     <property key="PartyCreateNewPartyGroup">
         <value xml:lang="en">Create New Party Group</value>
-        <value xml:lang="zh">新建会员组</value>
+        <value xml:lang="zh_CN">新建会员组</value>
     </property>
     <property key="PartyCreateNewPerson">
         <value xml:lang="en">Create New Person</value>
-        <value xml:lang="zh">新建人员</value>
+        <value xml:lang="zh_CN">新建人员</value>
     </property>
     <property key="PartyCreateNewProspect">
         <value xml:lang="en">Create Prospect</value>
-        <value xml:lang="zh">新建期望</value>
+        <value xml:lang="zh_CN">新建期望</value>
     </property>
     <property key="PartyCreateNewQuote">
         <value xml:lang="en">Create Quote</value>
-        <value xml:lang="zh">新建询价</value>
+        <value xml:lang="zh_CN">新建询价</value>
     </property>
     <property key="PartyCreateNewSecurityGroup">
         <value xml:lang="en">Create New SecurityGroup</value>
-        <value xml:lang="zh">新建安全组</value>
+        <value xml:lang="zh_CN">新建安全组</value>
     </property>
     <property key="PartyCreatePartyClassificationGroupPermissionError">
         <value xml:lang="en">Security Error: to run createPartyClassificationGroup you must have the PARTYMGR_CREATE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 createPartyClassificationGroup，你必须具有 PARTYMGR_CREATE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 createPartyClassificationGroup，你必须具有 PARTYMGR_CREATE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyCreatePartyClassificationPermissionError">
         <value xml:lang="en">Security Error: to run createPartyClassification you must have the PARTYMGR_CREATE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 createPartyClassification，你必须具有 PARTYMGR_CREATE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 createPartyClassification，你必须具有 PARTYMGR_CREATE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyCreatePartyRolePermissionError">
         <value xml:lang="en">Security Error: to run createPartyRole you must have the PARTYMGR_ROLE_CREATE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误：要运行新建会员角色(createPartyRole)，你必须有PARTYMGR_ROLE_CREATE或PARTYMGR_ADMIN权限</value>
+        <value xml:lang="zh_CN">安全错误：要运行新建会员角色(createPartyRole)，你必须有PARTYMGR_ROLE_CREATE或PARTYMGR_ADMIN权限</value>
     </property>
     <property key="PartyCreatePostalAddressBoundaryPermissionError">
         <value xml:lang="en">Security Error: to run createPostalAddressBoundary you must have the PARTYMGR_CREATE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 createPostalAddressBoundary，你必须具有 PARTYMGR_CREATE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 createPostalAddressBoundary，你必须具有 PARTYMGR_CREATE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyCreateRequestFromCommEvent">
         <value xml:lang="en">Create CustReq from CommEvent</value>
-        <value xml:lang="zh">从沟通事件新建客户需求</value>
+        <value xml:lang="zh_CN">从沟通事件新建客户需求</value>
     </property>
     <property key="PartyCreateVendorPermissionError">
         <value xml:lang="en">Security Error: to run createVendor you must have the PARTYMGR_CREATE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 createVendor，你必须具有 PARTYMGR_CREATE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 createVendor，你必须具有 PARTYMGR_CREATE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyCreatedDate">
         <value xml:lang="en">Party Created Date</value>
-        <value xml:lang="zh">会员新建日期</value>
+        <value xml:lang="zh_CN">会员新建日期</value>
     </property>
     <property key="PartyCurrency">
         <value xml:lang="en">In party currency</value>
-        <value xml:lang="zh">使用会员币种</value>
+        <value xml:lang="zh_CN">使用会员币种</value>
     </property>
     <property key="PartyCurrentShoppingCart">
         <value xml:lang="en">Current Shopping Cart</value>
-        <value xml:lang="zh">当前购物车</value>
+        <value xml:lang="zh_CN">当前购物车</value>
     </property>
     <property key="PartyCustomerRequest">
         <value xml:lang="en">Customer Request</value>
-        <value xml:lang="zh">客户请求</value>
+        <value xml:lang="zh_CN">客户请求</value>
     </property>
     <property key="PartyTemporaryPassword">
         <value xml:lang="en">The person will receive a temporary password by email.</value>
-        <value xml:lang="zh">用户将由电子邮件接受一个临时密码。</value> 
+        <value xml:lang="zh_CN">用户将由电子邮件接受一个临时密码。</value>
      </property>   
     <property key="PartyCybersourceAvsOver">
         <value xml:lang="en">Cyber source AVS Over</value>
-        <value xml:lang="zh">Cybersource公司地址验证服务替代</value>
+        <value xml:lang="zh_CN">Cybersource公司地址验证服务替代</value>
     </property>
     <property key="PartyDeceasedDate">
         <value xml:lang="en">Deceased Date</value>
@@ -1471,311 +1477,311 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyDeleteEmail">
         <value xml:lang="en">Delete Email</value>
-        <value xml:lang="zh">删除电子邮件</value>
+        <value xml:lang="zh_CN">删除电子邮件</value>
     </property>
     <property key="PartyDeletePartyRolePermissionError">
         <value xml:lang="en">Security Error: to run deletePartyRole you must have the PARTYMGR_DELETE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误：要运行删除会员角色(deletePartyRole)，你必须有PARTYMGR_DELETE或PARTYMGR_ADMIN权限</value>
+        <value xml:lang="zh_CN">安全错误：要运行删除会员角色(deletePartyRole)，你必须有PARTYMGR_DELETE或PARTYMGR_ADMIN权限</value>
     </property>
     <property key="PartyDeleteVendorPermissionError">
         <value xml:lang="en">Security Error: to run deleteVendor you must have the PARTYMGR_CREATE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 deleteVendor，你必须具有 PARTYMGR_CREATE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 deleteVendor，你必须具有 PARTYMGR_CREATE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyDisabled">
         <value xml:lang="en">DISABLED</value>
-        <value xml:lang="zh">不可用</value>
+        <value xml:lang="zh_CN">不可用</value>
     </property>
     <property key="PartyDivorced">
         <value xml:lang="en">D - Divorced</value>
-        <value xml:lang="zh">D - 离婚</value>
+        <value xml:lang="zh_CN">D - 离婚</value>
     </property>
     <property key="PartyDomainNameSuccessfullyCreated">
         <value xml:lang="en">Domain Name successfully created.</value>
-        <value xml:lang="zh">已成功新建域名。</value>
+        <value xml:lang="zh_CN">已成功新建域名。</value>
     </property>
     <property key="PartyDomainNameSuccessfullyUpdated">
         <value xml:lang="en">Domain Name successfully updated.</value>
-        <value xml:lang="zh">已成功更新域名。</value>
+        <value xml:lang="zh_CN">已成功更新域名。</value>
     </property>
     <property key="PartyDraftEmails">
         <value xml:lang="en">Draft Emails</value>
-        <value xml:lang="zh">电子邮件草稿</value>
+        <value xml:lang="zh_CN">电子邮件草稿</value>
     </property>
     <property key="PartyEditCommCustRequest">
         <value xml:lang="en">Edit Communication Customer Request</value>
-        <value xml:lang="zh">编辑沟通客户请求</value>
+        <value xml:lang="zh_CN">编辑沟通客户请求</value>
     </property>
     <property key="PartyEditCommPurpose">
         <value xml:lang="en">Edit Communication Work Purpose</value>
-        <value xml:lang="zh">编辑沟通工作目的</value>
+        <value xml:lang="zh_CN">编辑沟通工作目的</value>
     </property>
     <property key="PartyEditCommRole">
         <value xml:lang="en">Edit Communication Role</value>
-        <value xml:lang="zh">编辑沟通角色</value>
+        <value xml:lang="zh_CN">编辑沟通角色</value>
     </property>
     <property key="PartyEditCommWorkEffort">
         <value xml:lang="en">New Communication Work Effort</value>
-        <value xml:lang="zh">新建沟通人工服务</value>
+        <value xml:lang="zh_CN">新建沟通人工服务</value>
     </property>
     <property key="PartyEditCommunicationEvent">
         <value xml:lang="en">Edit Communication Event</value>
-        <value xml:lang="zh">编辑沟通事件</value>
+        <value xml:lang="zh_CN">编辑沟通事件</value>
     </property>
     <property key="PartyEditContactInfo">
         <value xml:lang="en">Edit Contact Information</value>
-        <value xml:lang="zh">编辑联系信息</value>
+        <value xml:lang="zh_CN">编辑联系信息</value>
     </property>
     <property key="PartyEditContactInformation">
         <value xml:lang="en">Edit Contact Information</value>
-        <value xml:lang="zh">编辑联系信息</value>
+        <value xml:lang="zh_CN">编辑联系信息</value>
     </property>
     <property key="PartyEditCustomerRequest">
         <value xml:lang="en">Edit Customer request copied from Communication Event</value>
-        <value xml:lang="zh">编辑从沟通事件复制的客户需求</value>
+        <value xml:lang="zh_CN">编辑从沟通事件复制的客户需求</value>
     </property>
     <property key="PartyEditPersonalInformation">
         <value xml:lang="en">Edit Personal Information</value>
-        <value xml:lang="zh">编辑个人信息</value>
+        <value xml:lang="zh_CN">编辑个人信息</value>
     </property>
     <property key="PartyEditSecurityGroupWithId">
         <value xml:lang="en">Edit Security Group With ID</value>
-        <value xml:lang="zh">编辑安全组：编号</value>
+        <value xml:lang="zh_CN">编辑安全组：编号</value>
     </property>
     <property key="PartyEftAccount">
         <value xml:lang="en">EFT Account</value>
-        <value xml:lang="zh">电子资金转账账户</value>
+        <value xml:lang="zh_CN">电子资金转账账户</value>
     </property>
     <property key="PartyEmailAddress">
         <value xml:lang="en">E-Mail Address</value>
-        <value xml:lang="zh">电子邮件地址</value>
+        <value xml:lang="zh_CN">电子邮件地址</value>
     </property>
     <property key="PartyEmailAddressMissing">
         <value xml:lang="en">Email Address is missing</value>
-        <value xml:lang="zh">缺少电子邮件地址</value>
+        <value xml:lang="zh_CN">缺少电子邮件地址</value>
     </property>
     <property key="PartyEmailAddressMissingError">
         <value xml:lang="en">E-mail address is missing</value>
-        <value xml:lang="zh">找不到电子邮件地址</value>
+        <value xml:lang="zh_CN">找不到电子邮件地址</value>
     </property>
     <property key="PartyEmailAddressNotExist">
         <value xml:lang="en">The Email Address cannot be verified.  This Email Address does not exists.</value>
-        <value xml:lang="zh">无法验证电子邮件地址。这个电子邮件地址不存在。</value>
+        <value xml:lang="zh_CN">无法验证电子邮件地址。这个电子邮件地址不存在。</value>
     </property>
     <property key="PartyEmailAddressNotFormattedCorrectly">
         <value xml:lang="en">E-mail address not formatted correctly, must be like: name@domain</value>
-        <value xml:lang="zh">电子邮件地址格式错误，必须类似：name@domain</value>
+        <value xml:lang="zh_CN">电子邮件地址格式错误，必须类似：name@domain</value>
     </property>
     <property key="PartyEmailAddressRequired">
         <value xml:lang="en">Email address is required</value>
     </property>
     <property key="PartyEmailAddressSuccessfullyCreated">
         <value xml:lang="en">Email Address successfully created.</value>
-        <value xml:lang="zh">已成功新建电子邮件地址。</value>
+        <value xml:lang="zh_CN">已成功新建电子邮件地址。</value>
     </property>
     <property key="PartyEmailAddressSuccessfullyUpdated">
         <value xml:lang="en">Email Address successfully updated.</value>
-        <value xml:lang="zh">已成功更新电子邮件地址。</value>
+        <value xml:lang="zh_CN">已成功更新电子邮件地址。</value>
     </property>
     <property key="PartyEmailAddressVerificationExpired">
         <value xml:lang="en">The Email Address Verification has been expired.</value>
-        <value xml:lang="zh">电子邮件地址已过期。</value>
+        <value xml:lang="zh_CN">电子邮件地址已过期。</value>
     </property>
     <property key="PartyEmailAddresses">
         <value xml:lang="en">Email Addresses</value>
-        <value xml:lang="zh">电子邮件地址</value>
+        <value xml:lang="zh_CN">电子邮件地址</value>
     </property>
     <property key="PartyEmailFromUnknownParties">
         <value xml:lang="en">Email from unknown parties</value>
-        <value xml:lang="zh">来自未知会员的电子邮件</value>
+        <value xml:lang="zh_CN">来自未知会员的电子邮件</value>
     </property>
     <property key="PartyEmailMessage">
         <value xml:lang="en">Allocate this message to a existing or new party and add an email address</value>
-        <value xml:lang="zh">把这个信息落实到一个已存在的会员或新的会员，并添加电子邮件地址</value>
+        <value xml:lang="zh_CN">把这个信息落实到一个已存在的会员或新的会员，并添加电子邮件地址</value>
     </property>
     <property key="PartyEmailTo">
         <value xml:lang="en">Email to</value>
-        <value xml:lang="zh">电子邮件至</value>
+        <value xml:lang="zh_CN">电子邮件至</value>
     </property>
     <property key="PartyEmailsFromUnknownOrigin">
         <value xml:lang="en">Emails from UN-known origin</value>
-        <value xml:lang="zh">来自未知来源的电子邮件</value>
+        <value xml:lang="zh_CN">来自未知来源的电子邮件</value>
     </property>
     <property key="PartyEnabled">
         <value xml:lang="en">ENABLED</value>
-        <value xml:lang="zh">可用</value>
+        <value xml:lang="zh_CN">可用</value>
     </property>
     <property key="PartyEnterPasswordTwice">
         <value xml:lang="en">You must enter your password twice</value>
-        <value xml:lang="zh">你必须输入密码两次</value>
+        <value xml:lang="zh_CN">你必须输入密码两次</value>
     </property>
     <property key="PartyEnteredDate">
         <value xml:lang="en">Entered Date</value>
-        <value xml:lang="zh">已输入的日期</value>
+        <value xml:lang="zh_CN">已输入的日期</value>
     </property>
     <property key="PartyEventPurpose">
         <value xml:lang="en">Event Purpose(s)</value>
-        <value xml:lang="zh">事件目的</value>
+        <value xml:lang="zh_CN">事件目的</value>
     </property>
     <property key="PartyEventType">
         <value xml:lang="en">Event Type</value>
-        <value xml:lang="zh">事件类型</value>
+        <value xml:lang="zh_CN">事件类型</value>
     </property>
     <property key="PartyExpDateBeforeTodayError">
         <value xml:lang="en">The expiration date is before today</value>
-        <value xml:lang="zh">过期日期早于今天</value>
+        <value xml:lang="zh_CN">过期日期早于今天</value>
     </property>
     <property key="PartyExpMonthMissingError">
         <value xml:lang="en">Expiration month is missing</value>
-        <value xml:lang="zh">找不到过期月</value>
+        <value xml:lang="zh_CN">找不到过期月</value>
     </property>
     <property key="PartyExpYearMissingError">
         <value xml:lang="en">Expiration year is missing</value>
-        <value xml:lang="zh">找不到过期年</value>
+        <value xml:lang="zh_CN">找不到过期年</value>
     </property>
     <property key="PartyExtension">
         <value xml:lang="en">Extension</value>
-        <value xml:lang="zh">分机</value>
+        <value xml:lang="zh_CN">分机</value>
     </property>
     <property key="PartyFaxNumber">
         <value xml:lang="en">Fax number</value>
-        <value xml:lang="zh">传真号码</value>
+        <value xml:lang="zh_CN">传真号码</value>
     </property>
     <property key="PartyFileAttach">
         <value xml:lang="en">File Attach.</value>
-        <value xml:lang="zh">文件附件</value>
+        <value xml:lang="zh_CN">文件附件</value>
     </property>
     <property key="PartyFinancialHistory">
         <value xml:lang="en">Fin. History</value>
-        <value xml:lang="zh">金融历史记录</value>
+        <value xml:lang="zh_CN">金融历史记录</value>
     </property>
     <property key="PartyFinancialSummary">
         <value xml:lang="en">Totals for Company:</value>
-        <value xml:lang="zh">合计属于公司：</value>
+        <value xml:lang="zh_CN">合计属于公司：</value>
     </property>
     <property key="PartyFindCommunicationEvents">
         <value xml:lang="en">Find Communication Events</value>
-        <value xml:lang="zh">查找沟通事件</value>
+        <value xml:lang="zh_CN">查找沟通事件</value>
     </property>
     <property key="PartyFindCommunicationsByOrder">
         <value xml:lang="en">Find Communications by Order</value>
     </property>
     <property key="PartyFindParty">
         <value xml:lang="en">Find Party</value>
-        <value xml:lang="zh">查找会员</value>
+        <value xml:lang="zh_CN">查找会员</value>
     </property>
     <property key="PartyFindPartyInvitations">
         <value xml:lang="en">Find Party Invitations</value>
-        <value xml:lang="zh">查找会员邀请</value>
+        <value xml:lang="zh_CN">查找会员邀请</value>
     </property>
     <property key="PartyFirstName">
         <value xml:lang="en">First name</value>
-        <value xml:lang="zh">名字</value>
+        <value xml:lang="zh_CN">名字</value>
     </property>
     <property key="PartyFirstNameMissing">
         <value xml:lang="en">First Name is Missing</value>
-        <value xml:lang="zh">找不到名字</value>
+        <value xml:lang="zh_CN">找不到名字</value>
     </property>
     <property key="PartyFirstNameOnCardMissingError">
         <value xml:lang="en">First name on card is missing </value>
-        <value xml:lang="zh">找不到卡上的名字</value>
+        <value xml:lang="zh_CN">找不到卡上的名字</value>
     </property>
     <property key="PartyFirstNameRequested">
         <value xml:lang="en">Please enter a firstName</value>
     </property>
     <property key="PartyFollowSession">
         <value xml:lang="en">Follow Session</value>
-        <value xml:lang="zh">跟踪会话</value>
+        <value xml:lang="zh_CN">跟踪会话</value>
     </property>
     <property key="PartyForward">
         <value xml:lang="en">Forward</value>
-        <value xml:lang="zh">转发</value>
+        <value xml:lang="zh_CN">转发</value>
     </property>
     <property key="PartyFoundCommunicationEvents">
         <value xml:lang="en">Found Communication Events</value>
-        <value xml:lang="zh">找到的沟通事件</value>
+        <value xml:lang="zh_CN">找到的沟通事件</value>
     </property>
     <property key="PartyFromContactMech">
         <value xml:lang="en">From Contact Mech</value>
-        <value xml:lang="zh">来自联系方式</value>
+        <value xml:lang="zh_CN">来自联系方式</value>
     </property>
     <property key="PartyFromEmailAddress">
         <value xml:lang="en">From Email Address</value>
-        <value xml:lang="zh">来自电子邮件地址</value>
+        <value xml:lang="zh_CN">来自电子邮件地址</value>
     </property>
     <property key="PartyFullName">
         <value xml:lang="en">Full Name</value>
     </property>
     <property key="PartyGender">
         <value xml:lang="en">Gender</value>
-        <value xml:lang="zh">性别</value>
+        <value xml:lang="zh_CN">性别</value>
     </property>
     <property key="PartyGeneralCorrespondenceAddress">
         <value xml:lang="en">General Correspondence Address</value>
-        <value xml:lang="zh">通信地址</value>
+        <value xml:lang="zh_CN">通信地址</value>
     </property>
     <property key="PartyGoToParent">
         <value xml:lang="en">Go to Parent</value>
-        <value xml:lang="zh">转到上级</value>
+        <value xml:lang="zh_CN">转到上级</value>
     </property>
     <property key="PartyGotoList">
         <value xml:lang="en">Goto List</value>
-        <value xml:lang="zh">转到列表</value>
+        <value xml:lang="zh_CN">转到列表</value>
     </property>
     <property key="PartyGroupName">
         <value xml:lang="en">Group Name</value>
-        <value xml:lang="zh">组名称</value>
+        <value xml:lang="zh_CN">组名称</value>
     </property>
     <property key="PartyGroupNameMissing">
         <value xml:lang="en">Group Name is missing</value>
-        <value xml:lang="zh">缺少组名称</value>
+        <value xml:lang="zh_CN">缺少组名称</value>
     </property>
     <property key="PartyGroupNumEmployeeIsInvalid">
         <value xml:lang="en">Number of employees is invalid</value>
-        <value xml:lang="zh">雇员数量无效</value>
+        <value xml:lang="zh_CN">雇员数量无效</value>
     </property>
     <property key="PartyGroupPartyId">
         <value xml:lang="en">Group Party ID</value>
-        <value xml:lang="zh">组会员编号</value>
+        <value xml:lang="zh_CN">组会员编号</value>
     </property>
     <property key="PartyHeight">
         <value xml:lang="en">Height</value>
-        <value xml:lang="zh">身高</value>
+        <value xml:lang="zh_CN">身高</value>
     </property>
     <property key="PartyHeightNotValidNumber">
         <value xml:lang="en">Height is not a valid number</value>
-        <value xml:lang="zh">身高不是一个有效数字</value>
+        <value xml:lang="zh_CN">身高不是一个有效数字</value>
     </property>
     <property key="PartyHideOld">
         <value xml:lang="en">Hide Old</value>
-        <value xml:lang="zh">隐藏过去的</value>
+        <value xml:lang="zh_CN">隐藏过去的</value>
     </property>
     <property key="PartyHistoryChanged">
         <value xml:lang="en">Changed</value>
-        <value xml:lang="zh">已修改</value>
+        <value xml:lang="zh_CN">已修改</value>
     </property>
     <property key="PartyHistoryName">
         <value xml:lang="en">Name History</value>
-        <value xml:lang="zh">名称历史记录</value>
+        <value xml:lang="zh_CN">名称历史记录</value>
     </property>
     <property key="PartyHistoryWas">
         <value xml:lang="en">Was</value>
-        <value xml:lang="zh">曾是</value>
+        <value xml:lang="zh_CN">曾是</value>
     </property>
     <property key="PartyHitTracker">
         <value xml:lang="en">Hit Tracker</value>
-        <value xml:lang="zh">点击跟踪系统</value>
+        <value xml:lang="zh_CN">点击跟踪系统</value>
     </property>
     <property key="PartyHomePhone">
         <value xml:lang="en">Home phone</value>
-        <value xml:lang="zh">家庭电话</value>
+        <value xml:lang="zh_CN">家庭电话</value>
     </property>
     <property key="PartyHomePhoneAreaCodeMissing">
         <value xml:lang="en">Home Phone Area Code is missing.</value>
-        <value xml:lang="zh">找不到家庭电话的区号。</value>
+        <value xml:lang="zh_CN">找不到家庭电话的区号。</value>
     </property>
     <property key="PartyHomePhoneContactNumberMissing">
         <value xml:lang="en">Home Phone Contact Number is missing.</value>
-        <value xml:lang="zh">找不到家庭电话号码。</value>
+        <value xml:lang="zh_CN">找不到家庭电话号码。</value>
     </property>
     <property key="PartyImportInvalidCsvFile">
         <value xml:lang="en">Invalid format for CSV (key,value,sequence)</value>
@@ -1788,192 +1794,192 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyInformationNotBelongToYou">
         <value xml:lang="en">This information does not belong to you and you do not have permission to view it</value>
-        <value xml:lang="zh">本信息不属于你，你无权浏览它</value>
+        <value xml:lang="zh_CN">本信息不属于你，你无权浏览它</value>
     </property>
     <property key="PartyInformationNotFound">
         <value xml:lang="en">Information Not Found</value>
-        <value xml:lang="zh">信息没有找到</value>
+        <value xml:lang="zh_CN">信息没有找到</value>
     </property>
     <property key="PartyInitialLocale">
         <value xml:lang="en">Initial Locale</value>
-        <value xml:lang="zh">初始语言</value>
+        <value xml:lang="zh_CN">初始语言</value>
     </property>
     <property key="PartyInitialReferer">
         <value xml:lang="en">Initial Referer</value>
-        <value xml:lang="zh">初始引用</value>
+        <value xml:lang="zh_CN">初始引用</value>
     </property>
     <property key="PartyInitialRequest">
         <value xml:lang="en">Initial Request</value>
-        <value xml:lang="zh">初始请求</value>
+        <value xml:lang="zh_CN">初始请求</value>
     </property>
     <property key="PartyInitialUserAgent">
         <value xml:lang="en">Initial User Agent</value>
-        <value xml:lang="zh">初始用户代理人</value>
+        <value xml:lang="zh_CN">初始用户代理人</value>
     </property>
     <property key="PartyInvitation">
         <value xml:lang="en">Invitation</value>
-        <value xml:lang="zh">邀请记录</value>
+        <value xml:lang="zh_CN">邀请记录</value>
     </property>
     
      <property key="partyInvitation">
         <value xml:lang="en">Invitation</value>
-        <value xml:lang="zh">邀请记录</value>
+        <value xml:lang="zh_CN">邀请记录</value>
     </property>
     
     <property key="PartyInvitationAccAndDecPermissionError">
         <value xml:lang="en">You do not have permission to accept or decline Party Invitation</value>
-        <value xml:lang="zh">你没有权限来接受或拒绝会员邀请</value>
+        <value xml:lang="zh_CN">你没有权限来接受或拒绝会员邀请</value>
     </property>
     <property key="PartyInvitationCancelPermissionError">
         <value xml:lang="en">You do not have permission to cancel the Party Invitation</value>
-        <value xml:lang="zh">你没有权限来取消会员邀请</value>
+        <value xml:lang="zh_CN">你没有权限来取消会员邀请</value>
     </property>
     <property key="PartyInvitationGroupAssoc">
         <value xml:lang="en">GroupAssoc </value>
-        <value xml:lang="zh">组关联</value>
+        <value xml:lang="zh_CN">组关联</value>
     </property>
     <property key="PartyInvitationGroupAssocPartyIdTo">
         <value xml:lang="en">Party Id To</value>
-        <value xml:lang="zh">会员编号到</value>
+        <value xml:lang="zh_CN">会员编号到</value>
     </property>
     <property key="PartyInvitationLastInviteDate">
         <value xml:lang="en">Last Invite Date</value>
-        <value xml:lang="zh">上次邀请日期</value>
+        <value xml:lang="zh_CN">上次邀请日期</value>
     </property>
     <property key="PartyInvitationNewPartyInvitation">
         <value xml:lang="en">New Party Invitation</value>
-        <value xml:lang="zh">新建会员邀请</value>
+        <value xml:lang="zh_CN">新建会员邀请</value>
     </property>
     <property key="PartyInvitationNewOrder">
         <value xml:lang="en">Create An Order From Invitation</value>
-        <value xml:lang="zh">創建的邀請秩序</value>
+        <value xml:lang="zh_CN">創建的邀請秩序</value>
     </property>
     <property key="PartyInvitationNotValidError">
         <value xml:lang="en">This is not a valid Party Invitation</value>
-        <value xml:lang="zh">这不是一个有效的会员邀请</value>
+        <value xml:lang="zh_CN">这不是一个有效的会员邀请</value>
     </property>
     <property key="PartyInvitationRoleAssoc">
         <value xml:lang="en">RoleAssoc</value>
-        <value xml:lang="zh">角色关联</value>
+        <value xml:lang="zh_CN">角色关联</value>
     </property>
     <property key="PartyInvoicesNotApplied">
         <value xml:lang="en">Invoices not yet (fully) applied</value>
-        <value xml:lang="zh">发票还没有(完全)应用</value>
+        <value xml:lang="zh_CN">发票还没有(完全)应用</value>
     </property>
     <property key="PartyInvoicesOtherParties">
         <value xml:lang="en">Invoices of other parties paid by payments from</value>
-        <value xml:lang="zh">其他会员发票，支付来自</value>
+        <value xml:lang="zh_CN">其他会员发票，支付来自</value>
     </property>
     <property key="PartyInvoicesPayments">
         <value xml:lang="en">Invoices Payments</value>
-        <value xml:lang="zh">发票支付</value>
+        <value xml:lang="zh_CN">发票支付</value>
     </property>
     <property key="PartyIpAddressSuccessfullyCreated">
         <value xml:lang="en">Web IP Address successfully created.</value>
-        <value xml:lang="zh">已成功新建网站IP地址。</value>
+        <value xml:lang="zh_CN">已成功新建网站IP地址。</value>
     </property>
     <property key="PartyIpAddressSuccessfullyUpdated">
         <value xml:lang="en">Web IP Address successfully updated.</value>
-        <value xml:lang="zh">已成功更新网站IP地址。</value>
+        <value xml:lang="zh_CN">已成功更新网站IP地址。</value>
     </property>
     <!-- Peter 'is a' employee of company B -->
     <property key="PartyIsA">
         <value xml:lang="en">is A</value>
-        <value xml:lang="zh">是一个</value>
+        <value xml:lang="zh_CN">是一个</value>
     </property>
     <property key="PartyIsPublic">
         <value xml:lang="en">Is Public</value>
-        <value xml:lang="zh">公开吗</value>
+        <value xml:lang="zh_CN">公开吗</value>
     </property>
     <property key="PartyIsUsps">
         <value xml:lang="en">Is USPS</value>
-        <value xml:lang="zh">使用USPS吗</value>
+        <value xml:lang="zh_CN">使用USPS吗</value>
     </property>
     <property key="PartyLastName">
         <value xml:lang="en">Last name</value>
-        <value xml:lang="zh">姓氏</value>
+        <value xml:lang="zh_CN">姓氏</value>
     </property>
     <property key="PartyLastNameMissingError">
         <value xml:lang="en">Last Name is Missing</value>
-        <value xml:lang="zh">找不到姓氏</value>
+        <value xml:lang="zh_CN">找不到姓氏</value>
     </property>
     <property key="PartyLastNameOnCardMissingError">
         <value xml:lang="en">Last name on card is missing</value>
-        <value xml:lang="zh">找不到卡上的姓氏</value>
+        <value xml:lang="zh_CN">找不到卡上的姓氏</value>
     </property>
     <property key="PartyLastNameRequested">
         <value xml:lang="en">Please enter a lastName</value>
     </property>
     <property key="PartyLeaveEmpty">
         <value xml:lang="en">Leave empty for new 'Party'</value>
-        <value xml:lang="zh">为新会员留空</value>
+        <value xml:lang="zh_CN">为新会员留空</value>
     </property>
     <property key="PartyLink">
         <value xml:lang="en">Link Party</value>
-        <value xml:lang="zh">链接会员</value>
+        <value xml:lang="zh_CN">链接会员</value>
     </property>
     <property key="PartyLinkExplanation">
         <value xml:lang="en">This will set the status of 'partyId' to disabled however will link it to 'partyTo' in the party Attributes</value>
     </property>
     <property key="PartyLinkMessage1">
         <value xml:lang="en">WARNING: This cannot be un-done, confirm you wish to link the two party records listed below.</value>
-        <value xml:lang="zh">警告：这不能撤销，请确定你要把下面两个会员记录链接在一起。</value>
+        <value xml:lang="zh_CN">警告：这不能撤销，请确定你要把下面两个会员记录链接在一起。</value>
     </property>
     <property key="PartyListCommCustRequest">
         <value xml:lang="en">Found Communication Customer Requests</value>
-        <value xml:lang="zh">找到了沟通客户请求</value>
+        <value xml:lang="zh_CN">找到了沟通客户请求</value>
     </property>
     <property key="PartyListCommPurpose">
         <value xml:lang="en">Found Communication Work Purposes</value>
-        <value xml:lang="zh">找到了沟通工作目的</value>
+        <value xml:lang="zh_CN">找到了沟通工作目的</value>
     </property>
     <property key="PartyListCommRole">
         <value xml:lang="en">Found Communication Roles</value>
-        <value xml:lang="zh">找到了沟通角色</value>
+        <value xml:lang="zh_CN">找到了沟通角色</value>
     </property>
     <property key="PartyListCommWorkEffort">
         <value xml:lang="en">Found Communication Work Efforts</value>
-        <value xml:lang="zh">找到了沟通人工服务</value>
+        <value xml:lang="zh_CN">找到了沟通人工服务</value>
     </property>
     <property key="PartyListCommunicationEvents">
         <value xml:lang="en">Communication Events</value>
-        <value xml:lang="zh">找到了沟通事件</value>
+        <value xml:lang="zh_CN">找到了沟通事件</value>
     </property>
     <property key="PartyListItems">
         <value xml:lang="en">List Items</value>
-        <value xml:lang="zh">明细列表</value>
+        <value xml:lang="zh_CN">明细列表</value>
     </property>
     <property key="PartyListName">
         <value xml:lang="en">List Name</value>
-        <value xml:lang="zh">名字列表</value>
+        <value xml:lang="zh_CN">名字列表</value>
     </property>
     <property key="PartyListRelatedAccounts">
         <value xml:lang="en">List Related Accounts</value>
-        <value xml:lang="zh">相关账户列表</value>
+        <value xml:lang="zh_CN">相关账户列表</value>
     </property>
     <property key="PartyListRelatedContacts">
         <value xml:lang="en">List Related Contacts</value>
-        <value xml:lang="zh">相关联系列表</value>
+        <value xml:lang="zh_CN">相关联系列表</value>
     </property>
     <property key="PartyListType">
         <value xml:lang="en">List Type</value>
-        <value xml:lang="zh">类型列表</value>
+        <value xml:lang="zh_CN">类型列表</value>
     </property>
     <property key="PartyLoggedInUsers">
         <value xml:lang="en">在线会员</value>
-        <value xml:lang="zh">在线会员</value>
+        <value xml:lang="zh_CN">在线会员</value>
     </property>
     <property key="PartyLookupAccount">
         <value xml:lang="en">Lookup Party with the role Account</value>
-        <value xml:lang="zh">用角色账户查找会员</value>
+        <value xml:lang="zh_CN">用角色账户查找会员</value>
     </property>
     <property key="PartyLookupContact">
         <value xml:lang="en">Lookup Party with the role Contact</value>
-        <value xml:lang="zh">用角色联系查找会员</value>
+        <value xml:lang="zh_CN">用角色联系查找会员</value>
     </property>
     <property key="PartyLookupContactMech">
         <value xml:lang="en">Lookup Contact Mech</value>
-        <value xml:lang="zh">查找联系方法</value>
+        <value xml:lang="zh_CN">查找联系方法</value>
     </property>
     <property key="PartyLookupInternalOrganization">
         <value xml:lang="en">Lookup Internal Organization</value>
@@ -1983,31 +1989,31 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyLookupParty">
         <value xml:lang="en">Lookup Party</value>
-        <value xml:lang="zh">查找会员</value>
+        <value xml:lang="zh_CN">查找会员</value>
     </property>
     <property key="PartyLookupPartyAndUserLoginAndPerson">
         <value xml:lang="en">Lookup PartyAndUserLoginAndPerson</value>
-        <value xml:lang="zh">查找会员且用户登录且人员</value>
+        <value xml:lang="zh_CN">查找会员且用户登录且人员</value>
     </property>
     <property key="PartyLookupPartyByName">
         <value xml:lang="en">Lookup Party by Name</value>
-        <value xml:lang="zh">按名字查找会员</value>
+        <value xml:lang="zh_CN">按名字查找会员</value>
     </property>
     <property key="PartyLookupPartyClassificationGroup">
         <value xml:lang="en">Lookup Party Classification Group</value>
-        <value xml:lang="zh">查找会员分类组</value>
+        <value xml:lang="zh_CN">查找会员分类组</value>
     </property>
     <property key="PartyLookupPartyCommEvent">
         <value xml:lang="en">Lookup Communication Event</value>
-        <value xml:lang="zh">查找沟通事件</value>
+        <value xml:lang="zh_CN">查找沟通事件</value>
     </property>
     <property key="PartyLookupPartyGroup">
         <value xml:lang="en">Lookup Group</value>
-        <value xml:lang="zh">查找组</value>
+        <value xml:lang="zh_CN">查找组</value>
     </property>
     <property key="PartyLookupPartyPerson">
         <value xml:lang="en">Lookup Person</value>
-        <value xml:lang="zh">查找人员</value>
+        <value xml:lang="zh_CN">查找人员</value>
     </property>
     <property key="PartyLookupStateProvinceGeoError">
         <value xml:lang="en">Error looking up StateProvinceGeo: ${errMessage}</value>
@@ -2023,461 +2029,461 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyLookupUserLoginAndPartyDetails">
         <value xml:lang="en">Lookup User Login And Party Details</value>
-        <value xml:lang="zh">查找用户登录和会员详细信息(UserLoginAndPartyDetails)</value>
+        <value xml:lang="zh_CN">查找用户登录和会员详细信息(UserLoginAndPartyDetails)</value>
     </property>
     <property key="PartyLoyaltyPoints">
         <value xml:lang="en">Loyalty Points</value>
-        <value xml:lang="zh">忠诚度积分</value>
+        <value xml:lang="zh_CN">忠诚度积分</value>
     </property>
     <property key="PartyMaidenName">
         <value xml:lang="en">Mothers Maiden Name</value>
-        <value xml:lang="zh">母亲婚前姓</value>
+        <value xml:lang="zh_CN">母亲婚前姓</value>
     </property>
     <property key="PartyMainRole">
         <value xml:lang="en">角色</value>
-        <value xml:lang="zh">角色</value>
+        <value xml:lang="zh_CN">角色</value>
     </property>
     <property key="PartyManager">
         <value xml:lang="en">Party Manager</value>
-        <value xml:lang="zh">会员管理应用程序</value>
+        <value xml:lang="zh_CN">会员管理应用程序</value>
     </property>
     <property key="PartyManagerApplication">
         <value xml:lang="en">Party Manager Application</value>
-        <value xml:lang="zh">会员管理应用程序</value>
+        <value xml:lang="zh_CN">会员管理应用程序</value>
     </property>
     <property key="PartyManifestCompanyName">
         <value xml:lang="en">Manifest Company Name</value>
-        <value xml:lang="zh">显示公司名称</value>
+        <value xml:lang="zh_CN">显示公司名称</value>
     </property>
     <property key="PartyManifestCompanyTitle">
         <value xml:lang="en">Manifest Company Title</value>
-        <value xml:lang="zh">显示公司称号</value>
+        <value xml:lang="zh_CN">显示公司称号</value>
     </property>
     <property key="PartyManifestLogoUrl">
         <value xml:lang="en">Manifest Logo Url</value>
-        <value xml:lang="zh">显示标志网址</value>
+        <value xml:lang="zh_CN">显示标志网址</value>
     </property>
     <property key="PartyManifestPolicies">
         <value xml:lang="en">Manifest Policies</value>
-        <value xml:lang="zh">显示政策</value>
+        <value xml:lang="zh_CN">显示政策</value>
     </property>
     <property key="PartyManualTx">
         <value xml:lang="en">Manual Tx</value>
-        <value xml:lang="zh">手工交易</value>
+        <value xml:lang="zh_CN">手工交易</value>
     </property>
     <property key="PartyMaritalStatus">
         <value xml:lang="en">Marital Status</value>
-        <value xml:lang="zh">婚姻状况</value>
+        <value xml:lang="zh_CN">婚姻状况</value>
     </property>
     <property key="PartyMaritalStatusDivorced">
         <value xml:lang="en">Divorced</value>
-        <value xml:lang="zh">离异</value>
+        <value xml:lang="zh_CN">离异</value>
     </property>
     <property key="PartyMaritalStatusMarried">
         <value xml:lang="en">Married</value>
-        <value xml:lang="zh">已婚</value>
+        <value xml:lang="zh_CN">已婚</value>
     </property>
     <property key="PartyMaritalStatusSeparated">
         <value xml:lang="en">Separated</value>
-        <value xml:lang="zh">分居</value>
+        <value xml:lang="zh_CN">分居</value>
     </property>
     <property key="PartyMaritalStatusSingle">
         <value xml:lang="en">Single</value>
-        <value xml:lang="zh">单身</value>
+        <value xml:lang="zh_CN">单身</value>
     </property>
     <property key="PartyMaritalStatusWidowed">
         <value xml:lang="en">Widowed</value>
-        <value xml:lang="zh">丧偶</value>
+        <value xml:lang="zh_CN">丧偶</value>
     </property>
     <property key="PartyMarried">
         <value xml:lang="en">M - Married</value>
-        <value xml:lang="zh">M - 已婚</value>
+        <value xml:lang="zh_CN">M - 已婚</value>
     </property>
     <property key="PartyMechPurposeTypeNotFound">
         <value xml:lang="en">Purpose Type not found with ID</value>
-        <value xml:lang="zh">没有找到目的类型，编号：</value>
+        <value xml:lang="zh_CN">没有找到目的类型，编号：</value>
     </property>
     <property key="PartyMemberRoles">
         <value xml:lang="en">Member Roles</value>
-        <value xml:lang="zh">成员角色</value>
+        <value xml:lang="zh_CN">成员角色</value>
     </property>
     <property key="PartyMgrCreatePermissionError">
         <value xml:lang="en">You do not have permission to view this page. ("PARTYMGR_CREATE" or "PARTYMGR_ADMIN" needed)</value>
-        <value xml:lang="zh">你没有权限浏览本页面。 (需要"PARTYMGR_CREATE" 或 "PARTYMGR_ADMIN")</value>
+        <value xml:lang="zh_CN">你没有权限浏览本页面。 (需要"PARTYMGR_CREATE" 或 "PARTYMGR_ADMIN")</value>
     </property>
     <property key="PartyMgrViewPermissionError">
         <value xml:lang="en">You do not have permission to view this page. ("PARTYMGR_VIEW" or "PARTYMGR_ADMIN" needed)</value>
-        <value xml:lang="zh">你没有权限浏览本页面。 (需要"PARTYMGR_VIEW" 或 "PARTYMGR_ADMIN")</value>
+        <value xml:lang="zh_CN">你没有权限浏览本页面。 (需要"PARTYMGR_VIEW" 或 "PARTYMGR_ADMIN")</value>
     </property>
     <property key="PartyMiddleInitial">
         <value xml:lang="en">Middle initial</value>
-        <value xml:lang="zh">中间名首字母</value>
+        <value xml:lang="zh_CN">中间名首字母</value>
     </property>
     <property key="PartyMiddleName">
         <value xml:lang="en">Middle Name</value>
-        <value xml:lang="zh">中间名</value>
+        <value xml:lang="zh_CN">中间名</value>
     </property>
     <property key="PartyMobilePhone">
         <value xml:lang="en">Mobile phone</value>
-        <value xml:lang="zh">移动电话</value>
+        <value xml:lang="zh_CN">移动电话</value>
     </property>
     <property key="PartyMothersMaidenName">
         <value xml:lang="en">Mothers Maiden Name</value>
-        <value xml:lang="zh">母亲未婚时名字</value>
+        <value xml:lang="zh_CN">母亲未婚时名字</value>
     </property>
     <property key="PartyMsgContactHavePurpose">
         <value xml:lang="en">Note: this new contact information will have the purpose</value>
-        <value xml:lang="zh">注意：这个新的联系信息的目的是</value>
+        <value xml:lang="zh_CN">注意：这个新的联系信息的目的是</value>
     </property>
     <property key="PartyMsgContactNotBelongToYou">
         <value xml:lang="en">The contact information specified does not belong to you, you may not view or edit it.</value>
-        <value xml:lang="zh">指定的联系信息不属于你，你不能浏览或编辑它。</value>
+        <value xml:lang="zh_CN">指定的联系信息不属于你，你不能浏览或编辑它。</value>
     </property>
     <property key="PartyMyCommunications">
         <value xml:lang="en">My Communications</value>
-        <value xml:lang="zh">我的沟通</value>
+        <value xml:lang="zh_CN">我的沟通</value>
     </property>
     <property key="PartyName">
         <value xml:lang="en">会员名称</value>
-        <value xml:lang="zh">会员名称</value>
+        <value xml:lang="zh_CN">会员名称</value>
     </property>
     <property key="PartyNameAndConactInfo">
         <value xml:lang="en">Name Phone and Email </value>
-        <value xml:lang="zh">姓名，电话和电子邮件</value>
+        <value xml:lang="zh_CN">姓名，电话和电子邮件</value>
     </property>
     <property key="PartyNameAndShippingAddress">
         <value xml:lang="en">Name and Shipping Address</value>
-        <value xml:lang="zh">名字和送货地址</value>
+        <value xml:lang="zh_CN">名字和送货地址</value>
     </property>
     <property key="PartyNewCommContent">
         <value xml:lang="en">New Communication Content</value>
-        <value xml:lang="zh">新建沟通内容</value>
+        <value xml:lang="zh_CN">新建沟通内容</value>
     </property>
     <property key="PartyNewCommCustRequest">
         <value xml:lang="en">New Communication Customer Request</value>
-        <value xml:lang="zh">新建沟通客户请求</value>
+        <value xml:lang="zh_CN">新建沟通客户请求</value>
     </property>
     <property key="PartyNewCommPurpose">
         <value xml:lang="en">New Communication Work Purpose</value>
-        <value xml:lang="zh">新建沟通工作目的</value>
+        <value xml:lang="zh_CN">新建沟通工作目的</value>
     </property>
     <property key="PartyNewCommRole">
         <value xml:lang="en">New Communication Role</value>
-        <value xml:lang="zh">新建沟通角色</value>
+        <value xml:lang="zh_CN">新建沟通角色</value>
     </property>
     <property key="PartyNewCommWorkEffort">
         <value xml:lang="en">New Communication Work Effort</value>
-        <value xml:lang="zh">新建沟通人工服务</value>
+        <value xml:lang="zh_CN">新建沟通人工服务</value>
     </property>
     <property key="PartyNewCommunication">
         <value xml:lang="en">New Communication</value>
-        <value xml:lang="zh">新建沟通</value>
+        <value xml:lang="zh_CN">新建沟通</value>
     </property>
     <property key="PartyNewContactHavePurpose">
         <value xml:lang="en">Note: this new contact information will have the purpose</value>
-        <value xml:lang="zh">注意：这个新的联系方式用于</value>
+        <value xml:lang="zh_CN">注意：这个新的联系方式用于</value>
     </property>
     <property key="PartyNewEmail">
         <value xml:lang="en">New Email</value>
-        <value xml:lang="zh">新建电子邮件</value>
+        <value xml:lang="zh_CN">新建电子邮件</value>
     </property>
     <property key="PartyNewEvent">
         <value xml:lang="en">New Event</value>
-        <value xml:lang="zh">新建事件</value>
+        <value xml:lang="zh_CN">新建事件</value>
     </property>
     <property key="PartyNewFind">
         <value xml:lang="en">New Find</value>
-        <value xml:lang="zh">新建查找</value>
+        <value xml:lang="zh_CN">新建查找</value>
     </property>
     <property key="PartyNewInternalNote">
         <value xml:lang="en">New Internal Note</value>
-        <value xml:lang="zh">新建内部便笺</value>
+        <value xml:lang="zh_CN">新建内部便笺</value>
     </property>
     <property key="PartyNewPassword">
         <value xml:lang="en">New Password</value>
-        <value xml:lang="zh">新密码</value>
+        <value xml:lang="zh_CN">新密码</value>
     </property>
     <property key="PartyNewPasswordVerify">
         <value xml:lang="en">New Password Verify</value>
-        <value xml:lang="zh">新密码校验</value>
+        <value xml:lang="zh_CN">新密码校验</value>
     </property>
     <property key="PartyNewRelationship">
         <value xml:lang="en">New Relationship</value>
-        <value xml:lang="zh">新建关系</value>
+        <value xml:lang="zh_CN">新建关系</value>
     </property>
     <property key="PartyNewRelationshipType">
         <value xml:lang="en">New Relationship Type</value>
-        <value xml:lang="zh">新建关系类型</value>
+        <value xml:lang="zh_CN">新建关系类型</value>
     </property>
     <property key="PartyNewRoleType">
         <value xml:lang="en">New Role Type</value>
-        <value xml:lang="zh">新建角色类型</value>
+        <value xml:lang="zh_CN">新建角色类型</value>
     </property>
     <property key="PartyNewTask">
         <value xml:lang="en">New Task</value>
-        <value xml:lang="zh">新建任务</value>
+        <value xml:lang="zh_CN">新建任务</value>
     </property>
     <property key="PartyNewUser">
         <value xml:lang="en">New User</value>
-        <value xml:lang="zh">新用户</value>
+        <value xml:lang="zh_CN">新用户</value>
     </property>
     <property key="PartyNickName">
         <value xml:lang="en">Nick Name</value>
-        <value xml:lang="zh">昵称</value>
+        <value xml:lang="zh_CN">昵称</value>
     </property>
     <property key="PartyNoAccess">
         <value xml:lang="en">You do not have access to this information</value>
-        <value xml:lang="zh">你没有权限访问这个信息</value>
+        <value xml:lang="zh_CN">你没有权限访问这个信息</value>
     </property>
     <property key="PartyNoBillingAddress">
         <value xml:lang="en">No Billing Address Selected</value>
-        <value xml:lang="zh">没有选择寄账单地址</value>
+        <value xml:lang="zh_CN">没有选择寄账单地址</value>
     </property>
     <property key="PartyNoCommunicationFound">
         <value xml:lang="en">No Communication Events</value>
-        <value xml:lang="zh">没有沟通事件</value>
+        <value xml:lang="zh_CN">没有沟通事件</value>
     </property>
     <property key="PartyNoContactInformation">
         <value xml:lang="en">No contact information on file</value>
-        <value xml:lang="zh">档案里没有联系信息</value>
+        <value xml:lang="zh_CN">档案里没有联系信息</value>
     </property>
     <property key="PartyNoContent">
         <value xml:lang="en">No Content</value>
-        <value xml:lang="zh">没有内容</value>
+        <value xml:lang="zh_CN">没有内容</value>
     </property>
     <property key="PartyNoMatch">
         <value xml:lang="en">No records match.</value>
-        <value xml:lang="zh">没有匹配的记录。</value>
+        <value xml:lang="zh_CN">没有匹配的记录。</value>
     </property>
     <property key="PartyNoNameFound">
         <value xml:lang="en">No name found</value>
-        <value xml:lang="zh">没有找到名字</value>
+        <value xml:lang="zh_CN">没有找到名字</value>
     </property>
     <property key="PartyNoNameGroup">
         <value xml:lang="en">No name (group)</value>
-        <value xml:lang="zh">没有名称 (组)</value>
+        <value xml:lang="zh_CN">没有名称 (组)</value>
     </property>
     <property key="PartyNoNotesForParty">
         <value xml:lang="en">No notes for this party.</value>
-        <value xml:lang="zh">没有给这个会员的便笺。</value>
+        <value xml:lang="zh_CN">没有给这个会员的便笺。</value>
     </property>
     <property key="PartyNoParent">
         <value xml:lang="en">No Parent</value>
-        <value xml:lang="zh">没有上级</value>
+        <value xml:lang="zh_CN">没有上级</value>
     </property>
     <property key="PartyNoPartiesFound">
         <value xml:lang="en">No parties found.</value>
-        <value xml:lang="zh">没有找到会员。</value>
+        <value xml:lang="zh_CN">没有找到会员。</value>
     </property>
     <property key="PartyNoPartyAttributesFound">
         <value xml:lang="en">No party attributes found.</value>
-        <value xml:lang="zh">没有找到会员属性。</value>
+        <value xml:lang="zh_CN">没有找到会员属性。</value>
     </property>
     <property key="PartyNoPartyForCurrentUserName">
         <value xml:lang="en">No party found for current user with user name</value>
-        <value xml:lang="zh">没有找到与当前用户用户名一致的会员</value>
+        <value xml:lang="zh_CN">没有找到与当前用户用户名一致的会员</value>
     </property>
     <property key="PartyNoPartyForUpdateCustomer">
         <value xml:lang="en">No partyId passed, cannot Update Customer</value>
-        <value xml:lang="zh">没有传递会员编号，无法更新客户</value>
+        <value xml:lang="zh_CN">没有传递会员编号，无法更新客户</value>
     </property>
     <property key="PartyNoPartyFoundWithPartyId">
         <value xml:lang="en">No party found with the partyId of</value>
-        <value xml:lang="zh">没有找到会员，会员编号</value>
+        <value xml:lang="zh_CN">没有找到会员，会员编号</value>
     </property>
     <property key="PartyNoPartyWithDataSourceId">
         <value xml:lang="en">Data source with ID ${dataSourceId} was not found</value>
     </property>
     <property key="PartyNoPartyRelationshipsFound">
         <value xml:lang="en">No relationships found.</value>
-        <value xml:lang="zh">没有找到关系。</value>
+        <value xml:lang="zh_CN">没有找到关系。</value>
     </property>
     <property key="PartyNoPartyRolesFound">
         <value xml:lang="en">No party roles found.</value>
-        <value xml:lang="zh">没有找到会员角色。</value>
+        <value xml:lang="zh_CN">没有找到会员角色。</value>
     </property>
     <property key="PartyNoPaymentMethodInformation">
         <value xml:lang="en">No payment method information on file.</value>
-        <value xml:lang="zh">没有存档的支付方式信息。</value>
+        <value xml:lang="zh_CN">没有存档的支付方式信息。</value>
     </property>
     <property key="PartyNoProductStoreFoundForThisParty">
         <value xml:lang="en">No product store(s) found for this party.</value>
     </property>
     <property key="PartyNoServerHitsFound">
         <value xml:lang="en">No Server Hits found for this Visit</value>
-        <value xml:lang="zh">没有找到这个访问的服务器点击</value>
+        <value xml:lang="zh_CN">没有找到这个访问的服务器点击</value>
     </property>
     <property key="PartyNoShoppingCartSavedForParty">
         <value xml:lang="en">No shopping cart saved for party</value>
-        <value xml:lang="zh">没有已保存的购物车，会员</value>
+        <value xml:lang="zh_CN">没有已保存的购物车，会员</value>
     </property>
     <property key="PartyNoShoppingListsParty">
         <value xml:lang="en">No Shopping lists for party</value>
-        <value xml:lang="zh">没有购物列表，会员</value>
+        <value xml:lang="zh_CN">没有购物列表，会员</value>
     </property>
     <property key="PartyNoState">
         <value xml:lang="en">No State/Province</value>
-        <value xml:lang="zh">没有省/州</value>
+        <value xml:lang="zh_CN">没有省/州</value>
     </property>
     <property key="PartyNoSubject">
         <value xml:lang="en">No Subject</value>
-        <value xml:lang="zh">没有主题</value>
+        <value xml:lang="zh_CN">没有主题</value>
     </property>
     <property key="PartyNoSupplier">
         <value xml:lang="en">No Supplier</value>
-        <value xml:lang="zh">没有供货商</value>
+        <value xml:lang="zh_CN">没有供货商</value>
     </property>
     <property key="PartyNoteCreationError">
         <value xml:lang="en">Unable to create Note: ${errorString}</value>
     </property>
     <property key="PartyNoUserLogin">
         <value xml:lang="en">No UserLogin(s) found for this party.</value>
-        <value xml:lang="zh">没有找到用户登录。</value>
+        <value xml:lang="zh_CN">没有找到用户登录。</value>
     </property>
     <property key="PartyNoVisitFound">
         <value xml:lang="en">No Visit(s) found for this party.</value>
-        <value xml:lang="zh">没有为这个会员找到访问。</value>
+        <value xml:lang="zh_CN">没有为这个会员找到访问。</value>
     </property>
     <property key="PartyNotModifRecreatSecurityGroup">
         <value xml:lang="en">This cannot be changed without re-creating the securityGroup.</value>
-        <value xml:lang="zh">如果不重新新建安全组的话，不能修改这个。</value>
+        <value xml:lang="zh_CN">如果不重新新建安全组的话，不能修改这个。</value>
     </property>
     <property key="PartyNotificationMailChange">
         <value xml:lang="en">Change Personal Info Notification Mail</value>
-        <value xml:lang="zh">修改个人信息通知邮件</value>
+        <value xml:lang="zh_CN">修改个人信息通知邮件</value>
     </property>
     <property key="PartyNotificationMailCreate">
         <value xml:lang="en">Party Account Creation Notification Mail</value>
-        <value xml:lang="zh">新建会员账户通知邮件</value>
+        <value xml:lang="zh_CN">新建会员账户通知邮件</value>
     </property>
     <property key="PartyNotificationMailVerification">
         <value xml:lang="en">Email Address Verification</value>
-        <value xml:lang="zh">电子邮件地址验证</value>
+        <value xml:lang="zh_CN">电子邮件地址验证</value>
     </property>
     <property key="PartyOfParty">
         <value xml:lang="en">of Party</value>
-        <value xml:lang="zh">属于会员</value>
+        <value xml:lang="zh_CN">属于会员</value>
     </property>
     <property key="PartyOldPassword">
         <value xml:lang="en">Current (Old) Password</value>
-        <value xml:lang="zh">当前密码</value>
+        <value xml:lang="zh_CN">当前密码</value>
     </property>
     <property key="PartyOpenEvents">
         <value xml:lang="en">Open Communications</value>
-        <value xml:lang="zh">打开沟通</value>
+        <value xml:lang="zh_CN">打开沟通</value>
     </property>
     <property key="PartyOptional">
         <value xml:lang="en">Optional</value>
-        <value xml:lang="zh">可选</value>
+        <value xml:lang="zh_CN">可选</value>
     </property>
     <property key="PartyOrderAdd">
         <value xml:lang="en">Order Add</value>
     </property>
     <property key="PartyOrderInLast">
         <value xml:lang="en">order(s) in the last</value>
-        <value xml:lang="zh">订单——上次</value>
+        <value xml:lang="zh_CN">订单——上次</value>
     </property>
     <property key="PartyOrganizationParty">
         <value xml:lang="en">Organization Party</value>
-        <value xml:lang="zh">机构会员</value>
+        <value xml:lang="zh_CN">机构会员</value>
     </property>
     <property key="PartyOrganizationPartyId">
         <value xml:lang="en">Organization Party ID</value>
-        <value xml:lang="zh">机构会员编号</value>
+        <value xml:lang="zh_CN">机构会员编号</value>
     </property>
     <property key="PartyOriginEmailNotKnown">
         <value xml:lang="en">Origin Email address not known!</value>
-        <value xml:lang="zh">原始电子邮件地址未知！</value>
+        <value xml:lang="zh_CN">原始电子邮件地址未知！</value>
     </property>
     <property key="PartyOverrideDefaultRateAmount">
         <value xml:lang="en">Override Default Rate Amount</value>
-        <value xml:lang="zh">覆盖缺省税金金额</value>
+        <value xml:lang="zh_CN">覆盖缺省税金金额</value>
     </property>
     <property key="PartyOtherAndGeneralCommunicationEvents">
         <value xml:lang="en">Others and General Communication Events</value>
     </property>
     <property key="PartyPagePushFollowing">
         <value xml:lang="en">Page Push/Following</value>
-        <value xml:lang="zh">页面推送/跟踪</value>
+        <value xml:lang="zh_CN">页面推送/跟踪</value>
     </property>
     <property key="PartyParentList">
         <value xml:lang="en">Parent List</value>
-        <value xml:lang="zh">上级列表</value>
+        <value xml:lang="zh_CN">上级列表</value>
     </property>
     <property key="PartyParties">
         <value xml:lang="en">Parties</value>
-        <value xml:lang="zh">顾客列表</value>
+        <value xml:lang="zh_CN">顾客列表</value>
     </property>
     <property key="findparty">
         <value xml:lang="en">Parties</value>
-        <value xml:lang="zh">顾客列表</value>
+        <value xml:lang="zh_CN">顾客列表</value>
     </property>
     
     <property key="PartyMgr">
         <value xml:lang="en">Parties</value>
-        <value xml:lang="zh">会员管理</value>
+        <value xml:lang="zh_CN">会员管理</value>
     </property>
     
     <property key="CreateNewParty">
         <value xml:lang="en">注册新会员</value>
-        <value xml:lang="zh">注册新会员</value>
+        <value xml:lang="zh_CN">注册新会员</value>
     </property>
     
     <property key="CommunicatMgr">
         <value xml:lang="en">沟通管理</value>
-        <value xml:lang="zh">沟通管理</value>
+        <value xml:lang="zh_CN">沟通管理</value>
     </property>
     
     <property key="PartyPartiesFor">
         <value xml:lang="en">Parties for</value>
-        <value xml:lang="zh">会员用于</value>
+        <value xml:lang="zh_CN">会员用于</value>
     </property>
     <property key="PartyPartiesFound">
         <value xml:lang="en">Parties Found</value>
-        <value xml:lang="zh">会员找到了</value>
+        <value xml:lang="zh_CN">会员找到了</value>
     </property>
     <property key="PartyParty">
         <value xml:lang="en">Party</value>
-        <value xml:lang="zh">会员</value>
+        <value xml:lang="zh_CN">会员</value>
     </property>
     <property key="PartyPartyCurrentInTheRoleOf">
         <value xml:lang="en">The current party in the role of</value>
-        <value xml:lang="zh">当前会员具有角色</value>
+        <value xml:lang="zh_CN">当前会员具有角色</value>
     </property>
     <property key="PartyPartyFrom">
         <value xml:lang="en">Party From</value>
-        <value xml:lang="zh">会员来自</value>
+        <value xml:lang="zh_CN">会员来自</value>
     </property>
     <property key="PartyPartyFromDoesNotExists">
         <value xml:lang="en">Party From does not exist!</value>
     </property>
     <property key="PartyPartyGroupInformation">
         <value xml:lang="en">Party Group Information</value>
-        <value xml:lang="zh">会员组信息</value>
+        <value xml:lang="zh_CN">会员组信息</value>
     </property>
     <property key="PartyPartyGroupName">
         <value xml:lang="en">Party Group Name</value>
-        <value xml:lang="zh">会员组名称</value>
+        <value xml:lang="zh_CN">会员组名称</value>
     </property>
     <property key="PartyPartyGroupSuccessfullyCreated">
         <value xml:lang="en">Party Group successfully created.</value>
-        <value xml:lang="zh">已成功新建会员组。</value>
+        <value xml:lang="zh_CN">已成功新建会员组。</value>
     </property>
     <property key="PartyPartyGroupSuccessfullyUpdated">
         <value xml:lang="en">Party Group successfully updated.</value>
-        <value xml:lang="zh">已成功更新会员组。</value>
+        <value xml:lang="zh_CN">已成功更新会员组。</value>
     </property>
     <property key="PartyPartyIDUserLoginID">
         <value xml:lang="en">PartyID/UserLoginID</value>
-        <value xml:lang="zh">会员编号/用户登录编号</value>
+        <value xml:lang="zh_CN">会员编号/用户登录编号</value>
     </property>
     <property key="PartyPartyId">
         <value xml:lang="en">Party ID</value>
-        <value xml:lang="zh">会员编号</value>
+        <value xml:lang="zh_CN">会员编号</value>
     </property>
     <property key="PartyPartyIdMissing">
         <value xml:lang="en">Party ID missing</value>
-        <value xml:lang="zh">找不到会员编号</value>
+        <value xml:lang="zh_CN">找不到会员编号</value>
     </property>
     <property key="PartyPartyIdentification">
         <value xml:lang="en">Identification Number</value>
@@ -2490,27 +2496,27 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyPartyInTheRoleOf">
         <value xml:lang="en">in the role of</value>
-        <value xml:lang="zh">具有角色</value>
+        <value xml:lang="zh_CN">具有角色</value>
     </property>
     <property key="PartyPartyNotDefined">
         <value xml:lang="en">Party not defined</value>
-        <value xml:lang="zh">没有定义会员</value>
+        <value xml:lang="zh_CN">没有定义会员</value>
     </property>
     <property key="PartyPartyOfTheRoleParty">
         <value xml:lang="en">of the current party in the role of</value>
-        <value xml:lang="zh">当前会员具有角色</value>
+        <value xml:lang="zh_CN">当前会员具有角色</value>
     </property>
     <property key="PartyPartyRequests">
         <value xml:lang="en">Requests</value>
-        <value xml:lang="zh">请求</value>
+        <value xml:lang="zh_CN">请求</value>
     </property>
     <property key="PartyPartySuccessfullyDeleted">
         <value xml:lang="en">Party successfully deleted.</value>
-        <value xml:lang="zh">已成功删除会员。</value>
+        <value xml:lang="zh_CN">已成功删除会员。</value>
     </property>
     <property key="PartyPartyTo">
         <value xml:lang="en">Party To</value>
-        <value xml:lang="zh">会员到</value>
+        <value xml:lang="zh_CN">会员到</value>
     </property>
     <property key="PartyPartyToDoesNotExists">
         <value xml:lang="en">Party To does not exist!</value>
@@ -2520,221 +2526,221 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyPartyWithId">
         <value xml:lang="en">of the Party with ID </value>
-        <value xml:lang="zh">会员，编号 </value>
+        <value xml:lang="zh_CN">会员，编号 </value>
     </property>
     <property key="PartyPassportExpire">
         <value xml:lang="en">Passport Expire</value>
-        <value xml:lang="zh">护照过期</value>
+        <value xml:lang="zh_CN">护照过期</value>
     </property>
     <property key="PartyPassportExpireDate">
         <value xml:lang="en">Passport Expire Date</value>
-        <value xml:lang="zh">护照过期日期</value>
+        <value xml:lang="zh_CN">护照过期日期</value>
     </property>
     <property key="PartyPassportExpireDateNotValidDate">
         <value xml:lang="en">Passport Expire Date is not a valid Date</value>
-        <value xml:lang="zh">护照过期日期是无效日期</value>
+        <value xml:lang="zh_CN">护照过期日期是无效日期</value>
     </property>
     <property key="PartyPassportNumber">
         <value xml:lang="en">Passport Number</value>
-        <value xml:lang="zh">护照号码</value>
+        <value xml:lang="zh_CN">护照号码</value>
     </property>
     <property key="PartyPasswordHint">
         <value xml:lang="en">Password Hint</value>
-        <value xml:lang="zh">密码提示</value>
+        <value xml:lang="zh_CN">密码提示</value>
     </property>
     <property key="PartyPasswordMatchError">
         <value xml:lang="en">Your Passwords do not match</value>
-        <value xml:lang="zh">你的两个密码不一致</value>
+        <value xml:lang="zh_CN">你的两个密码不一致</value>
     </property>
     <property key="PartyPasswordMissing">
         <value xml:lang="en">Password is Missing</value>
-        <value xml:lang="zh">找不到密码</value>
+        <value xml:lang="zh_CN">找不到密码</value>
     </property>
     <property key="PartyPaymentMethodInformation">
         <value xml:lang="en">Payment Method Information</value>
-        <value xml:lang="zh">支付方式信息</value>
+        <value xml:lang="zh_CN">支付方式信息</value>
     </property>
     <property key="PartyPaymentsNotApplied">
         <value xml:lang="en">Payments not yet (fully) applied</value>
-        <value xml:lang="zh">支付没有(完全)应用</value>
+        <value xml:lang="zh_CN">支付没有(完全)应用</value>
     </property>
     <property key="PartyPending">
         <value xml:lang="en">Pending</value>
-        <value xml:lang="zh">待处理</value>
+        <value xml:lang="zh_CN">待处理</value>
     </property>
     <property key="PartyPendingCommunicationEvents">
         <value xml:lang="en">Pending Communication Events</value>
-        <value xml:lang="zh">待处理的沟通事件</value>
+        <value xml:lang="zh_CN">待处理的沟通事件</value>
     </property>
     <property key="PartyPermission">
         <value xml:lang="en">Permission</value>
-        <value xml:lang="zh">权限</value>
+        <value xml:lang="zh_CN">权限</value>
     </property>
     <property key="PartyPermissionError">
         <value xml:lang="en">Security Error: to run ${methodShortDescription} you must have the PARTYMGR${securityAction} or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 ${methodShortDescription}，你必须具有 PARTYMGR${securityAction} 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 ${methodShortDescription}，你必须具有 PARTYMGR${securityAction} 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyPermissionErrorForThisParty">
         <value xml:lang="en">You do not have permission to perform this operation for this party</value>
-        <value xml:lang="zh">你没有权限对这个会员执行本操作</value>
+        <value xml:lang="zh_CN">你没有权限对这个会员执行本操作</value>
     </property>
     <property key="PartyPermissionErrorPartyId">
         <value xml:lang="en">Security Error: you do not have permission to perform ${resourceDescription} for this party.</value>
-        <value xml:lang="zh">你没有权限对这个会员执行本操作</value>
+        <value xml:lang="zh_CN">你没有权限对这个会员执行本操作</value>
     </property>
     <property key="PartyPermissionSecurityGroupWithId">
         <value xml:lang="en">Permissions for SecurityGroup with ID</value>
-        <value xml:lang="zh">安全组的权限，编号</value>
+        <value xml:lang="zh_CN">安全组的权限，编号</value>
     </property>
     <property key="PartyPersonSuccessfullyCreated">
         <value xml:lang="en">Person successfully created.</value>
-        <value xml:lang="zh">已成功新建人员。</value>
+        <value xml:lang="zh_CN">已成功新建人员。</value>
     </property>
     <property key="PartyPersonSuccessfullyUpdated">
         <value xml:lang="en">Person successfully updated.</value>
-        <value xml:lang="zh">已成功更新人员。</value>
+        <value xml:lang="zh_CN">已成功更新人员。</value>
     </property>
     <property key="PartyPersonalInformation">
         <value xml:lang="en">Personal Information</value>
-        <value xml:lang="zh">个人信息</value>
+        <value xml:lang="zh_CN">个人信息</value>
     </property>
     <property key="PartyPersonalInformationNotFound">
         <value xml:lang="en">Personal Information Not Found</value>
-        <value xml:lang="zh">找不到个人信息</value>
+        <value xml:lang="zh_CN">找不到个人信息</value>
     </property>
     <property key="PartyPersonalTitle">
         <value xml:lang="en">Personal Title</value>
-        <value xml:lang="zh">人员头衔</value>
+        <value xml:lang="zh_CN">人员头衔</value>
     </property>
     <property key="PartyPhoneNumber">
         <value xml:lang="en">Phone Number</value>
-        <value xml:lang="zh">电话号码</value>
+        <value xml:lang="zh_CN">电话号码</value>
     </property>
     <property key="PartyPhoneNumberInfoNotFound">
         <value xml:lang="en">Phone Number Information Not Found</value>
-        <value xml:lang="zh">找不到电话号码信息</value>
+        <value xml:lang="zh_CN">找不到电话号码信息</value>
     </property>
     <property key="PartyPhoneNumberRequired">
         <value xml:lang="en">At least one phone number is required below</value>
-        <value xml:lang="zh">下面至少需要一个电话号码</value>
+        <value xml:lang="zh_CN">下面至少需要一个电话号码</value>
     </property>
     <property key="PartyPhoneNumbers">
         <value xml:lang="en">Phone Numbers</value>
-        <value xml:lang="zh">电话号码</value>
+        <value xml:lang="zh_CN">电话号码</value>
     </property>
     <property key="PartyPointsFrom">
         <value xml:lang="en">points from</value>
-        <value xml:lang="zh">点来自</value>
+        <value xml:lang="zh_CN">点来自</value>
     </property>
     <property key="PartyPostal">
         <value xml:lang="en">Postal</value>
-        <value xml:lang="zh">邮政</value>
+        <value xml:lang="zh_CN">邮政</value>
     </property>
     <property key="PartyPostalAddressSuccessfullyCreated">
         <value xml:lang="en">Postal Address successfully created.</value>
-        <value xml:lang="zh">已成功新建通信地址。</value>
+        <value xml:lang="zh_CN">已成功新建通信地址。</value>
     </property>
     <property key="PartyPostalAddressSuccessfullyUpdated">
         <value xml:lang="en">Postal Address successfully updated.</value>
-        <value xml:lang="zh">已成功更新通信地址。</value>
+        <value xml:lang="zh_CN">已成功更新通信地址。</value>
     </property>
     <property key="PartyPostalCode">
         <value xml:lang="en">Postal Code</value>
-        <value xml:lang="zh">邮政编码</value>
+        <value xml:lang="zh_CN">邮政编码</value>
     </property>
     <property key="PartyPostalCodeMissing">
         <value xml:lang="en">Zip/Postal Code is missing</value>
-        <value xml:lang="zh">缺少邮政编号</value>
+        <value xml:lang="zh_CN">缺少邮政编号</value>
     </property>
     <property key="PartyPostalDirections">
         <value xml:lang="en">Directions</value>
-        <value xml:lang="zh">方向</value>
+        <value xml:lang="zh_CN">方向</value>
     </property>
     <property key="PartyPostalInformationNotFound">
         <value xml:lang="en">Postal Information Not Found</value>
-        <value xml:lang="zh">找不到邮政信息</value>
+        <value xml:lang="zh_CN">找不到邮政信息</value>
     </property>
     <property key="PartyPrice">
         <value xml:lang="en">Price</value>
-        <value xml:lang="zh">价格</value>
+        <value xml:lang="zh_CN">价格</value>
     </property>
     <property key="PartyPrimaryPhone">
         <value xml:lang="en">Primary Phone Number</value>
-        <value xml:lang="zh">第一个电话号码</value>
+        <value xml:lang="zh_CN">第一个电话号码</value>
     </property>
     <property key="PartyProduct">
         <value xml:lang="en">Product</value>
-        <value xml:lang="zh">宝贝</value>
+        <value xml:lang="zh_CN">宝贝</value>
     </property>
     <property key="PartyProductAdd">
         <value xml:lang="en">Product Add</value>
     </property>
     <property key="PartyProductId">
         <value xml:lang="en">Product Id</value>
-        <value xml:lang="zh">宝贝编号</value>
+        <value xml:lang="zh_CN">宝贝编号</value>
     </property>
     <property key="PartyProfile">
         <value xml:lang="en">Profile</value>
-        <value xml:lang="zh">会员信息</value>
+        <value xml:lang="zh_CN">会员信息</value>
     </property>
     <property key="PartyProtectedViewsForSecurityGroup">
         <value xml:lang="en">Protected Views For SecurityGroup</value>
-        <value xml:lang="zh">受保护的视图用于安全组</value>
+        <value xml:lang="zh_CN">受保护的视图用于安全组</value>
     </property>
     <property key="PartyProvinceInCanadaMissing">
         <value xml:lang="en">Province is missing, and is required for an address in Canada.</value>
-        <value xml:lang="zh">缺少省，而且必须是加拿大的一个地址。</value>
+        <value xml:lang="zh_CN">缺少省，而且必须是加拿大的一个地址。</value>
     </property>
     <property key="PartyProvinceMissing">
         <value xml:lang="en">State/Province is Missing</value>
-        <value xml:lang="zh">找不到州/省</value>
+        <value xml:lang="zh_CN">找不到州/省</value>
     </property>
     <property key="PartyPublic">
         <value xml:lang="en">Public</value>
-        <value xml:lang="zh">公开</value>
+        <value xml:lang="zh_CN">公开</value>
     </property>
     <property key="PartyPurposeTypeMissingCannotAdd">
         <value xml:lang="en">Purpose type not specified, cannot add purpose to contact mechanism</value>
-        <value xml:lang="zh">没有指定目的类型，不能把目的添加到联系方式</value>
+        <value xml:lang="zh_CN">没有指定目的类型，不能把目的添加到联系方式</value>
     </property>
     <property key="PartyPurposeTypeMissingCannotRemove">
         <value xml:lang="en">Purpose type not specified, cannot remove purpose from contact mechanism</value>
-        <value xml:lang="zh">没有指定目的类型，不能从联系方式删除目的</value>
+        <value xml:lang="zh_CN">没有指定目的类型，不能从联系方式删除目的</value>
     </property>
     <property key="PartyPurposeTypeNotFound">
         <value xml:lang="en">Contact Purpose Type Not Found with ID</value>
-        <value xml:lang="zh">找不到联系目的类型：编号</value>
+        <value xml:lang="zh_CN">找不到联系目的类型：编号</value>
     </property>
     <property key="PartyPushURL">
         <value xml:lang="en">Push URL</value>
-        <value xml:lang="zh">推送网址</value>
+        <value xml:lang="zh_CN">推送网址</value>
     </property>
     <property key="PartyQuantity">
         <value xml:lang="en">Quantity</value>
-        <value xml:lang="zh">数量</value>
+        <value xml:lang="zh_CN">数量</value>
     </property>
     <property key="PartyQuantityPurchased">
         <value xml:lang="en">Quantity Purchased</value>
-        <value xml:lang="zh">已购数量</value>
+        <value xml:lang="zh_CN">已购数量</value>
     </property>
     <property key="PartyQuickAddList">
         <value xml:lang="en">Quick Add To Shopping List</value>
-        <value xml:lang="zh">快速添加到购物列表</value>
+        <value xml:lang="zh_CN">快速添加到购物列表</value>
     </property>
     <property key="PartyRateNotSpecified">
         <value xml:lang="en">Rate not specified for this party AND NO default rate</value>
-        <value xml:lang="zh">没有为这个会员指定税率，并且没有缺省税率</value>
+        <value xml:lang="zh_CN">没有为这个会员指定税率，并且没有缺省税率</value>
     </property>
     <property key="PartyReceivePasswordByEmail">
         <value xml:lang="en">You will receive a password by email when your new account is approved</value>
-        <value xml:lang="zh">当你的新账户被批准时，你会收到密码的电子邮件</value>
+        <value xml:lang="zh_CN">当你的新账户被批准时，你会收到密码的电子邮件</value>
     </property>
     <property key="PartyRelatedCompany">
         <value xml:lang="en">Related Company</value>
     </property>
     <property key="PartyRelationSecurity">
         <value xml:lang="en">Party Relationship Security</value>
-        <value xml:lang="zh">会员关系安全</value>
+        <value xml:lang="zh_CN">会员关系安全</value>
     </property>
     <property key="PartyRelationshipTypeAlreadyExists">
         <value xml:lang="en">Could not create party relationship type: already exists</value>
@@ -2747,110 +2753,110 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyRelationshipValidFromRoleType">
         <value xml:lang="en">Valid From Role Type</value>
-        <value xml:lang="zh">来自的角色类型有效</value>
+        <value xml:lang="zh_CN">来自的角色类型有效</value>
     </property>
     <property key="PartyRelationshipValidToRoleType">
         <value xml:lang="en">Valid To Role Type</value>
-        <value xml:lang="zh">到的角色类型有效</value>
+        <value xml:lang="zh_CN">到的角色类型有效</value>
     </property>
     <property key="PartyRelationships">
         <value xml:lang="en">Relationships</value>
-        <value xml:lang="zh">关系</value>
+        <value xml:lang="zh_CN">关系</value>
     </property>
     <property key="PartyRemoveAttributePermissionError">
         <value xml:lang="en">Security Error: to run createPartyAttribute you must have the PARTYMGR_DELETE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 createPartyAttribute，你必须具有 PARTYMGR_DELETE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 createPartyAttribute，你必须具有 PARTYMGR_DELETE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyRemoveCommunicationEventPurposePermissionError">
         <value xml:lang="en">Security Error: to run removeCommunicationEventPurpose you must have the PARTYMGR_DELETE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 removeCommunicationEventPurpose，你必须具有 PARTYMGR_DELETE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 removeCommunicationEventPurpose，你必须具有 PARTYMGR_DELETE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyRemoveCommunicationEventRolePermissionError">
         <value xml:lang="en">Security Error: to run removeCommunicationEventRole you must have the PARTYMGR_DELETE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 removeCommunicationEventRole，你必须具有 PARTYMGR_DELETE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 removeCommunicationEventRole，你必须具有 PARTYMGR_DELETE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyRemovePartyClassificationGroupPermissionError">
         <value xml:lang="en">Security Error: to run deletePartyClassificationGroup you must have the PARTYMGR_DELETE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 deletePartyClassificationGroup，你必须具有 PARTYMGR_DELETE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 deletePartyClassificationGroup，你必须具有 PARTYMGR_DELETE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyRemovePartyClassificationPermissionError">
         <value xml:lang="en">Security Error: to run deletePartyClassification you must have the PARTYMGR_DELETE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 deletePartyClassification，你必须具有 PARTYMGR_DELETE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 deletePartyClassification，你必须具有 PARTYMGR_DELETE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyRemovePartyRelationshipPermissionError">
         <value xml:lang="en">Security Error: to run removePartyRelationship you must have the PARTYMGR_DELETE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 removePartyRelationship，你必须具有 PARTYMGR_DELETE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 removePartyRelationship，你必须具有 PARTYMGR_DELETE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyRemovePostalAddressBoundaryPermissionError">
         <value xml:lang="en">Security Error: to run deletePostalAddressBoundary you must have the PARTYMGR_DELETE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 deletePostalAddressBoundary，你必须具有 PARTYMGR_DELETE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 deletePostalAddressBoundary，你必须具有 PARTYMGR_DELETE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyRemoveWebSiteRolePermissionError">
         <value xml:lang="en">Security Error: to run removeWebSiteRole you must have the PARTYMGR_DELETE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 removeWebSiteRole，你必须具有 PARTYMGR_DELETE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 removeWebSiteRole，你必须具有 PARTYMGR_DELETE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyRepeatPassword">
         <value xml:lang="en">Repeat password to confirm</value>
-        <value xml:lang="zh">再输入一次以确认密码</value>
+        <value xml:lang="zh_CN">再输入一次以确认密码</value>
     </property>
     <property key="PartyReply">
         <value xml:lang="en">Reply</value>
-        <value xml:lang="zh">回复</value>
+        <value xml:lang="zh_CN">回复</value>
     </property>
     <property key="PartyReplyAll">
         <value xml:lang="en">Reply All</value>
     </property>
     <property key="PartyReplyPrefix">
         <value xml:lang="en">RE:</value>
-        <value xml:lang="zh">回复：</value>
+        <value xml:lang="zh_CN">回复：</value>
     </property>
     <property key="PartyRequestNewAccount">
         <value xml:lang="en">Request a New Account</value>
-        <value xml:lang="zh">请求一个新账户</value>
+        <value xml:lang="zh_CN">请求一个新账户</value>
     </property>
     <property key="PartyRequiredNote">
         <value xml:lang="en">Fields marked with (*) are required.</value>
-        <value xml:lang="zh">(*) 是必填项。</value>
+        <value xml:lang="zh_CN">(*) 是必填项。</value>
     </property>
     <property key="PartyRole">
         <value xml:lang="en">Role</value>
-        <value xml:lang="zh">角色</value>
+        <value xml:lang="zh_CN">角色</value>
     </property>
     <property key="PartyRoleType">
         <value xml:lang="en">Role Type</value>
-        <value xml:lang="zh">角色类型</value>
+        <value xml:lang="zh_CN">角色类型</value>
     </property>
     <property key="PartyRoleTypeFrom">
         <value xml:lang="en">RoleType From</value>
-        <value xml:lang="zh">角色类型来自</value>
+        <value xml:lang="zh_CN">角色类型来自</value>
     </property>
     <property key="PartyRoleTypeId">
         <value xml:lang="en">RoleType ID</value>
-        <value xml:lang="zh">角色类型编号</value>
+        <value xml:lang="zh_CN">角色类型编号</value>
     </property>
     <property key="PartyRoleTypeIdFrom">
         <value xml:lang="en">Party Role Type Id From (NEW)</value>
-        <value xml:lang="zh">会员角色类型编号来自 (新)</value>
+        <value xml:lang="zh_CN">会员角色类型编号来自 (新)</value>
     </property>
     <property key="PartyRoleTypeIdMissing">
         <value xml:lang="en">Role Type ID is missing.</value>
-        <value xml:lang="zh">没有找到角色类型编号。</value>
+        <value xml:lang="zh_CN">没有找到角色类型编号。</value>
     </property>
     <property key="PartyRoleTypeIdTo">
         <value xml:lang="en">Party Role Type Id To (NEW)</value>
-        <value xml:lang="zh">会员角色类型编号到 (新)</value>
+        <value xml:lang="zh_CN">会员角色类型编号到 (新)</value>
     </property>
     <property key="PartyRoleTypeTo">
         <value xml:lang="en">Role Type To</value>
-        <value xml:lang="zh">角色类型到</value>
+        <value xml:lang="zh_CN">角色类型到</value>
     </property>
     <property key="PartyRoles">
         <value xml:lang="en">Role(s)</value>
-        <value xml:lang="zh">角色</value>
+        <value xml:lang="zh_CN">角色</value>
     </property>
     <property key="PartySecurityGroup">
         <value xml:lang="en">Security Group</value>
-        <value xml:lang="zh">安全组</value>
+        <value xml:lang="zh_CN">安全组</value>
     </property>
     <property key="PartySecurityGroupCreatePermissionError">
         <value xml:lang="en">Security Error: to run ${resourceDescription} you must have the SECURITY_CREATE or SECURITY_ADMIN permission</value>
@@ -2863,348 +2869,348 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartySegmentGroupId">
         <value xml:lang="en">Segment Group Id</value>
-        <value xml:lang="zh">分区组编号</value>
+        <value xml:lang="zh_CN">分区组编号</value>
     </property>
     <property key="PartySegmentGroupProductStoreId">
         <value xml:lang="en">Product Store Id</value>
-        <value xml:lang="zh">宝贝店铺编号</value>
+        <value xml:lang="zh_CN">宝贝店铺编号</value>
     </property>
     <property key="PartySegmentGroupTypeId">
         <value xml:lang="en">Segment Type Id</value>
-        <value xml:lang="zh">分区类型编号</value>
+        <value xml:lang="zh_CN">分区类型编号</value>
     </property>
     <property key="PartySegmentRoles">
         <value xml:lang="en">Segment Roles</value>
-        <value xml:lang="zh">分区角色</value>
+        <value xml:lang="zh_CN">分区角色</value>
     </property>
     <property key="PartySegments">
         <value xml:lang="en">Segments</value>
-        <value xml:lang="zh">分区</value>
+        <value xml:lang="zh_CN">分区</value>
     </property>
     <property key="PartySelectContactType">
         <value xml:lang="en">Select Contact Type</value>
-        <value xml:lang="zh">选择联系方式</value>
+        <value xml:lang="zh_CN">选择联系方式</value>
     </property>
     <property key="PartySelectMimeType">
         <value xml:lang="en">Select Mime Type</value>
-        <value xml:lang="zh">选择Mime类型</value>
+        <value xml:lang="zh_CN">选择Mime类型</value>
     </property>
     <property key="PartySelectPurpose">
         <value xml:lang="en">Select Purpose</value>
-        <value xml:lang="zh">选择目的</value>
+        <value xml:lang="zh_CN">选择目的</value>
     </property>
     <property key="PartySelectRole">
         <value xml:lang="en">Select Role</value>
-        <value xml:lang="zh">选择角色</value>
+        <value xml:lang="zh_CN">选择角色</value>
     </property>
     <property key="PartySelectcRoleForParty">
         <value xml:lang="en">Select role(s) for this party</value>
-        <value xml:lang="zh">为这个会员选择角色</value>
+        <value xml:lang="zh_CN">为这个会员选择角色</value>
     </property>
     <property key="PartySendEmail">
         <value xml:lang="en">Send Email</value>
-        <value xml:lang="zh">发送电子邮件</value>
+        <value xml:lang="zh_CN">发送电子邮件</value>
     </property>
     <property key="PartySequenceId">
         <value xml:lang="en">Sequence Id</value>
-        <value xml:lang="zh">顺序编号</value>
+        <value xml:lang="zh_CN">顺序编号</value>
     </property>
     <property key="PartyServer">
         <value xml:lang="en">Server</value>
-        <value xml:lang="zh">服务器</value>
+        <value xml:lang="zh_CN">服务器</value>
     </property>
     <property key="PartyServiceNotForPostalAddress">
         <value xml:lang="en">This service (createContactMech) should not be used for POSTAL_ADDRESS type ContactMechs, use the createPostalAddress service</value>
-        <value xml:lang="zh">本服务 (createContactMech) 不应该用于通信地址类型的联系方式，请使用 createPostalAddress 服务</value>
+        <value xml:lang="zh_CN">本服务 (createContactMech) 不应该用于通信地址类型的联系方式，请使用 createPostalAddress 服务</value>
     </property>
     <property key="PartyServiceNotForTelecomNumber">
         <value xml:lang="en">This service (createContactMech) should not be used for TELECOM_NUMBER type ContactMechs, use the createTelecomNumber service</value>
-        <value xml:lang="zh">本服务 (createContactMech) 不应该用于电话号码类型的联系方式，请使用 createTelecomNumber 服务</value>
+        <value xml:lang="zh_CN">本服务 (createContactMech) 不应该用于电话号码类型的联系方式，请使用 createTelecomNumber 服务</value>
     </property>
     <property key="PartyServicemgntCustRequestId">
         <value xml:lang="en">Service management Customer Request Id</value>
-        <value xml:lang="zh">服务管理客户请求编号</value>
+        <value xml:lang="zh_CN">服务管理客户请求编号</value>
     </property>
     <property key="PartyShipperAccount">
         <value xml:lang="en">Shipper Account</value>
-        <value xml:lang="zh">承运人账户</value>
+        <value xml:lang="zh_CN">承运人账户</value>
     </property>
     <property key="PartyShippingAddress">
         <value xml:lang="en">Shipping Address</value>
     </property>
     <property key="PartyShoppingListDetail">
         <value xml:lang="en">Shopping List Detail</value>
-        <value xml:lang="zh">购物列表详细</value>
+        <value xml:lang="zh_CN">购物列表详细</value>
     </property>
     <property key="PartyShoppingListEmpty">
         <value xml:lang="en">Empty Shopping List</value>
-        <value xml:lang="zh">清空购物列表</value>
+        <value xml:lang="zh_CN">清空购物列表</value>
     </property>
     <property key="PartyShoppingLists">
         <value xml:lang="en">Shopping Lists</value>
-        <value xml:lang="zh">购物列表</value>
+        <value xml:lang="zh_CN">购物列表</value>
     </property>
     <property key="PartyShowActive">
         <value xml:lang="en">Show Active</value>
-        <value xml:lang="zh">显示有效的</value>
+        <value xml:lang="zh_CN">显示有效的</value>
     </property>
     <property key="PartyShowAll">
         <value xml:lang="en">Show All</value>
-        <value xml:lang="zh">显示全部</value>
+        <value xml:lang="zh_CN">显示全部</value>
     </property>
     <property key="PartyShowOld">
         <value xml:lang="en">Show Old</value>
-        <value xml:lang="zh">显示旧信息</value>
+        <value xml:lang="zh_CN">显示旧信息</value>
     </property>
     <property key="PartySingle">
         <value xml:lang="en">S - Single</value>
-        <value xml:lang="zh">S - 单身</value>
+        <value xml:lang="zh_CN">S - 单身</value>
     </property>
     <property key="PartySiteURLMissing">
         <value xml:lang="en">Site URL is missing</value>
-        <value xml:lang="zh">找不到站点网址</value>
+        <value xml:lang="zh_CN">找不到站点网址</value>
     </property>
     <property key="PartySize">
         <value xml:lang="en">Size</value>
-        <value xml:lang="zh">大小</value>
+        <value xml:lang="zh_CN">大小</value>
     </property>
     <property key="PartySocialSecurityNumber">
         <value xml:lang="en">Social Security Number</value>
-        <value xml:lang="zh">社会保险号</value>
+        <value xml:lang="zh_CN">社会保险号</value>
     </property>
     <property key="PartySolicitingOk">
         <value xml:lang="en">Soliciting OK</value>
-        <value xml:lang="zh">提示</value>
+        <value xml:lang="zh_CN">提示</value>
     </property>
     <property key="PartyStartTime">
         <value xml:lang="en">Start Time</value>
-        <value xml:lang="zh">开始时间</value>
+        <value xml:lang="zh_CN">开始时间</value>
     </property>
     <property key="PartyState">
         <value xml:lang="en">State/Province</value>
-        <value xml:lang="zh">省/直辖市</value>
+        <value xml:lang="zh_CN">省/直辖市</value>
     </property>
     <property key="PartyStateInCanadaMissing">
         <value xml:lang="en">State is missing, and is required for an address in Canada.</value>
-        <value xml:lang="zh">缺少州，这是加拿大的地址里必须有的。</value>
+        <value xml:lang="zh_CN">缺少州，这是加拿大的地址里必须有的。</value>
     </property>
     <property key="PartyStateInUsMissing">
         <value xml:lang="en">State is missing, and is required for an address in the United States.</value>
-        <value xml:lang="zh">缺少州，这是美国地址里必须有的。</value>
+        <value xml:lang="zh_CN">缺少州，这是美国地址里必须有的。</value>
     </property>
     <property key="PartyStateMissingError">
         <value xml:lang="en">State is missing</value>
-        <value xml:lang="zh">缺少省</value>
+        <value xml:lang="zh_CN">缺少省</value>
     </property>
     <property key="PartyStatusCannotBeChanged">
         <value xml:lang="en">Cannot change party status from ${partyFromStatusId} to ${partyToStatusId}</value>
     </property>
     <property key="PartyStillActive">
         <value xml:lang="en">Still Active</value>
-        <value xml:lang="zh">依然有效</value>
+        <value xml:lang="zh_CN">依然有效</value>
     </property>
     <property key="PartySubject">
         <value xml:lang="en">Subject</value>
-        <value xml:lang="zh">主题</value>
+        <value xml:lang="zh_CN">主题</value>
     </property>
     <property key="PartySuffix">
         <value xml:lang="en">Suffix</value>
-        <value xml:lang="zh">后缀</value>
+        <value xml:lang="zh_CN">后缀</value>
     </property>
     <property key="PartySupplier">
         <value xml:lang="en">Supplier</value>
-        <value xml:lang="zh">供货商</value>
+        <value xml:lang="zh_CN">供货商</value>
     </property>
     <property key="PartyTaxAddInfo">
         <value xml:lang="en">Add Tax Info</value>
-        <value xml:lang="zh">添加税务信息</value>
+        <value xml:lang="zh_CN">添加税务信息</value>
     </property>
     <property key="PartyTaxAuthInfos">
         <value xml:lang="en">Tax Infos</value>
-        <value xml:lang="zh">税务信息</value>
+        <value xml:lang="zh_CN">税务信息</value>
     </property>
     <property key="PartyTaxId">
         <value xml:lang="en">Tax ID</value>
-        <value xml:lang="zh">税务编号</value>
+        <value xml:lang="zh_CN">税务编号</value>
     </property>
     <property key="PartyTaxIdentification">
         <value xml:lang="en">Tax Identification and Exemption</value>
-        <value xml:lang="zh">税务编号和免除</value>
+        <value xml:lang="zh_CN">税务编号和免除</value>
     </property>
     <property key="PartyTaxIsExempt">
         <value xml:lang="en">Is Exempt?</value>
-        <value xml:lang="zh">免税吗?</value>
+        <value xml:lang="zh_CN">免税吗?</value>
     </property>
     <property key="PartyTelecom">
         <value xml:lang="en">Telecom</value>
-        <value xml:lang="zh">电信</value>
+        <value xml:lang="zh_CN">电信</value>
     </property>
     <property key="PartyTelecomNumberSuccessfullyCreated">
         <value xml:lang="en">Telecom Number successfully created.</value>
-        <value xml:lang="zh">已成功新建电话号码。</value>
+        <value xml:lang="zh_CN">已成功新建电话号码。</value>
     </property>
     <property key="PartyTelecomNumberSuccessfullyUpdated">
         <value xml:lang="en">Telecom Number successfully updated.</value>
-        <value xml:lang="zh">已成功更新电话号码。</value>
+        <value xml:lang="zh_CN">已成功更新电话号码。</value>
     </property>
     <property key="PartyTerm">
         <value xml:lang="en">Term</value>
-        <value xml:lang="zh">条件</value>
+        <value xml:lang="zh_CN">条件</value>
     </property>
     <property key="PartyTermType">
         <value xml:lang="en">Term Type</value>
-        <value xml:lang="zh">条件类型</value>
+        <value xml:lang="zh_CN">条件类型</value>
     </property>
     <property key="PartyTermValue">
         <value xml:lang="en">Term Value</value>
-        <value xml:lang="zh">条件值</value>
+        <value xml:lang="zh_CN">条件值</value>
     </property>
     <property key="PartyTerms">
         <value xml:lang="en">Terms</value>
-        <value xml:lang="zh">条件</value>
+        <value xml:lang="zh_CN">条件</value>
     </property>
     <property key="PartyTheProfileOf">
         <value xml:lang="en">The Profile of</value>
-        <value xml:lang="zh">简介</value>
+        <value xml:lang="zh_CN">简介</value>
     </property>
     <property key="PartyTime">
         <value xml:lang="en">Time</value>
-        <value xml:lang="zh">时间</value>
+        <value xml:lang="zh_CN">时间</value>
     </property>
     <property key="PartyToBePaidTo">
         <value xml:lang="en">To be paid to:</value>
-        <value xml:lang="zh">要支付给：</value>
+        <value xml:lang="zh_CN">要支付给：</value>
     </property>
     <property key="PartyToBeReceivedFrom">
         <value xml:lang="en">To be received from:</value>
-        <value xml:lang="zh">接收来自：</value>
+        <value xml:lang="zh_CN">接收来自：</value>
     </property>
     <property key="PartyToCart">
         <value xml:lang="en">To Cart</value>
-        <value xml:lang="zh">到购物车</value>
+        <value xml:lang="zh_CN">到购物车</value>
     </property>
     <property key="PartyToComplete">
         <value xml:lang="en">-&gt;Closed</value>
-        <value xml:lang="zh">已关闭的</value>
+        <value xml:lang="zh_CN">已关闭的</value>
     </property>
     <property key="PartyToContactMech">
         <value xml:lang="en">To Contact Mech</value>
-        <value xml:lang="zh">到联系方式</value>
+        <value xml:lang="zh_CN">到联系方式</value>
     </property>
     <property key="PartyToEmailAddress">
         <value xml:lang="en">To Email Address</value>
-        <value xml:lang="zh">到电子邮件地址</value>
+        <value xml:lang="zh_CN">到电子邮件地址</value>
     </property>
     <property key="PartyToName">
         <value xml:lang="en">To Name</value>
-        <value xml:lang="zh">到名字</value>
+        <value xml:lang="zh_CN">到名字</value>
     </property>
     <property key="PartyTotal">
         <value xml:lang="en">Total</value>
-        <value xml:lang="zh">合计</value>
+        <value xml:lang="zh_CN">合计</value>
     </property>
     <property key="PartyTotalYearsWorkExperience">
         <value xml:lang="en">Total Years Work Experience</value>
-        <value xml:lang="zh">全部工作年限</value>
+        <value xml:lang="zh_CN">全部工作年限</value>
     </property>
     <property key="PartyTotalYearsWorkNotValidNumber">
         <value xml:lang="en">Total Years Work Experience is not a valid number</value>
-        <value xml:lang="zh">工作经历的年数合计不是有效数字</value>
+        <value xml:lang="zh_CN">工作经历的年数合计不是有效数字</value>
     </property>
     <property key="PartyType">
         <value xml:lang="en">Type</value>
-        <value xml:lang="zh">类型</value>
+        <value xml:lang="zh_CN">类型</value>
     </property>
     <property key="PartyTypeId">
         <value xml:lang="en">Party Type Id</value>
-        <value xml:lang="zh">会员类型编号</value>
+        <value xml:lang="zh_CN">会员类型编号</value>
     </property>
     <property key="PartyUnableToLocatePurpose">
         <value xml:lang="en">Unable to locate purpose; cannot delete</value>
     </property>
     <property key="PartyURI">
         <value xml:lang="en">URI</value>
-        <value xml:lang="zh">URI</value>
+        <value xml:lang="zh_CN">URI</value>
     </property>
     <property key="PartyUnknown">
         <value xml:lang="en">Unknown</value>
-        <value xml:lang="zh">未知</value>
+        <value xml:lang="zh_CN">未知</value>
     </property>
     <property key="PartyUpdateAttributePermissionError">
         <value xml:lang="en">Security Error: to run updatePartyAttribute you must have the PARTYMGR_UPDATE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 updatePartyAttribute，你必须具有 PARTYMGR_UPDATE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 updatePartyAttribute，你必须具有 PARTYMGR_UPDATE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyUpdateCommunicationEventPermissionError">
         <value xml:lang="en">Security Error: to run updateCommunicationEvent you must have the PARTYMGR_UPDATE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 updateCommunicationEvent，你必须具有 PARTYMGR_UPDATE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 updateCommunicationEvent，你必须具有 PARTYMGR_UPDATE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyUpdatePartyClassificationGroupPermissionError">
         <value xml:lang="en">Security Error: to run updatePartyClassificationGroup you must have the PARTYMGR_UPDATE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 updatePartyClassificationGroup，你必须具有 PARTYMGR_UPDATE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 updatePartyClassificationGroup，你必须具有 PARTYMGR_UPDATE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyUpdatePartyClassificationPermissionError">
         <value xml:lang="en">Security Error: to run updatePartyClassification you must have the PARTYMGR_UPDATE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 updatePartyClassification，你必须具有 PARTYMGR_UPDATE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 updatePartyClassification，你必须具有 PARTYMGR_UPDATE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyUpdateVendorPermissionError">
         <value xml:lang="en">Security Error: to run updateVendor you must have the PARTYMGR_UPDATE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 updateVendor，你必须具有 PARTYMGR_UPDATE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 updateVendor，你必须具有 PARTYMGR_UPDATE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyUpdateWebSiteRolePermissionError">
         <value xml:lang="en">Security Error: to run updateWebSiteRole you must have the PARTYMGR_UPDATE or PARTYMGR_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 updateWebSiteRole，你必须具有 PARTYMGR_UPDATE 或 PARTYMGR_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 updateWebSiteRole，你必须具有 PARTYMGR_UPDATE 或 PARTYMGR_ADMIN 权限</value>
     </property>
     <property key="PartyUseCurrentAddress">
         <value xml:lang="en">Use Current Address</value>
-        <value xml:lang="zh">使用当前地址</value>
+        <value xml:lang="zh_CN">使用当前地址</value>
     </property>
     <property key="PartyUserCreated">
         <value xml:lang="en">User Created</value>
-        <value xml:lang="zh">已新建的用户</value>
+        <value xml:lang="zh_CN">已新建的用户</value>
     </property>
     <property key="PartyUserLogin">
         <value xml:lang="en">User Login</value>
-        <value xml:lang="zh">登录账号</value>
+        <value xml:lang="zh_CN">登录账号</value>
     </property>
     <property key="PartyUserLoginMissingError">
         <value xml:lang="en">Username is Missing</value>
-        <value xml:lang="zh">找不到用户名</value>
+        <value xml:lang="zh_CN">找不到用户名</value>
     </property>
     <property key="PartyUserLoginsForSecurityGroup">
         <value xml:lang="en">UserLogins for SecurityGroup with ID</value>
-        <value xml:lang="zh">安全组用户登录，编号</value>
+        <value xml:lang="zh_CN">安全组用户登录，编号</value>
     </property>
     <property key="PartyUserName">
         <value xml:lang="en">User Name(s)</value>
-        <value xml:lang="zh">用户名</value>
+        <value xml:lang="zh_CN">用户名</value>
     </property>
     <property key="PartyUserNameInUse">
         <value xml:lang="en">Email in use, please choose another.</value>
-        <value xml:lang="zh">邮箱地址已经被注册，请使用其它的邮箱地址</value>
+        <value xml:lang="zh_CN">邮箱地址已经被注册，请使用其它的邮箱地址</value>
     </property>
     <property key="PartyUserNameMissing">
         <value xml:lang="en">Username is missing</value>
-        <value xml:lang="zh">缺少用户名</value>
+        <value xml:lang="zh_CN">缺少用户名</value>
     </property>
     <property key="PartyValueFromPartyLevel">
         <value xml:lang="en">Value from party level</value>
-        <value xml:lang="zh">按会员等级的价值</value>
+        <value xml:lang="zh_CN">按会员等级的价值</value>
     </property>
     <property key="PartyValueFromRateTypeLevel">
         <value xml:lang="en">Value from rateType level</value>
-        <value xml:lang="zh">按税金类型等级的价值</value>
+        <value xml:lang="zh_CN">按税金类型等级的价值</value>
     </property>
     <property key="PartyValueFromWorkEffortLevel">
         <value xml:lang="en">Value from workeffort level</value>
-        <value xml:lang="zh">按人工服务等级的价值</value>
+        <value xml:lang="zh_CN">按人工服务等级的价值</value>
     </property>
     <property key="PartyVendor">
         <value xml:lang="en">Vendor</value>
-        <value xml:lang="zh">厂家</value>
+        <value xml:lang="zh_CN">厂家</value>
     </property>
     <property key="PartyVendorInformation">
         <value xml:lang="en">Vendor Information</value>
-        <value xml:lang="zh">厂家信息</value>
+        <value xml:lang="zh_CN">厂家信息</value>
     </property>
     <property key="PartyViewCommOrders">
         <value xml:lang="en">View Communication Orders</value>
@@ -3214,142 +3220,213 @@ Author:hezhiping   Email:110476592@qq.com
     </property>
     <property key="PartyViewCommunicationEvent">
         <value xml:lang="en">View Communication Event</value>
-        <value xml:lang="zh">浏览沟通事件</value>
+        <value xml:lang="zh_CN">浏览沟通事件</value>
     </property>
     <property key="PartyViewImage">
         <value xml:lang="en">View Image</value>
-        <value xml:lang="zh">浏览图像</value>
+        <value xml:lang="zh_CN">浏览图像</value>
     </property>
     <property key="PartyViewPostalAddressBoundaryPermissionError">
         <value xml:lang="en">Security Error: to run getPostalAddressBoundary you must have the PARTY_VIEW or PARTY_ADMIN permission</value>
-        <value xml:lang="zh">安全错误: 要运行 getPostalAddressBoundary，你必须具有 PARTY_VIEW 或 PARTY_ADMIN 权限</value>
+        <value xml:lang="zh_CN">安全错误: 要运行 getPostalAddressBoundary，你必须具有 PARTY_VIEW 或 PARTY_ADMIN 权限</value>
     </property>
     <property key="PartyViewSegmentRoles">
         <value xml:lang="en">View Party Segment Roles</value>
-        <value xml:lang="zh">浏览会员分区角色</value>
+        <value xml:lang="zh_CN">浏览会员分区角色</value>
     </property>
     <property key="PartyVisitDetail">
         <value xml:lang="en">Visit Detail</value>
-        <value xml:lang="zh">访问详细</value>
+        <value xml:lang="zh_CN">访问详细</value>
     </property>
     <property key="PartyVisitIDSessionID">
         <value xml:lang="en">VisitID / SessionID</value>
-        <value xml:lang="zh">访问编号 / 会话编号</value>
+        <value xml:lang="zh_CN">访问编号 / 会话编号</value>
     </property>
     <property key="PartyVisitId">
         <value xml:lang="en">Visit Id</value>
-        <value xml:lang="zh">访问编号</value>
+        <value xml:lang="zh_CN">访问编号</value>
     </property>
     <property key="PartyVisitListing">
         <value xml:lang="en">Visit Listing</value>
-        <value xml:lang="zh">访问列表</value>
+        <value xml:lang="zh_CN">访问列表</value>
     </property>
     <property key="PartyVisitorId">
         <value xml:lang="en">Visitor ID</value>
-        <value xml:lang="zh">访问者编号</value>
+        <value xml:lang="zh_CN">访问者编号</value>
     </property>
     <property key="PartyVisits">
         <value xml:lang="en">Visits</value>
-        <value xml:lang="zh">访问</value>
+        <value xml:lang="zh_CN">访问</value>
     </property>
      <property key="FindVisits">
         <value xml:lang="en">Visits</value>
-        <value xml:lang="zh">访问记录</value>
+        <value xml:lang="zh_CN">访问记录</value>
     </property>
     <property key="findVisits">
         <value xml:lang="en">Visits</value>
-        <value xml:lang="zh">访问记录</value>
+        <value xml:lang="zh_CN">访问记录</value>
     </property>
     
     <property key="WebappName">
         <value xml:lang="en">应用</value>
-        <value xml:lang="zh">应用</value>
+        <value xml:lang="zh_CN">应用</value>
     </property>
     <property key="UserLoginId">
         <value xml:lang="en">登录名</value>
-        <value xml:lang="zh">登录名</value>
+        <value xml:lang="zh_CN">登录名</value>
     </property>
     <property key="listLoggedInUsers">
         <value xml:lang="en">在线会员</value>
-        <value xml:lang="zh">在线会员</value>
+        <value xml:lang="zh_CN">在线会员</value>
     </property>
     
     
     <property key="PartyWebAddressSuccessfullyCreated">
         <value xml:lang="en">Web Address Successfully created.</value>
-        <value xml:lang="zh">已成功新建网址。</value>
+        <value xml:lang="zh_CN">已成功新建网址。</value>
     </property>
     <property key="PartyWebAddressSuccessfullyUpdated">
         <value xml:lang="en">Web Address successfully updated.</value>
-        <value xml:lang="zh">已成功更新网址。</value>
+        <value xml:lang="zh_CN">已成功更新网址。</value>
     </property>
     <property key="PartyWebApp">
         <value xml:lang="en">WebApp</value>
-        <value xml:lang="zh">网站应用</value>
+        <value xml:lang="zh_CN">网站应用</value>
     </property>
     <property key="PartyWeight">
         <value xml:lang="en">Weight</value>
-        <value xml:lang="zh">重量</value>
+        <value xml:lang="zh_CN">重量</value>
     </property>
     <property key="PartyWeightNotValidNumber">
         <value xml:lang="en">Weight is not a valid number</value>
-        <value xml:lang="zh">重量不是有效数字</value>
+        <value xml:lang="zh_CN">重量不是有效数字</value>
     </property>
     <property key="PartyYearsWork">
         <value xml:lang="en">Years Work</value>
-        <value xml:lang="zh">年（工作）</value>
+        <value xml:lang="zh_CN">年（工作）</value>
     </property>
     <property key="PartyYouHave">
         <value xml:lang="en">You have</value>
-        <value xml:lang="zh">你有</value>
+        <value xml:lang="zh_CN">你有</value>
     </property>
     <property key="PartyZipCode">
         <value xml:lang="en">Zip/Postal Code</value>
-        <value xml:lang="zh">邮政编码</value>
+        <value xml:lang="zh_CN">邮政编码</value>
     </property>
     <property key="PartyZipCodeMissing">
         <value xml:lang="en">Zip/Postal Code is missing</value>
-        <value xml:lang="zh">找不到邮政编码</value>
+        <value xml:lang="zh_CN">找不到邮政编码</value>
     </property>
     <property key="NewCustomer">
         <value xml:lang="en">新建客户</value>
-        <value xml:lang="zh">新建客户</value>
+        <value xml:lang="zh_CN">新建客户</value>
     </property>
     
     <property key="showclassgroups">
         <value xml:lang="en">会员分类</value>
-        <value xml:lang="zh">会员分类</value>
+        <value xml:lang="zh_CN">会员分类</value>
     </property>
     
     <property key="SupplierMgr">
         <value xml:lang="en">供运商管理</value>
-        <value xml:lang="zh">供运商管理</value>
+        <value xml:lang="zh_CN">供运商管理</value>
     </property>
     
     <property key="WorkerMgr">
         <value xml:lang="en">员工管理</value>
-        <value xml:lang="zh">员工管理</value>
+        <value xml:lang="zh_CN">员工管理</value>
     </property>
     
     <property key="WorkerList">
         <value xml:lang="en">员工列表</value>
-        <value xml:lang="zh">员工列表</value>
+        <value xml:lang="zh_CN">员工列表</value>
     </property>
     
      <property key="PartyCountryCode">
         <value xml:lang="en">国家代码</value>
-        <value xml:lang="zh">国家代码</value>
+        <value xml:lang="zh_CN">国家代码</value>
     </property>
     <property key="SetUserSecurityGroup">
         <value xml:lang="en">设置会员权限</value>
-        <value xml:lang="zh">设置会员权限</value>
+        <value xml:lang="zh_CN">设置会员权限</value>
     </property>
     
     <property key="PartyCreateSupplier">
         <value xml:lang="en">新建供应商</value>
-        <value xml:lang="zh">新建供应商</value>
-    </property> 
-    
-    
-    
+        <value xml:lang="zh_CN">新建供应商</value>
+    </property>
+
+    <property key="DOMAIN_NAME">
+        <value xml:lang="en">网络域名</value>
+        <value xml:lang="zh_CN">网络域名</value>
+    </property>
+    <property key="ELECTRONIC_ADDRESS">
+        <value xml:lang="en">电子地址</value>
+        <value xml:lang="zh_CN">电子地址</value>
+    </property>
+
+    <property key="EMAIL_ADDRESS">
+        <value xml:lang="en">电子邮件</value>
+        <value xml:lang="zh_CN">电子邮件</value>
+    </property>
+    <property key="IP_ADDRESS">
+        <value xml:lang="en">网络IP地址</value>
+        <value xml:lang="zh_CN">网络IP地址</value>
+    </property>
+    <property key="POSTAL_ADDRESS">
+        <value xml:lang="en">邮政地址</value>
+        <value xml:lang="zh_CN">邮政地址</value>
+    </property>
+
+    <property key="TELECOM_NUMBER">
+        <value xml:lang="en">电话号码</value>
+        <value xml:lang="zh_CN">电话号码</value>
+    </property>
+
+    <property key="INTERNAL_NUMBER">
+        <value xml:lang="en"> 网络号码</value>
+        <value xml:lang="zh_CN"> 网络号码</value>
+    </property>
+
+    <property key="WEB_ADDRESS">
+        <value xml:lang="en">网址</value>
+        <value xml:lang="zh_CN">网址</value>
+    </property>
+    <property key="partyClsmgr">
+        <value xml:lang="en">组织机构管理</value>
+        <value xml:lang="zh_CN">组织机构管理</value>
+    </property>
+
+    <property key="partyClsgroupList">
+        <value xml:lang="en">组织机构列表</value>
+        <value xml:lang="zh_CN">组织机构列表</value>
+    </property>
+    <property key="partyClsgroupTree">
+        <value xml:lang="en">组织机构树</value>
+        <value xml:lang="zh_CN">组织机构树</value>
+    </property>
+    <property key="partyClsgroupSearch">
+        <value xml:lang="en">查找组织机构</value>
+        <value xml:lang="zh_CN">查找组织机构</value>
+    </property>
+
+    <property key="partyClsgroupCreate">
+        <value xml:lang="en">创建组织机构</value>
+        <value xml:lang="zh_CN">创建组织机构</value>
+    </property>
+    <property key="partyClsgroupUpdate">
+        <value xml:lang="en">更新组织机构</value>
+        <value xml:lang="zh_CN">更新组织机构</value>
+    </property>
+    <property key="partyClsgroupRemove">
+        <value xml:lang="en">删除组织机构</value>
+        <value xml:lang="zh_CN">删除组织机构</value>
+    </property>
+    <property key="partyClsgroupMoveNode">
+        <value xml:lang="en">移动组织机构</value>
+        <value xml:lang="zh_CN">移动组织机构</value>
+    </property>
+
+
+
 </resource>

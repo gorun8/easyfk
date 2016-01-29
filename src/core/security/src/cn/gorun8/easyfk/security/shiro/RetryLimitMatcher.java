@@ -16,14 +16,12 @@ package cn.gorun8.easyfk.security.shiro;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import cn.gorun8.easyfk.base.util.UtilValidate;
 import cn.gorun8.easyfk.security.utils.UtilCaptcha;
 import javolution.util.FastMap;
 
 import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.AuthenticationInfo;
-import org.apache.shiro.authc.AuthenticationToken;
-import org.apache.shiro.authc.ExcessiveAttemptsException;
-import org.apache.shiro.authc.IncorrectCredentialsException;
+import org.apache.shiro.authc.*;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.cache.CacheManager;
@@ -116,6 +114,10 @@ public abstract class RetryLimitMatcher extends HashedCredentialsMatcher {
 	 */
 	protected void verifyCaptcha(String captcha,String captchaId,int remts){
 		// 判断验证码
+        if(UtilValidate.isEmpty(captchaId)){
+            return ;
+        }
+
 		Session session =SecurityUtils.getSubject().getSession();
         if(!UtilCaptcha.verifyCaptch(captchaId,session,captcha))
         {
@@ -125,21 +127,9 @@ public abstract class RetryLimitMatcher extends HashedCredentialsMatcher {
 	
 	protected void checkStatus(GenericValue user)
 	{
-//		String status = user.getStatus();
-//		if(UserStatus.DELETE.toString().equals(status)
-//				|| UserStatus.DISABLE.toString().equals(status)
-//				|| UserStatus.LOCK.toString().equals(status)
-//				|| UserStatus.UNLOCK.toString().equals(status)) {
-//			throw new LockedAccountException("账号已经被停用,请联系管理员解锁"); //帐号锁定
-//		}
-//		
-//		if (DateUtils.isOutmoded(user.getUserInvalidationDate())) {
-//			throw new AuthExpiredException(user.getId(),"用户使用系统时间已过期,请联系管理员!",false);
-//		}
-//		
-//		if (UserStatus.NOACTIVATE.toString().equals(user.getStatus())) {
-//			throw new AuthExpiredException(user.getId(),"账号未激活!修改密码以激活账号",true);
-//		} 
-			
-	}
+        String enabled = user.getString("enabled");
+        if("N".equals(enabled)){
+            throw new LockedAccountException("账号已经被停用,请联系管理员解锁");
+        }
+ 	}
 }

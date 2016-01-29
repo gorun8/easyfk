@@ -44,7 +44,7 @@ public class UtilCaptcha {
 	 * @param response
 	 */
 	public static void createCaptcha(String id,
-			HttpSession session,
+			Session session,
 			HttpServletResponse response) {
 		try {
 			String availableString = UtilProperties.getPropertyValue("captcha", "captcha.characters", "abcdefhjkmnpstuvwxy2345678");

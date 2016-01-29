@@ -13,105 +13,142 @@
  */
 package cn.gorun8.easyfk.party.controller;
 
-import cn.gorun8.easyfk.base.util.UtilHttp;
-import cn.gorun8.easyfk.base.util.UtilMessages;
-import cn.gorun8.easyfk.base.util.UtilMisc;
-import cn.gorun8.easyfk.base.util.UtilValidate;
+import cn.gorun8.easyfk.base.util.*;
 import cn.gorun8.easyfk.entity.GenericValue;
 import cn.gorun8.easyfk.party.service.PartyClsGroupService;
+import cn.gorun8.easyfk.security.annotation.PermissionDefine;
+import cn.gorun8.easyfk.security.service.SecurityService;
+import javolution.util.FastList;
+import javolution.util.FastMap;
+import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
+import java.util.UUID;
 
 /**
  * 会员组控制器
  * 
  */
+@PermissionDefine(permissionId = "party_clsgroup" ,resource = "PartyUiLabels",key="partyClsmgr" ,tag = "party:clsgroup:*")
 @Controller("partyClassificationGroupController")
-@RequestMapping("partyclsgroup")
+@RequestMapping("/dyn/partyclsgroup")
 public class PartyClassificationGroupController {
 	
 	@Autowired
 	private PartyClsGroupService partyClsGroupService;
-	ResourceBundleMessageSource t;
+
+	@Autowired
+	private SecurityService securityService;
+	/**
+	 * 根据当前登录管理员的权限列出该管理员可以看到的所有目录
+	 * @param request
+	 * @return
+	 */
+	@PermissionDefine(permissionId = "party_clsgroup_list" ,parentId = "party_clsgroup",resource = "PartyUiLabels",key="partyClsgroupList" ,tag = "party:clsgroup:list")
+	@RequiresPermissions("party:clsgroup:list")
+	@RequiresRoles("hzproletest")
 	@RequestMapping(value = "list")
 	public String list(HttpServletRequest request){
-		String parentId = "N_A";
-		List<Map> parClsMapList = partyClsGroupService.listRootNode(UtilMisc.toMap("parentId",parentId));
-		if(parClsMapList.size() >0) {
-			request.setAttribute("partyClsGroupRoot", parClsMapList);
-			Map<String, Object> attrMap = UtilHttp.getJSONAttributeMap(request, "partyClsGroupRoot");
-			JSONObject json = JSONObject.fromObject(attrMap);
-			request.setAttribute("partyClsGroupList", json);
-			String id = (String)parClsMapList.get(0).get("partyClassificationGroupId");
-			request.setAttribute("partyClsGroupRootId", id);
-			return "page/partyclsgrouplist";
+		Map<String ,Object > context = UtilHttp.getParameterMap(request);
+		Locale locale = (Locale) context.get("locale");
+		Map<String,Object>  result = securityService.findRoleTypes(context);
+		if(UtilMessages.isSuccess(result)){
+			List<Map> partyRoleTypeList = (List<Map>)result.get(UtilMessages.RESPONSE_DATA);
+			request.setAttribute("partyRoleTypeList", partyRoleTypeList);
 		}
-
-		return "page/initpartyclsgroup";
+		return "page/partyclsgrouplist";
 	}
 
-	@RequestMapping(value = "listchild")
-	@ResponseBody
-	public String listchild(HttpServletRequest request,@RequestParam(value="parentId")String parentId){
-		if(UtilValidate.isEmpty(parentId))
-		{
-			return UtilMessages.errorResponse(request,"没有参数");
+	/**
+	 * 根据当前登录管理员的权限列出该管理员可以看到的所有目录
+	 * @param request
+	 * @return
+	 */
+	@PermissionDefine(permissionId = "party_clsgroup_tree" ,parentId = "party_clsgroup",resource = "PartyUiLabels",key="partyClsgroupTree" ,tag = "party:clsgroup:tree")
+	@RequiresPermissions("party:clsgroup:tree")
+	@RequiresRoles("hzproletest")
+	@RequestMapping(value = "listtree")
+	public String listGlsGroupTree(HttpServletRequest request){
+		Map<String ,Object > context = UtilHttp.getParameterMap(request);
+		Locale locale = (Locale) context.get("locale");
+		String parentId = "_NA_";
+		context.put("parentId", parentId);
+
+
+		Map<String,Object>  result = partyClsGroupService.getPartyClassificationGroupTree(context);
+		if(UtilMessages.isSuccess(result)){
+			List<Map> parClsMapList = (List<Map>)result.get(UtilMessages.RESPONSE_DATA);
+			request.setAttribute("partyClsGroupList", parClsMapList);
 		}
-		List<Map> parClsMapList =  partyClsGroupService.listChildNode(UtilMisc.toMap("parentId", parentId));
-		request.setAttribute("partyClsGroupList", parClsMapList);
-		return  UtilMessages.successResponse("partyClsGroupList",request);
+		return "page/partyclsgrouplistajax";
 	}
 
+	/**
+	 * 查找组织机构
+	 * @param request
+	 * @param partyClsName
+	 * @return
+	 */
+	@PermissionDefine(permissionId = "party_clsgroup_search" ,parentId = "party_clsgroup",resource = "PartyUiLabels",key="partyClsgroupSearch",tag = "party:clsgroup:search")
+	@RequiresPermissions("party:clsgroup:search")
 	@RequestMapping(value = "searchnode")
-	@ResponseBody
 	public String search(HttpServletRequest request,@RequestParam(value="partyClsName")String partyClsName){
-		if(UtilValidate.isEmpty(partyClsName))
-		{
-			return UtilMessages.errorResponse(request,"没有参数");
+
+		if(UtilValidate.isEmpty(partyClsName)){
+			return listGlsGroupTree(request);
 		}
 
-		List<Map> parClsMapList =  partyClsGroupService.searchNode(UtilMisc.toMap("partyClsName", partyClsName));
-		request.setAttribute("partyClsGroupList", parClsMapList);
-		String id = (String)parClsMapList.get(0).get("partyClassificationGroupId");
-		request.setAttribute("partyClsGroupRootId", id);
-		return  UtilMessages.successResponse("partyClsGroupList,partyClsGroupRootId",request);
+		Map<String,Object>  result =  partyClsGroupService.searchPartyClassificationGroup(UtilMisc.toMap("partyClsName", partyClsName));
+		if(UtilMessages.isSuccess(result)){
+			List<Map> parClsMapList = (List<Map>)result.get(UtilMessages.RESPONSE_DATA);
+			request.setAttribute("partyClsGroupList", parClsMapList);
+		}
+
+		return "page/partyclsgrouplistajax";
 	}
 
 
-
-	@RequestMapping("createform")
-	public String createPartyClsGroupForm( HttpServletRequest request,HttpServletResponse response ){
-		createPartyClsGroup(request,response);
-		return "redirect:list";
-	}
-
+	@PermissionDefine(permissionId = "party_clsgroup_create" ,parentId = "party_clsgroup",resource = "PartyUiLabels",key = "partyClsgroupCreate" ,tag = "party:clsgroup:create")
+	@RequiresPermissions("party:clsgroup:create")
 	@RequestMapping("create")
 	@ResponseBody
 	public String createPartyClsGroup( HttpServletRequest request,HttpServletResponse response ){
-		Map<String,Object> params = UtilHttp.getParameterMap(request);
-		String parentGroupId = (String)params.get("parentGroupId");
-		String description = (String)params.get("description");
+		Map<String ,Object > context = UtilHttp.getParameterMap(request);
+		Locale locale = (Locale) context.get("locale");
 
-		boolean exits = partyClsGroupService.hasPartyClsGroupName(parentGroupId, description);
-		if(exits)
-		{
-			return  UtilMessages.errorResponse(request, "相同目录下已存在相同名称的机构");
+		Map<String,Object>  result= partyClsGroupService.hasPartyClassificationGroupName(context);
+		if(UtilMessages.isSuccess(result)){
+			boolean exits = (Boolean)result.get(UtilMessages.RESPONSE_DATA);
+			if(exits)
+			{
+				return  UtilMessages.errorResponse(request, "相同目录下已存在相同名称的机构");
+			}
 		}
 
 		try {
-			GenericValue partyClsGroup = GenericValue.fromMap(params);
-			String id = partyClsGroup.newPrimaryKey("partyClassificationGroup", "partyClassificationGroupId");
-			partyClsGroupService.createPartyClsGroup(partyClsGroup);
+			result = partyClsGroupService.createPartyClassificationGroup(context);
+			if(!UtilMessages.isSuccess(result)){
+				return UtilMessages.errorResponse(request);
+			}
 		}catch (Exception e){
 			e.printStackTrace();
 			return  UtilMessages.errorResponse(request, "新建组织机构出错");
@@ -119,22 +156,28 @@ public class PartyClassificationGroupController {
 		return  UtilMessages.successResponse(request,"新建组织机构成功");
 	}
 
+
+	@PermissionDefine(permissionId = "party_clsgroup_update" ,parentId = "party_clsgroup",resource = "PartyUiLabels",key = "partyClsgroupUpdate" ,tag = "party:clsgroup:update")
+	@RequiresPermissions("party:clsgroup:update")
 	@RequestMapping("update")
 	@ResponseBody
 	public String savePartyClsGroup(HttpServletRequest request,HttpServletResponse response ){
 		try {
-			Map<String,Object> params = UtilHttp.getParameterMap(request);
-			String parentGroupId = (String)params.get("parentGroupId");
-			String description = (String)params.get("description");
+			Map<String,Object> context = UtilHttp.getParameterMap(request);
 
-			boolean exits = partyClsGroupService.hasPartyClsGroupName(parentGroupId, description);
-			if(exits)
-			{
-				return  UtilMessages.errorResponse(request, "相同目录下已存在相同名称的机构");
+			Map<String,Object> result = partyClsGroupService.hasPartyClassificationGroupName(context);
+			if(UtilMessages.isSuccess(result)){
+				boolean exits = (Boolean)result.get(UtilMessages.RESPONSE_DATA);
+				if(exits)
+				{
+					return  UtilMessages.errorResponse(request, "相同目录下已存在相同名称的机构");
+				}
 			}
 
-			GenericValue partyClsGroup = GenericValue.fromMap(params);
-			partyClsGroupService.savePartyClsGroup(partyClsGroup);
+			result = partyClsGroupService.updatePartyClassificationGroup(context);
+			if(!UtilMessages.isSuccess(result)){
+				return UtilMessages.errorResponse(request);
+			}
 		}catch (Exception e){
 			e.printStackTrace();
 			return  UtilMessages.errorResponse(request, "更新组织机构出错");
@@ -142,21 +185,55 @@ public class PartyClassificationGroupController {
 		return  UtilMessages.successResponse(request,"更新组织机构成功");
 	}
 
+
+	@PermissionDefine(permissionId = "party_clsgroup_remove" ,parentId = "party_clsgroup",resource = "PartyUiLabels",key = "partyClsgroupRemove" ,tag = "party:clsgroup:remove")
+	@RequiresPermissions("party:clsgroup:remove")
 	@RequestMapping("remove")
 	@ResponseBody
-	public String removePartyClsGroupByPrimaryKey(HttpServletRequest request,@RequestParam("partyClsGroupId") String partyClsGroupId){
+	public String removePartyClsGroupByPrimaryKey(HttpServletRequest request){
 		try {
-			boolean rel = partyClsGroupService.hasChildrenPartyClsGroup(partyClsGroupId);
-			if(rel)
-			{
-				return  UtilMessages.errorResponse(request, "存在下级组织机构，不能删除");
+			Map<String,Object> context = UtilHttp.getParameterMap(request);
+			Locale locale = (Locale) context.get("locale");
+
+			String partyClsGroupId = (String)context.get("partyClsGroupId");
+			Map<String,Object> param = FastMap.newInstance();
+			param.put("parentId",partyClsGroupId);
+
+			Map<String,Object> result= partyClsGroupService.hasChildPartyClassificationGroup(param);
+			if(UtilMessages.isSuccess(result)){
+				boolean exits = (Boolean)result.get(UtilMessages.RESPONSE_DATA);
+				if(exits)
+				{
+					return  UtilMessages.errorResponse(request, "存在下级组织机构，不能删除");
+				}
+			}else{
+				return UtilMessages.errorResponse(request);
 			}
-			partyClsGroupService.removePartyClsGroupByPrimaryKey(partyClsGroupId);
+
+			result= partyClsGroupService.deletePartyClassificationGroup(context);
+			if(!UtilMessages.isSuccess(result)){
+				return UtilMessages.errorResponse(request);
+			}
 		}catch (Exception e){
 			e.printStackTrace();
 			return  UtilMessages.errorResponse(request, "删除组织机构出错");
 		}
 		return  UtilMessages.successResponse(request,"删除组织机构成功");
+	}
+
+	@PermissionDefine(permissionId = "party_clsgroup_movenode" ,parentId = "party_clsgroup",resource = "PartyUiLabels",key = "partyClsgroupMoveNode",tag = "party:clsgroup:movenode")
+	@RequiresPermissions("party:clsgroup:movenode")
+	@RequestMapping(value = "movenode")
+	@ResponseBody
+	public String movePartyClsGroup(HttpServletRequest request){
+		Map<String ,Object > context = UtilHttp.getParameterMap(request);
+		Locale locale = (Locale) context.get("locale");
+
+		Map<String,Object> result=  partyClsGroupService.movePartyClassificationGroup(context);
+		if(!UtilMessages.isSuccess(result)){
+			return UtilMessages.errorResponse(request,result);
+		}
+		return  UtilMessages.successResponse(request);
 	}
 
 

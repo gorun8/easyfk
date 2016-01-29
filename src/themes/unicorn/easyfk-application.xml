@@ -22,6 +22,6 @@
     <webapp name="unicorn"
         title="unicorn"
         server="default-server"
-        location="webapp"
+        location="webapp/unicorn"
         mount-point="/unicorn"/>
 </easyfk-application>

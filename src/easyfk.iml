@@ -190,11 +190,192 @@
       <src_folder value="GROOVY_DSL_SUPPORT" expected_position="173" />
     </src_description>
   </component>
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/core/entity/config/easyfk-spring-transition.xml</file>
+          <file>file://$MODULE_DIR$/core/security/webapp/WEB-INF/classes/springmvc.xml</file>
+          <file>file://$MODULE_DIR$/core/entity/config/easyfk-mybatis.xml</file>
+          <file>file://$MODULE_DIR$/hot-deploy/install/webapp/WEB-INF/classes/springmvc.xml</file>
+          <file>file://$MODULE_DIR$/core/webapp/config/easyfk-spring-common.xml</file>
+          <file>file://$MODULE_DIR$/core/webapp/config/easyfk-default-springmvc.xml</file>
+          <file>file://$MODULE_DIR$/core/webapp/config/easyfk-spring-scan.xml</file>
+          <file>file://$MODULE_DIR$/documents/resources/templates/private-context.xml</file>
+          <file>file://$MODULE_DIR$/core/security/webapp/WEB-INF/classes/private-context.xml</file>
+          <file>file://$MODULE_DIR$/baseapps/party/webapp/WEB-INF/classes/private-context.xml</file>
+          <file>file://$MODULE_DIR$/baseapps/workflow/config/activiti-bpm.xml</file>
+          <file>file://$MODULE_DIR$/hot-deploy/install/webapp/WEB-INF/classes/install-spring-scan.xml</file>
+          <file>file://$MODULE_DIR$/documents/resources/templates/springmvc.xml</file>
+          <file>file://$MODULE_DIR$/baseapps/party/webapp/WEB-INF/classes/springmvc.xml</file>
+          <file>file://$MODULE_DIR$/baseapps/workflow/webapp/WEB-INF/classes/spring-scan.xml</file>
+          <file>file://$MODULE_DIR$/baseapps/workflow/webapp/WEB-INF/classes/transition-bpm.xml</file>
+          <file>file://$MODULE_DIR$/baseapps/workflow/webapp/WEB-INF/classes/springmvc.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/core/images/webapp/images/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/core/images/webapp/images" relative="/" />
+        </webroots>
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/core/base/src" />
+          <root url="file://$MODULE_DIR$/core/catalina/src" />
+          <root url="file://$MODULE_DIR$/core/start/src" />
+          <root url="file://$MODULE_DIR$/core/webapp/src" />
+          <root url="file://$MODULE_DIR$/hot-deploy/install/src" />
+          <root url="file://$MODULE_DIR$/core/entity/src" />
+          <root url="file://$MODULE_DIR$/baseapps/workflow/src" />
+          <root url="file://$MODULE_DIR$/core/security/src" />
+          <root url="file://$MODULE_DIR$/core/common/src" />
+          <root url="file://$MODULE_DIR$/baseapps/party/src" />
+        </sourceRoots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web2">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/core/security/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/core/security/webapp" relative="/" />
+        </webroots>
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/core/base/src" />
+          <root url="file://$MODULE_DIR$/core/catalina/src" />
+          <root url="file://$MODULE_DIR$/core/start/src" />
+          <root url="file://$MODULE_DIR$/core/webapp/src" />
+          <root url="file://$MODULE_DIR$/hot-deploy/install/src" />
+          <root url="file://$MODULE_DIR$/core/entity/src" />
+          <root url="file://$MODULE_DIR$/baseapps/workflow/src" />
+          <root url="file://$MODULE_DIR$/core/security/src" />
+          <root url="file://$MODULE_DIR$/core/common/src" />
+          <root url="file://$MODULE_DIR$/baseapps/party/src" />
+        </sourceRoots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web3">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/documents/resources/templates/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/documents/resources/templates" relative="/WEB-INF" />
+        </webroots>
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/core/base/src" />
+          <root url="file://$MODULE_DIR$/core/catalina/src" />
+          <root url="file://$MODULE_DIR$/core/start/src" />
+          <root url="file://$MODULE_DIR$/core/webapp/src" />
+          <root url="file://$MODULE_DIR$/hot-deploy/install/src" />
+          <root url="file://$MODULE_DIR$/core/entity/src" />
+          <root url="file://$MODULE_DIR$/baseapps/workflow/src" />
+          <root url="file://$MODULE_DIR$/core/security/src" />
+          <root url="file://$MODULE_DIR$/core/common/src" />
+          <root url="file://$MODULE_DIR$/baseapps/party/src" />
+        </sourceRoots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web4">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/themes/unicorn/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/themes/unicorn/webapp" relative="/" />
+        </webroots>
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/core/base/src" />
+          <root url="file://$MODULE_DIR$/core/catalina/src" />
+          <root url="file://$MODULE_DIR$/core/start/src" />
+          <root url="file://$MODULE_DIR$/core/webapp/src" />
+          <root url="file://$MODULE_DIR$/hot-deploy/install/src" />
+          <root url="file://$MODULE_DIR$/core/entity/src" />
+          <root url="file://$MODULE_DIR$/baseapps/workflow/src" />
+          <root url="file://$MODULE_DIR$/core/security/src" />
+          <root url="file://$MODULE_DIR$/core/common/src" />
+          <root url="file://$MODULE_DIR$/baseapps/party/src" />
+        </sourceRoots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web5">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/baseapps/workflow/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/baseapps/workflow/webapp" relative="/" />
+        </webroots>
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/core/base/build/gen-src/javacc" />
+          <root url="file://$MODULE_DIR$/core/base/src" />
+          <root url="file://$MODULE_DIR$/core/catalina/src" />
+          <root url="file://$MODULE_DIR$/core/start/src" />
+          <root url="file://$MODULE_DIR$/core/webapp/src" />
+          <root url="file://$MODULE_DIR$/hot-deploy/install/src" />
+          <root url="file://$MODULE_DIR$/core/entity/src" />
+          <root url="file://$MODULE_DIR$/baseapps/workflow/src" />
+          <root url="file://$MODULE_DIR$/core/security/src" />
+          <root url="file://$MODULE_DIR$/core/common/src" />
+          <root url="file://$MODULE_DIR$/baseapps/party/src" />
+          <root url="file://$MODULE_DIR$/hot-deploy/rr/src" />
+          <root url="file://$MODULE_DIR$/hot-deploy/yy/src" />
+        </sourceRoots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web6">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/baseapps/party/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/baseapps/party/webapp" relative="/" />
+        </webroots>
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/core/base/src" />
+          <root url="file://$MODULE_DIR$/core/catalina/src" />
+          <root url="file://$MODULE_DIR$/core/start/src" />
+          <root url="file://$MODULE_DIR$/core/webapp/src" />
+          <root url="file://$MODULE_DIR$/hot-deploy/install/src" />
+          <root url="file://$MODULE_DIR$/core/entity/src" />
+          <root url="file://$MODULE_DIR$/baseapps/workflow/src" />
+          <root url="file://$MODULE_DIR$/core/security/src" />
+          <root url="file://$MODULE_DIR$/core/common/src" />
+          <root url="file://$MODULE_DIR$/baseapps/party/src" />
+        </sourceRoots>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web7">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/hot-deploy/install/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/hot-deploy/install/webapp" relative="/" />
+        </webroots>
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/core/base/src" />
+          <root url="file://$MODULE_DIR$/core/catalina/src" />
+          <root url="file://$MODULE_DIR$/core/start/src" />
+          <root url="file://$MODULE_DIR$/core/webapp/src" />
+          <root url="file://$MODULE_DIR$/hot-deploy/install/src" />
+          <root url="file://$MODULE_DIR$/core/entity/src" />
+          <root url="file://$MODULE_DIR$/baseapps/workflow/src" />
+          <root url="file://$MODULE_DIR$/core/security/src" />
+          <root url="file://$MODULE_DIR$/core/common/src" />
+          <root url="file://$MODULE_DIR$/baseapps/party/src" />
+        </sourceRoots>
+      </configuration>
+    </facet>
+  </component>
   <component name="NewModuleRootManager" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/build" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/core/base/build/gen-src/javacc" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/core/base/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/core/catalina/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/core/start/src" isTestSource="false" />
@@ -206,8 +387,7 @@
       <sourceFolder url="file://$MODULE_DIR$/core/common/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/baseapps/party/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/core/entity/src/com/westone/easyfk/entity/test" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/hot-deploy/rr/src" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/hot-deploy/yy/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/core/service/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="module-library">
@@ -1110,7 +1290,9 @@
           <root url="jar://$MODULE_DIR$/core/entity/lib/mybatis-3.2.8.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="jar://E:/mavrepo/org/mybatis/mybatis/3.2.5/mybatis-3.2.5-sources.jar!/" />
+        </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -1626,66 +1808,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
-      <library name="shiro-aspectj-1.2.3.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/core/security/lib/shiro-aspectj-1.2.3.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="shiro-core-1.2.3.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/core/security/lib/shiro-core-1.2.3.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="file://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.2.3/shiro-core-1.2.3-sources.jar" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="shiro-ehcache-1.2.3.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/core/security/lib/shiro-ehcache-1.2.3.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="shiro-quartz-1.2.2.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/core/security/lib/shiro-quartz-1.2.2.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="shiro-spring-1.2.3.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/core/security/lib/shiro-spring-1.2.3.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="file://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-spring/1.2.3/shiro-spring-1.2.3-sources.jar" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="shiro-web-1.2.3.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/core/security/lib/shiro-web-1.2.3.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="file://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-web/1.2.3/shiro-web-1.2.3-sources.jar" />
-        </SOURCES>
-      </library>
-    </orderEntry>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library name="servlet-api-3.0-alpha-1-sources.jar">
@@ -1847,6 +1969,70 @@
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/core/entity/lib/mybatis-spring-1.2.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/core/base/lib/shiro" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/core/base/lib/shiro" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/core/security/lib/shiro-aspectj-1.2.3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/core/security/lib/shiro-core-1.2.3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/core/security/lib/shiro-ehcache-1.2.3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/core/security/lib/shiro-quartz-1.2.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/core/security/lib/shiro-spring-1.2.3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/core/security/lib/shiro-web-1.2.3.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
