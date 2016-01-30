@@ -155,11 +155,14 @@
 		<!-- By default the servlet container sessions will be used.  Uncomment this line
              to use shiro's native sessions (see the JavaDoc for more): -->
 		<!-- <property name="sessionMode" value="native"/> -->
-
 	</bean>
 
-
 	<bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+	<!-- 开启对Service的Shiro的注解(如@RequiresRoles,@RequiresPermissions)-->
+	<bean id="serviceAdvisorAutoProxyCreator" class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"/>
+	<bean id="serviceAuthorizationAttributeSourceAdvisor" class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+		<property name="securityManager" ref="securityManager"/>
+	</bean>
 
 	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
 		<property name="securityManager" ref="securityManager" />

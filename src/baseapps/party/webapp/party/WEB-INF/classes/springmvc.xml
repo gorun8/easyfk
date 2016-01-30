@@ -89,7 +89,8 @@
 	<mvc:resources mapping="/template/**" location="/template/" />
 	<mvc:view-controller path="/" view-name="page/index" />
 	<mvc:view-controller path="/page/**" />
-	
+
+
 	<!--将拦截所有的URL请求 -->
 	<!-- 
 	<mvc:interceptors>
@@ -112,5 +113,10 @@
 		<context:include-filter type="annotation"
 								expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
-
+	<!-- 开启对Controller的Shiro的注解(如@RequiresRoles,@RequiresPermissions)-->
+	<bean id="controllerAdvisorAutoProxyCreator" class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"
+		  depends-on="lifecycleBeanPostProcessor"/>
+	<bean id="controllerAuthorizationAttributeSourceAdvisor"  class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+		<property name="securityManager" ref="securityManager"/>
+	</bean>
 </beans>

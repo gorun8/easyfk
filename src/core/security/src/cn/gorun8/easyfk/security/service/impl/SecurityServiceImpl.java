@@ -24,6 +24,7 @@ import cn.gorun8.easyfk.security.dao.SecurityWriteDao;
 import cn.gorun8.easyfk.security.service.SecurityService;
 import javolution.util.FastList;
 import javolution.util.FastMap;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -308,6 +309,7 @@ public class SecurityServiceImpl implements SecurityService {
      * 获取角色类型列表
      * @return
      */
+    @RequiresPermissions("security:role:list")
     public Map<String,  Object> findRoleTypes(Map<String, ? extends Object> context){
         Locale locale = (Locale) context.get("locale");
         try {

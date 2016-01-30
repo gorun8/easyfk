@@ -65,7 +65,6 @@ public class PartyClassificationGroupController {
 	 */
 	@PermissionDefine(permissionId = "party_clsgroup_list" ,parentId = "party_clsgroup",resource = "PartyUiLabels",key="partyClsgroupList" ,tag = "party:clsgroup:list")
 	@RequiresPermissions("party:clsgroup:list")
-	@RequiresRoles("hzproletest")
 	@RequestMapping(value = "list")
 	public String list(HttpServletRequest request){
 		Map<String ,Object > context = UtilHttp.getParameterMap(request);
@@ -85,14 +84,12 @@ public class PartyClassificationGroupController {
 	 */
 	@PermissionDefine(permissionId = "party_clsgroup_tree" ,parentId = "party_clsgroup",resource = "PartyUiLabels",key="partyClsgroupTree" ,tag = "party:clsgroup:tree")
 	@RequiresPermissions("party:clsgroup:tree")
-	@RequiresRoles("hzproletest")
 	@RequestMapping(value = "listtree")
 	public String listGlsGroupTree(HttpServletRequest request){
 		Map<String ,Object > context = UtilHttp.getParameterMap(request);
 		Locale locale = (Locale) context.get("locale");
 		String parentId = "_NA_";
 		context.put("parentId", parentId);
-
 
 		Map<String,Object>  result = partyClsGroupService.getPartyClassificationGroupTree(context);
 		if(UtilMessages.isSuccess(result)){
