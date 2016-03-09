@@ -46,7 +46,7 @@ easyfk.gotoClsParty=function(){
 }
 
 easyfk.exportTemplate=function(){
-	document.location.href ="/party/dyn/template/party_user.xls";
+	document.location.href ="/party/template/party_user.xls";
 }
 
 $(document).ready(function(){

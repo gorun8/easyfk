@@ -1,5 +1,18 @@
 
 var easyfk = {};
+
+/**
+ *  根据当前上下文构建URL
+ */
+easyfk.getCtxUrl = function(url){
+	var ctxObj = $("CONTEXT_OBJECT");
+	if(ctxObj.length > 0){
+		return ctxObj.val()+"/"+url;
+	}
+
+	return url;
+}
+
 /*
 *  POST 方式的AJAX请求，
 *  @param ajaxUrl
@@ -52,11 +65,11 @@ easyfk.ajax= function(method,ajaxUrl,params,callback)
 		type: method,
 		data: params,
 		error: function(msg) {
-			callback("通信出错，可能网络不稳定",false,null);
+			if(callback != null && callback != undefined){
+				callback("通信出错，可能网络不稳定",false,null);
+			}
 		},
 		success: function(jsonstr) {
-
-			alert(jsonstr);
 			var obj = jQuery.parseJSON(jsonstr);
 			var msg = "";
 			var responseType = false;
@@ -85,7 +98,6 @@ easyfk.ajax= function(method,ajaxUrl,params,callback)
 				}else if(obj.hasOwnProperty("errorMessage")){
 					msg = obj.errorMessage;
 				}
-
 				if(obj.hasOwnProperty("errorMessageList")){
 					$.each( obj.errorMessageList, function(i, n){
 						msg +=","+n;

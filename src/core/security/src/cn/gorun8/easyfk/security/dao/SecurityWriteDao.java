@@ -90,4 +90,23 @@ public abstract class SecurityWriteDao extends WriteDaoBase {
 
 
 
+	/**
+	 * 创建权限
+	 * @param securityPermission
+	 */
+	public abstract void createSecurityPermission(@Param("securityPermission") GenericValue securityPermission)throws GenericEntityException;
+
+	/**
+	 * 更新权限
+	 * @param securityPermission
+	 */
+	public abstract void saveSecurityPermission(@Param("securityPermission") GenericValue securityPermission)throws GenericEntityException ;
+
+	/**
+	 * 删除权限
+	 * @param securityPermission
+	 */
+	public abstract void removeSecurityPermission(@Param("securityPermission") GenericValue securityPermission)throws GenericEntityException ;
+
+
 }

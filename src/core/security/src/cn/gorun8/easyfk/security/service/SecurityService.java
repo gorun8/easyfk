@@ -66,6 +66,13 @@ public interface SecurityService {
 
 
 	/**
+	 * 分页获取资源树
+	 * @param context
+	 */
+	public Map<String,  Object> getPermissionListByPage(Map<String, ? extends Object> context);
+
+
+	/**
 	 * 获取组和组资源
 	 * @param context
 	 */
@@ -112,5 +119,12 @@ public interface SecurityService {
 	 * 获取会员的角色
 	 */
 	public Map<String,  Object> findPartyRoles(Map<String, ? extends Object> context);
+
+
+	/**
+	 * 描扫程序包中的PermissionDefine标签，并保存到security_permission表中。
+	 */
+	public Map<String,  Object> scanSecurityPermission(Map<String, ? extends Object> context);
+
 
 }

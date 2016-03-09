@@ -93,8 +93,9 @@
         <value xml:lang="zh_CN">获取角色类型出错</value>
     </property>
 
-
-
-
+    <property key="scan.security.permission.create.err">
+        <value xml:lang="en"> scan.security.permission.create.err</value>
+        <value xml:lang="zh_CN">扫描配置安全权限出错</value>
+    </property>
 
 </resource>

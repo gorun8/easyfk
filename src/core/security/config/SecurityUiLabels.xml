@@ -220,4 +220,74 @@
         <value xml:lang="en">View Cert</value>
         <value xml:lang="zh_CN">浏览证书</value>
     </property>
+
+    <property key="security_groups_mgr">
+        <value xml:lang="en">security group mgr</value>
+        <value xml:lang="zh_CN">安全组管理</value>
+    </property>
+
+    <property key="security_permission_mgr">
+        <value xml:lang="en">security permission mgr</value>
+        <value xml:lang="zh_CN">安全权限管理</value>
+    </property>
+
+
+    <property key="security_groups_list">
+        <value xml:lang="en">view security group list </value>
+        <value xml:lang="zh_CN">查看系统安全组列表</value>
+    </property>
+    <property key="security_groups_bzlist">
+        <value xml:lang="en">view security group list </value>
+        <value xml:lang="zh_CN">查看业务安全组列表</value>
+    </property>
+
+    <property key="security_groups_create">
+        <value xml:lang="en">security group create </value>
+        <value xml:lang="zh_CN">创建系统安全组</value>
+    </property>
+    <property key="security_groups_bzcreate">
+        <value xml:lang="en">security group create </value>
+        <value xml:lang="zh_CN">创建业务安全组</value>
+    </property>
+
+    <property key="security_groups_update">
+        <value xml:lang="en">security group update </value>
+        <value xml:lang="zh_CN">更新系统安全组</value>
+    </property>
+
+    <property key="security_groups_bzupdate">
+        <value xml:lang="en">security group update </value>
+        <value xml:lang="zh_CN">更新业务安全组</value>
+    </property>
+
+    <property key="security_groups_remove">
+        <value xml:lang="en">security group remove </value>
+        <value xml:lang="zh_CN">删除系统安全组</value>
+    </property>
+
+    <property key="security_groups_bzremove">
+        <value xml:lang="en">security group remove </value>
+        <value xml:lang="zh_CN">删除业务安全组</value>
+    </property>
+
+    <property key="security_groups_setpermisson">
+        <value xml:lang="en">security group set permission </value>
+        <value xml:lang="zh_CN">为安全组设置权限</value>
+    </property>
+    <property key="security_permisson_list">
+        <value xml:lang="en">View security permisson list </value>
+        <value xml:lang="zh_CN">查看系统资源权限列表</value>
+    </property>
+
+    <property key="security_permisson_scan">
+        <value xml:lang="en">Scan security permisson list </value>
+        <value xml:lang="zh_CN">扫描资源权限</value>
+    </property>
+
+
+
+
+
+
+
 </resource>

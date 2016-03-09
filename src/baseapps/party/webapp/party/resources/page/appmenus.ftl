@@ -50,18 +50,25 @@
       sub:[
       {
       id:'menuPartyAuth_2',
-      title:'角色授限',
-      desc:'管理角色和为角色授权',
+      title:'系统安全组',
+      desc:'管理系统安全组和授权',
       style:'fa-tint',
       href:'${ctx}/dyn/security/securitygroups',
       target:'_self'
+      },{
+      id:'menuPartyAuth_3',
+      title:'业务安全组',
+      desc:'管理业务安全组和授权',
+      style:'fa-tint',
+      href:'${ctx}/dyn/security/bzsecuritygroups',
+      target:'_self'
       },
       {
-      id:'menuPartyAuth_3',
-      title:'资源管理',
+      id:'menuPartyAuth_4',
+      title:'权限资源',
       desc:'管理可授权的资源',
       style:'fa-tint',
-      href:'${ctx}/dyn/page/resourcelist.ftl',
+      href:'${ctx}/dyn/security/resourcelist',
       target:'_self'
       },
       ]

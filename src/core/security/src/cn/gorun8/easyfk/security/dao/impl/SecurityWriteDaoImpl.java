@@ -72,4 +72,28 @@ public  class SecurityWriteDaoImpl extends SecurityWriteDao {
 		this.store("stopUserLoginSecurityGroup",userLoginGroup);
 	}
 
+
+	/**
+	 * 创建权限
+	 * @param securityPermission
+	 */
+	public  void createSecurityPermission(@Param("securityPermission") GenericValue securityPermission)throws GenericEntityException{
+		this.create("createSecurityPermission",securityPermission);
+	}
+
+	/**
+	 * 更新权限
+	 * @param securityPermission
+	 */
+	public  void saveSecurityPermission(@Param("securityPermission") GenericValue securityPermission)throws GenericEntityException {
+		this.store("saveSecurityPermission", securityPermission);
+	}
+
+	/**
+	 * 删除权限
+	 * @param securityPermission
+	 */
+	public  void removeSecurityPermission(@Param("securityPermission") GenericValue securityPermission)throws GenericEntityException {
+		this.removeValue("removeSecurityPermission", securityPermission);
+	}
 }

@@ -335,13 +335,13 @@ public class UtilMessages {
 
     public static void setMessages(HttpServletRequest request, String errorMessage, String eventMessage, String defaultMessage) {
         if (UtilValidate.isNotEmpty(errorMessage))
-            request.setAttribute(ERROR_MESSAGE_LIST, errorMessage);
+            request.setAttribute(ERROR_MESSAGE, errorMessage);
 
         if (UtilValidate.isNotEmpty(eventMessage))
-            request.setAttribute(EVENT_MESSAGE_LIST, eventMessage);
+            request.setAttribute(EVENT_MESSAGE, eventMessage);
 
         if (UtilValidate.isEmpty(errorMessage) && UtilValidate.isEmpty(eventMessage) && UtilValidate.isNotEmpty(defaultMessage))
-            request.setAttribute(EVENT_MESSAGE_LIST, defaultMessage);
+            request.setAttribute(EVENT_MESSAGE, defaultMessage);
 
     }
 

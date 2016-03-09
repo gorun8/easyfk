@@ -39,4 +39,5 @@
     <![endif]-->
 </head>
 <body  data-color="grey" class="flat">
+<input type="hidden" id="CONTEXT_OBJECT" name="CONTEXT_OBJECT" value="${ctx?default('')}">
 <div id="wrapper">

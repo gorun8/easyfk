@@ -22,6 +22,7 @@ import cn.gorun8.easyfk.entity.util.UtilEntity;
 import cn.gorun8.easyfk.security.dao.SecurityReadDao;
 import cn.gorun8.easyfk.security.dao.SecurityWriteDao;
 import cn.gorun8.easyfk.security.service.SecurityService;
+import cn.gorun8.easyfk.security.utils.UtilsSecurityPermission;
 import javolution.util.FastList;
 import javolution.util.FastMap;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -42,9 +43,9 @@ public class SecurityServiceImpl implements SecurityService {
     public static final String resource = "SecurityUiLabels";
     public static final String resourceError = "SecurityErrorUiLabels";
     @Autowired
-    SecurityWriteDao securityWriteDao;
+    private SecurityWriteDao securityWriteDao;
     @Autowired
-    SecurityReadDao securityReadDao;
+    private SecurityReadDao securityReadDao;
     /**
      * 根据groupId查找安全组
      *
@@ -192,11 +193,11 @@ public class SecurityServiceImpl implements SecurityService {
 
     public Map<String,  Object> getPermissionList(Map<String, ? extends Object> context){
         Locale locale = (Locale) context.get("locale");
-
+        String isSystem = (String)context.get("isSystem");
         String parentId = "_NA_";
         List<GenericValue> listRoot = FastList.newInstance();
         try {
-            getPermissions(listRoot,parentId);
+            getPermissions(listRoot,parentId,isSystem);
         } catch (GenericEntityException e) {
             e.printStackTrace();
             return UtilMessages.returnError(UtilProperties.getMessage(resourceError,
@@ -206,9 +207,10 @@ public class SecurityServiceImpl implements SecurityService {
         return UtilMessages.returnSuccessWithData(UtilEntity.toMap(listRoot));
     }
 
-    private boolean getPermissions(List<GenericValue> dataList,String parentId) throws  GenericEntityException{
+    private boolean getPermissions(List<GenericValue> dataList,String parentId,String isSystem) throws  GenericEntityException{
         GenericValue param = new GenericValue();
         param.setString("parentId", parentId);
+        param.setString("isSystem",isSystem);
 
         List<GenericValue> permissionList = securityReadDao.findSecurityPermission(param);
         if(permissionList == null || permissionList.size() <=0){
@@ -219,10 +221,33 @@ public class SecurityServiceImpl implements SecurityService {
         for (GenericValue it:permissionList){
             dataList.add(it);
             pid= it.getString("permissionId");
-            boolean b =  getPermissions(dataList,pid);
+            boolean b =  getPermissions(dataList,pid,isSystem);
             it.setString("hasSub",String.valueOf(b));
         }
         return true;
+    }
+
+    public Map<String,  Object> getPermissionListByPage(Map<String, ? extends Object> context){
+        Locale locale = (Locale) context.get("locale");
+        GenericValue param = GenericValue.fromMap(context,false);
+        try {
+            GenericValue tmp0 = new GenericValue(false);
+            List<GenericValue> permissionList = securityReadDao.findSecurityPermission(param);
+            //查找上级资源
+            for(GenericValue item :permissionList){
+                tmp0.put("PERMISSION_ID",item.get("PARENT_ID"));
+                GenericValue tmp = securityReadDao.findSecurityPermissionById(tmp0);
+                if(tmp != null){
+                    item.put("PARENT_DESCRIPTION",tmp.get("DESCRIPTION"));
+                }
+            }
+            return UtilMessages.returnSuccessWithData(UtilEntity.toMap(permissionList));
+        } catch (GenericEntityException e) {
+            e.printStackTrace();
+        }
+
+        return UtilMessages.returnError(UtilProperties.getMessage(resourceError,
+                "security.permission.find.error", locale));
     }
 
     public Map<String,  Object> getGroupAndPermission(Map<String, ? extends Object> context){
@@ -309,7 +334,7 @@ public class SecurityServiceImpl implements SecurityService {
      * 获取角色类型列表
      * @return
      */
-    @RequiresPermissions("security:role:list")
+    //@RequiresPermissions("security:role:list")
     public Map<String,  Object> findRoleTypes(Map<String, ? extends Object> context){
         Locale locale = (Locale) context.get("locale");
         try {
@@ -431,5 +456,46 @@ public class SecurityServiceImpl implements SecurityService {
             }
         }
     }
+
+    /**
+     * 描扫程序包中的PermissionDefine标签，并保存到security_permission表中。
+     */
+    public Map<String,  Object> scanSecurityPermission(Map<String, ? extends Object> context){
+        Locale locale = (Locale) context.get("locale");
+        GenericValue param = null;
+        GenericValue paramtmp = new GenericValue(false);
+
+        try {
+            List<String> permissionIdList = FastList.newInstance();
+            List<Map>  seccurityPermissionList = UtilsSecurityPermission.getSecurityPermissionAnnotation("cn.gorun8.easyfk.party.controller", locale);
+            for(Map map :seccurityPermissionList ) {
+                param = GenericValue.fromMap(map,true);
+                String permissionId = param.getString("PERMISSION_ID");
+                permissionIdList.add(permissionId);
+                paramtmp.put("PERMISSION_ID",permissionId);
+
+                List<GenericValue> tmp = securityReadDao.findSecurityPermission(paramtmp);
+                if(tmp != null && tmp.size() > 0){
+                    securityWriteDao.saveSecurityPermission(param);
+                }else {
+                    securityWriteDao.createSecurityPermission(param);
+                }
+
+            }
+            //自动将所有权限赋给超级管理员组，以便进行全面管理
+            Map<String, Object>  tmpContext = FastMap.newInstance();
+            tmpContext.put("locale",locale);
+            tmpContext.put("groupId","FULLADMIN");
+            tmpContext.put("selectedPermissions",permissionIdList);
+            return setGroupPermission(tmpContext);
+        } catch (GenericEntityException e) {
+            e.printStackTrace();
+        }
+
+        return UtilMessages.returnError(UtilProperties.getMessage(resourceError,
+                "scan.security.permission.create.err", locale));
+
+    }
+
 
 }

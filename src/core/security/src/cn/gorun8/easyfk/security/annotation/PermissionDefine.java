@@ -41,6 +41,11 @@ public @interface PermissionDefine {
     String key();
 
     /**
+     *是否为系统资源,IS_SYSTEM
+     */
+    String isSystem() default "N";
+
+    /**
      * 权限标识码，PERMISSION_TAG，应按照规则命名
      *规则：“资源标识符：对象实例ID：操作” 即对哪个资源的哪个实例可以进行什么操作。
      *其默认支持通配符权限字符串，“:”表示资源/操作/实例的分割；“,”表示操作的分割；

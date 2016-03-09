@@ -45,6 +45,12 @@ public   class SecurityReadDaoImpl extends SecurityReadDao {
 	}
 
 	@Override
+	public  GenericValue findSecurityPermissionById(@Param("params") GenericValue params)throws GenericEntityException{
+		return this.findOne("findSecurityPermissionById", params);
+	}
+
+
+	@Override
 	public  List<GenericValue> findGroupAndPermission(@Param("params") GenericValue params)throws GenericEntityException{
 		return this.findList("findGroupAndPermission",params);
 	}

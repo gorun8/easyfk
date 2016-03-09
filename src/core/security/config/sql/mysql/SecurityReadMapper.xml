@@ -29,29 +29,39 @@ Author:hezhiping   Email:110476592@qq.com
         FROM
         security_group
         WHERE
-        1=1
+        IS_SYSTEM = #{IS_SYSTEM}
         <if test="GROUP_ID!=null">AND GROUP_ID =#{GROUP_ID}</if>
         <if test="NAME!=null">AND  NAME =#{NAME}</if>
         <if test="DESCRIPTION!=null">AND DESCRIPTION =#{DESCRIPTION}</if>
     </select>
 
     <select id="findSecurityPermission"  resultType="cn.gorun8.easyfk.entity.GenericValue">
-        SELECT    PERMISSION_ID, DESCRIPTION, DYNAMIC_ACCESS,PERMISSION_TAG,PARENT_ID
+        SELECT    PERMISSION_ID, DESCRIPTION, DYNAMIC_ACCESS,PERMISSION_TAG,PARENT_ID,RELATIVE_CLASS,IS_SYSTEM
         FROM
         security_permission
         WHERE
         1=1
+        <if test="IS_SYSTEM!=null">AND IS_SYSTEM =#{IS_SYSTEM}</if>
         <if test="PERMISSION_ID!=null">AND PERMISSION_ID =#{PERMISSION_ID}</if>
         <if test="PARENT_ID!=null">AND  PARENT_ID =#{PARENT_ID}</if>
         <if test="DESCRIPTION!=null">AND DESCRIPTION =#{DESCRIPTION}</if>
+        ORDER BY PARENT_ID DESC
+    </select>
+
+    <select id="findSecurityPermissionById"  resultType="cn.gorun8.easyfk.entity.GenericValue">
+        SELECT    PERMISSION_ID, DESCRIPTION, DYNAMIC_ACCESS,PERMISSION_TAG,PARENT_ID,RELATIVE_CLASS,IS_SYSTEM
+        FROM
+        security_permission
+        WHERE
+        PERMISSION_ID =#{PERMISSION_ID}
     </select>
 
     <select id="findGroupAndPermission"  resultType="cn.gorun8.easyfk.entity.GenericValue">
-        SELECT   GROUP_ID, sp.PERMISSION_ID, DESCRIPTION, DYNAMIC_ACCESS,PERMISSION_TAG,PARENT_ID
+        SELECT   GROUP_ID, sp.PERMISSION_ID, DESCRIPTION, DYNAMIC_ACCESS,PERMISSION_TAG,PARENT_ID,RELATIVE_CLASS,sp.IS_SYSTEM
         FROM
         security_permission as sp,security_group_permission as sgp
         WHERE
-         sp.PERMISSION_ID = sgp.PERMISSION_ID AND sgp.GROUP_ID=#{GROUP_ID}
+         sp.PERMISSION_ID = sgp.PERMISSION_ID AND sgp.GROUP_ID=#{GROUP_ID} AND sp.IS_SYSTEM=#{IS_SYSTEM}
 
     </select>
 

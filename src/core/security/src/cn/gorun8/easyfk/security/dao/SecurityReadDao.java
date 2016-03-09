@@ -55,6 +55,14 @@ public abstract class SecurityReadDao extends ReadDaoBase {
 	 */
 	public abstract List<GenericValue> findSecurityPermission(@Param("params") GenericValue params)throws GenericEntityException;
 
+	/**
+	 * 获取权限资源
+	 * @param params
+	 * @return
+	 * @throws GenericEntityException
+	 */
+	public abstract GenericValue findSecurityPermissionById(@Param("params") GenericValue params)throws GenericEntityException;
+
 
 	/**
 	 * 获取组和组的权限资源

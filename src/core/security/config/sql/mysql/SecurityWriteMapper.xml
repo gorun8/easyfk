@@ -57,6 +57,7 @@ Author:hezhiping   Email:110476592@qq.com
 	<delete id="removeSecurityGroup" parameterType="cn.gorun8.easyfk.entity.GenericValue">
 		DELETE  FROM security_group
 		WHERE   GROUP_ID =#{GROUP_ID}
+		AND IS_SYSTEM =#{IS_SYSTEM}
 	</delete>
 
 
@@ -114,5 +115,51 @@ Author:hezhiping   Email:110476592@qq.com
 		)
 	</insert>
 
+	<insert id="createSecurityPermission" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+		INSERT INTO security_permission(
+		PERMISSION_ID
+		,DESCRIPTION
+		,PERMISSION_TAG
+		,PARENT_ID
+		,RELATIVE_CLASS
+		,IS_SYSTEM
+		<if test="LAST_UPDATED_STAMP!=null">,LAST_UPDATED_STAMP</if>
+		<if test="LAST_UPDATED_TX_STAMP!=null">,LAST_UPDATED_TX_STAMP</if>
+		<if test="CREATED_STAMP!=null">,CREATED_STAMP</if>
+		<if test="CREATED_TX_STAMP!=null">,CREATED_TX_STAMP</if>
+		)
+		VALUES (
+		#{PERMISSION_ID}
+		,#{DESCRIPTION}
+		,#{PERMISSION_TAG}
+		,#{PARENT_ID}
+		,#{RELATIVE_CLASS}
+		,#{IS_SYSTEM}
+		<if test="LAST_UPDATED_STAMP!=null">,#{LAST_UPDATED_STAMP}</if>
+		<if test="LAST_UPDATED_TX_STAMP!=null">,#{LAST_UPDATED_TX_STAMP}</if>
+		<if test="CREATED_STAMP!=null">,#{CREATED_STAMP}</if>
+		<if test="CREATED_TX_STAMP!=null">,#{CREATED_TX_STAMP}</if>
+		)
+	</insert>
+
+	<delete id="removeSecurityPermission" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+		DELETE  FROM security_permission
+		WHERE   PERMISSION_ID = #{PERMISSION_ID} AND IS_SYSTEM = #{IS_SYSTEM}
+	</delete>
+
+	<update id="saveSecurityPermission" parameterType="cn.gorun8.easyfk.entity.GenericValue">
+		UPDATE  security_permission
+		SET
+		PERMISSION_ID = #{PERMISSION_ID}
+		,DESCRIPTION = #{DESCRIPTION}
+		,PERMISSION_TAG = #{PERMISSION_TAG}
+		,PARENT_ID =#{PARENT_ID}
+		,RELATIVE_CLASS = #{RELATIVE_CLASS}
+		<if test="LAST_UPDATED_STAMP!=null">,LAST_UPDATED_STAMP = #{LAST_UPDATED_STAMP}</if>
+		<if test="LAST_UPDATED_TX_STAMP!=null">,LAST_UPDATED_TX_STAMP = #{LAST_UPDATED_TX_STAMP}</if>
+		<if test="CREATED_STAMP!=null">,CREATED_STAMP = #{CREATED_STAMP}</if>
+		<if test="CREATED_TX_STAMP!=null">,CREATED_TX_STAMP = #{CREATED_TX_STAMP}</if>
+		WHERE   PERMISSION_ID = #{PERMISSION_ID} AND IS_SYSTEM = #{IS_SYSTEM}
+	</update>
 
 </mapper>

@@ -14,7 +14,7 @@
 
 easyfk.newSecurityGroup = function () {
 	$("#securityGroupFormLabel").html("新建安全组");
-	var param = {groupId:'',name:'',description:'',securityGroupFormAction:'/party/dyn/security/createGroup'};
+	var param = {groupId:'',name:'',description:'',securityGroupFormAction:'/party/dyn/security/bzcreateGroup'};
 	easyfk.showDailog("securityGroupFormPanel",param);
 }
 
@@ -22,7 +22,7 @@ easyfk.editSecurityGroup = function (groupId) {
 	$("#securityGroupFormLabel").html("修改安全组");
 	var name= $("#securityGroup_"+groupId+"_name").val();
 	var description= $("#securityGroup_"+groupId+"_description").val();
-	var param = {groupId:groupId,name:name,description:description,securityGroupFormAction:'/party/dyn/security/updateGroup'};
+	var param = {groupId:groupId,name:name,description:description,securityGroupFormAction:'/party/dyn/security/bzupdateGroup'};
 	easyfk.showDailog("securityGroupFormPanel",param);
 }
 
@@ -36,7 +36,7 @@ easyfk.submitSecurityGorup = function(form){
 		easyfk.resetFormSubmitStatus("securityGroupForm");
 		if(type){
 			$("#securityGroupFormPanel").modal("hide");
-			document.location.href ="/party/dyn/security/securitygroups";
+			document.location.href ="/party/dyn/security/bzsecuritygroups";
 		}else{
 			alert(msg);
 		}
@@ -51,7 +51,7 @@ easyfk.removeSecurityGroup = function(groupId){
 			var params ={groupId:groupId};
 			easyfk.ajaxget(ajaxUrl,params,function(msg,type,obj){
 				if(type){
-					document.location.href ="/party/dyn/security/securitygroups";
+					document.location.href ="/party/dyn/security/bzsecuritygroups";
 				}else{
 					alert(msg);
 				}
@@ -91,7 +91,7 @@ easyfk.submitGroupPermission = function(treeObj){
 }
 
 easyfk.renderGroupPermissionTree = function(containerId,groupId,callback){
-	var ajaxUrl = "/party/dyn/security/getPermissionTree";
+	var ajaxUrl = "/party/dyn/security/getBzPermissionTree";
 	var postparams ={groupId:groupId};
 	easyfk.ajaxget(ajaxUrl,postparams,function(msg,type,obj){
 		if(!type){

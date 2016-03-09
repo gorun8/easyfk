@@ -12,13 +12,13 @@
   Author:hezhiping   Email:110476592@qq.com
 -->
 
-<@easyfkSetAppMenu menuName="EASYFK_MENU" focusItemIds="{['menuPartyAuth','menuPartyAuth_2']}" location="component://party/webapp/party/resources/page/appmenus.ftl">
+<@easyfkSetAppMenu menuName="EASYFK_MENU" focusItemIds="{['menuPartyAuth','menuPartyAuth_3']}" location="component://party/webapp/party/resources/page/appmenus.ftl">
 </@easyfkSetAppMenu>
 
-<@easyfkSetNavBar subTitle="系统安全组">
+<@easyfkSetNavBar subTitle="业务安全组">
 {NAV_BAR_DATA:[{id:'navid1',title:'首页',tip:'返回首页',style:'icon-home',href:'${ctx}'},
 {id:'navid2',title:'认证授权',tip:'认证授权',href:'${ctx}/partyclsgroup/list'},
-{id:'navid3',title:'系统安全组'},
+{id:'navid3',title:'业务安全组'},
 ]}
 </@easyfkSetNavBar>
 
@@ -44,7 +44,7 @@
 
 </@easyfkHeaderAttach>
 <@easyfkFooterAttach>
-<script src="/party/js/securitygroups.js"></script>
+<script src="/party/js/bzsecuritygroups.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
         $('input[type=checkbox],input[type=radio]').not("[data-switch-no-init]").iCheck({
@@ -136,7 +136,7 @@
                 </table>
             </div>
         </div>
-        <@easyfkPageBar pageUrl="${ctx}/dyn/security/securitygroups?pageSize=10&pageIndex="></@easyfkPageBar>
+        <@easyfkPageBar pageUrl="${ctx}/dyn/security/bzsecuritygroups?pageSize=10&pageIndex="></@easyfkPageBar>
 
     </div>
 </div>
@@ -243,7 +243,6 @@
 <script type="text/javascript">
 
     easyfk.setGroupPermission = function (groupId) {
-
         easyfk.renderGroupPermissionTree("securityResourceTree",groupId,function(){
             if("FULLADMIN" == groupId){
                 $("#securityGroupFormSubmit").hide();
